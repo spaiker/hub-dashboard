@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Encode Sans Narrow';
+    src: local('Encode Sans Narrow Regular'), local('EncodeSansNarrow-Regular'), url('../fonts/encodesansnarrow/encodesansnarrowregular.woff2') format('woff2'), url('../fonts/encodesansnarrow/encodesansnarrowregular.woff') format('woff'), url('../fonts/encodesansnarrow/encodesansnarrowregular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Encode Sans Narrow';
+    src: local('Encode Sans Narrow Bold'), local('EncodeSansNarrow-Bold'), url('../fonts/encodesansnarrow/encodesansnarrowbold.woff2') format('woff2'), url('../fonts/encodesansnarrow/encodesansnarrowbold.woff') format('woff'), url('../fonts/encodesansnarrow/encodesansnarrowbold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Encode Sans Narrow';
+    src: local('Encode Sans Narrow Medium'), local('EncodeSansNarrow-Medium'), url('../fonts/encodesansnarrow/encodesansnarrowmedium.woff2') format('woff2'), url('../fonts/encodesansnarrow/encodesansnarrowmedium.woff') format('woff'), url('../fonts/encodesansnarrow/encodesansnarrowmedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: local('FontAwesome-webfont'), local('FontAwesome-webfont'), url('../fonts/fontawesome-webfont.woff2') format('woff2'), url('../fonts/fontawesome-webfont.woff') format('woff'), url('../fonts/fontawesome-webfont.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/*General*/
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Encode Sans Narrow', sans-serif;
+    font-weight: 400;
+    color: #000;
+    position: relative;
+}
+
+
+
+
+/*---Graphics start---*/
+
+/*Circle-graph*/
+.timer {
+    font-size: 20px;
+    font-weight: 700;
+}
+.caption {
+    font-size: 11px;
+    font-weight: 700;
+}
+.total {
+    font-size: 11px;
+}
+.timer, .total, .caption {
+    text-transform: uppercase;
+}
+/*---Graphics end---*/
