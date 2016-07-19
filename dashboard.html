@@ -8,25 +8,167 @@
     <link rel="stylesheet" href="css/libs/normalize.css">
     <link rel="stylesheet" href="css/libs/jquery.circliful.css">
     <link rel="stylesheet" href="css/libs/morris.css">
+    <link rel="stylesheet" href="css/libs/font-awesome.min.css">
 
     <!--CSS-->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main-hub.css">
 
 </head>
 <body>
+<header class="b-header">
 
-<!--Graph-circle-->
-<div class="graph-circle" style="width: 150px">
-    <div class="js-circle-disk"></div>
-    <div class="js-circle-ram"></div>
-    <div class="js-circle-cpu"></div>
+</header>
+<div class="b-content b-content_minus-header g-full-height">
+<div class="b-workspace g-full-height b-workspace_left-sidebar b-workspace_two-sidebar b-workspace_two-sidebar_border">
+    <div class="b-workspace__header g-padding">
+        <div class="b-workspace-header" id="env-header">
+            <ul class="b-breadcrumbs">
+                <li class="b-breadcrumbs__li"><a href="/">Home</a></li>
+                <li class="b-breadcrumbs__li">Dashboard</li>
+            </ul>
+        </div>
+    </div>
+    <div class="b-workspace__body g-full-height g-padding js-scrollbar-wide container-dashboard">
+        <div class="row charts-1">
+            <div class="col-4">
+                <div class="graph-circle">
+                    <div class="js-circle-disk"></div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="graph-circle">
+                    <div class="js-circle-ram"></div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="graph-circle">
+                    <div class="js-circle-cpu"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="charts-2">
+                    <ul class="charts-2-menu">
+                        <li class="menu__item">
+                            <a href="#">
+                                <svg class="menu-item__svg">
+                                    <use xlink:href="assets/icons.svg#environments"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="menu__item menu__item_active">
+                            <a href="#">
+                                <svg class="menu-item__svg">
+                                    <use xlink:href="assets/icons.svg#organizations"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#">
+                                <svg class="menu-item__svg">
+                                    <use xlink:href="assets/icons.svg#coins"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="charts-2-content">
+                        <div class="charts-2-content__header">Organizations</div>
+                        <div id="graph" class="charts-2-content__graph"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="row charts-3">
+                    <div class="col-6 graph-square graph-square_rh">
+                        <div class="graph-square__header">
+                            RESOURCE HOSTS
+                        </div>
+                        <div class="graph-square__body">
+                            265
+                        </div>
+                    </div>
+                    <div class="col-6 graph-square graph-square_ch">
+                        <div class="graph-square__header">
+                            CONTAINER HOSTS
+                        </div>
+                        <div class="graph-square__body">
+                            31
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="charts-4">
+                    <div class="charts-4-header">
+                        <div class="dropdown">
+                            <button class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                PEERS <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li class="active"><a href="#">PEERS</a></li>
+                                <li><a href="#">USERS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="chart-4-graph">
+                        <div class="chart-4-graph__item">
+                            <div id="graph-area"></div>
+                        </div>
+                        <div class="chart-4-graph__buttons">
+                            <a href="#" class="btn btn_blue btn_blue_active">Day</a>
+                            <a href="#" class="btn btn_blue">Week</a>
+                            <a href="#" class="btn btn_blue">Mounth</a>
+                        </div>
+                    </div>
+                    <div class="chart-4-footer">
+                        <div class="row" style="display: inline-block">
+                            <div class="col-6 graph-square graph-square_chart-4">
+                                <div class="graph-square__header">
+                                    FREE
+                                </div>
+                                <div class="graph-square__body">
+                                    99
+                                </div>
+                            </div>
+                            <div class="col-6 graph-square graph-square_chart-4">
+                                <div class="graph-square__header">
+                                    PRIVATE
+                                </div>
+                                <div class="graph-square__body">
+                                    28
+                                </div>
+                            </div>
+                            <div class="col-6 graph-square graph-square_chart-4">
+                                <div class="graph-square__header">
+                                    SHARED
+                                </div>
+                                <div class="graph-square__body">
+                                    31
+                                </div>
+                            </div>
+                            <div class="col-6 graph-square graph-square_chart-4">
+                                <div class="graph-square__header">
+                                    <strong>TOTAL</strong>
+                                </div>
+                                <div class="graph-square__body">
+                                    139
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
 </div>
-<div style="width: 150px; height: 150px">
-<div id="graph" style="width: 150px; height: 150px"></div>
-</pre>
 </div>
 
-
+</div>
 <script src="js/libs/jquery-2.1.1.min.js"></script>
 <script src="js/libs/jquery.circliful.js"></script>
 <script src="js/libs/raphael.js"></script>

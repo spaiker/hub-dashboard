@@ -1,0 +1,30 @@
+<svg  xmlns="http://www.w3.org/2000/svg" style="width:0; height:0; visibility:hidden;">
+    <symbol id="environments" viewBox="0 0 20 20">
+        <circle stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" cx="4.2" cy="4.2" r="2.2"/>
+        <circle stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" cx="15.8" cy="4.2" r="2.2"/>
+        <line stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" x1="6.5" y1="4.2" x2="13.5" y2="4.2"/>
+        <line stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" x1="6.5" y1="15.8" x2="13.5" y2="15.8"/>
+        <circle stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" cx="4.2" cy="15.8" r="2.2"/>
+        <line stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" x1="4.2" y1="6.5" x2="4.2" y2="13.5"/>
+        <circle stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" cx="15.8" cy="15.8" r="2.2"/>
+        <line stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" x1="15.8" y1="6.5" x2="15.8" y2="13.5"/>
+    </symbol>
+
+    <symbol id="organizations" viewBox="0 0 20 20">
+        <line stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" x1="2.7" y1="7.6" x2="17.3" y2="7.6"/>
+        <polyline  points="
+        17.3,7.6 10,2.4 2.7,7.6 		"/>
+        <polyline stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" points="
+        15.5,9.6 15.5,14.8 4.5,14.8 4.5,9.6 		"/>
+        <line stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" x1="12.2" y1="9.9" x2="12.2" y2="14.7"/>
+        <line stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" x1="8" y1="14.6" x2="8" y2="9.9"/>
+        <polyline stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" points="
+        4.5,14.8 2,17.6 18,17.6 15.5,14.8 		"/>
+    </symbol>
+
+    <symbol id="coins" viewBox="0 0 20 20">
+        <circle stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" cx="10" cy="10" r="8"/>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" d="
+        M12.3,6.8c0,0-4.7-1.5-4.7,1.6s4.7,0.1,4.7,3.2s-4.7,1.6-4.7,1.6"/>
+    </symbol>
+</svg>
