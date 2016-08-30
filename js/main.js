@@ -1,87 +1,91 @@
-$( document ).ready(function() {
-    $(".js-circle-disk").circliful({
-        animationStep: 5,
-        foregroundColor: "#55a8fd",
-        backgroundColor: "#d9e4eb",
-        foregroundBorderWidth: 10,
-        backgroundBorderWidth: 10,
-        percent: 50,
-        textUnits: ' gb',
-        captionText: 'disk',
-        totalText: '250'
-    });
-    $(".js-circle-ram").circliful({
-        animationStep: 5,
-        foregroundColor: "#52dc90",
-        backgroundColor: "#d9e4eb",
-        foregroundBorderWidth: 10,
-        backgroundBorderWidth: 10,
-        percent: 4,
-        textUnits: ' gb',
-        captionText: 'ram',
-        totalText: '8'
-    });
-    $(".js-circle-cpu").circliful({
-        animationStep: 5,
-        foregroundColor: "#718bb7",
-        backgroundColor: "#d9e4eb",
-        foregroundBorderWidth: 10,
-        backgroundBorderWidth: 10,
-        percent: 2,
-        textUnits: ' cores',
-        captionText: 'cpu',
-        totalText: '6'
-    });
+$(".js-btn-minimize").click(function(){
+    $(".sidebar_left").toggleClass("js-sidebar-minimize");
+    $(".sidebar-menu__item a").toggleClass("tooltipped");
+    $(".header").toggleClass("js-header-minimize");
+    $(".content").toggleClass("js-content-minimize");
+});
 
-    $(function () {
-        eval($('#code').text());
-    });
+$(function() {
+    $('.ui.dropdown').dropdown(
+        {
+            transition: 'fade'
+        }
+    );
 
-    Morris.Donut({
-        element: 'graph',
-        data: [
-            {value: 70, label: 'foo'},
-            {value: 20, label: 'bar'},
-            {value: 10, label: 'baz'},
-        ],
-        backgroundColor: '#fff',
-        labelColor: '#697490',
-        colors: [
-            '#52dc90',
-            '#55a8fd',
-            '#718bb7'
-        ],
-        formatter: function (x) { return x + "%"}
-    });
+    $('.sidebar_right').sidebar('setting', 'transition', 'overlay')
+        .sidebar('attach events', '.js-chat-btn');
 
-    $(".dropdown-toggle").click(function(){
-        $(".dropdown-menu").toggleClass("dropdown-menu_show");
-    });
+    $('.tabular.menu .item').tab();
+});
 
-    Morris.Area({
-        element: 'graph-area',
-        data: [
-            {x: '2010 Q4', y: 3, z: 7},
-            {x: '2011 Q1', y: 3, z: 4},
-            {x: '2011 Q2', y: null, z: 1},
-            {x: '2011 Q3', y: 2, z: 5},
-            {x: '2011 Q4', y: 8, z: 2},
-            {x: '2012 Q1', y: 4, z: 4}
-        ],
-        xkey: 'x',
-        ykeys: ['y', 'z'],
-        labels: ['ONLINE', 'OFFLINE'],
-        continuousLine: false,
-        fillOpacity: 0.2,
-        lineColors: ['#ea5761', '#52dc90'],
-        lineWidth: 3,
-        pointSize: 5,
-        grid: true,
-        gridTextColor: '#697490',
-        gridTextSize: 12,
-        gridTextFamily: '"Encode Sans Narrow", sans-serif',
-        smooth: true
-    }).on('click', function(i, row){
-        console.log(i, row);
+$('.js-chat-carousel').slick({
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    variableWidth: true,
+    rtl: false
+});
+
+$(".chat-sound__link").click(function(){
+    $(this).toggleClass("chat-sound__link_off");
+});
+
+$(function(){
+    $('.js-scroll-content').slimScroll({
+        color: '#d4d9e3',
+        opacity: '1',
+        size: '5px',
+        height: 'calc(100% - 51px)',
+        railVisible: true,
+        railColor: '#d4d9e3',
+        railOpacity: '0.4',
+        position: 'right',
+        distance: '1px',
+        wrapperClass: "content__body-wrapper"
+    });
+    $('.js-scroll-content').css("height", "100%");
+
+    $('.js-dark-scroll').slimScroll({
+        color: '#d4d9e3',
+        opacity: '1',
+        size: '5px',
+        height: 'calc(100% - 119px)',
+        railVisible: true,
+        railColor: '#d4d9e3',
+        railOpacity: '0.4',
+        position: 'right',
+        distance: '5px',
+        wrapperClass: "slimScrollDiv"
+    });
+    $('.js-dark-scroll').css("height", "100%");
+
+    $('.js-dark-scroll_rooms').slimScroll({
+        color: '#d4d9e3',
+        opacity: '1',
+        size: '5px',
+        height: 'calc(100% - 50px)',
+        railVisible: true,
+        railColor: '#d4d9e3',
+        railOpacity: '0.4',
+        position: 'right',
+        distance: '1px',
+        wrapperClass: "slimScrollDiv"
+    });
+    $('.js-dark-scroll_rooms').css("height", "100%");
+});
+
+
+$(document).ready(function() {
+    $('.js-datatable').DataTable(
+        {   "bInfo": false,
+            "dom": '<"top"fi>rt<"bottom"lp><"clear">'
+        }
+    );
+} );
+
+jQuery(document).ready(function($) {
+    $(".js-table-clickable").click(function() {
+        window.document.location = $(this).data("href");
     });
 });
+
