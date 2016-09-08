@@ -1,0 +1,426 @@
+.daterange {
+    position: relative
+}
+.daterange_inline {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.daterange * {
+    box-sizing: border-box
+}
+
+.daterange div, .daterange li, .daterange span, .daterange ul {
+    margin: 0;
+    padding: 0;
+    border: 0
+}
+
+.daterange ul {
+    list-style: none
+}
+
+.daterange.dr-active {
+    z-index: 10
+}
+
+.daterange .dr-input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: inline-flex;
+    border: 1px solid #d4d9e3;
+    border-radius: 2px;
+    background-color: #FFF;
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+    height: 35px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-left: none;
+}
+
+/*.daterange .dr-input:hover {
+    border-color: #59b7ff
+}*/
+
+.daterange .dr-input.dr-active {
+    border-color: #59b7ff
+}
+
+.daterange .dr-input .dr-dates {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding: 0 15px;
+    min-width: calc(100% - 35px)
+}
+
+.daterange .dr-input .dr-dates .dr-date {
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 0;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    outline: 0
+}
+
+.daterange .dr-input .dr-dates .dr-date.dr-active, .daterange .dr-input .dr-dates .dr-date:focus, .daterange .dr-input .dr-dates .dr-date:hover {
+    color: #59b7ff
+}
+
+.daterange .dr-input .dr-dates .dr-date:empty:after {
+    content: attr(placeholder);
+    color: #9BA3A7
+}
+
+.daterange .dr-input .dr-dates .dr-dates-dash {
+    color: #d4d9e3;
+    padding: 0 10px;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    font-weight: 600
+}
+
+.daterange .dr-input .dr-presets {
+    width: 2.1875rem;
+    border-left: 1px solid #C3CACD;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+/*.daterange .dr-input .dr-presets.dr-active, .daterange .dr-input .dr-presets:hover {
+    border-color: #59b7ff;
+    box-shadow: inset 0 2px 3px #EBF1F4
+}*/
+
+.daterange .dr-input .dr-presets.dr-active .dr-preset-bar, .daterange .dr-input .dr-presets:hover .dr-preset-bar {
+    background-color: #59b7ff
+}
+
+.daterange .dr-input .dr-presets .dr-preset-bar {
+    height: 2px;
+    background-color: #C3CACD;
+    margin: 1px 0 1px 25%
+}
+
+.daterange .dr-input .dr-presets .dr-preset-bar:nth-child(1) {
+    width: 50%
+}
+
+.daterange .dr-input .dr-presets .dr-preset-bar:nth-child(2) {
+    width: 40%
+}
+
+.daterange .dr-input .dr-presets .dr-preset-bar:nth-child(3) {
+    width: 30%
+}
+
+.daterange .dr-selections {
+    position: absolute
+}
+.daterange .dr-selections .dr-calendar:after {
+    margin-left: -0.30714286em;
+    top: -0.30714286em;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    box-shadow: -1px -1px 0px 0px #bababc;
+    position: absolute;
+    content: '';
+    width: 0.71428571em;
+    height: 0.71428571em;
+    background: #FFFFFF;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    z-index: 2;
+}
+.daterange .dr-selections .dr-calendar {
+    background-color: #FFF;
+    font-size: .9375rem;
+    border: 1px solid #d4d9e3;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+    border-radius: 2px;
+    position: relative;
+    /*overflow: hidden;*/
+    z-index: 4;
+    padding-top: 5px;
+    top: 0;
+    left: 0;
+    -webkit-transition: width .2s;
+    transition: width .2s;
+    min-width: 210px;
+    margin-top: 7px;
+}
+
+.daterange .dr-selections .dr-calendar .dr-range-switcher {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 15px 20px;
+    font-size: 12px
+}
+
+.daterange .dr-selections .dr-calendar .dr-range-switcher .dr-switcher {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 12px;
+    text-transform: uppercase;
+}
+
+.daterange .dr-selections .dr-calendar .dr-range-switcher .dr-switcher i {
+    color: #C3CACD;
+    position: relative;
+    top: -1px;
+    cursor: pointer;
+    font-size: .75rem;
+    height: 100%;
+    width: 20px
+}
+
+.daterange .dr-selections .dr-calendar .dr-range-switcher .dr-switcher i:hover:after, .daterange .dr-selections .dr-calendar .dr-range-switcher .dr-switcher i:hover:before {
+    background-color: #59b7ff
+}
+
+.daterange .dr-selections .dr-calendar .dr-range-switcher .dr-switcher i.dr-disabled {
+    pointer-events: none;
+    opacity: 0
+}
+
+.daterange .dr-selections .dr-calendar .dr-range-switcher .dr-switcher i:after, .daterange .dr-selections .dr-calendar .dr-range-switcher .dr-switcher i:before {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 2px;
+    background-color: #C3CACD;
+    border-radius: 1px;
+    left: 50%
+}
+
+.daterange .dr-selections .dr-calendar .dr-range-switcher .dr-switcher i.dr-left:before {
+    top: calc(50% - 2px);
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg)
+}
+
+.daterange .dr-selections .dr-calendar .dr-range-switcher .dr-switcher i.dr-left:after {
+    top: calc(50% + 2px);
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg)
+}
+
+.daterange .dr-selections .dr-calendar .dr-range-switcher .dr-switcher i.dr-right:before {
+    top: calc(50% - 2px);
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    transform: translate(-50%, -50%) rotate(45deg)
+}
+
+.daterange .dr-selections .dr-calendar .dr-range-switcher .dr-switcher i.dr-right:after {
+    top: calc(50% + 2px);
+    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+    transform: translate(-50%, -50%) rotate(-45deg)
+}
+
+.daterange .dr-selections .dr-calendar .dr-range-switcher .dr-month-switcher {
+    width: 100%;
+    margin-right: .375rem
+}
+
+.daterange .dr-selections .dr-calendar .dr-range-switcher .dr-year-switcher {
+    min-width: 80px
+}
+
+.daterange .dr-selections .dr-calendar .dr-days-of-week-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* background-color: #EBF1F4; */
+    /* color: #9BA3A7; */
+    padding: .3125rem 0;
+    /* border: 1px solid rgba(195, 202, 205, .5); */
+    border-left: none;
+    border-right: none;
+    font-size: 12px;
+    text-transform: lowercase;
+}
+
+.daterange .dr-selections .dr-calendar .dr-days-of-week-list .dr-day-of-week {
+    width: calc(100% / 7);
+    text-align: center
+}
+
+.daterange .dr-selections .dr-calendar .dr-day-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    font-size: 12px
+}
+
+.daterange .dr-selections .dr-calendar .dr-day-list .dr-day {
+    padding: 10px 5px;
+    text-align: center;
+    width: calc(100% / 7);
+    cursor: pointer;
+    color: #4f565c
+}
+
+.daterange .dr-selections .dr-calendar .dr-day-list .dr-day.dr-hover:not(.dr-current) {
+    background-color: #59b7ff !important
+}
+
+.daterange .dr-selections .dr-calendar .dr-day-list .dr-day.dr-hover-before {
+    padding-left: .1875rem !important;
+    background-color: #59b7ff;
+    color: #fff;
+}
+
+.daterange .dr-selections .dr-calendar .dr-day-list .dr-day.dr-hover-after {
+    padding-left: .1875rem !important;
+    background-color: #59b7ff;
+    color: #fff;
+}
+
+.daterange .dr-selections .dr-calendar .dr-day-list .dr-end, .daterange .dr-selections .dr-calendar .dr-day-list .dr-selected, .daterange .dr-selections .dr-calendar .dr-day-list .dr-start {
+    background-color: rgba(89, 182, 255, 0.7)
+}
+
+.daterange .dr-selections .dr-calendar .dr-day-list .dr-maybe {
+    background-color: rgba(89, 182, 255, 0.7) !important;
+}
+
+.daterange .dr-selections .dr-calendar .dr-day-list .dr-fade {
+    color: #d4d9e3
+}
+
+.daterange .dr-selections .dr-calendar .dr-day-list .dr-start {
+    padding-left: .1875rem;
+    background-color: #59b7ff;
+    color: #fff;
+}
+
+.daterange .dr-selections .dr-calendar .dr-day-list .dr-end {
+    padding-left: .1875rem;
+    background-color: #59b7ff;
+    color: #fff;
+}
+
+.daterange .dr-selections .dr-calendar .dr-day-list .dr-current {
+    padding-left: .1875rem;
+    background-color: #59b7ff;
+    color: #fff;
+}
+
+.daterange .dr-selections .dr-calendar .dr-day-list .dr-outside {
+    pointer-events: none;
+    cursor: default;
+    color: rgba(195, 202, 205, .5)
+}
+
+.daterange .dr-selections .dr-preset-list {
+    background-color: #FFF;
+    color: #59b7ff;
+    font-size: .9375rem;
+    box-shadow: 0 0 5px #C3CACD;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 4;
+    padding-top: 5px;
+    top: -5px;
+    left: 4px;
+    width: 100%
+}
+
+.daterange .dr-selections .dr-list-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    padding: .75rem .625rem;
+    border-bottom: 1px solid #EBF1F4;
+    cursor: pointer;
+    white-space: nowrap
+}
+
+.daterange .dr-selections .dr-list-item:hover {
+    background-color: #EBF1F4
+}
+
+.daterange .dr-selections .dr-list-item .dr-item-aside {
+    color: #9BA3A7;
+    font-size: .75rem;
+    margin-left: .3125rem;
+    position: relative;
+    top: -1px
+}
+
+.daterange--single .dr-input {
+    cursor: text
+}
+
+.daterange--single .dr-input .dr-dates {
+    padding: 0;
+    min-width: 160px;
+    width: 100%
+}
+
+.daterange--single .dr-input .dr-dates .dr-date {
+    width: 100%;
+    padding: .65625rem .75rem;
+    text-align: left;
+    color: #4f565c
+}
+
+
+.dr-icon {
+    display: inline-flex;
+    height: 35px;
+    padding: 5px 5px!important;
+    vertical-align: middle;
+    font-size: 25px;
+    background-color: #59b7ff;
+    color: #fff;
+    border-bottom-left-radius: 2px;
+    border-top-left-radius: 2px;
+}

@@ -47,7 +47,7 @@
             <div class="navbar navbar_toolbar">
                 <ul class="nav nav_toolbar">
                     <li class="nav__minimize waves-effect">
-                        <a href="#" class="js-btn-minimize">
+                        <a href="#" class="nav-minimize js-btn-minimize">
                             <i class="hb hb-burger"></i>
                         </a>
                     </li>
@@ -55,6 +55,9 @@
                         <ul class="nav nav_breadcrumb">
                             <li class="nav-breadcrumb__item">
                                 <a href="#">Peers</a>
+                            </li>
+                            <li class="nav-breadcrumb__item">
+                                <a href="#">[Dilshat] Peers 8c</a>
                             </li>
                         </ul>
                     </li>
@@ -66,14 +69,16 @@
                             <span class="badge-circle badge-circle_warning">10</span>
                         </div>
                         <div class="menu nav-dropdown__content nav-dropdown__content_notification">
-                            <div class="nav-dropdown-content__notification item">
-                                <div class="notification__header">Peer Usage Approval</div>
-                                <div class="notification__description">User Ermek shared his peer with you. Please check your
-                                    <a href="#">shared peers</a></div>
-                                <div class="notification__date">20.07.2016  11:49</div>
-                            </div>
-                            <div class="nav-dropdown-content__footer item">
-                                <a href="#">Delete All Notifications</a>
+                            <div class="message">
+                                <div class="nav-dropdown-content__notification">
+                                    <div class="notification__header">Peer Usage Approval</div>
+                                    <div class="notification__description">User Ermek shared his peer with you. Please check your
+                                        <a href="#">shared peers</a></div>
+                                    <div class="notification__date">20.07.2016  11:49</div>
+                                </div>
+                                <div class="nav-dropdown-content__footer">
+                                    <a href="#">Delete All Notifications</a>
+                                </div>
                             </div>
                         </div>
                     </li>
@@ -97,29 +102,31 @@
                             </span>
                         </div>
                         <div class="menu nav-dropdown__content nav-dropdown__content_profile">
-                            <div class="nav-dropdown-content__profile item">
-                                <div class="profile__header">
-                                    <div class="profile-header__avatar">
-                                        <span class="profile__avatar">
-                                            <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                        </span>
+                            <div class="message">
+                                <div class="nav-dropdown-content__profile">
+                                    <div class="profile__header">
+                                        <div class="profile-header__avatar">
+                                            <span class="profile__avatar">
+                                                <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                            </span>
+                                        </div>
+                                        <div class="profile-header__name">
+                                            George Moschovitis
+                                        </div>
                                     </div>
-                                    <div class="profile-header__name">
-                                        George Moschovitis
-                                    </div>
+                                    <ul class="profile-menu nav">
+                                        <li class="profile-menu__item">
+                                            <a href="#"><i class="hb hb-peer"></i> Peers</a>
+                                        </li>
+                                        <li class="profile-menu__item">
+                                            <a href="#"><i class="hb hb-bazaar"></i> Invitations</a>
+                                        </li>
+                                    </ul>
+                                    <div class="clear"></div>
                                 </div>
-                                <ul class="profile__menu nav">
-                                    <li class="profile-menu__item">
-                                        <a href="#"><i class="hb hb-peer"></i> Peers</a>
-                                    </li>
-                                    <li class="profile-menu__item">
-                                        <a href="#"><i class="hb hb-bazaar"></i> Invitations</a>
-                                    </li>
-                                </ul>
-                                <div class="clear"></div>
-                            </div>
-                            <div class="nav-dropdown-content__footer item">
-                                <a href="#">Log out</a>
+                                <div class="nav-dropdown-content__footer">
+                                    <a href="#">Log out</a>
+                                </div>
                             </div>
                         </div>
                     </li>
@@ -130,67 +137,67 @@
     <div class="clear"></div>
 </header>
 <aside class="sidebar sidebar_left">
-    <ul class="nav sidebar-menu">
+    <ul class="nav sidebar-menu js-scroll-sidebar">
         <li class="sidebar-menu__title">TOOLS</li>
-        <li class="sidebar-menu__item waves-effect">
-            <a href="#" data-tooltip="Dashboard" data-position="right center" data-inverted="">
-                <i class="hb hb-dashboard"></i>
-                <span>Dashboard</span>
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" data-tooltip="Dashboard" data-position="right center" data-inverted="">
+                <i class="sidebar-menu-item__icon hb hb-dashboard"></i>
+                <span class="sidebar-menu-item__caption">Dashboard</span>
             </a>
         </li>
         <li class="sidebar-menu__item waves-effect">
-            <a href="#" data-tooltip="Environments" data-position="right center" data-inverted="">
-                <i class="hb hb-environments"></i>
-                <span>Environments</span>
+            <a href="#" class="sidebar-menu-item" data-tooltip="Environments" data-position="right center" data-inverted="">
+                <i class="sidebar-menu-item__icon hb hb-environments"></i>
+                <span class="sidebar-menu-item__caption">Environments</span>
             </a>
         </li>
         <li class="sidebar-menu__item waves-effect">
-            <a href="#" data-tooltip="AppScale" data-position="right center" data-inverted="">
-                <i class="hb hb-appscale"></i>
-                <span>AppScale</span>
+            <a href="#" class="sidebar-menu-item" data-tooltip="AppScale" data-position="right center" data-inverted="">
+                <i class="sidebar-menu-item__icon hb hb-appscale"></i>
+                <span class="sidebar-menu-item__caption">AppScale</span>
             </a>
         </li>
         <li class="sidebar-menu__item waves-effect">
-            <a href="#" data-tooltip="Hosting Services" data-position="right center" data-inverted="">
-                <i class="hb hb-hosting-services"></i>
-                <span>Hosting Services</span>
+            <a href="#" class="sidebar-menu-item" data-tooltip="Hosting Services" data-position="right center" data-inverted="">
+                <i class="sidebar-menu-item__icon hb hb-hosting-services"></i>
+                <span class="sidebar-menu-item__caption">Hosting Services</span>
             </a>
         </li>
         <li class="sidebar-menu__title">HUB DATA</li>
         <li class="sidebar-menu__item waves-effect">
-            <a href="#" data-tooltip="War room" data-position="right center" data-inverted="">
-                <i class="hb hb-globus"></i>
-                <span>War room</span>
+            <a href="#" class="sidebar-menu-item" data-tooltip="War room" data-position="right center" data-inverted="">
+                <i class="sidebar-menu-item__icon hb hb-globus"></i>
+                <span class="sidebar-menu-item__caption">War room</span>
             </a>
         </li>
         <li class="sidebar-menu__item waves-effect sidebar-menu__item_active">
-            <a href="#" data-tooltip="Peers" data-position="right center" data-inverted="">
-                <i class="hb hb-peer"></i>
-                <span>Peers</span>
+            <a href="#" class="sidebar-menu-item" data-tooltip="Peers" data-position="right center" data-inverted="">
+                <i class="sidebar-menu-item__icon hb hb-peer"></i>
+                <span class="sidebar-menu-item__caption">Peers</span>
             </a>
         </li>
         <li class="sidebar-menu__item waves-effect">
-            <a href="#" data-tooltip="Bazaar" data-position="right center" data-inverted="">
-                <i class="hb hb-bazaar"></i>
-                <span>Bazaar</span>
+            <a href="#" class="sidebar-menu-item" data-tooltip="Bazaar" data-position="right center" data-inverted="">
+                <i class="sidebar-menu-item__icon hb hb-bazaar"></i>
+                <span class="sidebar-menu-item__caption">Bazaar</span>
             </a>
         </li>
         <li class="sidebar-menu__item waves-effect">
-            <a href="#" data-tooltip="Map of peers" data-position="right center" data-inverted="">
-                <i class="hb hb-location"></i>
-                <span>Map of peers</span>
+            <a href="#" class="sidebar-menu-item" data-tooltip="Map of peers" data-position="right center" data-inverted="">
+                <i class="sidebar-menu-item__icon hb hb-location"></i>
+                <span class="sidebar-menu-item__caption">Map of peers</span>
             </a>
         </li>
         <li class="sidebar-menu__item waves-effect">
-            <a href="#" data-tooltip="Organizations" data-position="right center" data-inverted="">
-                <i class="hb hb-organizations"></i>
-                <span>Organizations</span>
+            <a href="#" class="sidebar-menu-item" data-tooltip="Organizations" data-position="right center" data-inverted="">
+                <i class="sidebar-menu-item__icon hb hb-organizations"></i>
+                <span class="sidebar-menu-item__caption">Organizations</span>
             </a>
         </li>
         <li class="sidebar-menu__item waves-effect">
-            <a href="#" data-tooltip="Users" data-position="right center" data-inverted="">
-                <i class="hb hb-users"></i>
-                <span>Users</span>
+            <a href="#" class="sidebar-menu-item" data-tooltip="Users" data-position="right center" data-inverted="">
+                <i class="sidebar-menu-item__icon hb hb-users"></i>
+                <span class="sidebar-menu-item__caption">Users</span>
             </a>
         </li>
     </ul>

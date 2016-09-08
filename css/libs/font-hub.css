@@ -127,3 +127,24 @@
 .hb-info:before {
     content: "\e925";
 }
+.hb-upload:before {
+    content: "\e926";
+}
+.hb-edit:before {
+    content: "\e927";
+}
+.hb-solid-subutai-console:before {
+    content: "\e928";
+}
+.hb-solid-caret-down:before {
+    content: "\e929";
+}
+.hb-solid-caret-left:before {
+    content: "\e92a";
+}
+.hb-solid-caret-right:before {
+    content: "\e92b";
+}
+.hb-solid-caret-up:before {
+    content: "\e92c";
+}
