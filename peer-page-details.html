@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="css/libs/slick-theme.css">
     <link rel="stylesheet" href="css/libs/datatables.css">
     <link rel="stylesheet" href="css/libs/ion.rangeSlider.css">
+    <link rel="stylesheet" href="css/libs/colorbox.css">
+    <link rel="stylesheet" href="css/libs/calendar.css">
+    <link rel="stylesheet" href="css/libs/elementTransitions.min.css">
     <!--UI Docs-->
     <link rel="stylesheet" href="css/libs/dropdown.css">
     <link rel="stylesheet" href="css/libs/transition.css">
@@ -859,45 +862,54 @@
 <section class="content pusher">
     <div class="content__header">
         <div class="content-header">
-            <div class="filter">
-                <div class="filter__item">
-                    <!--todo-->
-                    <div class="ui icon top left pointing dropdown button">
-                        <span class="text">Filters</span>
-                        <div class="menu">
-                            <div class="header">Display Density</div>
-                            <div class="item">Comfortable</div>
-                            <div class="item">Cozy</div>
-                            <div class="item">Compact</div>
-                            <div class="ui divider"></div>
-                            <div class="item">Settings</div>
-                            <div class="item">
-                                <i class="dropdown icon"></i>
-                                <span class="text">Upload Settings</span>
-                                <div class="menu">
-                                    <div class="item">
-                                        <i class="check icon"></i>
-                                        Convert Uploaded Files to PDF
-                                    </div>
-                                    <div class="item">
-                                        <i class="check icon"></i>
-                                        Digitize Text from Uploaded Files
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">Manage Apps</div>
-                            <div class="item">Keyboard Shortcuts</div>
-                            <div class="item">Help</div>
-                        </div>
+            <div class="content-header__right">
+                <div class="actions-zone">
+                    <button class="btn btn_blue"><i class="hb hb-edit"></i>Edit</button> <button class="btn btn_red"><i class="hb hb-close"></i>Delete</button>
+                </div>
+            </div>
+            <div class="content-header__left">
+                <div class="details">
+                    <div class="details__header">
+                        <ul class="details-header nav">
+                            <li class="details-header__item details-header__name">[Dilshat] Peer 8C <span class="ui button"><i class="hb hb-info"></i></span> <div class="details-popup ui popup left center transition hidden"><div class="details-popup__column">Registered:<br>Version:<br>IP:</div><div class="details-popup__column">22 hours ago:<br>4.0.0-RC14-SNAPSHOT. (Stable release: 4.0.0-RC13.)<br>158.181.132.179</div></div><span class="status status_online"></span></li>
+                            <li class="details-header__item details-header__price">Free</li>
+                            <li class="details-header__item details-header__rating"><i class="hb hb-solid-star"></i> 4.6</li>
+                            <li class="details-header__item detail-header__toggles-btns">
+                                <button class="btn btn_circle" data-tooltip="Show peer on Warroom" data-position="bottom center" data-inverted><i class="hb hb-globus"></i></button>
+                                <button class="btn btn_circle" data-tooltip="Open in Subutai Social" data-position="bottom center" data-inverted><i class="hb hb-solid-subutai-console"></i></button>
+                            </li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="details__description">
+                        <ul class="details-description nav">
+                            <li class="details-description__item"><i class="hb hb-user-2"></i> <span class="details-description__text">Dilshat</span></li>
+                            <li class="details-description__item"><i class="hb hb-location"></i> <span class="details-description__text"><i class="flag kg"></i> Kyrgyzstan</span></li>
+                            <li class="details-description__item"><i class="hb hb-heart"></i> <span class="details-description__text">11 hours ago</span></li>
+                            <li class="details-description__item"><i class="hb hb-compass"></i> <span class="details-description__text">Amazon.com, Inc.</span></li>
+                            <li class="details-description__item"><i class="hb hb-views"></i> <span class="details-description__text">Public</span></li>
+                        </ul>
+                        <div class="clear"></div>
                     </div>
                 </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="content-tabs">
+            <div class="tabular menu tabs">
+                <a class="item tab active" data-tab="data-tab-rh">Resource host</a>
+                <a class="item tab" data-tab="data-tab-reviews">Reviews</a>
+                <a class="item tab" data-tab="data-tab-environments">Environments</a>
+                <a class="item tab" data-tab="data-tab-sharing">Sharing</a>
+                <a class="item tab" data-tab="data-tab-history">History</a>
+                <a class="item tab" data-tab="data-tab-error-log">Error Log</a>
             </div>
         </div>
     </div>
     <div class="content__body js-scroll-content">
         <span class="content-body__fade-top"></span>
         <span class="content-body__fade-bottom"></span>
-        <div class="panel">
+        <div class="panel ui tab active" data-tab="data-tab-rh">
             <div class="panel__header panel__header_datatable-search">
                 <a href="#" class="btn btn_blue">My peers</a>
             </div>
@@ -906,312 +918,240 @@
                     <thead>
                     <tr>
                         <th>Name</th>
-                        <th>Price</th>
                         <th>CPU</th>
                         <th>RAM</th>
                         <th>HDD</th>
-                        <th>Country</th>
-                        <th>ISP</th>
-                        <th>Rating</th>
+                        <th>Price (hr)</th>
                         <th class="table-no-sort"></th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr class="js-table-clickable" data-href="peer-page-main.html">
-                        <td><span class="status status_online status_left"></span>Brazil-AWS [Marat's]</td>
-                        <td><span class="price price_free">FREE</span></td>
+                    <tr>
+                        <td><span class="status status_online status_left"></span><a class="et-rotate" et-in="rotateCarouselRightIn" et-out="rotateCarouselRightOut">Brazil-AWS [Marat's]</a></td>
                         <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">2 CPU <i class="hb hb-info"></i></span></td>
                         <td>3.86 GB</td>
                         <td>60 GB</td>
-                        <td><i class="flag br"></i> Brazil</td>
-                        <td style="max-width: 150px">Amazon.com, Inc.</td>
-                        <td class="table_rating"><i class="hb hb-solid-star"></i> 0.0</td>
-                        <td><button class="btn btn_action"><i class="hb hb-plus"></i>Add peer</button></td>
-                    </tr>
-                    <tr class="js-table-clickable" data-href="#">
-                        <td><span class="status status_online status_left"></span>Monster</td>
-                        <td>
-                            <span class="price price_free">Free</span>
-                            <br>
-                            <span class="price price_free">Free</span>
+                        <td><span class="price price_free">FREE</span></td>
+                        <td class="table-align-right">
+                            <button class="btn btn_action"><i class="hb hb-close"></i>Delete</button>
+                            <div class="btn btn_action ui icon top right pointing dropdown button">
+                                Action <span class="hb hb-solid-caret-down"></span>
+                                <ul class="menu dropdown-menu">
+                                    <li class="item"><a href="#modal-pricing" class="item__link js-cbox-modal-inline">Change price</a></li>
+                                    <li class="item"><a href="#" class="item__link">Metrics</a></li>
+                                </ul>
+                            </div>
                         </td>
-                        <td>
-                            <span data-tooltip="Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz" data-position="top center">8 CPU <i class="hb hb-info"></i></span>
-                            <br>
-                            <span data-tooltip="Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz" data-position="top center">8 CPU <i class="hb hb-info"></i></span>
-                        </td>
-                        <td>
-                            <span>8 GB</span>
-                            <br>
-                            <span>16 GB</span>
-                        </td>
-                        <td>
-                            <span>100 GB</span>
-                            <br>
-                            <span>100 GB</span>
-                        </td>
-                        <td><i class="flag fr"></i> France</td>
-                        <td style="max-width: 150px">MCI Communications Services, Inc. d/b/a Verizon Business</td>
-                        <td class="table_rating"><i class="hb hb-solid-star"></i> 5.0</td>
-                        <td><button class="btn btn_action"><i class="hb hb-plus"></i>Add peer</button></td>
-                    </tr>
-                    <tr class="js-table-clickable" data-href="peer-page-main.html">
-                        <td><span class="status status_online status_left"></span>Keshig-69</td>
-                        <td><span class="price price_free">FREE</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
-                        <td>8 GB</td>
-                        <td>100 GB</td>
-                        <td><i class="flag us"></i> United States</td>
-                        <td style="max-width: 150px">Mega-Line Ltd.</td>
-                        <td class="table_rating"><i class="hb hb-solid-star"></i> 4.8</td>
-                        <td><button class="btn btn_action"><i class="hb hb-plus"></i>Add peer</button></td>
-                    </tr>
-                    <tr class="js-table-clickable" data-href="#">
-                        <td><span class="status status_online status_left"></span>Keshig-69</td>
-                        <td><span class="price">$2.35</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
-                        <td>8 GB</td>
-                        <td>100 GB</td>
-                        <td><i class="flag fr"></i> France</td>
-                        <td style="max-width: 150px">MCI Communications Services, Inc. d/b/a Verizon Business</td>
-                        <td class="table_rating"><i class="hb hb-solid-star"></i> 5.0</td>
-                        <td><button class="btn btn_action"><i class="hb hb-plus"></i>Add peer</button></td>
-                    </tr>
-                    <tr class="js-table-clickable" data-href="peer-page-main.html">
-                        <td><span class="status status_online status_left"></span>Keshig-69</td>
-                        <td><span class="price price_free">FREE</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
-                        <td>8 GB</td>
-                        <td>100 GB</td>
-                        <td><i class="flag us"></i> United States</td>
-                        <td style="max-width: 150px">Mega-Line Ltd.</td>
-                        <td class="table_rating"><i class="hb hb-solid-star"></i> 4.8</td>
-                        <td><button class="btn btn_action"><i class="hb hb-plus"></i>Add peer</button></td>
-                    </tr>
-                    <tr class="js-table-clickable" data-href="#">
-                        <td><span class="status status_online status_left"></span>Keshig-69</td>
-                        <td><span class="price">$2.35</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
-                        <td>8 GB</td>
-                        <td>100 GB</td>
-                        <td><i class="flag fr"></i> France</td>
-                        <td style="max-width: 150px">MCI Communications Services, Inc. d/b/a Verizon Business</td>
-                        <td class="table_rating"><i class="hb hb-solid-star"></i> 5.0</td>
-                        <td><button class="btn btn_action"><i class="hb hb-plus"></i>Add peer</button></td>
-                    </tr>
-                    <tr class="js-table-clickable" data-href="peer-page-main.html">
-                        <td><span class="status status_online status_left"></span>Keshig-69</td>
-                        <td><span class="price price_free">FREE</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
-                        <td>8 GB</td>
-                        <td>100 GB</td>
-                        <td><i class="flag us"></i> United States</td>
-                        <td style="max-width: 150px">Mega-Line Ltd.</td>
-                        <td class="table_rating"><i class="hb hb-solid-star"></i> 4.8</td>
-                        <td><button class="btn btn_action"><i class="hb hb-plus"></i>Add peer</button></td>
-                    </tr>
-                    <tr class="js-table-clickable" data-href="#">
-                        <td><span class="status status_online status_left"></span>Keshig-69</td>
-                        <td><span class="price">$2.35</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
-                        <td>8 GB</td>
-                        <td>100 GB</td>
-                        <td><i class="flag fr"></i> France</td>
-                        <td style="max-width: 150px">MCI Communications Services, Inc. d/b/a Verizon Business</td>
-                        <td class="table_rating"><i class="hb hb-solid-star"></i> 5.0</td>
-                        <td><button class="btn btn_action"><i class="hb hb-plus"></i>Add peer</button></td>
-                    </tr>
-                    <tr class="js-table-clickable" data-href="peer-page-main.html">
-                        <td><span class="status status_online status_left"></span>Keshig-69</td>
-                        <td><span class="price price_free">FREE</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
-                        <td>8 GB</td>
-                        <td>100 GB</td>
-                        <td><i class="flag us"></i> United States</td>
-                        <td style="max-width: 150px">Mega-Line Ltd.</td>
-                        <td class="table_rating"><i class="hb hb-solid-star"></i> 4.8</td>
-                        <td><button class="btn btn_action"><i class="hb hb-plus"></i>Add peer</button></td>
-                    </tr>
-                    <tr class="js-table-clickable" data-href="#">
-                        <td><span class="status status_online status_left"></span>Keshig-69</td>
-                        <td><span class="price">$2.35</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
-                        <td>8 GB</td>
-                        <td>100 GB</td>
-                        <td><i class="flag fr"></i> France</td>
-                        <td style="max-width: 150px">MCI Communications Services, Inc. d/b/a Verizon Business</td>
-                        <td class="table_rating"><i class="hb hb-solid-star"></i> 5.0</td>
-                        <td><button class="btn btn_action"><i class="hb hb-plus"></i>Add peer</button></td>
-                    </tr>
-                    <tr class="js-table-clickable" data-href="peer-page-main.html">
-                        <td><span class="status status_online status_left"></span>Keshig-69</td>
-                        <td><span class="price price_free">FREE</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
-                        <td>8 GB</td>
-                        <td>100 GB</td>
-                        <td><i class="flag us"></i> United States</td>
-                        <td style="max-width: 150px">Mega-Line Ltd.</td>
-                        <td class="table_rating"><i class="hb hb-solid-star"></i> 4.8</td>
-                        <td><button class="btn btn_action"><i class="hb hb-plus"></i>Add peer</button></td>
-                    </tr>
-                    <tr class="js-table-clickable" data-href="#">
-                        <td><span class="status status_online status_left"></span>Keshig-69</td>
-                        <td><span class="price">$2.35</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
-                        <td>8 GB</td>
-                        <td>100 GB</td>
-                        <td><i class="flag fr"></i> France</td>
-                        <td style="max-width: 150px">MCI Communications Services, Inc. d/b/a Verizon Business</td>
-                        <td class="table_rating"><i class="hb hb-solid-star"></i> 5.0</td>
-                        <td><button class="btn btn_action"><i class="hb hb-plus"></i>Add peer</button></td>
-                    </tr>
-                    <tr class="js-table-clickable" data-href="peer-page-main.html">
-                        <td><span class="status status_online status_left"></span>Keshig-69</td>
-                        <td><span class="price price_free">FREE</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
-                        <td>8 GB</td>
-                        <td>100 GB</td>
-                        <td><i class="flag us"></i> United States</td>
-                        <td style="max-width: 150px">Mega-Line Ltd.</td>
-                        <td class="table_rating"><i class="hb hb-solid-star"></i> 4.8</td>
-                        <td><button class="btn btn_action"><i class="hb hb-plus"></i>Add peer</button></td>
-                    </tr>
-                    <tr class="js-table-clickable" data-href="#">
-                        <td><span class="status status_online status_left"></span>Keshig-69</td>
-                        <td><span class="price">$2.35</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
-                        <td>8 GB</td>
-                        <td>100 GB</td>
-                        <td><i class="flag fr"></i> France</td>
-                        <td style="max-width: 150px">MCI Communications Services, Inc. d/b/a Verizon Business</td>
-                        <td class="table_rating"><i class="hb hb-solid-star"></i> 5.0</td>
-                        <td><button class="btn btn_action"><i class="hb hb-plus"></i>Add peer</button></td>
-                    </tr>
-                    <tr class="js-table-clickable" data-href="peer-page-main.html">
-                        <td><span class="status status_online status_left"></span>Keshig-69</td>
-                        <td><span class="price price_free">FREE</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
-                        <td>8 GB</td>
-                        <td>100 GB</td>
-                        <td><i class="flag us"></i> United States</td>
-                        <td style="max-width: 150px">Mega-Line Ltd.</td>
-                        <td class="table_rating"><i class="hb hb-solid-star"></i> 4.8</td>
-                        <td><button class="btn btn_action"><i class="hb hb-plus"></i>Add peer</button></td>
-                    </tr>
-                    <tr class="js-table-clickable" data-href="#">
-                        <td><span class="status status_online status_left"></span>Keshig-69</td>
-                        <td><span class="price">$2.35</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
-                        <td>8 GB</td>
-                        <td>100 GB</td>
-                        <td><i class="flag fr"></i> France</td>
-                        <td style="max-width: 150px">MCI Communications Services, Inc. d/b/a Verizon Business</td>
-                        <td class="table_rating"><i class="hb hb-solid-star"></i> 5.0</td>
-                        <td><button class="btn btn_action"><i class="hb hb-plus"></i>Add peer</button></td>
-                    </tr>
-                    <tr class="js-table-clickable" data-href="peer-page-main.html">
-                        <td><span class="status status_online status_left"></span>Keshig-69</td>
-                        <td><span class="price price_free">FREE</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
-                        <td>8 GB</td>
-                        <td>100 GB</td>
-                        <td><i class="flag us"></i> United States</td>
-                        <td style="max-width: 150px">Mega-Line Ltd.</td>
-                        <td class="table_rating"><i class="hb hb-solid-star"></i> 4.8</td>
-                        <td><button class="btn btn_action"><i class="hb hb-plus"></i>Add peer</button></td>
-                    </tr>
-                    <tr class="js-table-clickable" data-href="#">
-                        <td><span class="status status_online status_left"></span>Keshig-69</td>
-                        <td><span class="price">$2.35</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
-                        <td>8 GB</td>
-                        <td>100 GB</td>
-                        <td><i class="flag fr"></i> France</td>
-                        <td style="max-width: 150px">MCI Communications Services, Inc. d/b/a Verizon Business</td>
-                        <td class="table_rating"><i class="hb hb-solid-star"></i> 5.0</td>
-                        <td><button class="btn btn_action"><i class="hb hb-plus"></i>Add peer</button></td>
-                    </tr>
-                    <tr class="js-table-clickable" data-href="peer-page-main.html">
-                        <td><span class="status status_online status_left"></span>Keshig-69</td>
-                        <td><span class="price price_free">FREE</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
-                        <td>8 GB</td>
-                        <td>100 GB</td>
-                        <td><i class="flag us"></i> United States</td>
-                        <td style="max-width: 150px">Mega-Line Ltd.</td>
-                        <td class="table_rating"><i class="hb hb-solid-star"></i> 4.8</td>
-                        <td><button class="btn btn_action"><i class="hb hb-plus"></i>Add peer</button></td>
-                    </tr>
-                    <tr class="js-table-clickable" data-href="#">
-                        <td><span class="status status_online status_left"></span>Keshig-69</td>
-                        <td><span class="price">$2.35</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
-                        <td>8 GB</td>
-                        <td>100 GB</td>
-                        <td><i class="flag fr"></i> France</td>
-                        <td style="max-width: 150px">MCI Communications Services, Inc. d/b/a Verizon Business</td>
-                        <td class="table_rating"><i class="hb hb-solid-star"></i> 5.0</td>
-                        <td><button class="btn btn_action"><i class="hb hb-plus"></i>Add peer</button></td>
-                    </tr>
-                    <tr class="js-table-clickable" data-href="peer-page-main.html">
-                        <td><span class="status status_online status_left"></span>Keshig-69</td>
-                        <td><span class="price price_free">FREE</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
-                        <td>8 GB</td>
-                        <td>100 GB</td>
-                        <td><i class="flag us"></i> United States</td>
-                        <td style="max-width: 150px">Mega-Line Ltd.</td>
-                        <td class="table_rating"><i class="hb hb-solid-star"></i> 4.8</td>
-                        <td><button class="btn btn_action"><i class="hb hb-plus"></i>Add peer</button></td>
-                    </tr>
-                    <tr class="js-table-clickable" data-href="#">
-                        <td><span class="status status_online status_left"></span>Keshig-69</td>
-                        <td><span class="price">$2.35</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
-                        <td>8 GB</td>
-                        <td>100 GB</td>
-                        <td><i class="flag fr"></i> France</td>
-                        <td style="max-width: 150px">MCI Communications Services, Inc. d/b/a Verizon Business</td>
-                        <td class="table_rating"><i class="hb hb-solid-star"></i> 5.0</td>
-                        <td><button class="btn btn_action"><i class="hb hb-plus"></i>Add peer</button></td>
-                    </tr>
-                    <tr class="js-table-clickable" data-href="peer-page-main.html">
-                        <td><span class="status status_online status_left"></span>Keshig-69</td>
-                        <td><span class="price price_free">FREE</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
-                        <td>8 GB</td>
-                        <td>100 GB</td>
-                        <td><i class="flag us"></i> United States</td>
-                        <td style="max-width: 150px">Mega-Line Ltd.</td>
-                        <td class="table_rating"><i class="hb hb-solid-star"></i> 4.8</td>
-                        <td><button class="btn btn_action"><i class="hb hb-plus"></i>Add peer</button></td>
-                    </tr>
-                    <tr class="js-table-clickable" data-href="#">
-                        <td><span class="status status_online status_left"></span>Keshig-69</td>
-                        <td><span class="price">$2.35</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
-                        <td>8 GB</td>
-                        <td>100 GB</td>
-                        <td><i class="flag fr"></i> France</td>
-                        <td style="max-width: 150px">MCI Communications Services, Inc. d/b/a Verizon Business</td>
-                        <td class="table_rating"><i class="hb hb-solid-star"></i> 5.0</td>
-                        <td><button class="btn btn_action"><i class="hb hb-plus"></i>Add peer</button></td>
                     </tr>
                     </tbody>
                 </table>
             </div>
         </div>
+        <div class="panel ui tab" data-tab="data-tab-reviews">
+            <div class="panel__header">
+                <a href="#" class="btn btn_green">Write</a>
+            </div>
+            <div class="panel__body">
+                <ul class="reviews nav">
+                    <li class="reviews__item">
+                        <div class="reviews-item__header">
+                            <div class="reviews-item-header">
+                                <div class="reviews-item-header__avatar">
+                                    <span class="profile__avatar">
+                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                    </span>
+                                </div>
+                                <div class="reviews-item-header__wrapper">
+                                    <div class="reviews-name"><span class="reviews-name__text">George Moshowvitis</span> <div class="ui star rating rating-disabled" data-rating="3" data-max-rating="5"></div></div>
+                                    <div class="reviews-date">20 May, 2016 </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="reviews-item__body">
+                            <div class="reviews-item-body">
+                                <div class="reviews-text">
+                                    Very nice plugin, unusable on tablets without landscape view. Fix it and raiting will higher. Anyway good tool, but be able to have a powerfull peer.
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="reviews__item">
+                        <div class="reviews-item__header">
+                            <div class="reviews-item-header">
+                                <div class="reviews-item-header__avatar">
+                                    <span class="profile__avatar">
+                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                    </span>
+                                </div>
+                                <div class="reviews-item-header__wrapper">
+                                    <div class="reviews-name"><span class="reviews-name__text">George Moshowvitis</span> <div class="ui star rating rating-disabled" data-rating="1" data-max-rating="5"></div></div>
+                                    <div class="reviews-date">20 May, 2016 </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="reviews-item__body">
+                            <div class="reviews-item-body">
+                                <div class="reviews-text">
+                                    Very nice plugin, unusable on tablets without landscape view. Fix it and raiting will higher. Anyway good tool, but be able to have a powerfull peer.
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="reviews__item">
+                        <div class="reviews-item__header">
+                            <div class="reviews-item-header">
+                                <div class="reviews-item-header__avatar">
+                                    <span class="profile__avatar">
+                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                    </span>
+                                </div>
+                                <div class="reviews-item-header__wrapper">
+                                    <div class="reviews-name"><span class="reviews-name__text">George Moshowvitis</span> <div class="ui star rating rating-disabled" data-rating="5" data-max-rating="5"></div></div>
+                                    <div class="reviews-date">20 May, 2016 </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="reviews-item__body">
+                            <div class="reviews-item-body">
+                                <div class="reviews-text">
+                                    Very nice plugin, unusable on tablets without landscape view. Fix it and raiting will higher. Anyway good tool, but be able to have a powerfull peer.
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="panel ui tab" data-tab="data-tab-environments">
+            <div class="panel__body">
+                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>State</th>
+                        <th>Created</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Environment name</td>
+                        <td>EXCHANGE_INFO</td>
+                        <td>2016/08/24 12:36</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="panel ui tab" data-tab="data-tab-sharing">
+            <div class="panel__body">
+                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Country</th>
+                        <th class="table-no-sort"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span class="status status_online status_left"></span> Sharing name</td>
+                        <td><i class="flag br"></i> Brazil</td>
+                        <td class="table-align-right"><button class="btn btn_action"><i class="hb hb-close"></i>Delete</button></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="panel ui tab" data-tab="data-tab-history">
+            <div class="panel__header panel__header_datatable-search">
+                <div class="daterange daterange_inline js-daterange_double"></div> <a href="#" class="btn btn_blue">Show</a>
+            </div>
+            <div class="panel__body">
+                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Action</th>
+                        <th>Info</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>2016/08/24 12:54:03</td>
+                        <td>Added to environment</td>
+                        <td>PUBLIC -> SHARED</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="panel ui tab" data-tab="data-tab-error-log">
+            <div class="panel__body">
+                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Message</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>2016/08/24 12:54:03</td>
+                        <td class="table-error-log">D1C6EE8CC0D51BA9BFBD0CE4889D8B3F1C16CE0C: Aug 24 05:16:41 rh1471788553.gw.intra.lan ubuntu-core-launcher[875]: [ERROR] 2016/08/24 05:16:41 Failed to handshake with
+                            a DHT Server: lookup dht1.subut.ai on [::1]:53: server misbehaving</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+<!-- todo
+        <div class="panel ui tab et-page">
+            <div class="panel__body">
+                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Message</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>2016/08/24 12:54:03</td>
+                        <td class="table-error-log">D1C6EE8CC0D51BA9BFBD0CE4889D8B3F1C16CE0C: Aug 24 05:16:41 rh1471788553.gw.intra.lan ubuntu-core-launcher[875]: [ERROR] 2016/08/24 05:16:41 Failed to handshake with
+                            a DHT Server: lookup dht1.subut.ai on [::1]:53: server misbehaving</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+-->
     </div>
 
 </section>
+
+
+<!--Modals todo
+<div class="modal" id="modal-pricing">
+</div>
+-->
 
 <script src="js/libs/jquery-2.1.1.min.js"></script>
 <script src="js/libs/slick.js"></script>
 <script src="js/libs/tether.js"></script>
 <script src="js/libs/jquery.slimscroll.min.js"></script>
 <script src="js/libs/ion.rangeSlider.js"></script>
-
+<script src="js/libs/jquery.colorbox.js"></script>
 <script src="js/libs/datatables.js"></script>
+<script src="js/libs/moment.js"></script>
+<script src="js/libs/calendar.js"></script>
+<script src="js/libs/elementTransitions.min.js"></script>
+
+
 <script src="js/libs/dropdown.js"></script>
 <script src="js/libs/transition.js"></script>
 <script src="js/libs/popup.js"></script>

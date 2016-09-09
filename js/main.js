@@ -1,12 +1,11 @@
 $(".js-btn-minimize").click(function(){
-    $(".sidebar_left").toggleClass("js-sidebar-minimize");
-    $(".sidebar-menu__item a").toggleClass("tooltipped");
-    $(".header").toggleClass("js-header-minimize");
-    $(".content").toggleClass("js-content-minimize");
+    $(".sidebar_left").toggleClass("sidebar-minimize");
+    $(".header").toggleClass("header-minimize");
+    $(".content").toggleClass("content-minimize");
 });
 
 $(function() {
-    $('.ui.dropdown').dropdown(
+    $('.dropdown').dropdown(
         {
             transition: 'fade'
         }
@@ -16,7 +15,21 @@ $(function() {
         .sidebar('attach events', '.js-chat-btn');
 
     $('.tabular.menu .item').tab();
+
+    $('.ui.rating.rating-disabled').rating('disable');
+
+    $('.button').popup({
+        inline     : true,
+        hoverable  : true,
+        position   : 'bottom center',
+        delay: {
+            show: 300,
+            hide: 800
+        }
+    });
+
 });
+
 
 $('.js-chat-carousel').slick({
     infinite: false,
@@ -72,8 +85,39 @@ $(function(){
         wrapperClass: "slimScrollDiv"
     });
     $('.js-dark-scroll_rooms').css("height", "100%");
+
+    $('.js-scroll-sidebar').slimScroll({
+        color: '#697490',
+        opacity: '1',
+        size: '5px',
+        height: '100%',
+        railVisible: true,
+        railColor: '#697490',
+        railOpacity: '0.4',
+        position: 'right',
+        distance: '1px',
+        wrapperClass: "slimScrollDiv"
+    });
 });
 
+function initColorbox() {
+    $.colorbox.remove();
+    $('a.js-cbox-modal-inline').colorbox({
+        inline: true,
+        title: " ",
+        transition: "none",
+        previous: false,
+        next: false,
+        arrowKey: false,
+        rel: false,
+        overlayClose: true,
+        opacity: 0.8,
+        closeButton: false,
+        onComplete: function () {
+            $.colorbox.resize();
+        }
+    });
+}
 
 $(document).ready(function() {
     $('.js-datatable').DataTable(
@@ -89,3 +133,26 @@ jQuery(document).ready(function($) {
     });
 });
 
+new Calendar({
+    element: $('.js-daterange_double'),
+    earliest_date: 'January 1, 2000',
+    latest_date: new Date(),
+    start_date: 'May 1, 2015',
+    end_date: 'May 31, 2015',
+    presets: false,
+    callback: function() {
+        var start = moment(this.start_date).format('ll'),
+            end = moment(this.end_date).format('ll');
+
+        console.debug('Start Date: '+ start +'\nEnd Date: '+ end);
+    }
+});
+
+$(document).ready(function(evt) {
+    var svgns = 'http://www.w3.org/2000/svg',
+        xlinkns = 'http://www.w3.org/1999/xlink',
+        use = document.createElementNS(svgns, 'use');
+
+    use.setAttributeNS(xlinkns, 'xlink:href', '#save');
+    document.getElementById('useSVG').appendChild(use);
+});

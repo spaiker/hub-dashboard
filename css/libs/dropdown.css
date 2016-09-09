@@ -201,13 +201,13 @@
        Message
 -------------------*/
 
-.ui.dropdown .menu > .message {
+/*.ui.dropdown .menu > .message {
   padding: 0.78571429rem 1.14285714rem;
   font-weight: normal;
 }
 .ui.dropdown .menu > .message:not(.ui) {
   color: rgba(0, 0, 0, 0.4);
-}
+}*/
 
 /*--------------
     Sub Menu
