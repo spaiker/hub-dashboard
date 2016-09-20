@@ -1,0 +1,321 @@
+/*---Dashboard start---*/
+
+.container-dashboard {
+    background-color: #f7faff;
+    padding: 0 20px 20px;
+    color: #697490;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.row-border-bottom {
+    border-bottom: 1px solid #d4d9e3;
+}
+
+.col-4, .col-6, .col-8 {
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.col-4 {
+    width: 33.33333333%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-8 {
+    width: 66.66666667%;
+}
+
+.charts-1 {
+    box-sizing: border-box;
+    border-bottom: 1px solid #d4d9e3;
+    margin-bottom: 30px;
+}
+.charts-2 {
+    border: 1px solid #d4d9e3;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.charts-4 {
+    border: 1px solid #d4d9e3;
+    background-color: #fff;
+}
+.charts-1 .col-4 {
+    margin: 20px 0;
+    border-right: 1px solid #d4d9e3;
+}
+.charts-1 .col-4:last-child {
+    border: none;
+}
+.graph-circle {
+    margin: 30px auto;
+    width: 150px;
+}
+
+.charts-2-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-right: 1px solid #d4d9e3;
+    float: left;
+}
+.charts-2-content {
+    margin-left: 91px;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 20px;
+}
+.menu-item__svg {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    stroke: #697490;
+    fill: none;
+    stroke-width: 1.5px;
+}
+.charts-2-menu .menu__item {
+    width: 90px;
+    border-bottom: 1px solid #d4d9e3;
+}
+.charts-2-menu .menu__item_active {
+    background-color: #718bb7;
+    stroke: #fff;
+}
+.charts-2-menu .menu__item:last-child {
+    border: none;
+}
+.charts-2-menu .menu__item_active .menu-item__svg {
+    stroke: #fff;
+}
+.charts-2-menu .menu__item a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 0 35px;
+    line-height: 110px;
+    box-sizing: border-box;
+}
+.charts-2-menu .menu__item:hover {
+    background-color: #d4d9e3;
+}
+.charts-2-menu .menu__item_active:hover  {
+    background-color: #718bb7;
+}
+.charts-2-content__graph {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+.charts-2-content__header {
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.charts-4-header {
+    text-align: center;
+    padding: 20px 20px 10px;
+}
+.charts-4-header .dropdown {
+    position: relative;
+    display: inline-block;
+}
+.charts-4-header .dropdown .dropdown-toggle {
+    display: inline-block;
+    padding: 0;
+    margin-bottom: 0;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background: none;
+    font-size: 12px;
+    font-weight: 700;
+    color: inherit;
+}
+.charts-4-header .dropdown .dropdown-menu {
+    list-style: none;
+    padding: 2px 0;
+    margin: 0;
+    background-color: #fff;
+    border: 1px solid #d4d9e3;;
+    position: absolute;
+    top: auto;
+    right: 0;
+    -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.2);
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);
+    display: none;
+}
+.charts-4-header .dropdown .dropdown-menu_show {
+    display: block;
+}
+.charts-4-header .dropdown .dropdown-menu li a {
+    color: inherit;
+    display: block;
+    font-size: 12px;
+    text-decoration: none;
+    min-width: 90px;
+    height: 25px;
+    line-height: 25px;
+    text-align: right;
+    padding: 0 20px 0 10px;
+}
+.charts-4-header .dropdown .dropdown-menu .active a {
+    background-color: #55a8fd;
+    color: #fff;
+    font-weight: 700;
+    position: relative;
+}
+.charts-4-header .dropdown .dropdown-menu .active a:before {
+    position: absolute;
+    left: 10px;
+    content: "\f00c";
+    font-family: FontAwesome;
+}
+.charts-4-header .dropdown .dropdown-menu li a:hover {
+    background-color: #d4d9e3;
+}
+.charts-4-header .dropdown .dropdown-menu .active a:hover {
+    background-color: #55a8fd;
+}
+
+.chart-4-graph {
+    padding: 0 20px;
+}
+.chart-4-graph svg {
+    font-family: inherit;
+}
+.chart-4-graph__item {
+    margin-bottom: 10px;
+}
+/*Circle-graph*/
+.timer {
+    font-size: 20px;
+    font-weight: 700;
+}
+.caption {
+    font-size: 11px;
+    font-weight: 700;
+}
+.total {
+    font-size: 11px;
+}
+.timer, .total, .caption, .charts-2-content__header {
+    text-transform: uppercase;
+}
+/*Clear*/
+.clear {
+    clear: both;
+}
+/*Square*/
+.graph-square {
+    padding: 20px;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    display: inline-block;
+    width: calc(50% - 10px);
+    opacity: .9;
+    cursor: pointer;
+}
+.graph-square:hover {
+    opacity: 1;
+}
+.graph-square_rh {
+    background-color: #55a8fd;
+}
+
+.graph-square_ch {
+    background-color: #52dc90;
+    margin-left: 20px;
+}
+.graph-square__header {
+    font-weight: 700;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.graph-square__body {
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 10px;
+}
+.graph-square_chart-4 {
+    color: inherit;
+    background: none;
+    width: auto;
+    padding: 0 20px;
+    margin: 20px 0;
+    border-right: 1px solid #d4d9e3;
+}
+.graph-square_chart-4:last-child {
+    border: none;
+}
+.graph-square_chart-4 .graph-square__header {
+    font-weight: 400;
+}
+/*---Dashboard end---*/
+
+/*BUTTONS*/
+.chart-4-graph {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #d4d9e3;
+    padding-bottom: 20px;
+}
+
+.chart-4-graph__buttons,.chart-4-footer {
+    text-align: center;
+}
+
+/*
+.btn {
+    border: 1px solid #cbcbcb;
+    display: inline-block;
+    padding: 0 15px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #f2f2f2;
+    border-radius: 2px;
+    color: #3d3d3d;
+    font-size: 12px;
+    text-decoration: none;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+    vertical-align: middle;
+    box-sizing: border-box;
+    text-align: center;
+}
+.btn:hover {
+    text-decoration: none;
+}
+.btn_blue {
+    background: none;
+    border-color: #59b7ff;
+    font-size: 14px;
+    color: #59b7ff;
+    min-width: 100px;
+}
+
+.btn_blue_active {
+    background-color: #59b7ff;
+    color: #fff;
+    font-weight: 700;
+}
+*/

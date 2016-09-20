@@ -5,12 +5,6 @@ $(".js-btn-minimize").click(function(){
 });
 
 $(function() {
-    $('.dropdown').dropdown(
-        {
-            transition: 'fade'
-        }
-    );
-
     $('.sidebar_right').sidebar('setting', 'transition', 'overlay')
         .sidebar('attach events', '.js-chat-btn');
 
@@ -30,7 +24,43 @@ $(function() {
 
 });
 
+$('.dropdown-toggle').dropdown();
 
+$(function() {
+    $(".js-filter-memory").ionRangeSlider(
+        {
+            type: "single",
+            min: 0,
+            max: 24,
+            step: 8,
+            grid: true,
+            grid_snap: true,
+            postfix: " GB"
+        }
+    );
+    $(".js-filter-disk").ionRangeSlider(
+        {
+            type: "single",
+            min: 0,
+            max: 100,
+            step: 10,
+            grid: true,
+            grid_snap: true,
+            postfix: " GB"
+        }
+    );
+    $(".js-filter-others").ionRangeSlider(
+        {
+            type: "double",
+            min: 0,
+            max: 100,
+            step: 10,
+            grid: false,
+            grid_snap: false,
+            prefix: "$"
+        }
+    );
+});
 $('.js-chat-carousel').slick({
     infinite: false,
     slidesToShow: 3,
@@ -48,7 +78,7 @@ $(function(){
         color: '#d4d9e3',
         opacity: '1',
         size: '5px',
-        height: 'calc(100% - 51px)',
+        height: 'calc(100% - 66px)',
         railVisible: true,
         railColor: '#d4d9e3',
         railOpacity: '0.4',
@@ -148,11 +178,57 @@ new Calendar({
     }
 });
 
-$(document).ready(function(evt) {
-    var svgns = 'http://www.w3.org/2000/svg',
-        xlinkns = 'http://www.w3.org/1999/xlink',
-        use = document.createElementNS(svgns, 'use');
+/*Charts from RH detail page*/
 
-    use.setAttributeNS(xlinkns, 'xlink:href', '#save');
-    document.getElementById('useSVG').appendChild(use);
-});
+var tt = document.createElement('div'),
+    leftOffset = -(~~$('html').css('padding-left').replace('px', '') + ~~$('body').css('margin-left').replace('px', '')),
+    topOffset = -32;
+tt.className = 'ex-tooltip';
+document.body.appendChild(tt);
+
+var cpu = {
+    "xScale": "time",
+    "yScale": "exponential",
+    "main": [
+        {
+            "className": ".pizza",
+            "data": [
+                {
+                    "x": "2012-11-05",
+                    "y": 6
+                },
+                {
+                    "x": "2012-11-06",
+                    "y": 6
+                },
+                {
+                    "x": "2012-11-07",
+                    "y": 8
+                },
+                {
+                    "x": "2012-11-08",
+                    "y": 3
+                },
+                {
+                    "x": "2012-11-09",
+                    "y": 4
+                },
+                {
+                    "x": "2012-11-10",
+                    "y": 9
+                },
+                {
+                    "x": "2012-11-11",
+                    "y": 6
+                }
+            ]
+        }
+    ]
+};
+var opts = {
+    "dataFormatX": function (x) { return d3.time.format('%Y-%m-%d').parse(x); },
+    "tickFormatX": function (x) { return d3.time.format('%a')(x); }
+};
+var myChart = new xChart('line-dotted', cpu, '#js-chart-cpu', opts);
+var myChart = new xChart('line-dotted', cpu, '#js-chart-hdd', opts);
+var myChart = new xChart('line-dotted', cpu, '#js-chart-ram', opts);

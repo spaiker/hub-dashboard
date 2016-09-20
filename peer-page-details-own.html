@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="css/libs/sidebar.css">
     <link rel="stylesheet" href="css/libs/tab.css">
 
+    <link rel="stylesheet" href="css/libs/boo-dropdown.css">
+
     <!--CSS-->
     <link rel="stylesheet" href="css/main.css">
 
@@ -46,7 +48,7 @@
         <div class="header-right">
             <div class="navbar navbar_toolbar">
                 <ul class="nav nav_toolbar">
-                    <li class="nav__minimize waves-effect">
+                    <li class="nav__minimize">
                         <a href="#" class="nav-minimize js-btn-minimize">
                             <i class="hb hb-burger"></i>
                         </a>
@@ -63,22 +65,20 @@
                     </li>
                 </ul>
                 <ul class="nav nav_toolbar nav_toolbar_right">
-                    <li class="nav-dropdown ui dropdown top right pointing">
-                        <div class="nav-dropdown__btn default text">
+                    <li class="nav-dropdown dropdown dropdown_pointer dropdown_right">
+                        <div class="nav-dropdown__btn dropdown-toggle">
                             <i class="hb hb-solid-bell"></i>
                             <span class="badge-circle badge-circle_warning">10</span>
                         </div>
-                        <div class="menu nav-dropdown__content nav-dropdown__content_notification">
-                            <div class="message">
-                                <div class="nav-dropdown-content__notification">
-                                    <div class="notification__header">Peer Usage Approval</div>
-                                    <div class="notification__description">User Ermek shared his peer with you. Please check your
-                                        <a href="#">shared peers</a></div>
-                                    <div class="notification__date">20.07.2016  11:49</div>
-                                </div>
-                                <div class="nav-dropdown-content__footer">
-                                    <a href="#">Delete All Notifications</a>
-                                </div>
+                        <div class="nav-dropdown__content nav-dropdown__content_notification dropdown-menu">
+                            <div class="nav-dropdown-content__notification">
+                                <div class="notification__header">Peer Usage Approval</div>
+                                <div class="notification__description">User Ermek shared his peer with you. Please check your
+                                    <a href="#">shared peers</a></div>
+                                <div class="notification__date">20.07.2016  11:49</div>
+                            </div>
+                            <div class="nav-dropdown-content__footer">
+                                <a href="#">Delete All Notifications</a>
                             </div>
                         </div>
                     </li>
@@ -88,8 +88,8 @@
                             <span class="badge-circle badge-circle_warning">5</span>
                         </a>
                     </li>
-                    <li class="nav-dropdown ui dropdown top right pointing">
-                        <div class="nav-dropdown__btn default text">
+                    <li class="nav-dropdown dropdown dropdown_pointer dropdown_right">
+                        <div class="nav-dropdown__btn dropdown-toggle">
                             <span class="profile-meta">
                                 <span class="profile-meta__avatar">
                                     <span class="profile__avatar profile__avatar_online">
@@ -101,7 +101,7 @@
                                 </span>
                             </span>
                         </div>
-                        <div class="menu nav-dropdown__content nav-dropdown__content_profile">
+                        <div class="dropdown-menu nav-dropdown__content nav-dropdown__content_profile">
                             <div class="message">
                                 <div class="nav-dropdown-content__profile">
                                     <div class="profile__header">
@@ -136,6 +136,7 @@
     </div>
     <div class="clear"></div>
 </header>
+
 <aside class="sidebar sidebar_left">
     <ul class="nav sidebar-menu js-scroll-sidebar">
         <li class="sidebar-menu__title">TOOLS</li>
@@ -1028,14 +1029,16 @@
 <script src="js/libs/tether.js"></script>
 <script src="js/libs/jquery.slimscroll.min.js"></script>
 <script src="js/libs/ion.rangeSlider.js"></script>
-
 <script src="js/libs/datatables.js"></script>
-<script src="js/libs/dropdown.js"></script>
+
 <script src="js/libs/transition.js"></script>
 <script src="js/libs/popup.js"></script>
 <script src="js/libs/rating.js"></script>
 <script src="js/libs/sidebar.js"></script>
 <script src="js/libs/tab.js"></script>
+
+<script src="js/libs/boo-button.js"></script>
+<script src="js/libs/boo-dropdown.js"></script>
 
 <script src="js/main.js"></script>
 </body>
