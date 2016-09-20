@@ -148,3 +148,6 @@
 .hb-solid-caret-up:before {
     content: "\e92c";
 }
+.hb-check:before {
+    content: "\e92d";
+}

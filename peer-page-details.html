@@ -15,14 +15,17 @@
     <link rel="stylesheet" href="css/libs/colorbox.css">
     <link rel="stylesheet" href="css/libs/calendar.css">
     <link rel="stylesheet" href="css/libs/elementTransitions.min.css">
+    <link rel="stylesheet" href="css/libs/xcharts.css">
+
     <!--UI Docs-->
-    <link rel="stylesheet" href="css/libs/dropdown.css">
     <link rel="stylesheet" href="css/libs/transition.css">
     <link rel="stylesheet" href="css/libs/popup.css">
     <link rel="stylesheet" href="css/libs/flag.css">
     <link rel="stylesheet" href="css/libs/rating.css">
     <link rel="stylesheet" href="css/libs/sidebar.css">
     <link rel="stylesheet" href="css/libs/tab.css">
+
+    <link rel="stylesheet" href="css/libs/boo-dropdown.css">
 
     <!--CSS-->
     <link rel="stylesheet" href="css/main.css">
@@ -49,7 +52,7 @@
         <div class="header-right">
             <div class="navbar navbar_toolbar">
                 <ul class="nav nav_toolbar">
-                    <li class="nav__minimize waves-effect">
+                    <li class="nav__minimize">
                         <a href="#" class="nav-minimize js-btn-minimize">
                             <i class="hb hb-burger"></i>
                         </a>
@@ -66,22 +69,20 @@
                     </li>
                 </ul>
                 <ul class="nav nav_toolbar nav_toolbar_right">
-                    <li class="nav-dropdown ui dropdown top right pointing">
-                        <div class="nav-dropdown__btn default text">
+                    <li class="nav-dropdown dropdown dropdown_pointer dropdown_right">
+                        <div class="nav-dropdown__btn dropdown-toggle">
                             <i class="hb hb-solid-bell"></i>
                             <span class="badge-circle badge-circle_warning">10</span>
                         </div>
-                        <div class="menu nav-dropdown__content nav-dropdown__content_notification">
-                            <div class="message">
-                                <div class="nav-dropdown-content__notification">
-                                    <div class="notification__header">Peer Usage Approval</div>
-                                    <div class="notification__description">User Ermek shared his peer with you. Please check your
-                                        <a href="#">shared peers</a></div>
-                                    <div class="notification__date">20.07.2016  11:49</div>
-                                </div>
-                                <div class="nav-dropdown-content__footer">
-                                    <a href="#">Delete All Notifications</a>
-                                </div>
+                        <div class="nav-dropdown__content nav-dropdown__content_notification dropdown-menu">
+                            <div class="nav-dropdown-content__notification">
+                                <div class="notification__header">Peer Usage Approval</div>
+                                <div class="notification__description">User Ermek shared his peer with you. Please check your
+                                    <a href="#">shared peers</a></div>
+                                <div class="notification__date">20.07.2016  11:49</div>
+                            </div>
+                            <div class="nav-dropdown-content__footer">
+                                <a href="#">Delete All Notifications</a>
                             </div>
                         </div>
                     </li>
@@ -91,8 +92,8 @@
                             <span class="badge-circle badge-circle_warning">5</span>
                         </a>
                     </li>
-                    <li class="nav-dropdown ui dropdown top right pointing">
-                        <div class="nav-dropdown__btn default text">
+                    <li class="nav-dropdown dropdown dropdown_pointer dropdown_right">
+                        <div class="nav-dropdown__btn dropdown-toggle">
                             <span class="profile-meta">
                                 <span class="profile-meta__avatar">
                                     <span class="profile__avatar profile__avatar_online">
@@ -104,7 +105,7 @@
                                 </span>
                             </span>
                         </div>
-                        <div class="menu nav-dropdown__content nav-dropdown__content_profile">
+                        <div class="dropdown-menu nav-dropdown__content nav-dropdown__content_profile">
                             <div class="message">
                                 <div class="nav-dropdown-content__profile">
                                     <div class="profile__header">
@@ -910,7 +911,7 @@
     <div class="content__body js-scroll-content">
         <span class="content-body__fade-top"></span>
         <span class="content-body__fade-bottom"></span>
-        <div class="panel ui tab active" data-tab="data-tab-rh">
+        <div class="panel ui tab active js-panel-hide" data-tab="data-tab-rh">
             <div class="panel__header panel__header_datatable-search">
                 <a href="#" class="btn btn_blue">My peers</a>
             </div>
@@ -928,7 +929,7 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td><span class="status status_online status_left"></span><a class="et-rotate" et-in="rotateCarouselRightIn" et-out="rotateCarouselRightOut">Brazil-AWS [Marat's]</a></td>
+                        <td><span class="status status_online status_left"></span><a onclick="showPageElement('panel-rh')">Brazil-AWS [Marat's]</a></td>
                         <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">2 CPU <i class="hb hb-info"></i></span></td>
                         <td>3.86 GB</td>
                         <td>60 GB</td>
@@ -1110,27 +1111,52 @@
             </div>
         </div>
 
-<!-- todo
-        <div class="panel ui tab et-page">
+
+        <div class="panel panel-rh" id="panel-rh">
+            <div class="panel__header">
+                <div class="panel-header">
+                    <div class="panel-header__right">
+                        <div class="btn-group" data-toggle="buttons-radio">
+                            <button class="btn active" data-toggle="button">Day</button>
+                            <button class="btn">Week</button>
+                            <button class="btn">Mount</button>
+                        </div>
+                    </div>
+                    <div class="panel-header__left">
+                        <a href="#" class="link-guide"><i class="hb hb-arrow-left link-guide__icon-before"></i>Back to table</a>
+                    </div>
+                </div>
+            </div>
             <div class="panel__body">
-                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
-                    <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Message</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>2016/08/24 12:54:03</td>
-                        <td class="table-error-log">D1C6EE8CC0D51BA9BFBD0CE4889D8B3F1C16CE0C: Aug 24 05:16:41 rh1471788553.gw.intra.lan ubuntu-core-launcher[875]: [ERROR] 2016/08/24 05:16:41 Failed to handshake with
-                            a DHT Server: lookup dht1.subut.ai on [::1]:53: server misbehaving</td>
-                    </tr>
-                    </tbody>
-                </table>
+                <div class="panel-body">
+                    <div class="rh-chart">
+                        <div class="rh-chart__title">
+                            CPU
+                        </div>
+                        <div class="rh-chart__graph">
+                            <figure id="js-chart-cpu"></figure>
+                        </div>
+                    </div>
+                    <div class="rh-chart">
+                        <div class="rh-chart__title">
+                            RAM
+                        </div>
+                        <div class="rh-chart__graph">
+                            <figure id="js-chart-ram"></figure>
+                        </div>
+                    </div>
+                    <div class="rh-chart">
+                        <div class="rh-chart__title">
+                            HDD
+                        </div>
+                        <div class="rh-chart__graph">
+                            <figure id="js-chart-hdd"></figure>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
             </div>
         </div>
--->
     </div>
 
 </section>
@@ -1151,14 +1177,18 @@
 <script src="js/libs/moment.js"></script>
 <script src="js/libs/calendar.js"></script>
 <script src="js/libs/elementTransitions.min.js"></script>
+<script src="js/libs/d3.min.js" charset="utf-8"></script>
+<script src="js/libs/xcharts.js"></script>
 
 
-<script src="js/libs/dropdown.js"></script>
 <script src="js/libs/transition.js"></script>
 <script src="js/libs/popup.js"></script>
 <script src="js/libs/rating.js"></script>
 <script src="js/libs/sidebar.js"></script>
 <script src="js/libs/tab.js"></script>
+
+<script src="js/libs/boo-button.js"></script>
+<script src="js/libs/boo-dropdown.js"></script>
 
 <script src="js/main.js"></script>
 </body>
