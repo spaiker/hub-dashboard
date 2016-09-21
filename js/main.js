@@ -12,20 +12,20 @@ $(function() {
 
     $('.ui.rating.rating-disabled').rating('disable');
 
-    $('.button').popup({
-        inline     : true,
-        hoverable  : true,
-        position   : 'bottom center',
-        delay: {
-            show: 300,
-            hide: 800
-        }
-    });
 
 });
+$(function() {
+    $('.dropdown-toggle').dropdown();
 
-$('.dropdown-toggle').dropdown();
+    $('[data-toggle="tooltip"]').tooltip({
+        animation: true
+    });
+    $('[data-inverted]').hover(function(){
+        $('.tooltip').addClass('tooltip-inverted');
+    });
 
+    $('[data-toggle="popover"]').popover()
+});
 $(function() {
     $(".js-filter-memory").ionRangeSlider(
         {

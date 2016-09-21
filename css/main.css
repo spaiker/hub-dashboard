@@ -1412,7 +1412,7 @@ input[type=search] {
     display: none;
 }
 .sidebar-minimize .sidebar-menu-item {
-    padding: 15px 0 15px 25px;
+    padding: 15px 0 15px 21px;
 }
 .header-minimize .navbar-brand__logo_small {
     display: block;

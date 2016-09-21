@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="css/libs/tab.css">
 
     <link rel="stylesheet" href="css/libs/boo-dropdown.css">
+    <link rel="stylesheet" href="css/libs/boo-tooltip.css">
     <!--CSS-->
     <link rel="stylesheet" href="css/main.css">
 
@@ -140,62 +141,62 @@
     <ul class="nav sidebar-menu js-scroll-sidebar">
         <li class="sidebar-menu__title">TOOLS</li>
         <li class="sidebar-menu__item">
-            <a href="#" class="sidebar-menu-item" data-tooltip="Dashboard" data-position="right center" data-inverted="">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Dashboard" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-dashboard"></i>
                 <span class="sidebar-menu-item__caption">Dashboard</span>
             </a>
         </li>
-        <li class="sidebar-menu__item waves-effect">
-            <a href="#" class="sidebar-menu-item" data-tooltip="Environments" data-position="right center" data-inverted="">
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Environments" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-environments"></i>
                 <span class="sidebar-menu-item__caption">Environments</span>
             </a>
         </li>
-        <li class="sidebar-menu__item waves-effect">
-            <a href="#" class="sidebar-menu-item" data-tooltip="AppScale" data-position="right center" data-inverted="">
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="AppScale" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-appscale"></i>
                 <span class="sidebar-menu-item__caption">AppScale</span>
             </a>
         </li>
-        <li class="sidebar-menu__item waves-effect">
-            <a href="#" class="sidebar-menu-item" data-tooltip="Hosting Services" data-position="right center" data-inverted="">
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Hosting Services" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-hosting-services"></i>
                 <span class="sidebar-menu-item__caption">Hosting Services</span>
             </a>
         </li>
         <li class="sidebar-menu__title">HUB DATA</li>
-        <li class="sidebar-menu__item waves-effect">
-            <a href="#" class="sidebar-menu-item" data-tooltip="War room" data-position="right center" data-inverted="">
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="War room" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-globus"></i>
                 <span class="sidebar-menu-item__caption">War room</span>
             </a>
         </li>
-        <li class="sidebar-menu__item waves-effect sidebar-menu__item_active">
-            <a href="#" class="sidebar-menu-item" data-tooltip="Peers" data-position="right center" data-inverted="">
+        <li class="sidebar-menu__item sidebar-menu__item_active">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Peers" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-peer"></i>
                 <span class="sidebar-menu-item__caption">Peers</span>
             </a>
         </li>
-        <li class="sidebar-menu__item waves-effect">
-            <a href="#" class="sidebar-menu-item" data-tooltip="Bazaar" data-position="right center" data-inverted="">
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Bazaar" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-bazaar"></i>
                 <span class="sidebar-menu-item__caption">Bazaar</span>
             </a>
         </li>
-        <li class="sidebar-menu__item waves-effect">
-            <a href="#" class="sidebar-menu-item" data-tooltip="Map of peers" data-position="right center" data-inverted="">
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Map of peers" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-location"></i>
                 <span class="sidebar-menu-item__caption">Map of peers</span>
             </a>
         </li>
-        <li class="sidebar-menu__item waves-effect">
-            <a href="#" class="sidebar-menu-item" data-tooltip="Organizations" data-position="right center" data-inverted="">
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Organizations" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-organizations"></i>
                 <span class="sidebar-menu-item__caption">Organizations</span>
             </a>
         </li>
-        <li class="sidebar-menu__item waves-effect">
-            <a href="#" class="sidebar-menu-item" data-tooltip="Users" data-position="right center" data-inverted="">
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Users" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-users"></i>
                 <span class="sidebar-menu-item__caption">Users</span>
             </a>
@@ -1059,7 +1060,7 @@
                     <tr class="js-table-clickable" data-href="peer-page-main.html">
                         <td><span class="status status_online status_left"></span>Brazil-AWS [Marat's]</td>
                         <td><span class="price price_free">FREE</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">2 CPU <i class="hb hb-info"></i></span></td>
+                        <td><span rel="tooltip" title="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-toggle="tooltip" data-placement="top" data-inverted>2 CPU <i class="hb hb-info"></i></span></td>
                         <td>3.86 GB</td>
                         <td>60 GB</td>
                         <td><i class="flag br"></i> Brazil</td>
@@ -1075,9 +1076,9 @@
                             <span class="price price_free">Free</span>
                         </td>
                         <td>
-                            <span data-tooltip="Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz" data-position="top center">8 CPU <i class="hb hb-info"></i></span>
+                            <span rel="tooltip" title="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-toggle="tooltip" data-placement="top" data-inverted>8 CPU <i class="hb hb-info"></i></span>
                             <br>
-                            <span data-tooltip="Intel(R) Core(TM) i7-6700K CPU @ 4.00GHz" data-position="top center">8 CPU <i class="hb hb-info"></i></span>
+                            <span rel="tooltip" title="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-toggle="tooltip" data-placement="top" data-inverted>8 CPU <i class="hb hb-info"></i></span>
                         </td>
                         <td>
                             <span>8 GB</span>
@@ -1097,7 +1098,7 @@
                     <tr class="js-table-clickable" data-href="peer-page-main.html">
                         <td><span class="status status_online status_left"></span>Keshig-69</td>
                         <td><span class="price price_free">FREE</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
+                        <td><span rel="tooltip" title="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-toggle="tooltip" data-placement="top" data-inverted>1 CPU <i class="hb hb-info"></i></span></td>
                         <td>8 GB</td>
                         <td>100 GB</td>
                         <td><i class="flag us"></i> United States</td>
@@ -1108,7 +1109,7 @@
                     <tr class="js-table-clickable" data-href="#">
                         <td><span class="status status_online status_left"></span>Keshig-69</td>
                         <td><span class="price">$2.35</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
+                        <td><span rel="tooltip" title="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-toggle="tooltip" data-placement="top" data-inverted>1 CPU <i class="hb hb-info"></i></span></td>
                         <td>8 GB</td>
                         <td>100 GB</td>
                         <td><i class="flag fr"></i> France</td>
@@ -1119,7 +1120,7 @@
                     <tr class="js-table-clickable" data-href="peer-page-main.html">
                         <td><span class="status status_online status_left"></span>Keshig-69</td>
                         <td><span class="price price_free">FREE</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
+                        <td><span rel="tooltip" title="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-toggle="tooltip" data-placement="top" data-inverted>1 CPU <i class="hb hb-info"></i></span></td>
                         <td>8 GB</td>
                         <td>100 GB</td>
                         <td><i class="flag us"></i> United States</td>
@@ -1130,7 +1131,7 @@
                     <tr class="js-table-clickable" data-href="#">
                         <td><span class="status status_online status_left"></span>Keshig-69</td>
                         <td><span class="price">$2.35</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
+                        <td><span rel="tooltip" title="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-toggle="tooltip" data-placement="top" data-inverted>1 CPU <i class="hb hb-info"></i></span></td>
                         <td>8 GB</td>
                         <td>100 GB</td>
                         <td><i class="flag fr"></i> France</td>
@@ -1141,7 +1142,7 @@
                     <tr class="js-table-clickable" data-href="peer-page-main.html">
                         <td><span class="status status_online status_left"></span>Keshig-69</td>
                         <td><span class="price price_free">FREE</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
+                        <td><span rel="tooltip" title="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-toggle="tooltip" data-placement="top" data-inverted>1 CPU <i class="hb hb-info"></i></span></td>
                         <td>8 GB</td>
                         <td>100 GB</td>
                         <td><i class="flag us"></i> United States</td>
@@ -1152,7 +1153,7 @@
                     <tr class="js-table-clickable" data-href="#">
                         <td><span class="status status_online status_left"></span>Keshig-69</td>
                         <td><span class="price">$2.35</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
+                        <td><span rel="tooltip" title="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-toggle="tooltip" data-placement="top" data-inverted>1 CPU <i class="hb hb-info"></i></span></td>
                         <td>8 GB</td>
                         <td>100 GB</td>
                         <td><i class="flag fr"></i> France</td>
@@ -1163,7 +1164,7 @@
                     <tr class="js-table-clickable" data-href="peer-page-main.html">
                         <td><span class="status status_online status_left"></span>Keshig-69</td>
                         <td><span class="price price_free">FREE</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
+                        <td><span rel="tooltip" title="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-toggle="tooltip" data-placement="top" data-inverted>1 CPU <i class="hb hb-info"></i></span></td>
                         <td>8 GB</td>
                         <td>100 GB</td>
                         <td><i class="flag us"></i> United States</td>
@@ -1174,7 +1175,7 @@
                     <tr class="js-table-clickable" data-href="#">
                         <td><span class="status status_online status_left"></span>Keshig-69</td>
                         <td><span class="price">$2.35</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
+                        <td><span rel="tooltip" title="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-toggle="tooltip" data-placement="top" data-inverted>1 CPU <i class="hb hb-info"></i></span></td>
                         <td>8 GB</td>
                         <td>100 GB</td>
                         <td><i class="flag fr"></i> France</td>
@@ -1185,7 +1186,7 @@
                     <tr class="js-table-clickable" data-href="peer-page-main.html">
                         <td><span class="status status_online status_left"></span>Keshig-69</td>
                         <td><span class="price price_free">FREE</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
+                        <td><span rel="tooltip" title="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-toggle="tooltip" data-placement="top" data-inverted>1 CPU <i class="hb hb-info"></i></span></td>
                         <td>8 GB</td>
                         <td>100 GB</td>
                         <td><i class="flag us"></i> United States</td>
@@ -1196,7 +1197,7 @@
                     <tr class="js-table-clickable" data-href="#">
                         <td><span class="status status_online status_left"></span>Keshig-69</td>
                         <td><span class="price">$2.35</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
+                        <td><span rel="tooltip" title="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-toggle="tooltip" data-placement="top" data-inverted>1 CPU <i class="hb hb-info"></i></span></td>
                         <td>8 GB</td>
                         <td>100 GB</td>
                         <td><i class="flag fr"></i> France</td>
@@ -1207,7 +1208,7 @@
                     <tr class="js-table-clickable" data-href="peer-page-main.html">
                         <td><span class="status status_online status_left"></span>Keshig-69</td>
                         <td><span class="price price_free">FREE</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
+                        <td><span rel="tooltip" title="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-toggle="tooltip" data-placement="top" data-inverted>1 CPU <i class="hb hb-info"></i></span></td>
                         <td>8 GB</td>
                         <td>100 GB</td>
                         <td><i class="flag us"></i> United States</td>
@@ -1218,7 +1219,7 @@
                     <tr class="js-table-clickable" data-href="#">
                         <td><span class="status status_online status_left"></span>Keshig-69</td>
                         <td><span class="price">$2.35</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
+                        <td><span rel="tooltip" title="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-toggle="tooltip" data-placement="top" data-inverted>1 CPU <i class="hb hb-info"></i></span></td>
                         <td>8 GB</td>
                         <td>100 GB</td>
                         <td><i class="flag fr"></i> France</td>
@@ -1229,7 +1230,7 @@
                     <tr class="js-table-clickable" data-href="peer-page-main.html">
                         <td><span class="status status_online status_left"></span>Keshig-69</td>
                         <td><span class="price price_free">FREE</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
+                        <td><span rel="tooltip" title="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-toggle="tooltip" data-placement="top" data-inverted>1 CPU <i class="hb hb-info"></i></span></td>
                         <td>8 GB</td>
                         <td>100 GB</td>
                         <td><i class="flag us"></i> United States</td>
@@ -1240,7 +1241,7 @@
                     <tr class="js-table-clickable" data-href="#">
                         <td><span class="status status_online status_left"></span>Keshig-69</td>
                         <td><span class="price">$2.35</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
+                        <td><span rel="tooltip" title="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-toggle="tooltip" data-placement="top" data-inverted>1 CPU <i class="hb hb-info"></i></span></td>
                         <td>8 GB</td>
                         <td>100 GB</td>
                         <td><i class="flag fr"></i> France</td>
@@ -1251,7 +1252,7 @@
                     <tr class="js-table-clickable" data-href="peer-page-main.html">
                         <td><span class="status status_online status_left"></span>Keshig-69</td>
                         <td><span class="price price_free">FREE</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
+                        <td><span rel="tooltip" title="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-toggle="tooltip" data-placement="top" data-inverted>1 CPU <i class="hb hb-info"></i></span></td>
                         <td>8 GB</td>
                         <td>100 GB</td>
                         <td><i class="flag us"></i> United States</td>
@@ -1262,7 +1263,7 @@
                     <tr class="js-table-clickable" data-href="#">
                         <td><span class="status status_online status_left"></span>Keshig-69</td>
                         <td><span class="price">$2.35</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
+                        <td><span rel="tooltip" title="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-toggle="tooltip" data-placement="top" data-inverted>1 CPU <i class="hb hb-info"></i></span></td>
                         <td>8 GB</td>
                         <td>100 GB</td>
                         <td><i class="flag fr"></i> France</td>
@@ -1273,7 +1274,7 @@
                     <tr class="js-table-clickable" data-href="peer-page-main.html">
                         <td><span class="status status_online status_left"></span>Keshig-69</td>
                         <td><span class="price price_free">FREE</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
+                        <td><span rel="tooltip" title="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-toggle="tooltip" data-placement="top" data-inverted>1 CPU <i class="hb hb-info"></i></span></td>
                         <td>8 GB</td>
                         <td>100 GB</td>
                         <td><i class="flag us"></i> United States</td>
@@ -1284,7 +1285,7 @@
                     <tr class="js-table-clickable" data-href="#">
                         <td><span class="status status_online status_left"></span>Keshig-69</td>
                         <td><span class="price">$2.35</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
+                        <td><span rel="tooltip" title="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-toggle="tooltip" data-placement="top" data-inverted>1 CPU <i class="hb hb-info"></i></span></td>
                         <td>8 GB</td>
                         <td>100 GB</td>
                         <td><i class="flag fr"></i> France</td>
@@ -1295,7 +1296,7 @@
                     <tr class="js-table-clickable" data-href="peer-page-main.html">
                         <td><span class="status status_online status_left"></span>Keshig-69</td>
                         <td><span class="price price_free">FREE</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
+                        <td><span rel="tooltip" title="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-toggle="tooltip" data-placement="top" data-inverted>1 CPU <i class="hb hb-info"></i></span></td>
                         <td>8 GB</td>
                         <td>100 GB</td>
                         <td><i class="flag us"></i> United States</td>
@@ -1306,7 +1307,7 @@
                     <tr class="js-table-clickable" data-href="#">
                         <td><span class="status status_online status_left"></span>Keshig-69</td>
                         <td><span class="price">$2.35</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
+                        <td><span rel="tooltip" title="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-toggle="tooltip" data-placement="top" data-inverted>1 CPU <i class="hb hb-info"></i></span></td>
                         <td>8 GB</td>
                         <td>100 GB</td>
                         <td><i class="flag fr"></i> France</td>
@@ -1317,7 +1318,7 @@
                     <tr class="js-table-clickable" data-href="peer-page-main.html">
                         <td><span class="status status_online status_left"></span>Keshig-69</td>
                         <td><span class="price price_free">FREE</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
+                        <td><span rel="tooltip" title="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-toggle="tooltip" data-placement="top" data-inverted>1 CPU <i class="hb hb-info"></i></span></td>
                         <td>8 GB</td>
                         <td>100 GB</td>
                         <td><i class="flag us"></i> United States</td>
@@ -1328,7 +1329,7 @@
                     <tr class="js-table-clickable" data-href="#">
                         <td><span class="status status_online status_left"></span>Keshig-69</td>
                         <td><span class="price">$2.35</span></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">1 CPU <i class="hb hb-info"></i></span></td>
+                        <td><span rel="tooltip" title="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-toggle="tooltip" data-placement="top" data-inverted>1 CPU <i class="hb hb-info"></i></span></td>
                         <td>8 GB</td>
                         <td>100 GB</td>
                         <td><i class="flag fr"></i> France</td>
@@ -1365,6 +1366,7 @@
 
 <script src="js/libs/boo-button.js"></script>
 <script src="js/libs/boo-dropdown.js"></script>
+<script src="js/libs/boo-tooltip.js"></script>
 
 <script src="js/main.js"></script>
 </body>

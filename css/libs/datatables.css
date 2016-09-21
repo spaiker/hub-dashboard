@@ -415,6 +415,7 @@ table.dataTable td {
     padding: 8px 0px 8px 5px;
     color: #697490;
     border-radius: 2px;
+    background-color: #fff;
 }
 .dataTables_wrapper .dataTables_scroll {
     clear: both;
