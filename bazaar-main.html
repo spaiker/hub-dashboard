@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="css/libs/calendar.css">
     <link rel="stylesheet" href="css/libs/elementTransitions.min.css">
     <link rel="stylesheet" href="css/libs/xcharts.css">
+    <link rel="stylesheet" href="css/libs/boo-dropdown.css">
+    <link rel="stylesheet" href="css/libs/boo-tooltip.css">
 
     <!--UI Docs-->
     <link rel="stylesheet" href="css/libs/dropdown.css">
@@ -25,9 +27,6 @@
     <link rel="stylesheet" href="css/libs/rating.css">
     <link rel="stylesheet" href="css/libs/sidebar.css">
     <link rel="stylesheet" href="css/libs/tab.css">
-
-    <!--Default styles-->
-    <link rel="stylesheet" href="css/libs/default-styles.css">
 
     <!--CSS-->
     <link rel="stylesheet" href="css/main.css">
@@ -54,7 +53,7 @@
         <div class="header-right">
             <div class="navbar navbar_toolbar">
                 <ul class="nav nav_toolbar">
-                    <li class="nav__minimize waves-effect">
+                    <li class="nav__minimize">
                         <a href="#" class="nav-minimize js-btn-minimize">
                             <i class="hb hb-burger"></i>
                         </a>
@@ -62,28 +61,26 @@
                     <li class="nav__breadcrumb">
                         <ul class="nav nav_breadcrumb">
                             <li class="nav-breadcrumb__item">
-                                Bazaar
+                                <a href="#">Bazaar</a>
                             </li>
                         </ul>
                     </li>
                 </ul>
                 <ul class="nav nav_toolbar nav_toolbar_right">
-                    <li class="nav-dropdown ui dropdown top right pointing">
-                        <div class="nav-dropdown__btn default text">
+                    <li class="nav-dropdown dropdown dropdown_pointer dropdown_right">
+                        <div class="nav-dropdown__btn dropdown-toggle" data-toggle="dropdown">
                             <i class="hb hb-solid-bell"></i>
                             <span class="badge-circle badge-circle_warning">10</span>
                         </div>
-                        <div class="menu nav-dropdown__content nav-dropdown__content_notification">
-                            <div class="message">
-                                <div class="nav-dropdown-content__notification">
-                                    <div class="notification__header">Peer Usage Approval</div>
-                                    <div class="notification__description">User Ermek shared his peer with you. Please check your
-                                        <a href="#">shared peers</a></div>
-                                    <div class="notification__date">20.07.2016  11:49</div>
-                                </div>
-                                <div class="nav-dropdown-content__footer">
-                                    <a href="#">Delete All Notifications</a>
-                                </div>
+                        <div class="nav-dropdown__content nav-dropdown__content_notification dropdown-menu dropdown-menu_noclose">
+                            <div class="nav-dropdown-content__notification">
+                                <div class="notification__header">Peer Usage Approval</div>
+                                <div class="notification__description">User Ermek shared his peer with you. Please check your
+                                    <a href="#">shared peers</a></div>
+                                <div class="notification__date">20.07.2016  11:49</div>
+                            </div>
+                            <div class="nav-dropdown-content__footer">
+                                <a href="#">Delete All Notifications</a>
                             </div>
                         </div>
                     </li>
@@ -93,8 +90,8 @@
                             <span class="badge-circle badge-circle_warning">5</span>
                         </a>
                     </li>
-                    <li class="nav-dropdown ui dropdown top right pointing">
-                        <div class="nav-dropdown__btn default text">
+                    <li class="nav-dropdown dropdown dropdown_pointer dropdown_right">
+                        <div class="nav-dropdown__btn dropdown-toggle" data-toggle="dropdown" >
                             <span class="profile-meta">
                                 <span class="profile-meta__avatar">
                                     <span class="profile__avatar profile__avatar_online">
@@ -106,7 +103,7 @@
                                 </span>
                             </span>
                         </div>
-                        <div class="menu nav-dropdown__content nav-dropdown__content_profile">
+                        <div class="nav-dropdown__content nav-dropdown__content_profile dropdown-menu dropdown-menu_noclose ">
                             <div class="message">
                                 <div class="nav-dropdown-content__profile">
                                     <div class="profile__header">
@@ -136,71 +133,73 @@
                         </div>
                     </li>
                 </ul>
+                <div class="clear"></div>
             </div>
         </div>
     </div>
     <div class="clear"></div>
 </header>
+<!--Header end-->
 <aside class="sidebar sidebar_left">
     <ul class="nav sidebar-menu js-scroll-sidebar">
         <li class="sidebar-menu__title">TOOLS</li>
         <li class="sidebar-menu__item">
-            <a href="#" class="sidebar-menu-item" data-tooltip="Dashboard" data-position="right center" data-inverted="">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Dashboard" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-dashboard"></i>
                 <span class="sidebar-menu-item__caption">Dashboard</span>
             </a>
         </li>
-        <li class="sidebar-menu__item waves-effect">
-            <a href="#" class="sidebar-menu-item" data-tooltip="Environments" data-position="right center" data-inverted="">
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Environments" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-environments"></i>
                 <span class="sidebar-menu-item__caption">Environments</span>
             </a>
         </li>
-        <li class="sidebar-menu__item waves-effect">
-            <a href="#" class="sidebar-menu-item" data-tooltip="AppScale" data-position="right center" data-inverted="">
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="AppScale" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-appscale"></i>
                 <span class="sidebar-menu-item__caption">AppScale</span>
             </a>
         </li>
-        <li class="sidebar-menu__item waves-effect">
-            <a href="#" class="sidebar-menu-item" data-tooltip="Hosting Services" data-position="right center" data-inverted="">
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Hosting Services" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-hosting-services"></i>
                 <span class="sidebar-menu-item__caption">Hosting Services</span>
             </a>
         </li>
         <li class="sidebar-menu__title">HUB DATA</li>
-        <li class="sidebar-menu__item waves-effect">
-            <a href="#" class="sidebar-menu-item" data-tooltip="War room" data-position="right center" data-inverted="">
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="War room" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-globus"></i>
                 <span class="sidebar-menu-item__caption">War room</span>
             </a>
         </li>
-        <li class="sidebar-menu__item waves-effect sidebar-menu__item_active">
-            <a href="#" class="sidebar-menu-item" data-tooltip="Peers" data-position="right center" data-inverted="">
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Peers" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-peer"></i>
                 <span class="sidebar-menu-item__caption">Peers</span>
             </a>
         </li>
-        <li class="sidebar-menu__item waves-effect">
-            <a href="#" class="sidebar-menu-item" data-tooltip="Bazaar" data-position="right center" data-inverted="">
-                <i class="sidebar-menu-item__icon hb hb-bazaar"></i>
+        <li class="sidebar-menu__item sidebar-menu__item_active">
+            <a href="#" class="sidebar-menu-i144444tem" rel="tooltip" title="Bazaar" data-toggle="tooltip" data-placement="right">
+                <i class="sidebar-menu-item__icon h14b hb-bazaar"></i>
                 <span class="sidebar-menu-item__caption">Bazaar</span>
             </a>
         </li>
-        <li class="sidebar-menu__item waves-effect">
-            <a href="#" class="sidebar-menu-item" data-tooltip="Map of peers" data-position="right center" data-inverted="">
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Map of peers" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-location"></i>
                 <span class="sidebar-menu-item__caption">Map of peers</span>
             </a>
         </li>
-        <li class="sidebar-menu__item waves-effect">
-            <a href="#" class="sidebar-menu-item" data-tooltip="Organizations" data-position="right center" data-inverted="">
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Organizations" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-organizations"></i>
                 <span class="sidebar-menu-item__caption">Organizations</span>
             </a>
         </li>
-        <li class="sidebar-menu__item waves-effect">
-            <a href="#" class="sidebar-menu-item" data-tooltip="Users" data-position="right center" data-inverted="">
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Users" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-users"></i>
                 <span class="sidebar-menu-item__caption">Users</span>
             </a>
@@ -879,250 +878,534 @@
     <div class="content__body js-scroll-content">
         <span class="content-body__fade-top"></span>
         <span class="content-body__fade-bottom"></span>
-        <div class="panel ui tab active js-panel-hide" data-tab="data-tab-rh">
-            <div class="panel__header panel__header_datatable-search">
-                <a href="#" class="btn btn_blue">My peers</a>
+        <div class="panel panel_multi">
+            <div class="panel__header">
+                <a href="#" class="btn btn_blue">My products</a>
             </div>
             <div class="panel__body">
-                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
-                    <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>CPU</th>
-                        <th>RAM</th>
-                        <th>HDD</th>
-                        <th>Price (hr)</th>
-                        <th class="table-no-sort"></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td><span class="status status_online status_left"></span><a onclick="showPageElement('panel-rh')">Brazil-AWS [Marat's]</a></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">2 CPU <i class="hb hb-info"></i></span></td>
-                        <td>3.86 GB</td>
-                        <td>60 GB</td>
-                        <td><span class="price price_free">FREE</span></td>
-                        <td class="table-align-right">
-                            <button class="btn btn_action"><i class="hb hb-close"></i>Delete</button>
-                            <div class="btn btn_action ui icon top right pointing dropdown button">
-                                Action <span class="hb hb-solid-caret-down"></span>
-                                <ul class="menu dropdown-menu">
-                                    <li class="item"><a href="#modal-pricing" class="item__link js-cbox-modal-inline">Change price</a></li>
-                                    <li class="item"><a href="#" class="item__link">Metrics</a></li>
+                <div class="card card_default">
+                    <div class="card-content">
+                        <a href="#" class="card-click-target"></a>
+                        <div class="card-content__cover">
+                            <div class="card-content-cover">
+                                <div class="card-content-cover__container">
+                                    <div class="card-content-cover-container">
+                                        <img src="assets/img/product-default.png" alt="" class="card-content-cover-container__image">
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="card-click-target">
+                                <span class="overlay-container"></span>
+                            </a>
+                        </div>
+                        <div class="card-content__details">
+                            <div class="card-dropdown dropdown dropdown_pointer dropdown_center">
+                                <a href="#" class="card-dropdown-toggle dropdown-toggle" data-toggle="dropdown"><i class="hb hb-extra"></i></a>
+                                <ul class="dropdown-menu" style="left: -67px">
+                                    <li class="dropdown-menu__item">
+                                        <a class="dropdown-menu-item" href="#">View product</a>
+                                    </li>
+                                    <li class="dropdown-menu__item">
+                                        <a class="dropdown-menu-item" href="#">Install </a>
+                                    </li>
                                 </ul>
                             </div>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="panel ui tab" data-tab="data-tab-reviews">
-            <div class="panel__header">
-                <a href="#" class="btn btn_green">Write</a>
-            </div>
-            <div class="panel__body">
-                <ul class="reviews nav">
-                    <li class="reviews__item">
-                        <div class="reviews-item__header">
-                            <div class="reviews-item-header">
-                                <div class="reviews-item-header__avatar">
-                                    <span class="profile__avatar">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                            <div class="card-content-details">
+                                <div class="card-details__title">
+                                    <a href="#" class="card-details-title">
+                                        Elasticsearch
+                                        <span class="paragraph-end"></span>
+                                    </a>
+                                </div>
+                                <div class="card-details__subtitle">
+                                    <span class="card-details-subtitle">
+                                        4.0.0-RC14-SNAPSHOT
+                                        <span class="paragraph-end"></span>
                                     </span>
                                 </div>
-                                <div class="reviews-item-header__wrapper">
-                                    <div class="reviews-name"><span class="reviews-name__text">George Moshowvitis</span> <div class="ui star rating rating-disabled" data-rating="3" data-max-rating="5"></div></div>
-                                    <div class="reviews-date">20 May, 2016 </div>
-                                </div>
-                                <div class="clear"></div>
                             </div>
                         </div>
-                        <div class="reviews-item__body">
-                            <div class="reviews-item-body">
-                                <div class="reviews-text">
-                                    Very nice plugin, unusable on tablets without landscape view. Fix it and raiting will higher. Anyway good tool, but be able to have a powerfull peer.
-                                </div>
+                        <div class="card-content__footer">
+                            <div class="card-content-footer">
+                                <span class="card-content-footer__rating">
+                                    <span class="rating">
+                                        <span class="rating__icon"><i class="hb hb-solid-star"></i></span>
+                                        <span class="rating__points">4.8</span>
+                                    </span>
+                                </span>
+                                <span class="card-content-footer__price">
+                                    <span class="paragraph-end"></span>
+                                    <span class="price price_free">FREE</span>
+                                </span>
                             </div>
                         </div>
-                    </li>
-                    <li class="reviews__item">
-                        <div class="reviews-item__header">
-                            <div class="reviews-item-header">
-                                <div class="reviews-item-header__avatar">
-                                    <span class="profile__avatar">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                      </span>
-                                </div>
-                                <div class="reviews-item-header__wrapper">
-                                    <div class="reviews-name"><span class="reviews-name__text">George Moshowvitis</span> <div class="ui star rating rating-disabled" data-rating="1" data-max-rating="5"></div></div>
-                                    <div class="reviews-date">20 May, 2016 </div>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                        <div class="reviews-item__body">
-                            <div class="reviews-item-body">
-                                <div class="reviews-text">
-                                    Very nice plugin, unusable on tablets without landscape view. Fix it and raiting will higher. Anyway good tool, but be able to have a powerfull peer.
+                    </div>
+                </div>
+                <div class="card card_default">
+                    <div class="card-content">
+                        <a href="#" class="card-click-target"></a>
+                        <div class="card-content__cover">
+                            <div class="card-content-cover">
+                                <div class="card-content-cover__container">
+                                    <div class="card-content-cover-container">
+                                        <img src="assets/img/product-default.png" alt="" class="card-content-cover-container__image">
+                                    </div>
                                 </div>
                             </div>
+                            <a href="#" class="card-click-target">
+                                <span class="overlay-container"></span>
+                            </a>
                         </div>
-                    </li>
-                    <li class="reviews__item">
-                        <div class="reviews-item__header">
-                            <div class="reviews-item-header">
-                                <div class="reviews-item-header__avatar">
-                                    <span class="profile__avatar">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                        <div class="card-content__details">
+                            <div class="card-dropdown dropdown dropdown_pointer dropdown_center">
+                                <a href="#" class="card-dropdown-toggle dropdown-toggle" data-toggle="dropdown"><i class="hb hb-extra"></i></a>
+                                <ul class="dropdown-menu" style="left: -67px">
+                                    <li class="dropdown-menu__item">
+                                        <a class="dropdown-menu-item" href="#">View product</a>
+                                    </li>
+                                    <li class="dropdown-menu__item">
+                                        <a class="dropdown-menu-item" href="#">Install </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-content-details">
+                                <div class="card-details__title">
+                                    <a href="#" class="card-details-title">
+                                        Elasticsearch
+                                        <span class="paragraph-end"></span>
+                                    </a>
+                                </div>
+                                <div class="card-details__subtitle">
+                                    <span class="card-details-subtitle">
+                                        4.0.0-RC14-SNAPSHOT
+                                        <span class="paragraph-end"></span>
                                     </span>
                                 </div>
-                                <div class="reviews-item-header__wrapper">
-                                    <div class="reviews-name"><span class="reviews-name__text">George Moshowvitis</span> <div class="ui star rating rating-disabled" data-rating="5" data-max-rating="5"></div></div>
-                                    <div class="reviews-date">20 May, 2016 </div>
-                                </div>
-                                <div class="clear"></div>
                             </div>
                         </div>
-                        <div class="reviews-item__body">
-                            <div class="reviews-item-body">
-                                <div class="reviews-text">
-                                    Very nice plugin, unusable on tablets without landscape view. Fix it and raiting will higher. Anyway good tool, but be able to have a powerfull peer.
+                        <div class="card-content__footer">
+                            <div class="card-content-footer">
+                                <span class="card-content-footer__rating">
+                                    <span class="rating">
+                                        <span class="rating__icon"><i class="hb hb-solid-star"></i></span>
+                                        <span class="rating__points">4.8</span>
+                                    </span>
+                                </span>
+                                <span class="card-content-footer__price">
+                                    <span class="paragraph-end"></span>
+                                    <span class="price price_free">FREE</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card_default">
+                    <div class="card-content">
+                        <a href="#" class="card-click-target"></a>
+                        <div class="card-content__cover">
+                            <div class="card-content-cover">
+                                <div class="card-content-cover__container">
+                                    <div class="card-content-cover-container">
+                                        <img src="assets/img/product-default.png" alt="" class="card-content-cover-container__image">
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="card-click-target">
+                                <span class="overlay-container"></span>
+                            </a>
+                        </div>
+                        <div class="card-content__details">
+                            <div class="card-dropdown dropdown dropdown_pointer dropdown_center">
+                                <a href="#" class="card-dropdown-toggle dropdown-toggle" data-toggle="dropdown"><i class="hb hb-extra"></i></a>
+                                <ul class="dropdown-menu" style="left: -67px">
+                                    <li class="dropdown-menu__item">
+                                        <a class="dropdown-menu-item" href="#">View product</a>
+                                    </li>
+                                    <li class="dropdown-menu__item">
+                                        <a class="dropdown-menu-item" href="#">Install </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-content-details">
+                                <div class="card-details__title">
+                                    <a href="#" class="card-details-title">
+                                        Elasticsearch
+                                        <span class="paragraph-end"></span>
+                                    </a>
+                                </div>
+                                <div class="card-details__subtitle">
+                                    <span class="card-details-subtitle">
+                                        4.0.0-RC14-SNAPSHOT
+                                        <span class="paragraph-end"></span>
+                                    </span>
                                 </div>
                             </div>
                         </div>
-                    </li>
-                </ul>
-                <div class="clear"></div>
-            </div>
-        </div>
-        <div class="panel ui tab" data-tab="data-tab-environments">
-            <div class="panel__body">
-                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
-                    <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>State</th>
-                        <th>Created</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Environment name</td>
-                        <td>EXCHANGE_INFO</td>
-                        <td>2016/08/24 12:36</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="panel ui tab" data-tab="data-tab-sharing">
-            <div class="panel__body">
-                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
-                    <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Country</th>
-                        <th class="table-no-sort"></th>
-                    </tr>
-                    </thead>+
-                    <tbody>
-                    <tr>
-                        <td><span class="status status_online status_left"></span> Sharing name</td>
-                        <td><i class="flag br"></i> Brazil</td>
-                        <td class="table-align-right"><button class="btn btn_action"><i class="hb hb-close"></i>Delete</button></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="panel ui tab" data-tab="data-tab-history">
-            <div class="panel__header panel__header_datatable-search">
-                <div class="daterange daterange_inline js-daterange_double"></div> <a href="#" class="btn btn_blue">Show</a>
-            </div>
-            <div class="panel__body">
-                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
-                    <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Action</th>
-                        <th>Info</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>2016/08/24 12:54:03</td>
-                        <td>Added to environment</td>
-                        <td>PUBLIC -> SHARED</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="panel ui tab" data-tab="data-tab-error-log">
-            <div class="panel__body">
-                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
-                    <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Message</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>2016/08/24 12:54:03</td>
-                        <td class="table-error-log">D1C6EE8CC0D51BA9BFBD0CE4889D8B3F1C16CE0C: Aug 24 05:16:41 rh1471788553.gw.intra.lan ubuntu-core-launcher[875]: [ERROR] 2016/08/24 05:16:41 Failed to handshake with
-                            a DHT Server: lookup dht1.subut.ai on [::1]:53: server misbehaving</td>
-                    </tr>
-                    </tbody>47
-                </table>7444444444444444444444444444444444444444444444444444444444444444444444444
-            </div>
-        </div>
-
-
-        <div class="panel panel-rh" id="panel-rh">
-            <div class="panel__header">
-                <div class="panel-header">
-                    <div class="panel-header__right">
-                        <div class="btn-group" data-toggle="buttons-radio">
-                            <button class="btn active" data-toggle="button">Day</button>
-                            <button class="btn">Week</button>
-                            <button class="btn">Mount</button>
+                        <div class="card-content__footer">
+                            <div class="card-content-footer">
+                                <span class="card-content-footer__rating">
+                                    <span class="rating">
+                                        <span class="rating__icon"><i class="hb hb-solid-star"></i></span>
+                                        <span class="rating__points">4.8</span>
+                                    </span>
+                                </span>
+                                <span class="card-content-footer__price">
+                                    <span class="paragraph-end"></span>
+                                    <span class="price price_free">FREE</span>
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="panel-header__left">
-                        <a href="#" class="link-guide"><i class="hb hb-arrow-left link-guide__icon-before"></i>Back to table</a>
                     </div>
                 </div>
-            </div>
-            <div class="panel__body">
-                <div class="panel-body">
-                    <div class="rh-chart">
-                        <div class="rh-chart__title">
-                            CPU
+                <div class="card card_default">
+                    <div class="card-content">
+                        <a href="#" class="card-click-target"></a>
+                        <div class="card-content__cover">
+                            <div class="card-content-cover">
+                                <div class="card-content-cover__container">
+                                    <div class="card-content-cover-container">
+                                        <img src="assets/img/product-default.png" alt="" class="card-content-cover-container__image">
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="card-click-target">
+                                <span class="overlay-container"></span>
+                            </a>
                         </div>
-                        <div class="rh-chart__graph">
-                            <figure id="js-chart-cpu"></figure>
+                        <div class="card-content__details">
+                            <div class="card-dropdown dropdown dropdown_pointer dropdown_center">
+                                <a href="#" class="card-dropdown-toggle dropdown-toggle" data-toggle="dropdown"><i class="hb hb-extra"></i></a>
+                                <ul class="dropdown-menu" style="left: -67px">
+                                    <li class="dropdown-menu__item">
+                                        <a class="dropdown-menu-item" href="#">View product</a>
+                                    </li>
+                                    <li class="dropdown-menu__item">
+                                        <a class="dropdown-menu-item" href="#">Install </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-content-details">
+                                <div class="card-details__title">
+                                    <a href="#" class="card-details-title">
+                                        Elasticsearch
+                                        <span class="paragraph-end"></span>
+                                    </a>
+                                </div>
+                                <div class="card-details__subtitle">
+                                    <span class="card-details-subtitle">
+                                        4.0.0-RC14-SNAPSHOT
+                                        <span class="paragraph-end"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content__footer">
+                            <div class="card-content-footer">
+                                <span class="card-content-footer__rating">
+                                    <span class="rating">
+                                        <span class="rating__icon"><i class="hb hb-solid-star"></i></span>
+                                        <span class="rating__points">4.8</span>
+                                    </span>
+                                </span>
+                                <span class="card-content-footer__price">
+                                    <span class="paragraph-end"></span>
+                                    <span class="price price_free">FREE</span>
+                                </span>
+                            </div>
                         </div>
                     </div>
-                    <div class="rh-chart">
-                        <div class="rh-chart__title">
-                            RAM
-                        </div>
-                        <div class="rh-chart__graph">
-                            <figure id="js-chart-ram"></figure>
-                        </div>
-                    </div>
-                    <div class="rh-chart">
-                        <div class="rh-chart__title">
-                            HDD
-                        </div>
-                        <div class="rh-chart__graph">
-                            <figure id="js-chart-hdd"></figure>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
                 </div>
+                <div class="card card_default">
+                    <div class="card-content">
+                        <a href="#" class="card-click-target"></a>
+                        <div class="card-content__cover">
+                            <div class="card-content-cover">
+                                <div class="card-content-cover__container">
+                                    <div class="card-content-cover-container">
+                                        <img src="assets/img/product-default.png" alt="" class="card-content-cover-container__image">
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="card-click-target">
+                                <span class="overlay-container"></span>
+                            </a>
+                        </div>
+                        <div class="card-content__details">
+                            <div class="card-dropdown dropdown dropdown_pointer dropdown_center">
+                                <a href="#" class="card-dropdown-toggle dropdown-toggle" data-toggle="dropdown"><i class="hb hb-extra"></i></a>
+                                <ul class="dropdown-menu" style="left: -67px">
+                                    <li class="dropdown-menu__item">
+                                        <a class="dropdown-menu-item" href="#">View product</a>
+                                    </li>
+                                    <li class="dropdown-menu__item">
+                                        <a class="dropdown-menu-item" href="#">Install </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-content-details">
+                                <div class="card-details__title">
+                                    <a href="#" class="card-details-title">
+                                        Elasticsearch
+                                        <span class="paragraph-end"></span>
+                                    </a>
+                                </div>
+                                <div class="card-details__subtitle">
+                                    <span class="card-details-subtitle">
+                                        4.0.0-RC14-SNAPSHOT
+                                        <span class="paragraph-end"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content__footer">
+                            <div class="card-content-footer">
+                                <span class="card-content-footer__rating">
+                                    <span class="rating">
+                                        <span class="rating__icon"><i class="hb hb-solid-star"></i></span>
+                                        <span class="rating__points">4.8</span>
+                                    </span>
+                                </span>
+                                <span class="card-content-footer__price">
+                                    <span class="paragraph-end"></span>
+                                    <span class="price price_free">FREE</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card_default">
+                    <div class="card-content">
+                        <a href="#" class="card-click-target"></a>
+                        <div class="card-content__cover">
+                            <div class="card-content-cover">
+                                <div class="card-content-cover__container">
+                                    <div class="card-content-cover-container">
+                                        <img src="assets/img/product-default.png" alt="" class="card-content-cover-container__image">
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="card-click-target">
+                                <span class="overlay-container"></span>
+                            </a>
+                        </div>
+                        <div class="card-content__details">
+                            <div class="card-dropdown dropdown dropdown_pointer dropdown_center">
+                                <a href="#" class="card-dropdown-toggle dropdown-toggle" data-toggle="dropdown"><i class="hb hb-extra"></i></a>
+                                <ul class="dropdown-menu" style="left: -67px">
+                                    <li class="dropdown-menu__item">
+                                        <a class="dropdown-menu-item" href="#">View product</a>
+                                    </li>
+                                    <li class="dropdown-menu__item">
+                                        <a class="dropdown-menu-item" href="#">Install </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-content-details">
+                                <div class="card-details__title">
+                                    <a href="#" class="card-details-title">
+                                        Elasticsearch
+                                        <span class="paragraph-end"></span>
+                                    </a>
+                                </div>
+                                <div class="card-details__subtitle">
+                                    <span class="card-details-subtitle">
+                                        4.0.0-RC14-SNAPSHOT
+                                        <span class="paragraph-end"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content__footer">
+                            <div class="card-content-footer">
+                                <span class="card-content-footer__rating">
+                                    <span class="rating">
+                                        <span class="rating__icon"><i class="hb hb-solid-star"></i></span>
+                                        <span class="rating__points">4.8</span>
+                                    </span>
+                                </span>
+                                <span class="card-content-footer__price">
+                                    <span class="paragraph-end"></span>
+                                    <span class="price price_free">FREE</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card_default">
+                    <div class="card-content">
+                        <a href="#" class="card-click-target"></a>
+                        <div class="card-content__cover">
+                            <div class="card-content-cover">
+                                <div class="card-content-cover__container">
+                                    <div class="card-content-cover-container">
+                                        <img src="assets/img/product-default.png" alt="" class="card-content-cover-container__image">
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="card-click-target">
+                                <span class="overlay-container"></span>
+                            </a>
+                        </div>
+                        <div class="card-content__details">
+                            <div class="card-dropdown dropdown dropdown_pointer dropdown_center">
+                                <a href="#" class="card-dropdown-toggle dropdown-toggle" data-toggle="dropdown"><i class="hb hb-extra"></i></a>
+                                <ul class="dropdown-menu" style="left: -67px">
+                                    <li class="dropdown-menu__item">
+                                        <a class="dropdown-menu-item" href="#">View product</a>
+                                    </li>
+                                    <li class="dropdown-menu__item">
+                                        <a class="dropdown-menu-item" href="#">Install </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-content-details">
+                                <div class="card-details__title">
+                                    <a href="#" class="card-details-title">
+                                        Elasticsearch
+                                        <span class="paragraph-end"></span>
+                                    </a>
+                                </div>
+                                <div class="card-details__subtitle">
+                                    <span class="card-details-subtitle">
+                                        4.0.0-RC14-SNAPSHOT
+                                        <span class="paragraph-end"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content__footer">
+                            <div class="card-content-footer">
+                                <span class="card-content-footer__rating">
+                                    <span class="rating">
+                                        <span class="rating__icon"><i class="hb hb-solid-star"></i></span>
+                                        <span class="rating__points">4.8</span>
+                                    </span>
+                                </span>
+                                <span class="card-content-footer__price">
+                                    <span class="paragraph-end"></span>
+                                    <span class="price price_free">FREE</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card_default">
+                    <div class="card-content">
+                        <a href="#" class="card-click-target"></a>
+                        <div class="card-content__cover">
+                            <div class="card-content-cover">
+                                <div class="card-content-cover__container">
+                                    <div class="card-content-cover-container">
+                                        <img src="assets/img/product-default.png" alt="" class="card-content-cover-container__image">
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="card-click-target">
+                                <span class="overlay-container"></span>
+                            </a>
+                        </div>
+                        <div class="card-content__details">
+                            <div class="card-dropdown dropdown dropdown_pointer dropdown_center">
+                                <a href="#" class="card-dropdown-toggle dropdown-toggle" data-toggle="dropdown"><i class="hb hb-extra"></i></a>
+                                <ul class="dropdown-menu" style="left: -67px">
+                                    <li class="dropdown-menu__item">
+                                        <a class="dropdown-menu-item" href="#">View product</a>
+                                    </li>
+                                    <li class="dropdown-menu__item">
+                                        <a class="dropdown-menu-item" href="#">Install </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-content-details">
+                                <div class="card-details__title">
+                                    <a href="#" class="card-details-title">
+                                        Elasticsearch
+                                        <span class="paragraph-end"></span>
+                                    </a>
+                                </div>
+                                <div class="card-details__subtitle">
+                                    <span class="card-details-subtitle">
+                                        4.0.0-RC14-SNAPSHOT
+                                        <span class="paragraph-end"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content__footer">
+                            <div class="card-content-footer">
+                                <span class="card-content-footer__rating">
+                                    <span class="rating">
+                                        <span class="rating__icon"><i class="hb hb-solid-star"></i></span>
+                                        <span class="rating__points">4.8</span>
+                                    </span>
+                                </span>
+                                <span class="card-content-footer__price">
+                                    <span class="paragraph-end"></span>
+                                    <span class="price price_free">FREE</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card_default">
+                    <div class="card-content">
+                        <a href="#" class="card-click-target"></a>
+                        <div class="card-content__cover">
+                            <div class="card-content-cover">
+                                <div class="card-content-cover__container">
+                                    <div class="card-content-cover-container">
+                                        <img src="assets/img/product-default.png" alt="" class="card-content-cover-container__image">
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="card-click-target">
+                                <span class="overlay-container"></span>
+                            </a>
+                        </div>
+                        <div class="card-content__details">
+                            <div class="card-dropdown dropdown dropdown_pointer dropdown_center">
+                                <a href="#" class="card-dropdown-toggle dropdown-toggle" data-toggle="dropdown"><i class="hb hb-extra"></i></a>
+                                <ul class="dropdown-menu" style="left: -67px">
+                                    <li class="dropdown-menu__item">
+                                        <a class="dropdown-menu-item" href="#">View product</a>
+                                    </li>
+                                    <li class="dropdown-menu__item">
+                                        <a class="dropdown-menu-item" href="#">Install </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-content-details">
+                                <div class="card-details__title">
+                                    <a href="#" class="card-details-title">
+                                        Elasticsearch
+                                        <span class="paragraph-end"></span>
+                                    </a>
+                                </div>
+                                <div class="card-details__subtitle">
+                                    <span class="card-details-subtitle">
+                                        4.0.0-RC14-SNAPSHOT
+                                        <span class="paragraph-end"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content__footer">
+                            <div class="card-content-footer">
+                                <span class="card-content-footer__rating">
+                                    <span class="rating">
+                                        <span class="rating__icon"><i class="hb hb-solid-star"></i></span>
+                                        <span class="rating__points">4.8</span>
+                                    </span>
+                                </span>
+                                <span class="card-content-footer__price">
+                                    <span class="paragraph-end"></span>
+                                    <span class="price price_free">FREE</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -1157,6 +1440,9 @@
 <script src="js/libs/tab.js"></script>
 
 <script src="js/libs/boo-button.js"></script>
+<script src="js/libs/boo-dropdown.js"></script>
+<script src="js/libs/boo-tooltip.js"></script>
+<script src="js/libs/boo-popover.js"></script>
 
 <script src="js/main.js"></script>
 </body>
