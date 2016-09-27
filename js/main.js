@@ -24,7 +24,7 @@ $(function() {
         $('.tooltip').addClass('tooltip-inverted');
     });
 
-    $('[data-toggle="popover"]').popover()
+    //$('[data-toggle="popover"]').popover()
 });
 $(function() {
     $(".js-filter-memory").ionRangeSlider(
