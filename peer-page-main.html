@@ -59,19 +59,16 @@
                             <li class="nav-breadcrumb__item">
                                 <a href="#">Peers</a>
                             </li>
-                            <li class="nav-breadcrumb__item">
-                                <a href="#">[Dilshat] Peers 8c</a>
-                            </li>
                         </ul>
                     </li>
                 </ul>
                 <ul class="nav nav_toolbar nav_toolbar_right">
                     <li class="nav-dropdown dropdown dropdown_pointer dropdown_right">
-                        <div class="nav-dropdown__btn dropdown-toggle">
+                        <div class="nav-dropdown__btn dropdown-toggle" data-toggle="dropdown">
                             <i class="hb hb-solid-bell"></i>
                             <span class="badge-circle badge-circle_warning">10</span>
                         </div>
-                        <div class="nav-dropdown__content nav-dropdown__content_notification dropdown-menu">
+                        <div class="nav-dropdown__content nav-dropdown__content_notification dropdown-menu dropdown-menu_noclose">
                             <div class="nav-dropdown-content__notification">
                                 <div class="notification__header">Peer Usage Approval</div>
                                 <div class="notification__description">User Ermek shared his peer with you. Please check your
@@ -90,7 +87,7 @@
                         </a>
                     </li>
                     <li class="nav-dropdown dropdown dropdown_pointer dropdown_right">
-                        <div class="nav-dropdown__btn dropdown-toggle">
+                        <div class="nav-dropdown__btn dropdown-toggle" data-toggle="dropdown" >
                             <span class="profile-meta">
                                 <span class="profile-meta__avatar">
                                     <span class="profile__avatar profile__avatar_online">
@@ -102,7 +99,7 @@
                                 </span>
                             </span>
                         </div>
-                        <div class="dropdown-menu nav-dropdown__content nav-dropdown__content_profile">
+                        <div class="nav-dropdown__content nav-dropdown__content_profile dropdown-menu dropdown-menu_noclose ">
                             <div class="message">
                                 <div class="nav-dropdown-content__profile">
                                     <div class="profile__header">
@@ -1017,7 +1014,7 @@
                     <div id="filter-others" class="dropdown-menu dropdown-menu_noclose">
                         <div class="dropdown-menu__body filter-others">
                             <div class="filter-item__numbers">
-                                <input type="number" value="0"> <label>to</label> <input type="number" value="100">
+                                <input type="number" value="0" class="filter-item-numbers__input"> <label class="filter-item-numbers__label">to</label> <input type="number" value="100" class="filter-item-numbers__input">
                             </div>
                             <input type="text" class="js-filter-others" name="filter-others" value="" />
                         </div>
@@ -1368,6 +1365,7 @@
 <script src="js/libs/boo-button.js"></script>
 <script src="js/libs/boo-dropdown.js"></script>
 <script src="js/libs/boo-tooltip.js"></script>
+<script src="js/libs/boo-popover.js"></script> <!--Need boo-tooltip.js-->
 
 <script src="js/main.js"></script>
 </body>

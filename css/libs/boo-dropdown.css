@@ -121,3 +121,15 @@
 .dropdown-menu_dividers .dropdown-menu__item:last-child {
     border-bottom: none;
 }
+.dropdown-menu__item:last-child,
+.dropdown-menu__item:first-child {
+    overflow: hidden;
+}
+.dropdown-menu__item:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.dropdown-menu__item:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
