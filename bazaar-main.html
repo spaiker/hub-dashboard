@@ -181,8 +181,8 @@
             </a>
         </li>
         <li class="sidebar-menu__item sidebar-menu__item_active">
-            <a href="#" class="sidebar-menu-i144444tem" rel="tooltip" title="Bazaar" data-toggle="tooltip" data-placement="right">
-                <i class="sidebar-menu-item__icon h14b hb-bazaar"></i>
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Bazaar" data-toggle="tooltip" data-placement="right">
+                <i class="sidebar-menu-item__icon hb hb-bazaar"></i>
                 <span class="sidebar-menu-item__caption">Bazaar</span>
             </a>
         </li>
@@ -863,8 +863,15 @@
 <section class="content pusher">
     <div class="content__header content__header_categories">
         <div class="content-header">
-            <div class="categories">
-                <span class="categories__title">Categories <span class="hb hb-angle-down"></span></span>
+            <div class="categories dropdown dropdown_pointer">
+                <a href="#" class="categories__title dropdown-toggle" data-toggle="dropdown">Categories <span class="hb hb-angle-down"></span></a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">All (23)</a></li>
+                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">Application Development (2)</a></li>
+                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">Application Servers (0)</a></li>
+                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">Application Stacks (0)</a></li>
+                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">Big Data (20)</a></li>
+                </ul>
             </div>
         </div>
         <div class="content-tabs">
@@ -874,6 +881,7 @@
                 <a class="item tab" data-tab="data-tab-environments">Free</a>
             </div>
         </div>
+        <div class="clear"></div>
     </div>
     <div class="content__body js-scroll-content">
         <span class="content-body__fade-top"></span>
