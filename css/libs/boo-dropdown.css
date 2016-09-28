@@ -5,6 +5,7 @@
 .dropdown-toggle {
     *margin-bottom: -3px;
     cursor: pointer;
+    color: inherit;
 
 }
 
@@ -132,4 +133,18 @@
 .dropdown-menu__item:last-child {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+.dropdown_action {
+    display: inline-block;
+}
+.dropdown.dropdown_action .dropdown-menu {
+    border-radius: 2px;
+    min-width: inherit;
+}
+.dropdown.dropdown_action .dropdown-menu .dropdown-menu__item {
+    border-radius: 0;
+}
+.dropdown.dropdown_action .dropdown-menu .dropdown-menu__item .dropdown-menu-item {
+    padding: 7px 10px;
+    text-align: left;
 }

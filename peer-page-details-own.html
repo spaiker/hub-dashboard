@@ -870,7 +870,8 @@
                 <div class="details">
                     <div class="details__header">
                         <ul class="details-header nav">
-                            <li class="details-header__item details-header__name">[Dilshat] Peer 8C <span class="ui button"><i class="hb hb-info"></i></span> <div class="details-popup ui popup left center transition hidden"><div class="details-popup__column">Registered:<br>Version:<br>IP:</div><div class="details-popup__column">22 hours ago:<br>4.0.0-RC14-SNAPSHOT. (Stable release: 4.0.0-RC13.)<br>158.181.132.179</div></div><span class="status status_online"></span></li>
+                            <li class="details-header__item details-header__name">[Dilshat] Peer 8C
+                                <a href="#" class="details-header-item" rel="popover" data-content='<div class="details-popup"><div class="details-popup__column">Registered:<br>Version:<br>IP:</div><div class="details-popup__column">22 hours ago:<br>4.0.0-RC14-SNAPSHOT. (Stable release: 4.0.0-RC13.)<br>158.181.132.179</div></div> <div class="clear"></div>' data-html="true" data-toggle='popover' data-placement="bottom"><i class="hb hb-info"></i></a><span class="status status_online"></span></li>
                             <li class="details-header__item details-header__price">Free</li>
                             <li class="details-header__item details-header__rating"><i class="hb hb-solid-star"></i> 4.6</li>
                             <li class="details-header__item detail-header__toggles-btns">
@@ -927,13 +928,13 @@
                         <td>3.86 GB</td>
                         <td>60 GB</td>
                         <td><span class="price price_free">FREE</span></td>
-                        <td>
+                        <td class="table-align-right">
                             <button class="btn btn_action"><i class="hb hb-close"></i>Delete</button>
-                            <div class="btn btn_action ui icon top right pointing dropdown button">
-                                Action <span class="hb hb-solid-caret-down"></span>
-                                <ul class="menu dropdown-menu">
-                                    <li class="item"><a href="#" class="item__link js-cbox-modal-inline">Change price</a></li>
-                                    <li class="item"><a href="#" class="item__link">Metrics</a></li>
+                            <div class="dropdown dropdown_right dropdown_action">
+                                <a href="#" class="btn btn_action dropdown-toggle" data-toggle="dropdown">Action <span class="hb hb-solid-caret-down"></span></a>
+                                <ul class="dropdown-menu dropdown-menu_dividers">
+                                    <li class="dropdown-menu__item"><a href="#modal-pricing" class="dropdown-menu-item">Change price</a></li>
+                                    <li class="dropdown-menu__item"><a href="#" class="dropdown-menu-item">Metrics</a></li>
                                 </ul>
                             </div>
                         </td>

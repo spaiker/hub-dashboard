@@ -1418,15 +1418,17 @@ input[type=search] {
 .details-header__item:last-child {
     margin: 0;
 }
+.details-header-item {
+    color: inherit;
+}
 .details-header__name {
     font-size: 18px;
     font-weight: 600;
 }
 .details-popup {
-    padding: 15px!important;
-    color: inherit!important;
-    font-size: 12px!important;
-    max-width: inherit!important;
+    color: inherit;
+    font-size: 12px;
+    max-width: inherit;
 }
 .details-popup__column {
     float: left;
