@@ -12,16 +12,20 @@
     <link rel="stylesheet" href="css/libs/slick-theme.css">
     <link rel="stylesheet" href="css/libs/datatables.css">
     <link rel="stylesheet" href="css/libs/ion.rangeSlider.css">
+    <link rel="stylesheet" href="css/libs/colorbox.css">
+    <link rel="stylesheet" href="css/libs/calendar.css">
+    <link rel="stylesheet" href="css/libs/elementTransitions.min.css">
+    <link rel="stylesheet" href="css/libs/xcharts.css">
+
+    <link rel="stylesheet" href="css/libs/boo-dropdown.css">
+    <link rel="stylesheet" href="css/libs/boo-tooltip.css">
+
     <!--UI Docs-->
     <link rel="stylesheet" href="css/libs/transition.css">
-    <link rel="stylesheet" href="css/libs/popup.css">
     <link rel="stylesheet" href="css/libs/flag.css">
     <link rel="stylesheet" href="css/libs/rating.css">
     <link rel="stylesheet" href="css/libs/sidebar.css">
     <link rel="stylesheet" href="css/libs/tab.css">
-
-    <link rel="stylesheet" href="css/libs/boo-dropdown.css">
-    <link rel="stylesheet" href="css/libs/boo-tooltip.css">
 
     <!--CSS-->
     <link rel="stylesheet" href="css/main.css">
@@ -56,10 +60,7 @@
                     <li class="nav__breadcrumb">
                         <ul class="nav nav_breadcrumb">
                             <li class="nav-breadcrumb__item">
-                                <a href="#">Bazaar</a>
-                            </li>
-                            <li class="nav-breadcrumb__item">
-                                <a href="#">Cassandra</a>
+                                <a href="#">Users</a>
                             </li>
                         </ul>
                     </li>
@@ -131,12 +132,13 @@
                         </div>
                     </li>
                 </ul>
-				<div class="clear"></div>
+                <div class="clear"></div>
             </div>
         </div>
     </div>
     <div class="clear"></div>
 </header>
+<!--Header end-->
 <aside class="sidebar sidebar_left">
     <ul class="nav sidebar-menu js-scroll-sidebar">
         <li class="sidebar-menu__title">TOOLS</li>
@@ -177,7 +179,7 @@
                 <span class="sidebar-menu-item__caption">Peers</span>
             </a>
         </li>
-        <li class="sidebar-menu__item sidebar-menu__item_active">
+        <li class="sidebar-menu__item">
             <a href="#" class="sidebar-menu-item" rel="tooltip" title="Bazaar" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-bazaar"></i>
                 <span class="sidebar-menu-item__caption">Bazaar</span>
@@ -195,7 +197,7 @@
                 <span class="sidebar-menu-item__caption">Organizations</span>
             </a>
         </li>
-        <li class="sidebar-menu__item">
+        <li class="sidebar-menu__item sidebar-menu__item_active">
             <a href="#" class="sidebar-menu-item" rel="tooltip" title="Users" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-users"></i>
                 <span class="sidebar-menu-item__caption">Users</span>
@@ -859,194 +861,378 @@
 </aside>
 <section class="content pusher">
     <div class="content__header">
-        <div class="content-header">
-            <div class="content-header__right">
-                <div class="actions-zone">
-                    <button class="btn btn_green"><i class="hb hb-arrow-down"></i>Install</button>
-                </div>
-            </div>
-            <div class="content-header__left">
-                <div class="details-cover">
-                    <div class="card-content-cover">
-                        <div class="card-content-cover__container">
-                            <div class="card-content-cover-container">
-                                <img src="assets/img/product-default.png" alt="" class="card-content-cover-container__image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="details details_cover">
-                    <div class="details__header">
-                        <ul class="details-header nav">
-                            <li class="details-header__item details-header__name">Cassandra
-                                <a href="#" class="details-header-item" rel="popover" data-content='<div class="details-popup"><div class="details-popup__column">Upload date:<br>Size:<br>File:</div><div class="details-popup__column">2016.08.19 21:08<br>425.88 KB<br>cassandra-subutai-plugin-4.0.3.kar</div></div> <div class="clear"></div>' data-html="true" data-toggle='popover' data-placement="bottom"><i class="hb hb-info"></i></a>
-                            </li>
-                            <li class="details-header__item details-header__price">Free</li>
-                            <li class="details-header__item details-header__rating"><i class="hb hb-solid-star"></i> 4.6</li>
-                        </ul>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="details__description">
-                        <ul class="details-description nav">
-                            <li class="details-description__item"><span class="details-description__text">4.0.0-RC14-SNAPSHOT</span></li>
-                            <li class="details-description__item"><i class="hb hb-downloads"></i> <span class="details-description__text">3458</span></li>
-                            <li class="details-description__item"><i class="hb hb-views"></i> <span class="details-description__text">7546</span></li>
-                        </ul>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="details__description details__description_text">
-                        <ul class="details-description nav">
-                            <li class="details-description__item"><span class="details-description__text">Cassandra is an open source distributed database management system designed to handle large amounts of data across many commodity servers,
-providing high availability with no single point of failure. Cassandra offers robust support for clusters spanning multiple datacenters, with
-asynchronous masterless replication allowing low latency operations for all clients.</span></li>
-                        </ul>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div class="clear"></div>
-        </div>
         <div class="content-tabs">
             <div class="tabular menu tabs">
-                <a class="item tab active" data-tab="data-tab-screenshots">Screenshots</a>
-                <a class="item tab" data-tab="data-tab-reviews">Reviews</a>
+                <a class="item tab active" data-tab="data-tab-users">All users</a>
+                <a class="item tab" data-tab="data-tab-online">Online</a>
+                <a class="item tab" data-tab="data-tab-your-country">Your country</a>
             </div>
         </div>
+        <div class="clear"></div>
     </div>
     <div class="content__body js-scroll-content">
         <span class="content-body__fade-top"></span>
         <span class="content-body__fade-bottom"></span>
-        <div class="panel panel_multi ui tab active" data-tab="data-tab-screenshots">
-            <div class="panel__body">
-                <div class="card card_screenshot">
-                    <div class="card-content">
-                        <div class="card-content__container">
-                            <a href="#" class="card-content-container">
-                                <img src="assets/img/sample.JPG" alt="" class="card-content-container__image">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card card_screenshot">
-                    <div class="card-content">
-                        <div class="card-content__container">
-                            <a href="#" class="card-content-container">
-                                <img src="assets/img/sample.JPG" alt="" class="card-content-container__image">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card card_screenshot">
-                    <div class="card-content">
-                        <div class="card-content__container">
-                            <a href="#" class="card-content-container">
-                                <img src="assets/img/sample.JPG" alt="" class="card-content-container__image">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card card_screenshot">
-                    <div class="card-content">
-                        <div class="card-content__container">
-                            <a href="#" class="card-content-container">
-                                <img src="assets/img/sample.JPG" alt="" class="card-content-container__image">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="panel ui tab" data-tab="data-tab-reviews">
+        <div class="panel panel_multi">
             <div class="panel__header">
-                <a href="#" class="btn btn_green">Write</a>
+                <a href="#" class="btn btn_blue">Invitations</a>
             </div>
             <div class="panel__body">
-                <ul class="reviews nav">
-                    <li class="reviews__item">
-                        <div class="reviews-item__header">
-                            <div class="reviews-item-header">
-                                <div class="reviews-item-header__avatar">
-                                    <span class="profile__avatar">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                <div class="card card_users">
+                    <div class="card-content">
+                        <a href="#" class="card-click-target"></a>
+                        <div class="card-content__cover">
+                            <div class="card-content-cover">
+                                <div class="card-content-cover__container">
+                                    <div class="card-content-cover-container">
+                                        <img src="assets/img/avatar-default.png" alt="" class="card-content-cover-container__image">
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="card-click-target">
+                                <span class="overlay-container"></span>
+                            </a>
+                        </div>
+                        <div class="card-content__details">
+                            <div class="card-dropdown dropdown dropdown_pointer dropdown_center">
+                                <a href="#" class="card-dropdown-toggle dropdown-toggle" data-toggle="dropdown"><i class="hb hb-extra"></i></a>
+                                <ul class="dropdown-menu" style="left: -67px">
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">View profile</a></li>
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">Type message</a></li>
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">Add to friends</a></li>
+                                </ul>
+                            </div>
+                            <div class="card-content-details">
+                                <div class="card-details__title">
+                                    <a href="#" class="card-details-title">
+                                        George Moshovitis
+                                        <span class="paragraph-end"></span>
+                                    </a>
+                                </div>
+                                <div class="card-details__subtitle">
+                                    <span class="card-details-subtitle">
+                                        <i class="flag br"></i> Brazil
+                                        <span class="paragraph-end"></span>
                                     </span>
                                 </div>
-                                <div class="reviews-item-header__wrapper">
-                                    <div class="reviews-name"><span class="reviews-name__text">George Moshowvitis</span> <div class="ui star rating rating-disabled" data-rating="3" data-max-rating="5"></div></div>
-                                    <div class="reviews-date">20 May, 2016 </div>
-                                </div>
-                                <div class="clear"></div>
                             </div>
                         </div>
-                        <div class="reviews-item__body">
-                            <div class="reviews-item-body">
-                                <div class="reviews-text">
-                                    Very nice plugin, unusable on tablets without landscape view. Fix it and raiting will higher. Anyway good tool, but be able to have a powerfull peer.
+                    </div>
+                </div>
+                <div class="card card_users">
+                    <div class="card-content">
+                        <a href="#" class="card-click-target"></a>
+                        <div class="card-content__cover">
+                            <div class="card-content-cover">
+                                <div class="card-content-cover__container">
+                                    <div class="card-content-cover-container">
+                                        <img src="assets/img/avatar-default.png" alt="" class="card-content-cover-container__image">
+                                    </div>
                                 </div>
                             </div>
+                            <a href="#" class="card-click-target">
+                                <span class="overlay-container"></span>
+                            </a>
                         </div>
-                    </li>
-                    <li class="reviews__item">
-                        <div class="reviews-item__header">
-                            <div class="reviews-item-header">
-                                <div class="reviews-item-header__avatar">
-                                    <span class="profile__avatar">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                        <div class="card-content__details">
+                            <div class="card-dropdown dropdown dropdown_pointer dropdown_center">
+                                <a href="#" class="card-dropdown-toggle dropdown-toggle" data-toggle="dropdown"><i class="hb hb-extra"></i></a>
+                                <ul class="dropdown-menu" style="left: -67px">
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">View profile</a></li>
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">Type message</a></li>
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">Add to friends</a></li>
+                                </ul>
+                            </div>
+                            <div class="card-content-details">
+                                <div class="card-details__title">
+                                    <a href="#" class="card-details-title">
+                                        George Moshovitis
+                                        <span class="paragraph-end"></span>
+                                    </a>
+                                </div>
+                                <div class="card-details__subtitle">
+                                    <span class="card-details-subtitle">
+                                        <i class="flag br"></i> Brazil
+                                        <span class="paragraph-end"></span>
                                     </span>
                                 </div>
-                                <div class="reviews-item-header__wrapper">
-                                    <div class="reviews-name"><span class="reviews-name__text">George Moshowvitis</span> <div class="ui star rating rating-disabled" data-rating="1" data-max-rating="5"></div></div>
-                                    <div class="reviews-date">20 May, 2016 </div>
-                                </div>
-                                <div class="clear"></div>
                             </div>
                         </div>
-                        <div class="reviews-item__body">
-                            <div class="reviews-item-body">
-                                <div class="reviews-text">
-                                    Very nice plugin, unusable on tablets without landscape view. Fix it and raiting will higher. Anyway good tool, but be able to have a powerfull peer.
+                    </div>
+                </div>
+                <div class="card card_users">
+                    <div class="card-content">
+                        <a href="#" class="card-click-target"></a>
+                        <div class="card-content__cover">
+                            <div class="card-content-cover">
+                                <div class="card-content-cover__container">
+                                    <div class="card-content-cover-container">
+                                        <img src="assets/img/avatar-default.png" alt="" class="card-content-cover-container__image">
+                                    </div>
                                 </div>
                             </div>
+                            <a href="#" class="card-click-target">
+                                <span class="overlay-container"></span>
+                            </a>
                         </div>
-                    </li>
-                    <li class="reviews__item">
-                        <div class="reviews-item__header">
-                            <div class="reviews-item-header">
-                                <div class="reviews-item-header__avatar">
-                                    <span class="profile__avatar">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                        <div class="card-content__details">
+                            <div class="card-dropdown dropdown dropdown_pointer dropdown_center">
+                                <a href="#" class="card-dropdown-toggle dropdown-toggle" data-toggle="dropdown"><i class="hb hb-extra"></i></a>
+                                <ul class="dropdown-menu" style="left: -67px">
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">View profile</a></li>
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">Type message</a></li>
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">Add to friends</a></li>
+                                </ul>
+                            </div>
+                            <div class="card-content-details">
+                                <div class="card-details__title">
+                                    <a href="#" class="card-details-title">
+                                        George Moshovitis
+                                        <span class="paragraph-end"></span>
+                                    </a>
+                                </div>
+                                <div class="card-details__subtitle">
+                                    <span class="card-details-subtitle">
+                                        <i class="flag br"></i> Brazil
+                                        <span class="paragraph-end"></span>
                                     </span>
                                 </div>
-                                <div class="reviews-item-header__wrapper">
-                                    <div class="reviews-name"><span class="reviews-name__text">George Moshowvitis</span> <div class="ui star rating rating-disabled" data-rating="5" data-max-rating="5"></div></div>
-                                    <div class="reviews-date">20 May, 2016 </div>
-                                </div>
-                                <div class="clear"></div>
                             </div>
                         </div>
-                        <div class="reviews-item__body">
-                            <div class="reviews-item-body">
-                                <div class="reviews-text">
-                                    Very nice plugin, unusable on tablets without landscape view. Fix it and raiting will higher. Anyway good tool, but be able to have a powerfull peer.
+                    </div>
+                </div>
+                <div class="card card_users">
+                    <div class="card-content">
+                        <a href="#" class="card-click-target"></a>
+                        <div class="card-content__cover">
+                            <div class="card-content-cover">
+                                <div class="card-content-cover__container">
+                                    <div class="card-content-cover-container">
+                                        <img src="assets/img/avatar-default.png" alt="" class="card-content-cover-container__image">
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="card-click-target">
+                                <span class="overlay-container"></span>
+                            </a>
+                        </div>
+                        <div class="card-content__details">
+                            <div class="card-dropdown dropdown dropdown_pointer dropdown_center">
+                                <a href="#" class="card-dropdown-toggle dropdown-toggle" data-toggle="dropdown"><i class="hb hb-extra"></i></a>
+                                <ul class="dropdown-menu" style="left: -67px">
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">View profile</a></li>
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">Type message</a></li>
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">Add to friends</a></li>
+                                </ul>
+                            </div>
+                            <div class="card-content-details">
+                                <div class="card-details__title">
+                                    <a href="#" class="card-details-title">
+                                        George Moshovitis
+                                        <span class="paragraph-end"></span>
+                                    </a>
+                                </div>
+                                <div class="card-details__subtitle">
+                                    <span class="card-details-subtitle">
+                                        <i class="flag br"></i> Brazil
+                                        <span class="paragraph-end"></span>
+                                    </span>
                                 </div>
                             </div>
                         </div>
-                    </li>
-                </ul>
-                <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="card card_users">
+                    <div class="card-content">
+                        <a href="#" class="card-click-target"></a>
+                        <div class="card-content__cover">
+                            <div class="card-content-cover">
+                                <div class="card-content-cover__container">
+                                    <div class="card-content-cover-container">
+                                        <img src="assets/img/avatar-default.png" alt="" class="card-content-cover-container__image">
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="card-click-target">
+                                <span class="overlay-container"></span>
+                            </a>
+                        </div>
+                        <div class="card-content__details">
+                            <div class="card-dropdown dropdown dropdown_pointer dropdown_center">
+                                <a href="#" class="card-dropdown-toggle dropdown-toggle" data-toggle="dropdown"><i class="hb hb-extra"></i></a>
+                                <ul class="dropdown-menu" style="left: -67px">
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">View profile</a></li>
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">Type message</a></li>
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">Add to friends</a></li>
+                                </ul>
+                            </div>
+                            <div class="card-content-details">
+                                <div class="card-details__title">
+                                    <a href="#" class="card-details-title">
+                                        George Moshovitis
+                                        <span class="paragraph-end"></span>
+                                    </a>
+                                </div>
+                                <div class="card-details__subtitle">
+                                    <span class="card-details-subtitle">
+                                        <i class="flag br"></i> Brazil
+                                        <span class="paragraph-end"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card_users">
+                    <div class="card-content">
+                        <a href="#" class="card-click-target"></a>
+                        <div class="card-content__cover">
+                            <div class="card-content-cover">
+                                <div class="card-content-cover__container">
+                                    <div class="card-content-cover-container">
+                                        <img src="assets/img/avatar-default.png" alt="" class="card-content-cover-container__image">
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="card-click-target">
+                                <span class="overlay-container"></span>
+                            </a>
+                        </div>
+                        <div class="card-content__details">
+                            <div class="card-dropdown dropdown dropdown_pointer dropdown_center">
+                                <a href="#" class="card-dropdown-toggle dropdown-toggle" data-toggle="dropdown"><i class="hb hb-extra"></i></a>
+                                <ul class="dropdown-menu" style="left: -67px">
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">View profile</a></li>
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">Type message</a></li>
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">Add to friends</a></li>
+                                </ul>
+                            </div>
+                            <div class="card-content-details">
+                                <div class="card-details__title">
+                                    <a href="#" class="card-details-title">
+                                        George Moshovitis
+                                        <span class="paragraph-end"></span>
+                                    </a>
+                                </div>
+                                <div class="card-details__subtitle">
+                                    <span class="card-details-subtitle">
+                                        <i class="flag br"></i> Brazil
+                                        <span class="paragraph-end"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card_users">
+                    <div class="card-content">
+                        <a href="#" class="card-click-target"></a>
+                        <div class="card-content__cover">
+                            <div class="card-content-cover">
+                                <div class="card-content-cover__container">
+                                    <div class="card-content-cover-container">
+                                        <img src="assets/img/avatar-default.png" alt="" class="card-content-cover-container__image">
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="card-click-target">
+                                <span class="overlay-container"></span>
+                            </a>
+                        </div>
+                        <div class="card-content__details">
+                            <div class="card-dropdown dropdown dropdown_pointer dropdown_center">
+                                <a href="#" class="card-dropdown-toggle dropdown-toggle" data-toggle="dropdown"><i class="hb hb-extra"></i></a>
+                                <ul class="dropdown-menu" style="left: -67px">
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">View profile</a></li>
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">Type message</a></li>
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">Add to friends</a></li>
+                                </ul>
+                            </div>
+                            <div class="card-content-details">
+                                <div class="card-details__title">
+                                    <a href="#" class="card-details-title">
+                                        George Moshovitis
+                                        <span class="paragraph-end"></span>
+                                    </a>
+                                </div>
+                                <div class="card-details__subtitle">
+                                    <span class="card-details-subtitle">
+                                        <i class="flag br"></i> Brazil
+                                        <span class="paragraph-end"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card_users">
+                    <div class="card-content">
+                        <a href="#" class="card-click-target"></a>
+                        <div class="card-content__cover">
+                            <div class="card-content-cover">
+                                <div class="card-content-cover__container">
+                                    <div class="card-content-cover-container">
+                                        <img src="assets/img/avatar-default.png" alt="" class="card-content-cover-container__image">
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="card-click-target">
+                                <span class="overlay-container"></span>
+                            </a>
+                        </div>
+                        <div class="card-content__details">
+                            <div class="card-dropdown dropdown dropdown_pointer dropdown_center">
+                                <a href="#" class="card-dropdown-toggle dropdown-toggle" data-toggle="dropdown"><i class="hb hb-extra"></i></a>
+                                <ul class="dropdown-menu" style="left: -67px">
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">View profile</a></li>
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">Type message</a></li>
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">Add to friends</a></li>
+                                </ul>
+                            </div>
+                            <div class="card-content-details">
+                                <div class="card-details__title">
+                                    <a href="#" class="card-details-title">
+                                        George Moshovitis
+                                        <span class="paragraph-end"></span>
+                                    </a>
+                                </div>
+                                <div class="card-details__subtitle">
+                                    <span class="card-details-subtitle">
+                                        <i class="flag br"></i> Brazil
+                                        <span class="paragraph-end"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 
 </section>
 
+
+<!--Modals todo
+<div class="modal" id="modal-pricing">
+</div>
+-->
+
 <script src="js/libs/jquery-2.1.1.min.js"></script>
 <script src="js/libs/slick.js"></script>
 <script src="js/libs/tether.js"></script>
 <script src="js/libs/jquery.slimscroll.min.js"></script>
 <script src="js/libs/ion.rangeSlider.js"></script>
+<script src="js/libs/jquery.colorbox.js"></script>
 <script src="js/libs/datatables.js"></script>
+<script src="js/libs/moment.js"></script>
+<script src="js/libs/calendar.js"></script>
+<script src="js/libs/elementTransitions.min.js"></script>
+<script src="js/libs/d3.min.js" charset="utf-8"></script>
+<script src="js/libs/xcharts.js"></script>
 
+<script src="js/libs/dropdown.js"></script>
 <script src="js/libs/transition.js"></script>
 <script src="js/libs/popup.js"></script>
 <script src="js/libs/rating.js"></script>

@@ -239,7 +239,6 @@ a {
     position: absolute;
     right: 3px;
     top: 11px;
-    z-index: 2;
 }
 .card-dropdown-toggle {
     font-size: 33px;
@@ -373,6 +372,32 @@ a {
     max-width: 100%;
 }
 
+.card_users {
+    width: 250px;
+    height: 85px;
+}
+.card_users .card-content__cover {
+    padding: 20px;
+    height: 85px;
+    width: 85px;
+    float: left;
+}
+.card_users .card-content__details {
+    margin: 0 0 0 85px;
+    padding: 23px 20px 20px 10px;
+}
+
+.card_users .card-dropdown {
+    top: 23px;
+}
+
+.card_users .card-details-title {
+    font-size: 13px;
+    font-weight: 600;
+}
+.card_users .card-details-subtitle {
+    font-size: 12px;
+}
     /*Forms*/
 
 .input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
