@@ -91,7 +91,8 @@
 .hb-organizations:before {
     content: "\e910";
 }
-.hb-peer:before {
+.hb-peer:before,
+.hb-peers:before {
     content: "\e911";
 }
 .hb-search:before {
@@ -109,10 +110,12 @@
 .hb-user-2:before {
     content: "\e916";
 }
-.hb-users:before {
+.hb-users:before,
+.hb-friends:before {
     content: "\e917";
 }
-.hb-views:before {
+.hb-views:before,
+.hb-eye:before {
     content: "\e918";
 }
 .hb-wifi:before {
@@ -153,4 +156,40 @@
 }
 .hb-extra:before {
     content: "\e92e";
+}
+.hb-time:before,
+.hb-created:before {
+    content: "\e92f";
+}
+.hb-unverifyed:before {
+    content: "\e930";
+}
+.hb-verifyed:before {
+    content: "\e931";
+}
+.hb-settings:before,
+.hb-cog:before {
+    content: "\e932";
+}
+.hb-last-login:before,
+.hb-login:before,
+.hb-enter:before {
+    content: "\e933";
+}
+.hb-kurjun:before {
+    content: "\e934";
+}
+.hb-invitation:before,
+.hb-mail:before,
+.hb-envelope:before {
+    content: "\e935";
+}
+.hb-github:before {
+    content: "\e936";
+}
+.hb-cloud-provider:before {
+    content: "\e937";
+}
+.hb-billing:before {
+    content: "\e938";
 }
