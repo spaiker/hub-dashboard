@@ -11,7 +11,8 @@
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
 }
 .hb-angle-down:before {
     content: "\e91a";
@@ -161,10 +162,10 @@
 .hb-created:before {
     content: "\e92f";
 }
-.hb-unverifyed:before {
+.hb-unverified:before {
     content: "\e930";
 }
-.hb-verifyed:before {
+.hb-verified:before {
     content: "\e931";
 }
 .hb-settings:before,

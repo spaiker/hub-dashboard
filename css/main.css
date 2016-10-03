@@ -237,12 +237,15 @@ a {
 }
 .card-dropdown {
     position: absolute;
-    right: 3px;
+    right: 8px;
     top: 11px;
 }
 .card-dropdown-toggle {
-    font-size: 33px;
+    font-size: 23px;
     color: #d4d9e3;
+}
+.card-dropdown .dropdown-menu {
+    left: -72px;
 }
 
 .card-details__title {
@@ -388,7 +391,7 @@ a {
 }
 
 .card_users .card-dropdown {
-    top: 23px;
+    top: 25px;
 }
 
 .card_users .card-details-title {
@@ -656,6 +659,7 @@ input[type=search] {
 }
 .btn i {
     margin: 0 5px 0 -5px;
+    vertical-align: baseline;
 }
 
 /*Custom buttons*/
@@ -890,15 +894,15 @@ input[type=search] {
 }
 .nav-minimize {
     color: #D4D9E3;
-    font-size: 30px;
+    font-size: 20px;
     line-height: 60px;
-    padding: 0 10px;
+    padding: 0 20px;
     display: block;
 }
-
-.nav_breadcrumb {
-    margin-left: 10px;
+.nav-minimize .hb {
+    vertical-align: baseline;
 }
+
 .nav-breadcrumb__item {
     display: inline-block;
     position: relative;
@@ -935,11 +939,14 @@ input[type=search] {
 .nav-dropdown__btn {
     color: #697490;
     text-decoration: none;
-    padding: 0 13px;
-    font-size: 30px;
+    padding: 0 15px;
+    font-size: 20px;
     display: block;
     position: relative;
     line-height: 60px;
+}
+.nav-dropdown__btn .hb {
+    vertical-align: baseline;
 }
 .nav-dropdown__content {
 }
@@ -990,6 +997,8 @@ input[type=search] {
     width: 80px;
     height: 80px;
     margin: 0 auto;
+    position: relative;
+    top: inherit;
 }
 .profile-header__name {
     padding: 10px 20px 15px;
@@ -1033,7 +1042,7 @@ input[type=search] {
     white-space: nowrap;
     vertical-align: middle;
     bottom: 14px;
-    right: 9px;
+    right: 6px;
     border: 2px solid #fff;
     border-radius: 50%;
 }
@@ -1073,7 +1082,10 @@ input[type=search] {
     display: inline-block;
     width: 25px;
     height: 25px;
-    position: relative;
+}
+.profile-meta .profile__avatar {
+    position: absolute;
+    top: 17px;
 }
 
 .profile__avatar_online:before {
@@ -1190,7 +1202,7 @@ input[type=search] {
     text-decoration: none;
 }
 .sidebar-menu__item .sidebar-menu-item__icon {
-    font-size: 25px;
+    font-size: 18px;
     color: #697490;
     margin: 0 10px 0 0;
 }
@@ -1494,9 +1506,30 @@ input[type=search] {
 .details-header-item {
     color: inherit;
 }
-.details-header__name {
+.details-header__item_name {
     font-size: 18px;
     font-weight: 600;
+}
+.details-header__item_verified .hb,
+.details-header__item_unverified .hb {
+    margin-right: 10px;
+}
+.details-header__item_verified .hb:before {
+    content: "\e931";
+    color: #52dc90;
+}
+.details-header__item_unverified .hb:before {
+    content: "\e930";
+    color: #ea5761;
+}
+.details-header-item__text {
+    font-weight: 600;
+}
+.details-header__item_verified .details-header-item__text:before {
+    content: "Verified";
+}
+.details-header__item_unverified .details-header-item__text:before {
+    content: "Unverified";
 }
 .details-popup {
     color: inherit;
@@ -1515,21 +1548,21 @@ input[type=search] {
     position: absolute;
     clear: both;
 }
-.details-header__name .status {
+.details-header__item_name .status {
     margin: 0 0 0 40px;
 }
-.details-header__price,
-.details-header__rating {
+.details-header__item_price,
+.details-header__item_rating {
     font-size: 16px;
     font-weight: 600;
 
 }
-.details-header__rating .hb-solid-star {
+.details-header__item_rating .hb-solid-star {
     font-size: 20px;
     color: #ffbc3c;
     vertical-align: text-bottom;
 }
-.detail-header__toggles-btns .btn_circle {
+.details-header__item_toggles-btns .btn_circle {
     margin: 0 10px 0 0;
 }
 
@@ -1543,8 +1576,7 @@ input[type=search] {
     margin: 0 40px 0 0;
 }
 .details-description__item .hb {
-    font-size: 15px;
-    vertical-align: text-top;
+    vertical-align: baseline;
     margin: 0 10px 0 0;
 }
 .details-description__text .flag {
@@ -1624,7 +1656,7 @@ input[type=search] {
     margin: 0 40px 0 0;
 }
 .reviews-name .rating {
-    font-size: 16px;
+    font-size: 10px;
     vertical-align: text-bottom;
 }
 .reviews-date {
@@ -1654,6 +1686,11 @@ input[type=search] {
 .content__header_categories .content-header {
     float: left;
     padding: 15px 40px;
+    position: relative;
+}
+.content__header_filters .content-header {
+    padding: 15px 40px;
+    position: relative;
 }
 
 .categories__title {
@@ -1741,7 +1778,7 @@ input[type=search] {
     display: none;
 }
 .sidebar-minimize .sidebar-menu-item {
-    padding: 15px 0 15px 21px;
+    padding: 15px 0 15px 24px;
 }
 .header-minimize .navbar-brand__logo_small {
     display: block;
