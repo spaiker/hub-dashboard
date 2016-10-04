@@ -688,7 +688,7 @@ input[type=search] {
     padding: 0 1px 0 0;
     width: 26px;
     height: 26px;
-    font-size: 21px;
+    font-size: 15px;
     line-height: 23px;
 
     background-color: #fff;
@@ -1188,9 +1188,9 @@ input[type=search] {
 }
 
 .sidebar-menu__title {
-    font-size: 12px;
+    font-size: 10px;
     color: #697490;
-    padding: 25px 0 5px 25px;
+    padding: 25px 0 10px 25px;
 }
 .sidebar-menu__item {
     width: 100%;
@@ -1205,6 +1205,7 @@ input[type=search] {
     font-size: 18px;
     color: #697490;
     margin: 0 10px 0 0;
+    vertical-align: middle;
 }
 .sidebar-menu__item .sidebar-menu-item__caption {
     font-size: 15px;
@@ -1510,6 +1511,10 @@ input[type=search] {
     font-size: 18px;
     font-weight: 600;
 }
+.details-header__item_name .hb {
+    vertical-align: baseline;
+    font-size: 16px;
+}
 .details-header__item_verified .hb,
 .details-header__item_unverified .hb {
     margin-right: 10px;
@@ -1558,9 +1563,7 @@ input[type=search] {
 
 }
 .details-header__item_rating .hb-solid-star {
-    font-size: 20px;
     color: #ffbc3c;
-    vertical-align: text-bottom;
 }
 .details-header__item_toggles-btns .btn_circle {
     margin: 0 10px 0 0;
@@ -1761,11 +1764,64 @@ input[type=search] {
     border-top-color: transparent;
 }
 
-
 .filter-others  .irs {
     height: 58px;
 }
 
+.sidebar-profile-info__avatar {
+    height: 100px;
+    padding: 10px 70px;
+}
+.sidebar-profile-info__avatar .card-content-cover {
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-radius: 50%;
+}
+.sidebar-profile-info__avatar .card-content-cover-container__image {
+    max-height: 80px;
+}
+.sidebar-profile-directional {
+    padding: 15px 25px 0;
+}
+.sidebar-profile-directional__item {
+    color: #697490;
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
+}
+.sidebar-profile-directional__item:hover {
+    color: #e7e7e7;
+}
+.sidebar-profile-directional__item:last-child {
+    float: right;
+}
+.sidebar-profile-info__title,
+.sidebar-profile-info__details {
+    padding: 15px 25px 0;
+}
+.sidebar-profile-info-name,
+.sidebar-profile-info-balance {
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+}
+.sidebar-profile-info-balance {
+    font-size: 12px;
+}
+.sidebar-profile-info-name,
+.sidebar-profile-info-details {
+    padding: 0 0 10px;
+}
+
+.sidebar-profile-info-details {
+    font-size: 12px;
+    color: #fff;
+}
+.sidebar-profile-info-details .hb {
+    color: #697490;
+    margin: 0 10px 0 0;
+}
 /*JS*/
 .sidebar-minimize {
     width: 70px;

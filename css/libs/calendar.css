@@ -89,7 +89,7 @@
     -webkit-box-flex: 0;
     -ms-flex-positive: 0;
     flex-grow: 0;
-    font-weight: 600
+    font-size: 14px;
 }
 
 .daterange .dr-input .dr-presets {
@@ -416,9 +416,9 @@
 .dr-icon {
     display: inline-flex;
     height: 35px;
-    padding: 5px 5px!important;
+    padding: 7px!important;
     vertical-align: middle;
-    font-size: 25px;
+    font-size: 20px;
     background-color: #59b7ff;
     color: #fff;
     border-bottom-left-radius: 2px;

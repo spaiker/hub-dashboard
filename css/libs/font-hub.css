@@ -12,7 +12,6 @@
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    vertical-align: middle;
 }
 .hb-angle-down:before {
     content: "\e91a";
@@ -131,7 +130,8 @@
 .hb-info:before {
     content: "\e925";
 }
-.hb-upload:before {
+.hb-upload:before,
+.hb-cloud-provider:before {
     content: "\e926";
 }
 .hb-edit:before {
@@ -187,9 +187,6 @@
 }
 .hb-github:before {
     content: "\e936";
-}
-.hb-cloud-provider:before {
-    content: "\e937";
 }
 .hb-billing:before {
     content: "\e938";
