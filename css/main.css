@@ -1554,7 +1554,7 @@ input[type=search] {
     clear: both;
 }
 .details-header__item_name .status {
-    margin: 0 0 0 40px;
+    margin: 0 0 3px 40px;
 }
 .details-header__item_price,
 .details-header__item_rating {
