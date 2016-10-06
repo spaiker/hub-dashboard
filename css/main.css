@@ -1903,3 +1903,19 @@ input[type=search] {
 	vertical-align: middle;
 }
 
+.selected-filter {
+	display: block;
+	padding: 7px 15px;
+	color: #fff;
+	font-weight: normal;
+	background-color: #D4D9E4;
+}
+
+.selected-filter .hb {
+	padding-left: 10px;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
