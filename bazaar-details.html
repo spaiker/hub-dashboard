@@ -23,6 +23,9 @@
     <link rel="stylesheet" href="css/libs/boo-dropdown.css">
     <link rel="stylesheet" href="css/libs/boo-tooltip.css">
 
+    <link rel="stylesheet" href="css/libs/remodal.css">
+    <link rel="stylesheet" href="css/libs/remodal-default-theme.css">
+
     <!--CSS-->
     <link rel="stylesheet" href="css/main.css">
 
@@ -863,6 +866,7 @@
             <div class="content-header__right">
                 <div class="actions-zone">
                     <button class="btn btn_green"><i class="hb hb-arrow-down"></i>Install</button>
+                    <button class="btn btn_blue" data-remodal-target="modal-edit-product"><i class="hb hb-arrow-down"></i>Edit</button>
                 </div>
             </div>
             <div class="content-header__left">
@@ -1040,6 +1044,62 @@ asynchronous masterless replication allowing low latency operations for all clie
 
 </section>
 
+<!--Modals-->
+<div class="remodal remodal_md" data-remodal-id="modal-edit-product">
+    <div class="remodal-header">
+        <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
+        <div class="remodal-header__title"><span class="remodal-header-title">Edit product</span></div>
+    </div>
+    <div class="remodal-body">
+        <div class="modal modal_edit-product">
+            <div class="modal__forms-wrapper">
+                <label for="name" class="forms-label">Name</label>
+                <input type="text" class="forms-input" id="name" placeholder="Write your name">
+            </div>
+            <div class="modal__forms-wrapper">
+                <label for="category" class="forms-label">Category</label>
+                <select type="text" class="forms-input" id="category">
+                    <option val="">Please choose</option>
+                    <option value="shared">Category 1</option>
+                </select>
+            </div>
+            <div class="modal__forms-wrapper">
+                <label for="type" class="forms-label">Type</label>
+                <select type="text" class="forms-input" id="type">
+                    <option val="">Please choose</option>
+                    <option value="shared">Type 1</option>
+                </select>
+            </div>
+            <div class="modal__forms-wrapper">
+                <label for="dependency" class="forms-label">Dependency</label>
+                <select type="text" class="forms-input" id="dependency">
+                    <option val="">Please choose</option>
+                    <option value="shared">Dependency 1</option>
+                </select>
+            </div>
+            <div class="modal__forms-wrapper modal__forms-wrapper_2-col">
+                <div class="modal-forms-wrapper">
+                    <label for="price" class="forms-label">Price</label>
+                    <input type="number" class="forms-input" id="price" value="100">
+                </div>
+                <div class="modal-forms-wrapper ">
+                    <label for="version" class="forms-label">Version</label>
+                    <input type="text" class="forms-input" id="version" value="1.00">
+                </div>
+            </div>
+            <div class="modal__forms-wrapper">
+                <label for="description" class="forms-label forms-label_textarea">Description</label>
+                <textarea class="forms-input forms-input_textarea" id="description" placeholder="Write your description" rows="3"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="remodal-footer">
+        <button class="btn btn_blue" data-remodal-action="confirm">Save</button>
+        <button class="btn" data-remodal-action="cancel">Cancel</button>
+    </div>
+</div>
+
+
 <script src="js/libs/jquery-2.1.1.min.js"></script>
 <script src="js/libs/slick.js"></script>
 <script src="js/libs/tether.js"></script>
@@ -1057,6 +1117,8 @@ asynchronous masterless replication allowing low latency operations for all clie
 <script src="js/libs/boo-dropdown.js"></script>
 <script src="js/libs/boo-tooltip.js"></script>
 <script src="js/libs/boo-popover.js"></script>
+
+<script src="js/libs/remodal.js"></script>
 
 <script src="js/main.js"></script>
 </body>
