@@ -9,7 +9,7 @@ $(function() {
         .sidebar('attach events', '.js-chat-btn');
 
     $('.tabular.menu .item').tab();
-
+    $('.ui.rating').rating();
     $('.ui.rating.rating-disabled').rating('disable');
 
 

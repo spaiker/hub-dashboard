@@ -27,6 +27,9 @@
     <link rel="stylesheet" href="css/libs/boo-dropdown.css">
     <link rel="stylesheet" href="css/libs/boo-tooltip.css">
 
+    <link rel="stylesheet" href="css/libs/remodal.css">
+    <link rel="stylesheet" href="css/libs/remodal-default-theme.css">
+
     <!--CSS-->
     <link rel="stylesheet" href="css/main.css">
 
@@ -866,7 +869,7 @@
         <div class="content-header">
             <div class="content-header__right">
                 <div class="actions-zone">
-                    <button class="btn btn_blue"><i class="hb hb-edit"></i>Edit</button> <button class="btn btn_red"><i class="hb hb-close"></i>Delete</button>
+                    <button class="btn btn_blue" data-remodal-target="modal-edit"><i class="hb hb-edit"></i>Edit</button> <button class="btn btn_red"><i class="hb hb-close"></i>Delete</button>
                 </div>
             </div>
             <div class="content-header__left">
@@ -952,7 +955,7 @@
         </div>
         <div class="panel ui tab" data-tab="data-tab-reviews">
             <div class="panel__header">
-                <a href="#" class="btn btn_green">Write</a>
+                <a href="#modal-review" class="btn btn_green">Write</a>
             </div>
             <div class="panel__body">
                 <ul class="reviews nav">
@@ -1162,6 +1165,103 @@
 
 </section>
 
+<!--Modals-->
+<div class="remodal remodal_xs" data-remodal-id="modal-pricing">
+    <div class="remodal-header">
+        <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
+        <div class="remodal-header__title"><span class="remodal-header-title">Pricing</span></div>
+    </div>
+    <div class="remodal-body">
+        <div class="modal modal_pricing">
+            <div class="modal__forms-wrapper">
+                <label for="tiny" class="forms-label">TINY</label>
+                <input type="number" class="forms-input" id="tiny" value="100">
+            </div>
+            <div class="modal__forms-wrapper">
+                <label for="small" class="forms-label">SMALL</label>
+                <input type="number" class="forms-input" id="small" value="100">
+            </div>
+            <div class="modal__forms-wrapper">
+                <label for="medium" class="forms-label">MEDIUM</label>
+                <input type="number" class="forms-input" id="medium" value="100">
+            </div>
+            <div class="modal__forms-wrapper">
+                <label for="large" class="forms-label">LARGE</label>
+                <input type="number" class="forms-input" id="large" value="100">
+            </div>
+            <div class="modal__forms-wrapper">
+                <label for="huge" class="forms-label">HUGE</label>
+                <input type="number" class="forms-input" id="huge" value="100">
+            </div>
+        </div>
+    </div>
+    <div class="remodal-footer">
+        <button class="btn btn_blue" data-remodal-action="confirm">Save</button>
+        <button class="btn" data-remodal-action="cancel">Cancel</button>
+    </div>
+</div>
+<div class="remodal remodal_md" data-remodal-id="modal-review">
+    <div class="remodal-header">
+        <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
+        <div class="remodal-header__title"><span class="remodal-header-title">Write review</span></div>
+    </div>
+    <div class="remodal-body">
+        <div class="modal modal_review">
+            <div class="modal__forms-wrapper">
+                <label class="forms-label">Rating</label>
+                <div class="forms-rating"><div class="ui star rating" data-rating="0" data-max-rating="5"></div></div>
+            </div>
+            <div class="modal__forms-wrapper">
+                <label for="name" class="forms-label">Name</label>
+                <input type="text" class="forms-input" id="name" placeholder="Write your name">
+            </div>
+            <div class="modal__forms-wrapper">
+                <label for="description" class="forms-label forms-label_textarea">Comment</label>
+                <textarea class="forms-input forms-input_textarea" id="description" placeholder="Write your comment" rows="3"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="remodal-footer">
+        <button class="btn btn_blue" data-remodal-action="confirm">Save</button>
+        <button class="btn" data-remodal-action="cancel">Cancel</button>
+    </div>
+</div>
+<div class="remodal remodal_sm" data-remodal-id="modal-edit">
+    <div class="remodal-header">
+        <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
+        <div class="remodal-header__title"><span class="remodal-header-title">Edit</span></div>
+    </div>
+    <div class="remodal-body">
+        <div class="modal modal_edit">
+            <div class="modal__forms-wrapper">
+                <label for="name" class="forms-label">Name</label>
+                <input type="text" class="forms-input" id="name" placeholder="Write your name">
+            </div>
+            <div class="modal__forms-wrapper">
+                <label for="scope" class="forms-label">Scope</label>
+                <select type="text" class="forms-input" id="scope">
+                    <option val="">Please choose</option>
+                    <option value="shared">Shared</option>
+                    <option value="public">Public</option>
+                    <option value="private">Private</option>
+                </select>
+            </div>
+            <div class="modal__wrapper">
+                <div class="modal-wrapper">
+                    <label for="scope" class="forms-label">Accessible via Tunnel to Subutai Social</label>
+                </div>
+                <label class="forms-switch">
+                    <input type="checkbox" class="forms-switch__checkbox">
+                    <span class="forms-switch__slider"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="remodal-footer">
+        <button class="btn btn_blue" data-remodal-action="confirm">Save</button>
+        <button class="btn" data-remodal-action="cancel">Cancel</button>
+    </div>
+</div>
 
 <div class="modal" id="modal-pricing">
 </div>
@@ -1189,6 +1289,8 @@
 <script src="js/libs/boo-dropdown.js"></script>
 <script src="js/libs/boo-tooltip.js"></script>
 <script src="js/libs/boo-popover.js"></script>
+
+<script src="js/libs/remodal.js"></script>
 
 <script src="js/main.js"></script>
 </body>

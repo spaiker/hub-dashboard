@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="css/libs/calendar.css">
     <link rel="stylesheet" href="css/libs/elementTransitions.min.css">
     <link rel="stylesheet" href="css/libs/xcharts.css">
+    <link rel="stylesheet" href="css/libs/isotope.css">
 
     <link rel="stylesheet" href="css/libs/boo-dropdown.css">
     <link rel="stylesheet" href="css/libs/boo-tooltip.css">
@@ -875,9 +876,10 @@
         </div>
         <div class="content-tabs">
             <div class="tabular menu tabs">
-                <a class="item tab active" data-tab="data-tab-rh">Popular</a>
-                <a class="item tab" data-tab="data-tab-reviews">Recent</a>
-                <a class="item tab" data-tab="data-tab-environments">Free</a>
+                <a class="item tab active" data-filter="*">All</a>
+                <a class="item tab" data-filter=".isotope-popular">Popular</a>
+                <a class="item tab" data-filter=".isotope-recent">Recent</a>
+                <a class="item tab" data-filter=".isotope-free">Free</a>
             </div>
         </div>
     </div>
@@ -889,7 +891,7 @@
                 <a href="#" class="btn btn_blue">My products</a>
             </div>
             <div class="panel__body">
-                <div class="card card_default">
+                <div class="card card_default isotope-free">
                     <div class="card-content">
                         <a href="#" class="card-click-target"></a>
                         <div class="card-content__cover">
@@ -947,7 +949,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card card_default">
+                <div class="card card_default isotope-popular">
                     <div class="card-content">
                         <a href="#" class="card-click-target"></a>
                         <div class="card-content__cover">
@@ -1005,7 +1007,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card card_default">
+                <div class="card card_default isotope-popular">
                     <div class="card-content">
                         <a href="#" class="card-click-target"></a>
                         <div class="card-content__cover">
@@ -1063,7 +1065,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card card_default">
+                <div class="card card_default isotope-free">
                     <div class="card-content">
                         <a href="#" class="card-click-target"></a>
                         <div class="card-content__cover">
@@ -1121,7 +1123,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card card_default">
+                <div class="card card_default isotope-popular">
                     <div class="card-content">
                         <a href="#" class="card-click-target"></a>
                         <div class="card-content__cover">
@@ -1179,7 +1181,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card card_default">
+                <div class="card card_default isotope-recent">
                     <div class="card-content">
                         <a href="#" class="card-click-target"></a>
                         <div class="card-content__cover">
@@ -1237,7 +1239,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card card_default">
+                <div class="card card_default isotope-free isotope-recent">
                     <div class="card-content">
                         <a href="#" class="card-click-target"></a>
                         <div class="card-content__cover">
@@ -1295,7 +1297,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card card_default">
+                <div class="card card_default isotope-recent">
                     <div class="card-content">
                         <a href="#" class="card-click-target"></a>
                         <div class="card-content__cover">
@@ -1353,7 +1355,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card card_default">
+                <div class="card card_default isotope-popular">
                     <div class="card-content">
                         <a href="#" class="card-click-target"></a>
                         <div class="card-content__cover">
@@ -1436,6 +1438,7 @@
 <script src="js/libs/elementTransitions.min.js"></script>
 <script src="js/libs/d3.min.js" charset="utf-8"></script>
 <script src="js/libs/xcharts.js"></script>
+<script src="js/libs/jquery.isotope.js"></script>
 
 <script src="js/libs/dropdown.js"></script>
 <script src="js/libs/transition.js"></script>
@@ -1450,5 +1453,6 @@
 <script src="js/libs/boo-popover.js"></script>
 
 <script src="js/main.js"></script>
+<script src="js/pages/bazaar-main.js"></script>
 </body>
 </html>
