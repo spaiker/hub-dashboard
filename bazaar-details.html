@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="css/libs/remodal.css">
     <link rel="stylesheet" href="css/libs/remodal-default-theme.css">
 
+    <link rel="stylesheet" href="css/libs/jquery.filer.css">
+
     <!--CSS-->
     <link rel="stylesheet" href="css/main.css">
 
@@ -865,8 +867,8 @@
         <div class="content-header">
             <div class="content-header__right">
                 <div class="actions-zone">
-                    <button class="btn btn_green"><i class="hb hb-arrow-down"></i>Install</button>
-                    <button class="btn btn_blue" data-remodal-target="modal-edit-product"><i class="hb hb-arrow-down"></i>Edit</button>
+                    <button class="btn btn_green" data-remodal-target="modal-install-on-peers"><i class="hb hb-arrow-down"></i>Install</button>
+                    <button class="btn btn_blue" data-remodal-target="modal-edit-product"><i class="hb hb-edit"></i>Edit</button>
                 </div>
             </div>
             <div class="content-header__left">
@@ -1091,10 +1093,56 @@ asynchronous masterless replication allowing low latency operations for all clie
                 <label for="description" class="forms-label forms-label_textarea">Description</label>
                 <textarea class="forms-input forms-input_textarea" id="description" placeholder="Write your description" rows="3"></textarea>
             </div>
+            <div class="modal__forms-wrapper modal__forms-wrapper_upload">
+                <label for="logo" class="forms-label">Logo</label>
+                <form action="./php/upload.php" method="post" enctype="multipart/form-data" id="logo" class="forms">
+                    <input type="file" name="files[]" multiple="multiple" class="forms-input js-input-logo">
+                </form>
+            </div>
+            <div class="modal__forms-wrapper modal__forms-wrapper_upload">
+                <label for="product" class="forms-label">Product file</label>
+                <form action="./php/upload.php" method="post" enctype="multipart/form-data" id="product" class="forms">
+                    <input type="file" name="files[]" multiple="multiple" class="forms-input js-input-product">
+                </form>
+            </div>
+            <div class="modal__forms-wrapper modal__forms-wrapper_upload">
+                <label for="screenshots" class="forms-label">Screenshots</label>
+                <form action="./php/upload.php" method="post" enctype="multipart/form-data" id="screenshots" class="forms">
+                    <input type="file" name="files[]" multiple="multiple" class="forms-input js-input-screenshots">
+                </form>
+            </div>
         </div>
     </div>
     <div class="remodal-footer">
         <button class="btn btn_blue" data-remodal-action="confirm">Save</button>
+        <button class="btn" data-remodal-action="cancel">Cancel</button>
+    </div>
+</div>
+<div class="remodal remodal_xs" data-remodal-id="modal-install-on-peers">
+    <div class="remodal-header">
+        <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
+        <div class="remodal-header__title"><span class="remodal-header-title">Install on peers</span></div>
+    </div>
+    <div class="remodal-body">
+        <div class="modal modal_install-on-peers">
+            <ul class="peer-list">
+                <li class="peer-list__item">
+                    <span class="checkbox-wrapper">
+                        <input type="checkbox" id="1">
+                        <label for="1"><span class="status status_online status_left"></span> [Dilshat] Peer 8C [Dilshat] Peer 8C</label>
+                    </span>
+                </li>
+                <li class="peer-list__item">
+                    <span class="checkbox-wrapper">
+                        <input type="checkbox" id="2">
+                        <label for="2"><span class="status status_online status_left"></span> [Dilshat] Peer 8C</label>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="remodal-footer">
+        <button class="btn btn_green" data-remodal-action="confirm">Install</button>
         <button class="btn" data-remodal-action="cancel">Cancel</button>
     </div>
 </div>
@@ -1119,7 +1167,9 @@ asynchronous masterless replication allowing low latency operations for all clie
 <script src="js/libs/boo-popover.js"></script>
 
 <script src="js/libs/remodal.js"></script>
+<script src="js/libs/jquery.filer.min.js"></script>
 
 <script src="js/main.js"></script>
+<script src="js/pages/bazaar-details.js"></script>
 </body>
 </html>

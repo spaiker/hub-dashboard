@@ -436,6 +436,7 @@ label {
 }
 .forms-label_textarea {
     vertical-align: top;
+    line-height: 35px;
 }
 .forms-input_textarea,
 textarea {
@@ -664,7 +665,7 @@ textarea {
 /*Default*/
 .btn {
     display: inline-block;
-    padding: 8px 15px;
+    padding: 9px 15px;
     vertical-align: middle;
     cursor: pointer;
     border-radius: 2px;
@@ -684,7 +685,7 @@ textarea {
     border: 1px solid #718bb7;
 
     color: #fff;
-    font-size: 14px;
+    font-size: 12px;
     text-decoration: none;
 
 }
@@ -1910,6 +1911,12 @@ textarea {
     width: 60%;
     margin: 0 0 0 10px;
 }
+.modal__forms-wrapper_upload .forms-label,
+.modal__forms-wrapper_upload label {
+    line-height: 35px;
+    display: inline-block;
+    vertical-align: top;
+}
 .modal_review .rating {
     font-size: 12px;
 }
@@ -1938,6 +1945,34 @@ textarea {
 .modal_edit-product .modal__forms-wrapper_2-col .modal-forms-wrapper .forms-input {
     width: 100px;
 }
+
+.modal_edit-product .modal__forms-wrapper .forms {
+    width: 80%;
+    display: inline-block;
+    margin: 0 0 0 10px;
+}
+
+.peer-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.peer-list__item {
+    margin: 0 0 10px 0;
+}
+.peer-list__item:last-child {
+    margin: 0;
+}
+.peer-list .checkbox-wrapper label {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    word-wrap: normal;
+}
+
+
+
     /*JS*/
 .sidebar-minimize {
     width: 70px;
@@ -1950,7 +1985,10 @@ textarea {
     display: none;
 }
 .sidebar-minimize .sidebar-menu-item {
-    padding: 15px 0 15px 24px;
+    padding: 15px 0 15px 23px;
+}
+.sidebar-minimize .sidebar-menu__item .sidebar-menu-item__icon {
+    font-size: 20px;
 }
 .header-minimize .navbar-brand__logo_small {
     display: block;
