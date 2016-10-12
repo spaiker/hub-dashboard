@@ -223,6 +223,31 @@ a {
     max-height: 160px;
     max-width: 100%;
 }
+.card-content-cover-container__popover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 2;
+    cursor: pointer;
+}
+.card-content-cover-container-popover .sidebar-profile-info__title {
+    padding: 0;
+}
+.card-content-cover-container-popover .sidebar-profile-info__details {
+    padding: 15px 0 0;
+}
+
+.card-content-cover-container-popover .sidebar-profile-info-name,
+.card-content-cover-container-popover .sidebar-profile-info-balance,
+.card-content-cover-container-popover .sidebar-profile-info-details {
+    color: #697490;
+}
+.card-content-cover-container-popover .sidebar-profile-info-details:last-child {
+    padding: 0;
+}
 .card-content__details {
     padding: 10px 20px 0 20px;
     position: relative;
@@ -1883,6 +1908,7 @@ textarea {
     font-weight: 500;
     color: #fff;
 }
+
 .sidebar-profile-info-balance {
     font-size: 12px;
 }
@@ -1999,7 +2025,7 @@ textarea {
     display: none;
 }
 .header-minimize .navbar-brand {
-    padding: 11px 0 0 11px;
+    padding: 11px 0 0 12px;
 }
 .header-minimize .navbar-header {
     width: 70px;
@@ -2010,6 +2036,31 @@ textarea {
 .content-minimize {
     margin-left: 70px;
 }
+
+.sidebar-minimize .sidebar-profile-directional {
+    padding: 7px 0 0 0;
+}
+.sidebar-minimize .sidebar-profile-directional__item {
+    display: block;
+    padding: 8px 27px;
+}
+.sidebar-minimize .sidebar-profile-directional__item:last-child {
+    float: inherit;
+}
+.sidebar-minimize .sidebar-profile-info__avatar {
+    height: 50px;
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    position: relative;
+}
+.sidebar-minimize .sidebar-profile-info__title,
+.sidebar-minimize .sidebar-profile-info__details {
+    display: none;
+}
+.sidebar-minimize .card-content-cover-container__popover {
+    display: block;
+}
+
 /*MEDIUM DEFINITION SCREEN Media*/
 @media only screen and (max-width: 1450px) {
     .details__description_text .details-description__item {
