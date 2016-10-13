@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="css/libs/sidebar.css">
     <link rel="stylesheet" href="css/libs/tab.css">
 
+    <link rel="stylesheet" href="css/libs/isotope.css">
+
     <!--CSS-->
     <link rel="stylesheet" href="css/main.css">
 
@@ -863,10 +865,10 @@
     <div class="content__header">
         <div class="content-tabs">
             <div class="tabular menu tabs">
-                <a class="item tab active" data-tab="data-tab-users">All organizations</a>
-                <a class="item tab" data-tab="data-tab-online">Verified</a>
-                <a class="item tab" data-tab="data-tab-your-country">Open source</a>
-                <a class="item tab" data-tab="data-tab-your-country">Educational</a>
+                <a class="item tab active" data-filter="*">All organizations</a>
+                <a class="item tab" data-filter=".isotope-verified">Verified</a>
+                <a class="item tab" data-filter=".isotope-open-source">Open source</a>
+                <a class="item tab" data-filter=".isotope-educational">Educational</a>
             </div>
         </div>
         <div class="clear"></div>
@@ -882,7 +884,7 @@
                 </div>
             </div>
             <div class="panel__body">
-                <div class="card card_users card_organizations">
+                <div class="card card_users card_organizations isotope-verified">
                     <div class="card-content">
                         <a href="#" class="card-click-target"></a>
                         <div class="card-content__cover">
@@ -922,7 +924,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card card_users card_organizations">
+                <div class="card card_users card_organizations isotope-open-source">
                     <div class="card-content">
                         <a href="#" class="card-click-target"></a>
                         <div class="card-content__cover">
@@ -962,7 +964,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card card_users card_organizations">
+                <div class="card card_users card_organizations isotope-verified">
                     <div class="card-content">
                         <a href="#" class="card-click-target"></a>
                         <div class="card-content__cover">
@@ -1002,7 +1004,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card card_users card_organizations">
+                <div class="card card_users card_organizations isotope-open-source">
                     <div class="card-content">
                         <a href="#" class="card-click-target"></a>
                         <div class="card-content__cover">
@@ -1042,7 +1044,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card card_users card_organizations">
+                <div class="card card_users card_organizations isotope-educational">
                     <div class="card-content">
                         <a href="#" class="card-click-target"></a>
                         <div class="card-content__cover">
@@ -1082,7 +1084,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card card_users card_organizations">
+                <div class="card card_users card_organizations isotope-verified">
                     <div class="card-content">
                         <a href="#" class="card-click-target"></a>
                         <div class="card-content__cover">
@@ -1122,7 +1124,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card card_users card_organizations">
+                <div class="card card_users card_organizations isotope-educational">
                     <div class="card-content">
                         <a href="#" class="card-click-target"></a>
                         <div class="card-content__cover">
@@ -1162,7 +1164,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card card_users card_organizations">
+                <div class="card card_users card_organizations isotope-open-source">
                     <div class="card-content">
                         <a href="#" class="card-click-target"></a>
                         <div class="card-content__cover">
@@ -1239,6 +1241,10 @@
 <script src="js/libs/boo-tooltip.js"></script>
 <script src="js/libs/boo-popover.js"></script>
 
+<script src="js/libs/jquery.isotope.js"></script>
+
 <script src="js/main.js"></script>
+<script src="js/pages/isotope-settings.js"></script>
+
 </body>
 </html>
