@@ -146,16 +146,16 @@
     position: absolute
 }
 .daterange .dr-selections .dr-calendar:after {
-    margin-left: -0.30714286em;
-    top: -0.30714286em;
+    margin-left: -4px;
+    top: -3px;
     left: 50%;
     right: auto;
     bottom: auto;
-    box-shadow: -1px -1px 0px 0px #bababc;
+    box-shadow: -1px -1px 0px 0px #d4d9e3;
     position: absolute;
     content: '';
-    width: 0.71428571em;
-    height: 0.71428571em;
+    width: 7px;
+    height: 7px;
     background: #FFFFFF;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -177,7 +177,7 @@
     -webkit-transition: width .2s;
     transition: width .2s;
     min-width: 210px;
-    margin-top: 7px;
+    margin-top: 4px;
 }
 
 .daterange .dr-selections .dr-calendar .dr-range-switcher {
@@ -206,7 +206,7 @@
 }
 
 .daterange .dr-selections .dr-calendar .dr-range-switcher .dr-switcher i {
-    color: #C3CACD;
+    color: #d4d9e3;
     position: relative;
     top: -1px;
     cursor: pointer;
@@ -229,7 +229,7 @@
     position: absolute;
     width: 7px;
     height: 2px;
-    background-color: #C3CACD;
+    background-color: #d4d9e3;
     border-radius: 1px;
     left: 50%
 }

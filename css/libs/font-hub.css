@@ -191,3 +191,60 @@
 .hb-billing:before {
     content: "\e938";
 }
+.hb-solid-close:before {
+    content: "\e937";
+}
+.hb-domain:before {
+    content: "\e939";
+}
+.hb-folder:before {
+    content: "\e93a";
+}
+.hb-question:before {
+    content: "\e93b";
+}
+.hb-reload:before {
+    content: "\e93c";
+}
+.hb-key:before {
+    content: "\e93d";
+}
+.hb-ssh-key:before {
+    content: "\e93e";
+}
+.hb-play:before {
+    content: "\e93f";
+}
+.hb-stop:before {
+    content: "\e940";
+}
+.hb-social-facebook:before {
+    content: "\e941";
+}
+.hb-social-github:before {
+    content: "\e942";
+}
+.hb-social-google:before {
+    content: "\e943";
+}
+.hb-solid-add-friend:before {
+    content: "\e944";
+}
+.hb-solid-remove-friend:before {
+    content: "\e945";
+}
+.hb-installed-product:before {
+    content: "\e946";
+}
+.hb-uploaded-product:before {
+    content: "\e947";
+}
+.hb-minus-short:before {
+    content: "\e948";
+}
+.hb-minus-mid:before {
+    content: "\e949";
+}
+.hb-minus-long:before {
+    content: "\e94a";
+}

@@ -1052,6 +1052,8 @@ textarea {
 
 .nav-dropdown__content_notification {
     max-height: 350px;
+    max-width: 400px;
+    width: 400px;
 }
 .nav-dropdown__content_profile {
     width: 200px;
@@ -1071,6 +1073,7 @@ textarea {
 .nav-dropdown-content__notification .notification__description {
     font-size: 12px;
     margin-top: 5px;
+    white-space: normal;
 }
 .nav-dropdown-content__notification .notification__description a {
     text-decoration: underline;
@@ -2051,8 +2054,8 @@ textarea {
     margin: 0 0 20px;
     position: relative;
 }
-.sidebar-minimize .sidebar-profile-info__title,
-.sidebar-minimize .sidebar-profile-info__details {
+.sidebar-minimize .sidebar-profile-info .sidebar-profile-info__title,
+.sidebar-minimize .sidebar-profile-info .sidebar-profile-info__details {
     display: none;
 }
 .sidebar-minimize .card-content-cover-container__popover {
@@ -2077,8 +2080,11 @@ textarea {
     .sidebar-menu__item .sidebar-menu-item__caption {
         display: none;
     }
-    .sidebar-menu-item {
-        padding: 15px 0 15px 25px;
+    .sidebar-menu__item .sidebar-menu-item {
+        padding: 15px 0 15px 23px;
+    }
+    .sidebar-menu__item .sidebar-menu-item__icon {
+        font-size: 20px;
     }
     .navbar-brand__logo_small {
         display: block;
@@ -2087,7 +2093,7 @@ textarea {
         display: none;
     }
     .navbar-brand {
-        padding: 11px 0 0 11px;
+        padding: 11px 0 0 12px;
     }
     .navbar-header {
         width: 70px;
@@ -2100,6 +2106,29 @@ textarea {
     }
     .details__description_text .details-description__item {
         max-width: 400px;
+    }
+    .sidebar-profile-directional {
+        padding: 7px 0 0 0;
+    }
+    .sidebar-profile-directional__item {
+        display: block;
+        padding: 8px 27px;
+    }
+    .sidebar-profile-directional__item:last-child {
+        float: inherit;
+    }
+    .sidebar-profile-info__avatar {
+        height: 50px;
+        padding: 10px 20px;
+        margin: 0 0 20px;
+        position: relative;
+    }
+    .sidebar-profile-info .sidebar-profile-info__title,
+    .sidebar-profile-info .sidebar-profile-info__details {
+        display: none;
+    }
+    .card-content-cover-container__popover {
+        display: block;
     }
 }
 

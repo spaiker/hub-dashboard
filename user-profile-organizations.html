@@ -207,13 +207,13 @@
                 <span class="sidebar-menu-item__caption">Kurjun</span>
             </a>
         </li>
-        <li class="sidebar-menu__item">
+        <li class="sidebar-menu__item sidebar-menu__item_active">
             <a href="#" class="sidebar-menu-item" rel="tooltip" title="Organizations" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-organizations"></i>
                 <span class="sidebar-menu-item__caption">Organizations</span>
             </a>
         </li>
-        <li class="sidebar-menu__item sidebar-menu__item_active">
+        <li class="sidebar-menu__item">
             <a href="#" class="sidebar-menu-item" rel="tooltip" title="Friends" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-friends"></i>
                 <span class="sidebar-menu-item__caption">Friends</span>
@@ -892,27 +892,27 @@
     <div class="content__header">
         <div class="content-tabs">
             <div class="tabular menu tabs">
-                <a class="item tab active" data-tab="data-tab-installed">Installed products</a>
-                <a class="item tab" data-tab="data-tab-uploaded">Uploaded products</a>
+                <a class="item tab active" data-tab="data-tab-invitations">Invitations</a>
+                <a class="item tab" data-tab="data-tab-owner">Owner</a>
             </div>
         </div>
     </div>
     <div class="content__body js-scroll-content">
         <span class="content-body__fade-top"></span>
         <span class="content-body__fade-bottom"></span>
-        <div class="panel panel_multi ui tab active" data-tab="data-tab-installed">
+        <div class="panel panel_multi ui tab active" data-tab="data-tab-invitations">
             <div class="panel__header">
-                <a href="#" class="btn btn_blue">Go to Bazaar</a>
+                <a href="#" class="btn btn_blue">Go to Organizations</a>
             </div>
             <div class="panel__body">
-                <div class="card card_default">
+                <div class="card card_users card_organizations">
                     <div class="card-content">
                         <a href="#" class="card-click-target"></a>
                         <div class="card-content__cover">
                             <div class="card-content-cover">
                                 <div class="card-content-cover__container">
                                     <div class="card-content-cover-container">
-                                        <img src="assets/img/product-default.png" alt="" class="card-content-cover-container__image">
+                                        <img src="assets/img/organization-default.png" alt="" class="card-content-cover-container__image">
                                     </div>
                                 </div>
                             </div>
@@ -924,57 +924,42 @@
                             <div class="card-dropdown dropdown dropdown_pointer dropdown_center">
                                 <a href="#" class="card-dropdown-toggle dropdown-toggle" data-toggle="dropdown"><i class="hb hb-extra"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">View product</a></li>
-                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">Edit</a></li>
-                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">Delete</a></li>
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">View organization</a></li>
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">Join organization</a></li>
                                 </ul>
                             </div>
                             <div class="card-content-details">
                                 <div class="card-details__title">
                                     <a href="#" class="card-details-title">
-                                        Installed product
+                                        Apache Software Foundation
                                         <span class="paragraph-end"></span>
                                     </a>
                                 </div>
                                 <div class="card-details__subtitle">
                                     <span class="card-details-subtitle">
-                                        4.0.0-RC14-SNAPSHOT
+                                        Open source
                                         <span class="paragraph-end"></span>
                                     </span>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="card-content__footer">
-                            <div class="card-content-footer">
-                                <span class="card-content-footer__rating">
-                                    <span class="rating">
-                                        <span class="rating__icon"><i class="hb hb-solid-star"></i></span>
-                                        <span class="rating__points">4.8</span>
-                                    </span>
-                                </span>
-                                <span class="card-content-footer__price">
-                                    <span class="paragraph-end"></span>
-                                    <span class="price price_free">FREE</span>
-                                </span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="panel panel_multi ui tab" data-tab="data-tab-uploaded">
+        <div class="panel panel_multi ui tab" data-tab="data-tab-owner">
             <div class="panel__header">
-                <a href="#" class="btn btn_green"><i class="hb hb-arrow-up"></i>Upload</a>
+                <a href="#" class="btn btn_green">Create</a>
             </div>
             <div class="panel__body">
-                <div class="card card_default">
+                <div class="card card_users card_organizations">
                     <div class="card-content">
                         <a href="#" class="card-click-target"></a>
                         <div class="card-content__cover">
                             <div class="card-content-cover">
                                 <div class="card-content-cover__container">
                                     <div class="card-content-cover-container">
-                                        <img src="assets/img/product-default.png" alt="" class="card-content-cover-container__image">
+                                        <img src="assets/img/organization-default.png" alt="" class="card-content-cover-container__image">
                                     </div>
                                 </div>
                             </div>
@@ -986,38 +971,23 @@
                             <div class="card-dropdown dropdown dropdown_pointer dropdown_center">
                                 <a href="#" class="card-dropdown-toggle dropdown-toggle" data-toggle="dropdown"><i class="hb hb-extra"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">View product</a></li>
-                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">Edit</a></li>
-                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">Delete</a></li>
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">View organization</a></li>
+                                    <li class="dropdown-menu__item"><a class="dropdown-menu-item" href="#">Join organization</a></li>
                                 </ul>
                             </div>
                             <div class="card-content-details">
                                 <div class="card-details__title">
                                     <a href="#" class="card-details-title">
-                                        Uploaded product
+                                        Apache Software Foundation
                                         <span class="paragraph-end"></span>
                                     </a>
                                 </div>
                                 <div class="card-details__subtitle">
                                     <span class="card-details-subtitle">
-                                        4.0.0-RC14-SNAPSHOT
+                                        Open source
                                         <span class="paragraph-end"></span>
                                     </span>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="card-content__footer">
-                            <div class="card-content-footer">
-                                <span class="card-content-footer__rating">
-                                    <span class="rating">
-                                        <span class="rating__icon"><i class="hb hb-solid-star"></i></span>
-                                        <span class="rating__points">4.8</span>
-                                    </span>
-                                </span>
-                                <span class="card-content-footer__price">
-                                    <span class="paragraph-end"></span>
-                                    <span class="price price_free">FREE</span>
-                                </span>
                             </div>
                         </div>
                     </div>
