@@ -2199,3 +2199,7 @@ textarea {
     padding: 5px;
 }
 
+.rh-pricing-form {
+	display: none;
+}
+
