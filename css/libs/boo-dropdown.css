@@ -57,6 +57,22 @@
     border: none;
 }
 
+.dropdown-menu .dropdown-menu__caption {
+    display: block;
+    padding: 10px 20px 10px 10px;
+    clear: both;
+    font-size: 12px;
+    font-weight: 700;
+    color: #697490;
+    white-space: nowrap;
+}
+.dropdown-menu .dropdown-menu__divider {
+    height: 1px;
+    margin: 2px 0;
+    overflow: hidden;
+    background-color: #d4d9e3;
+}
+
 .dropdown-menu li > a:hover, .dropdown-menu .active > a, .dropdown-menu .active > a:hover {
     text-decoration: none;
     background-color: #f2f3f6
@@ -151,3 +167,4 @@
     padding: 7px 10px;
     text-align: left;
 }
+

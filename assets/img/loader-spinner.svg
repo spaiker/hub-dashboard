@@ -1,0 +1,21 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="6.5 6.5 25 25" enable-background="new 6.5 6.5 25 25" xml:space="preserve">
+	<g transform="translate(1 1)">
+		<circle fill="none" stroke="#D4D9E3" stroke-width="5" cx="18" cy="18" r="10"/>
+		<path fill="none" stroke="#59B7FF" stroke-width="5" stroke-linecap="round" d="M28,18c0-5.5-4.5-10-10-10		">
+			<animateTransform
+					fill="remove"
+					type="rotate"
+					from="0 18 18"
+					attributeName="transform"
+					accumulate="none"
+					restart="always"
+					to="360 18 18"
+					calcMode="paced"
+					dur="0.5s"
+					additive="replace"
+					repeatCount="indefinite">
+			</animateTransform>
+		</path>
+	</g>
+</svg>
