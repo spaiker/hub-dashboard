@@ -83,6 +83,9 @@ a {
     left: 20px;
     z-index: 2;
 }
+.panel__body_datatable-no-search .top {
+    display: none;
+}
 .pushable > .pusher:after {
     background-color: rgba(13, 24, 40, 0.4);
 }
@@ -684,7 +687,9 @@ textarea {
     cursor: default!important;
     background-image: none!important;
 }
-
+.table-checkbox {
+    width: 25px;
+}
 
 /*Buttons*/
 /*Default*/
@@ -1594,7 +1599,7 @@ textarea {
     text-align: right;
 }
 /*.actions-zone .btn:nth-child(odd) {*/
-.actions-zone .btn) {
+.actions-zone .btn {
     margin: 0 10px 0 0;
 }
 .actions-zone .btn:last-child {
