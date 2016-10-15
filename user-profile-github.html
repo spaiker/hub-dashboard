@@ -27,9 +27,6 @@
     <link rel="stylesheet" href="css/libs/sidebar.css">
     <link rel="stylesheet" href="css/libs/tab.css">
 
-    <link rel="stylesheet" href="css/libs/remodal.css">
-    <link rel="stylesheet" href="css/libs/remodal-default-theme.css">
-
     <!--CSS-->
     <link rel="stylesheet" href="css/main.css">
 
@@ -186,7 +183,7 @@
                 <span class="sidebar-menu-item__caption">Billing</span>
             </a>
         </li>
-        <li class="sidebar-menu__item sidebar-menu__item_active">
+        <li class="sidebar-menu__item">
             <a href="#" class="sidebar-menu-item" rel="tooltip" title="Peers" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-peer"></i>
                 <span class="sidebar-menu-item__caption">Peers</span>
@@ -222,10 +219,10 @@
                 <span class="sidebar-menu-item__caption">Friends</span>
             </a>
         </li>
-        <li class="sidebar-menu__item">
+        <li class="sidebar-menu__item sidebar-menu__item_active">
             <a href="#" class="sidebar-menu-item" rel="tooltip" title="GitHub progects" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-github"></i>
-                <span class="sidebar-menu-item__caption">GitHub progects</span>
+                <span class="sidebar-menu-item__caption">GitHub projects</span>
             </a>
         </li>
         <li class="sidebar-menu__item">
@@ -892,226 +889,37 @@
     </div>
 </aside>
 <section class="content pusher">
-    <div class="content__header">
-        <div class="content-tabs">
-            <div class="tabular menu tabs">
-                <a class="item tab active" data-tab="data-tab-added">Added peers</a>
-                <a class="item tab" data-tab="data-tab-connected">Connected peers</a>
-                <a class="item tab" data-tab="data-tab-shared">Shared peers</a>
-                <a class="item tab" data-tab="data-tab-cloud">Cloud peers</a>
-                <a class="item tab" data-tab="data-tab-cloud-log">Cloud peers log</a>
-                <a class="item tab" data-tab="data-tab-errors">Peer errors</a>
-            </div>
-        </div>
-    </div>
     <div class="content__body js-scroll-content">
         <span class="content-body__fade-top"></span>
         <span class="content-body__fade-bottom"></span>
-        <div class="panel ui tab active" data-tab="data-tab-added">
+        <div class="panel">
+            <div class="panel__header panel__header_datatable-search">
+                <a href="#" class="btn btn_action"><i class="hb hb-key"></i> Authorize</a> <a href="#" class="btn btn_action"><i class="hb hb-reload"></i> Reload</a>
+            </div>
             <div class="panel__body">
-                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
-                    <thead>
-                    <tr>
-                        <th>Name / ID</th>
-                        <th>Country</th>
-                        <th>Resource Hosts</th>
-                        <th class="table-no-sort"></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr class="js-table-clickable" data-href="peer-page-main.html">
-                        <td><span class="status status_online status_left"></span>Brazil-AWS [Marat's]</td>
-                        <td><i class="flag br"></i> Brazil</td>
-                        <td>2</td>
-                        <td><button class="btn btn_action"><i class="hb hb-close"></i>Delete</button></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="panel ui tab" data-tab="data-tab-connected">
-            <div class="panel__body">
-                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
-                    <thead>
-                    <tr>
-                        <th>Name / ID</th>
-                        <th>Country</th>
-                        <th>Resource Hosts</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr class="js-table-clickable" data-href="peer-page-main.html">
-                        <td><span class="status status_online status_left"></span>Brazil-AWS [Marat's]</td>
-                        <td><i class="flag br"></i> Brazil</td>
-                        <td>2</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="panel ui tab" data-tab="data-tab-shared">
-            <div class="panel__body">
-                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
-                    <thead>
-                    <tr>
-                        <th>Name / ID</th>
-                        <th>Country</th>
-                        <th>Resource Hosts</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr class="js-table-clickable" data-href="peer-page-main.html">
-                        <td><span class="status status_online status_left"></span>Brazil-AWS [Marat's]</td>
-                        <td><i class="flag kg"></i> Kyrgyzstan</td>
-                        <td>1</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="panel ui tab" data-tab="data-tab-cloud">
-            <div class="panel__header">
-                <div class="panel-header">
-                    <div class="panel-header__right">
-                        <button class="btn btn_action" data-remodal-target="modal-add-peer"><i class="hb hb-plus"></i> Add peer</button>
-                        <button class="btn btn_action" data-remodal-target="modal-create-peer"><i class="hb hb-peers"></i> Create peer</button>
-                    </div>
-                    <div class="panel-header__left">
-                        <div class="dropdown dropdown_left dropdown_action">
-                            <a href="#" class="btn btn_action dropdown-toggle" data-toggle="dropdown">
-                                <span class="checkbox-wrapper">
-                                        <input type="checkbox" id="all">
-                                        <label for="all"></label>
-                                </span>
-                                <span class="hb hb-solid-caret-down"></span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu-item">All</a></li>
-                                <li class="dropdown-menu__divider"></li>
-                                <li class="dropdown-menu__caption">States</li>
-                                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu-item">Running</a></li>
-                                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu-item">Suspended</a></li>
-                                <li class="dropdown-menu__divider"></li>
-                                <li class="dropdown-menu__caption">Cloud providers</li>
-                                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu-item">AWS</a></li>
-                                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu-item">GCE</a></li>
-                            </ul>
-                        </div>
-                        <div class="dropdown dropdown_left dropdown_action">
-                            <a href="#" class="btn btn_action dropdown-toggle" data-toggle="dropdown">Actions<span class="hb hb-solid-caret-down"></span></a>
-                            <ul class="dropdown-menu">
-                                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu-item">Turn on</a></li>
-                                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu-item">Turn off</a></li>
-                                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu-item">Register to hub</a></li>
-                                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu-item">Update subutai</a></li>
-                                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu-item">Set peer's cred</a></li>
-                                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu-item">Remove from list</a></li>
-                                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu-item">Destroy</a></li>
-                                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu-item">Refresh states</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="panel__body panel__body_datatable-no-search">
                 <table class="table table_stripped js-datatable" cellspacing="0" width="100%">
                     <thead>
                     <tr>
-                        <th class="table-no-sort"></th>
-                        <th>Instance Name / (ID)</th>
-                        <th>Location ID</th>
-                        <th>IP address</th>
-                        <th>Cloud Provider</th>
-                        <th>Instance State</th>
-                        <th>Peer Name</th>
-                        <th>P2P health</th>
-                        <th>RH instances</th>
-                        <th>Parent peer</th>
-                        <th class="table-no-sort"></th>
+                        <th>Repository</th>
+                        <th>Created</th>
+                        <th>Last Push</th>
+                        <th>Description</th>
+                        <th>Default Branch</th>
+                        <th>Contributors</th>
+                        <th>Subutai Blueprint</th>
+                        <th>HUB Link</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
-                        <td class="table-checkbox">
-                            <span class="checkbox-wrapper checkbox-wrapper_empty">
-                                <input type="checkbox" id="1">
-                                <label for="1"></label>
-                            </span>
-                        </td>
-                        <td>53</td>
-                        <td>45</td>
-                        <td>PUBLIC -> SHARED</td>
-                        <td>Lorep ipsum</td>
-                        <td>25</td>
-                        <td>Lorep ipsum</td>
-                        <td>PUBLIC -> SHARED</td>
-                        <td>Lorep ipsum</td>
-                        <td>25</td>
-                        <td>
-                            <div class="dropdown dropdown_right dropdown_action">
-                                <a href="#" class="btn btn_action dropdown-toggle" data-toggle="dropdown">Actions<span class="hb hb-solid-caret-down"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li class="dropdown-menu__item"><a href="#" class="dropdown-menu-item">Turn on</a></li>
-                                    <li class="dropdown-menu__item"><a href="#" class="dropdown-menu-item">Turn off</a></li>
-                                    <li class="dropdown-menu__item"><a href="#" class="dropdown-menu-item">Register to hub</a></li>
-                                    <li class="dropdown-menu__item"><a href="#" class="dropdown-menu-item">Update subutai</a></li>
-                                    <li class="dropdown-menu__item"><a href="#" class="dropdown-menu-item">Set peer's cred</a></li>
-                                    <li class="dropdown-menu__item"><a href="#" class="dropdown-menu-item">Remove from list</a></li>
-                                    <li class="dropdown-menu__item"><a href="#" class="dropdown-menu-item">Destroy</a></li>
-                                    <li class="dropdown-menu__item"><a href="#" class="dropdown-menu-item">Refresh states</a></li>
-                                </ul>
-                            </div>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="panel ui tab" data-tab="data-tab-cloud-log">
-            <div class="panel__header panel__header_datatable-search">
-                <div class="daterange daterange_inline js-daterange_double"></div> <a href="#" class="btn btn_blue">Show</a>
-            </div>
-            <div class="panel__body">
-                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
-                    <thead>
-                    <tr>
-                        <th>Instance ID</th>
-                        <th>Operation Date</th>
-                        <th>Operation ID</th>
-                        <th>Operation</th>
-                        <th>Who started</th>
-                        <th>Status</th>
-                        <th>Response Message</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>2016/08/24 12:54:03</td>
-                        <td>53</td>
-                        <td>45</td>
-                        <td>PUBLIC -> SHARED</td>
-                        <td>Lorep ipsum</td>
-                        <td>25</td>
-                        <td>Lorep ipsum</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="panel ui tab" data-tab="data-tab-errors">
-            <div class="panel__body">
-                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
-                    <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Message</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>2016/08/24 12:54:03</td>
-                        <td class="table-error-log">D1C6EE8CC0D51BA9BFBD0CE4889D8B3F1C16CE0C: Aug 24 05:16:41 rh1471788553.gw.intra.lan ubuntu-core-launcher[875]: [ERROR] 2016/08/24 05:16:41 Failed to handshake with
-                            a DHT Server: lookup dht1.subut.ai on [::1]:53: server misbehaving</td>
+                        <td><a href="#">hub-dashboard</a></td>
+                        <td>16/07/12 14:18</td>
+                        <td>16/10/14 23:47</td>
+                        <td>Front-end side of SSF</td>
+                        <td>master</td>
+                        <td>3</td>
+                        <td>No</td>
+                        <td>No</td>
                     </tr>
                     </tbody>
                 </table>
@@ -1121,78 +929,6 @@
 
 </section>
 
-<!--Modals-->
-<div class="remodal" data-remodal-id="modal-add-peer">
-    <div class="remodal-header">
-        <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
-        <div class="remodal-header__title"><span class="remodal-header-title">Add peers</span></div>
-    </div>
-    <div class="remodal-body">
-        <div class="modal modal_add-peer">
-            <div class="modal-wrapper modal-wrapper_datatable-search">
-                <span class="checkbox-wrapper">
-                    <input type="radio" id="registered" name="registered">
-                    <label for="registered">Registered peers</label>
-                </span>
-                <span class="checkbox-wrapper">
-                    <input type="radio" id="not-registered" name="registered">
-                    <label for="not-registered">Not registered instances </label>
-                </span>
-            </div>
-            <table class="table table_stripped js-datatable" cellspacing="0" width="100%">
-                <thead>
-                <tr>
-                    <th class="table-no-sort"></th>
-                    <th>Name</th>
-                    <th>ISP</th>
-                    <th>Country</th>
-                    <th>IP Address</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td class="table-checkbox">
-                            <span class="checkbox-wrapper checkbox-wrapper_empty">
-                                <input type="checkbox" id="100">
-                                <label for="100"></label>
-                            </span>
-                    </td>
-                    <td><span class="status status_online status_left"></span> Dilshat</td>
-                    <td>Megaline</td>
-                    <td>Kyrgyzstan</td>
-                    <td>158.181.132.179</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-    <div class="remodal-footer">
-        <button class="btn btn_green" data-remodal-action="confirm">Add</button>
-        <button class="btn" data-remodal-action="cancel">Cancel</button>
-    </div>
-</div>
-<div class="remodal remodal_sm" data-remodal-id="modal-create-peer">
-    <div class="remodal-header">
-        <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
-        <div class="remodal-header__title"><span class="remodal-header-title">Select cloud provider</span></div>
-    </div>
-    <div class="remodal-body">
-        <div class="modal modal_create-peer">
-            <div class="modal__forms-wrapper">
-                <label for="cloud-provider" class="forms-label">Cloud provider</label>
-                <select type="text" class="forms-input" id="cloud-provider">
-                    <option val="">Please choose</option>
-                    <option value="aws">AWS</option>
-                    <option value="gce">GCE</option>
-                </select>
-            </div>
-        </div>
-    </div>
-    <div class="remodal-footer">
-        <button class="btn btn_green" data-remodal-action="confirm">Continue</button>
-        <button class="btn" data-remodal-action="cancel">Cancel</button>
-    </div>
-</div>
 
 <script src="js/libs/jquery-2.1.1.min.js"></script>
 <script src="js/libs/slick.js"></script>
@@ -1207,7 +943,9 @@
 <script src="js/libs/d3.min.js" charset="utf-8"></script>
 <script src="js/libs/xcharts.js"></script>
 
+<script src="js/libs/dropdown.js"></script>
 <script src="js/libs/transition.js"></script>
+<script src="js/libs/popup.js"></script>
 <script src="js/libs/rating.js"></script>
 <script src="js/libs/sidebar.js"></script>
 <script src="js/libs/tab.js"></script>
@@ -1216,8 +954,6 @@
 <script src="js/libs/boo-dropdown.js"></script>
 <script src="js/libs/boo-tooltip.js"></script>
 <script src="js/libs/boo-popover.js"></script>
-
-<script src="js/libs/remodal.js"></script>
 
 <script src="js/main.js"></script>
 </body>
