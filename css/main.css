@@ -2029,7 +2029,7 @@ textarea {
     width: 100px;
 }
 
-.modal_edit-product .modal__forms-wrapper .forms {
+.jFiler-wrapper {
     width: 80%;
     display: inline-block;
     margin: 0 0 0 10px;
@@ -2266,5 +2266,14 @@ textarea {
 
 .rh-pricing-form {
 	display: none;
+}
+
+.link-style {
+	display: inline;
+	padding: 0 0 0 0;
+	background: none;
+	border: none;
+	color: #697490;
+	cursor: pointer;
 }
 
