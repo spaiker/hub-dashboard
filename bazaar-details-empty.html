@@ -12,22 +12,21 @@
     <link rel="stylesheet" href="css/libs/slick-theme.css">
     <link rel="stylesheet" href="css/libs/datatables.css">
     <link rel="stylesheet" href="css/libs/ion.rangeSlider.css">
-    <link rel="stylesheet" href="css/libs/colorbox.css">
-    <link rel="stylesheet" href="css/libs/calendar.css">
-    <link rel="stylesheet" href="css/libs/elementTransitions.min.css">
-    <link rel="stylesheet" href="css/libs/xcharts.css">
-
-    <link rel="stylesheet" href="css/libs/boo-dropdown.css">
-    <link rel="stylesheet" href="css/libs/boo-tooltip.css">
-
     <!--UI Docs-->
     <link rel="stylesheet" href="css/libs/transition.css">
+    <link rel="stylesheet" href="css/libs/popup.css">
     <link rel="stylesheet" href="css/libs/flag.css">
     <link rel="stylesheet" href="css/libs/rating.css">
     <link rel="stylesheet" href="css/libs/sidebar.css">
     <link rel="stylesheet" href="css/libs/tab.css">
 
-    <link rel="stylesheet" href="css/libs/coupons-tree.css">
+    <link rel="stylesheet" href="css/libs/boo-dropdown.css">
+    <link rel="stylesheet" href="css/libs/boo-tooltip.css">
+
+    <link rel="stylesheet" href="css/libs/remodal.css">
+    <link rel="stylesheet" href="css/libs/remodal-default-theme.css">
+
+    <link rel="stylesheet" href="css/libs/jquery.filer.css">
 
     <!--CSS-->
     <link rel="stylesheet" href="css/main.css">
@@ -62,7 +61,10 @@
                     <li class="nav__breadcrumb">
                         <ul class="nav nav_breadcrumb">
                             <li class="nav-breadcrumb__item">
-                                <a href="#">User profile</a>
+                                <a href="#">Bazaar</a>
+                            </li>
+                            <li class="nav-breadcrumb__item">
+                                <a href="#">Cassandra</a>
                             </li>
                         </ul>
                     </li>
@@ -134,107 +136,77 @@
                         </div>
                     </li>
                 </ul>
-                <div class="clear"></div>
+				<div class="clear"></div>
             </div>
         </div>
     </div>
     <div class="clear"></div>
 </header>
-<!--Header end-->
 <aside class="sidebar sidebar_left">
-    <div class="sidebar-wrapper js-scroll-sidebar">
-        <div class="sidebar-profile">
-            <div class="sidebar-profile__directional">
-                <div class="sidebar-profile-directional">
-                    <a href="#" class="sidebar-profile-directional__item">
-                        <i class="hb hb-arrow-left"></i>
-                    </a>
-                    <a href="#" class="sidebar-profile-directional__item">
-                        <i class="hb hb-cog"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="sidebar-profile__info">
-                <div class="sidebar-profile-info">
-                    <div class="sidebar-profile-info__avatar">
-                        <span class="card-content-cover-container__popover" rel="popover" data-content='<div class="card-content-cover-container-popover"><div class="sidebar-profile-info__title"><div class="sidebar-profile-info-name">Ehrlan</div><div class="sidebar-profile-info-balance">0.00 S</div></div><div class="sidebar-profile-info__details"><div class="sidebar-profile-info-details"><i class="hb hb-location"></i> <i class="flag france"></i> France</div><div class="sidebar-profile-info-details"><i class="hb hb-last-login"></i> 43 minutes ago</div></div></div>' data-html="true" data-toggle='popover' data-placement="right"></span>
-                        <div class="card-content-cover">
-                            <div class="card-content-cover__container">
-                                <div class="card-content-cover-container">
-                                    <img src="assets/img/avatar-default.png" alt="" class="card-content-cover-container__image">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sidebar-profile-info__title">
-                        <div class="sidebar-profile-info-name">Ehrlan</div>
-                        <div class="sidebar-profile-info-balance">0.00 S</div>
-                    </div>
-                    <div class="sidebar-profile-info__details">
-                        <div class="sidebar-profile-info-details"><i class="hb hb-location"></i> <i class="flag france"></i> France</div>
-                        <div class="sidebar-profile-info-details"><i class="hb hb-last-login"></i> 43 minutes ago</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <ul class="nav sidebar-menu">
-            <li class="sidebar-menu__title">USER DATA</li>
-            <li class="sidebar-menu__item">
-                <a href="#" class="sidebar-menu-item" rel="tooltip" title="Billing" data-toggle="tooltip" data-placement="right">
-                    <i class="sidebar-menu-item__icon hb hb-billing"></i>
-                    <span class="sidebar-menu-item__caption">Billing</span>
-                </a>
-            </li>
-            <li class="sidebar-menu__item">
-                <a href="#" class="sidebar-menu-item" rel="tooltip" title="Peers" data-toggle="tooltip" data-placement="right">
-                    <i class="sidebar-menu-item__icon hb hb-peer"></i>
-                    <span class="sidebar-menu-item__caption">Peers</span>
-                </a>
-            </li>
-            <li class="sidebar-menu__item">
-                <a href="#" class="sidebar-menu-item" rel="tooltip" title="Products" data-toggle="tooltip" data-placement="right">
-                    <i class="sidebar-menu-item__icon hb hb-bazaar"></i>
-                    <span class="sidebar-menu-item__caption">Products</span>
-                </a>
-            </li>
-            <li class="sidebar-menu__item sidebar-menu__item_active">
-                <a href="#" class="sidebar-menu-item" rel="tooltip" title="Invitations" data-toggle="tooltip" data-placement="right">
-                    <i class="sidebar-menu-item__icon hb hb-invitation"></i>
-                    <span class="sidebar-menu-item__caption">Invitations</span>
-                </a>
-            </li>
-            <li class="sidebar-menu__item">
-                <a href="#" class="sidebar-menu-item" rel="tooltip" title="Kurjun" data-toggle="tooltip" data-placement="right">
-                    <i class="sidebar-menu-item__icon hb hb-kurjun"></i>
-                    <span class="sidebar-menu-item__caption">Kurjun</span>
-                </a>
-            </li>
-            <li class="sidebar-menu__item">
-                <a href="#" class="sidebar-menu-item" rel="tooltip" title="Organizations" data-toggle="tooltip" data-placement="right">
-                    <i class="sidebar-menu-item__icon hb hb-organizations"></i>
-                    <span class="sidebar-menu-item__caption">Organizations</span>
-                </a>
-            </li>
-            <li class="sidebar-menu__item">
-                <a href="#" class="sidebar-menu-item" rel="tooltip" title="Friends" data-toggle="tooltip" data-placement="right">
-                    <i class="sidebar-menu-item__icon hb hb-friends"></i>
-                    <span class="sidebar-menu-item__caption">Friends</span>
-                </a>
-            </li>
-            <li class="sidebar-menu__item">
-                <a href="#" class="sidebar-menu-item" rel="tooltip" title="GitHub progects" data-toggle="tooltip" data-placement="right">
-                    <i class="sidebar-menu-item__icon hb hb-github"></i>
-                    <span class="sidebar-menu-item__caption">GitHub progects</span>
-                </a>
-            </li>
-            <li class="sidebar-menu__item">
-                <a href="#" class="sidebar-menu-item" rel="tooltip" title="Cloud provider" data-toggle="tooltip" data-placement="right">
-                    <i class="sidebar-menu-item__icon hb hb-cloud-provider"></i>
-                    <span class="sidebar-menu-item__caption">Cloud provider</span>
-                </a>
-            </li>
-        </ul>
-    </div>
+    <ul class="nav sidebar-menu js-scroll-sidebar">
+        <li class="sidebar-menu__title">TOOLS</li>
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Dashboard" data-toggle="tooltip" data-placement="right">
+                <i class="sidebar-menu-item__icon hb hb-dashboard"></i>
+                <span class="sidebar-menu-item__caption">Dashboard</span>
+            </a>
+        </li>
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Environments" data-toggle="tooltip" data-placement="right">
+                <i class="sidebar-menu-item__icon hb hb-environments"></i>
+                <span class="sidebar-menu-item__caption">Environments</span>
+            </a>
+        </li>
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="AppScale" data-toggle="tooltip" data-placement="right">
+                <i class="sidebar-menu-item__icon hb hb-appscale"></i>
+                <span class="sidebar-menu-item__caption">AppScale</span>
+            </a>
+        </li>
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Hosting Services" data-toggle="tooltip" data-placement="right">
+                <i class="sidebar-menu-item__icon hb hb-hosting-services"></i>
+                <span class="sidebar-menu-item__caption">Hosting Services</span>
+            </a>
+        </li>
+        <li class="sidebar-menu__title">HUB DATA</li>
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="War room" data-toggle="tooltip" data-placement="right">
+                <i class="sidebar-menu-item__icon hb hb-globus"></i>
+                <span class="sidebar-menu-item__caption">War room</span>
+            </a>
+        </li>
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Peers" data-toggle="tooltip" data-placement="right">
+                <i class="sidebar-menu-item__icon hb hb-peer"></i>
+                <span class="sidebar-menu-item__caption">Peers</span>
+            </a>
+        </li>
+        <li class="sidebar-menu__item sidebar-menu__item_active">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Bazaar" data-toggle="tooltip" data-placement="right">
+                <i class="sidebar-menu-item__icon hb hb-bazaar"></i>
+                <span class="sidebar-menu-item__caption">Bazaar</span>
+            </a>
+        </li>
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Map of peers" data-toggle="tooltip" data-placement="right">
+                <i class="sidebar-menu-item__icon hb hb-location"></i>
+                <span class="sidebar-menu-item__caption">Map of peers</span>
+            </a>
+        </li>
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Organizations" data-toggle="tooltip" data-placement="right">
+                <i class="sidebar-menu-item__icon hb hb-organizations"></i>
+                <span class="sidebar-menu-item__caption">Organizations</span>
+            </a>
+        </li>
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Users" data-toggle="tooltip" data-placement="right">
+                <i class="sidebar-menu-item__icon hb hb-users"></i>
+                <span class="sidebar-menu-item__caption">Users</span>
+            </a>
+        </li>
+    </ul>
 </aside>
 <aside class="ui sidebar sidebar_right right overlay">
     <div class="chat">
@@ -892,114 +864,241 @@
 </aside>
 <section class="content pusher">
     <div class="content__header">
+        <div class="content-header">
+            <div class="content-header__right">
+                <div class="actions-zone">
+                    <button class="btn btn_green" data-remodal-target="modal-install-on-peers"><i class="hb hb-arrow-down"></i>Install</button>
+                    <button class="btn btn_blue" data-remodal-target="modal-edit-product"><i class="hb hb-edit"></i>Edit</button>
+                </div>
+            </div>
+            <div class="content-header__left">
+                <div class="details-cover">
+                    <div class="card-content-cover">
+                        <div class="card-content-cover__container">
+                            <div class="card-content-cover-container">
+                                <img src="assets/img/product-default.png" alt="" class="card-content-cover-container__image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="details details_cover">
+                    <div class="details__header">
+                        <ul class="details-header nav">
+                            <li class="details-header__item details-header__item_name">Cassandra
+                                <a href="#" class="details-header-item" 
+									rel="popover" 
+									data-content='<div class="details-popup"><div class="details-popup__column">Upload date:<br>Size:<br>File:</div><div class="details-popup__column">2016.08.19 21:08<br>425.88 KB<br>cassandra-subutai-plugin-4.0.3.kar</div></div> <div class="clear"></div>' 
+									data-html="true" 
+									data-toggle='popover' 
+									data-placement="bottom">
+									<i class="hb hb-info"></i>
+								</a>
+                            </li>
+                            <li class="details-header__item details-header__item_price">Free</li>
+                            <li class="details-header__item details-header__item_rating"><i class="hb hb-solid-star"></i> 4.6</li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="details__description">
+                        <ul class="details-description nav">
+                            <li class="details-description__item"><span class="details-description__text">4.0.0-RC14-SNAPSHOT</span></li>
+                            <li class="details-description__item"><i class="hb hb-downloads"></i> <span class="details-description__text">3458</span></li>
+                            <li class="details-description__item"><i class="hb hb-views"></i> <span class="details-description__text">7546</span></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="details__description details__description_text">
+                        <ul class="details-description nav">
+                            <li class="details-description__item"><span class="details-description__text">Cassandra is an open source distributed database management system designed to handle large amounts of data across many commodity servers,
+providing high availability with no single point of failure. Cassandra offers robust support for clusters spanning multiple datacenters, with
+asynchronous masterless replication allowing low latency operations for all clients.</span></li>
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
         <div class="content-tabs">
             <div class="tabular menu tabs">
-                <a class="item tab active" data-tab="data-tab-invitations">Invitations</a>
-                <a class="item tab" data-tab="data-tab-coupons">Coupons</a>
+                <a class="item tab active" data-tab="data-tab-screenshots">Screenshots</a>
+                <a class="item tab" data-tab="data-tab-reviews">Reviews</a>
             </div>
         </div>
     </div>
     <div class="content__body js-scroll-content">
         <span class="content-body__fade-top"></span>
         <span class="content-body__fade-bottom"></span>
-        <div class="panel ui tab active" data-tab="data-tab-invitations">
-            <div class="panel__header panel__header_datatable-search">
-                <div class="panel-header">
-                    <div class="panel-header-invitation">
-                        <input type="text" class="forms-input" placeholder="Email to send invitaion"> 
-                        <label class="forms-label">or select from:</label>
-                        <div class="panel-header-social">
-                            <a href="#" class="btn btn_square btn_social-google-plus"><i class="hb hb-social-google-plus"></i></a>
-                            <a href="#" class="btn btn_square btn_social-github"><i class="hb hb-social-github"></i></a>
-                            <a href="#" class="btn btn_square btn_social-facebook"><i class="hb hb-social-facebook"></i></a>
+        <div class="panel panel_multi ui tab active" data-tab="data-tab-screenshots">
+            <div class="panel__body">
+                <div class="card card_screenshot">
+                    <div class="card-content">
+                        <div class="card-content__container">
+                            <a href="#" class="card-content-container">
+                                <img src="assets/img/sample.JPG" alt="" class="card-content-container__image">
+                            </a>
                         </div>
-                        <select type="text" class="forms-input">
-                            <option value="*">Also invite to organization(s)</option>
-                        </select>
-                        <button class="btn btn_green">Send</button>
+                    </div>
+                </div>
+                <div class="card card_screenshot">
+                    <div class="card-content">
+                        <div class="card-content__container">
+                            <a href="#" class="card-content-container">
+                                <img src="assets/img/sample.JPG" alt="" class="card-content-container__image">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card_screenshot">
+                    <div class="card-content">
+                        <div class="card-content__container">
+                            <a href="#" class="card-content-container">
+                                <img src="assets/img/sample.JPG" alt="" class="card-content-container__image">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card_screenshot">
+                    <div class="card-content">
+                        <div class="card-content__container">
+                            <a href="#" class="card-content-container">
+                                <img src="assets/img/sample.JPG" alt="" class="card-content-container__image">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="panel__body">
-                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
-                    <thead>
-                    <tr>
-                        <th>Receivers</th>
-                        <th>Code</th>
-                        <th>Date</th>
-                        <th>Status</th>
-                        <th>Sender</th>
-                        <th class="table-no-sort"></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Brazil-AWS [Marat's]</td>
-                        <td>JffFDFDSEER</td>
-                        <td>3.86 GB</td>
-                        <td><span class="status status_online status_left"></span> Online</td>
-                        <td>Filler</td>
-                        <td class="table-align-right">
-                            <button class="btn btn_action"><i class="hb hb-close"></i>Delete</button>
-                            <div class="dropdown dropdown_right dropdown_action">
-                                <a href="#" class="btn btn_action dropdown-toggle" data-toggle="dropdown">Action <span class="hb hb-solid-caret-down"></span></a>
-                                <ul class="dropdown-menu dropdown-menu_dividers">
-                                    <li class="dropdown-menu__item"><a href="#modal-pricing" class="dropdown-menu-item">Change price</a></li>
-                                    <li class="dropdown-menu__item"><a href="#" class="dropdown-menu-item">Metrics</a></li>
-                                </ul>
-                            </div>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
         </div>
-        <div class="panel ui tab" data-tab="data-tab-coupons">
+        <div class="panel panel_multi ui tab" data-tab="data-tab-reviews">
             <div class="panel__body">
-                <ul class="coupons">
-                    <li class="coupons__main">
-                        <a href="#" class="me">
-                            <i class="crown"></i>
-                            <span>Me</span></a>
-                        <ul>
-                            <li>
-                                <a href="#"><span>Child</span></a>
-                                <ul>
-                                    <li>
-                                        <a href="#"><span>Grand Child</span></a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#"><span>Child</span></a>
-                                <ul>
-                                    <li><a href="#"><span>Grand Child</span></a></li>
-                                    <li>
-                                        <a href="#"><span>Grand Child</span></a>
-                                        <ul>
-                                            <li>
-                                                <a href="#"><span>Great Grand Child</span></a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><span>Great Grand Child</span></a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><span>Great Grand Child</span></a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#"><span>Grand Child</span></a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <div class="clear"></div>
+                <div class="panel-body">
+                    <div class="content-empty">
+                        <div class="content-empty__header">
+                            <div class="content-empty-header">
+                                <svg class="content-empty-header__image">
+                                    <use class="content-empty-header-image" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/images.svg#reviews"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="content-empty__body">
+                            <div class="content-empty-body">
+                                Be first who will write a review
+                            </div>
+                        </div>
+                        <div class="content-empty__footer">
+                            <div class="content-empty-footer">
+                                <button class="btn btn_green">Write review</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
 </section>
+
+<!--Modals-->
+<div class="remodal remodal_md" data-remodal-id="modal-edit-product">
+    <div class="remodal-header">
+        <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
+        <div class="remodal-header__title"><span class="remodal-header-title">Edit product</span></div>
+    </div>
+    <div class="remodal-body">
+        <div class="modal modal_edit-product">
+            <div class="modal__forms-wrapper">
+                <label for="name" class="forms-label">Name</label>
+                <input type="text" class="forms-input" id="name" placeholder="Write your name">
+            </div>
+            <div class="modal__forms-wrapper">
+                <label for="category" class="forms-label">Category</label>
+                <select type="text" class="forms-input" id="category">
+                    <option val="">Please choose</option>
+                    <option value="shared">Category 1</option>
+                </select>
+            </div>
+            <div class="modal__forms-wrapper">
+                <label for="type" class="forms-label">Type</label>
+                <select type="text" class="forms-input" id="type">
+                    <option val="">Please choose</option>
+                    <option value="shared">Type 1</option>
+                </select>
+            </div>
+            <div class="modal__forms-wrapper">
+                <label for="dependency" class="forms-label">Dependency</label>
+                <select type="text" class="forms-input" id="dependency">
+                    <option val="">Please choose</option>
+                    <option value="shared">Dependency 1</option>
+                </select>
+            </div>
+            <div class="modal__forms-wrapper modal__forms-wrapper_2-col">
+                <div class="modal-forms-wrapper">
+                    <label for="price" class="forms-label">Price</label>
+                    <input type="number" class="forms-input" id="price" value="100">
+                </div>
+                <div class="modal-forms-wrapper ">
+                    <label for="version" class="forms-label">Version</label>
+                    <input type="text" class="forms-input" id="version" value="1.00">
+                </div>
+            </div>
+            <div class="modal__forms-wrapper">
+                <label for="description" class="forms-label forms-label_textarea">Description</label>
+                <textarea class="forms-input forms-input_textarea" id="description" placeholder="Write your description" rows="3"></textarea>
+            </div>
+            <div class="modal__forms-wrapper modal__forms-wrapper_upload">
+                <label for="logo" class="forms-label">Logo</label>
+                <form action="./php/upload.php" method="post" enctype="multipart/form-data" id="logo" class="forms">
+                    <input type="file" name="files[]" multiple="multiple" class="forms-input js-input-logo">
+                </form>
+            </div>
+            <div class="modal__forms-wrapper modal__forms-wrapper_upload">
+                <label for="product" class="forms-label">Product file</label>
+                <form action="./php/upload.php" method="post" enctype="multipart/form-data" id="product" class="forms">
+                    <input type="file" name="files[]" multiple="multiple" class="forms-input js-input-product">
+                </form>
+            </div>
+            <div class="modal__forms-wrapper modal__forms-wrapper_upload">
+                <label for="screenshots" class="forms-label">Screenshots</label>
+                <form action="./php/upload.php" method="post" enctype="multipart/form-data" id="screenshots" class="forms">
+                    <input type="file" name="files[]" multiple="multiple" class="forms-input js-input-screenshots">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="remodal-footer">
+        <button class="btn btn_blue" data-remodal-action="confirm">Save</button>
+        <button class="btn" data-remodal-action="cancel">Cancel</button>
+    </div>
+</div>
+<div class="remodal remodal_xs" data-remodal-id="modal-install-on-peers">
+    <div class="remodal-header">
+        <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
+        <div class="remodal-header__title"><span class="remodal-header-title">Install on peers</span></div>
+    </div>
+    <div class="remodal-body">
+        <div class="modal modal_install-on-peers">
+            <ul class="peer-list">
+                <li class="peer-list__item">
+                    <span class="checkbox-wrapper">
+                        <input type="checkbox" id="1">
+                        <label for="1"><span class="status status_online status_left"></span> [Dilshat] Peer 8C [Dilshat] Peer 8C</label>
+                    </span>
+                </li>
+                <li class="peer-list__item">
+                    <span class="checkbox-wrapper">
+                        <input type="checkbox" id="2">
+                        <label for="2"><span class="status status_online status_left"></span> [Dilshat] Peer 8C</label>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="remodal-footer">
+        <button class="btn btn_green" data-remodal-action="confirm">Install</button>
+        <button class="btn" data-remodal-action="cancel">Cancel</button>
+    </div>
+</div>
 
 
 <script src="js/libs/jquery-2.1.1.min.js"></script>
@@ -1007,15 +1106,8 @@
 <script src="js/libs/tether.js"></script>
 <script src="js/libs/jquery.slimscroll.min.js"></script>
 <script src="js/libs/ion.rangeSlider.js"></script>
-<script src="js/libs/jquery.colorbox.js"></script>
 <script src="js/libs/datatables.js"></script>
-<script src="js/libs/moment.js"></script>
-<script src="js/libs/calendar.js"></script>
-<script src="js/libs/elementTransitions.min.js"></script>
-<script src="js/libs/d3.min.js" charset="utf-8"></script>
-<script src="js/libs/xcharts.js"></script>
 
-<script src="js/libs/dropdown.js"></script>
 <script src="js/libs/transition.js"></script>
 <script src="js/libs/popup.js"></script>
 <script src="js/libs/rating.js"></script>
@@ -1027,6 +1119,10 @@
 <script src="js/libs/boo-tooltip.js"></script>
 <script src="js/libs/boo-popover.js"></script>
 
+<script src="js/libs/remodal.js"></script>
+<script src="js/libs/jquery.filer.min.js"></script>
+
 <script src="js/main.js"></script>
+<script src="js/pages/bazaar-details.js"></script>
 </body>
 </html>

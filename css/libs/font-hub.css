@@ -224,7 +224,7 @@
 .hb-social-github:before {
     content: "\e942";
 }
-.hb-social-google:before {
+.hb-social-google-plus:before {
     content: "\e943";
 }
 .hb-solid-add-friend:before {
@@ -247,4 +247,7 @@
 }
 .hb-minus-long:before {
     content: "\e94a";
+}
+.hb-solid-duplicate:before {
+    content: "\e94b";
 }
