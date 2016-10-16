@@ -2177,6 +2177,10 @@ textarea {
 .modal_add-peer .modal-wrapper .checkbox-wrapper {
     margin: 0 15px 0 0;
 }
+.modal_contribute-resources .forms-input:first-child {
+    width: 100%;
+    margin: 0 0 20px 0;
+}
 
 .jFiler-wrapper {
     width: 80%;

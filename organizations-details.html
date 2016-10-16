@@ -23,6 +23,9 @@
     <link rel="stylesheet" href="css/libs/boo-dropdown.css">
     <link rel="stylesheet" href="css/libs/boo-tooltip.css">
 
+    <link rel="stylesheet" href="css/libs/remodal.css">
+    <link rel="stylesheet" href="css/libs/remodal-default-theme.css">
+
     <!--CSS-->
     <link rel="stylesheet" href="css/main.css">
 
@@ -1208,88 +1211,161 @@ innovation the SSF improves the way we collaborate and share knowledge to maximi
                 </div>
             </div>
         </div>
-        <div class="panel ui tab" data-tab="data-tab-reviews">
-            <div class="panel__header">
-                <a href="#" class="btn btn_green">Write</a>
+        <div class="panel ui tab" data-tab="data-tab-join">
+            <div class="panel__body">
+                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Requested</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a href="#">Timur</a></td>
+                        <td>1 month ago</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="panel ui tab" data-tab="data-tab-invitation">
+            <div class="panel__header panel__header_datatable-search">
+                <button class="btn btn_green" data-remodal-target="modal-add-email">Add email</button>
             </div>
             <div class="panel__body">
-                <ul class="reviews nav">
-                    <li class="reviews__item">
-                        <div class="reviews-item__header">
-                            <div class="reviews-item-header">
-                                <div class="reviews-item-header__avatar">
-                                    <span class="profile__avatar">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                    </span>
-                                </div>
-                                <div class="reviews-item-header__wrapper">
-                                    <div class="reviews-name"><span class="reviews-name__text">George Moshowvitis</span> <div class="ui star rating rating-disabled" data-rating="3" data-max-rating="5"></div></div>
-                                    <div class="reviews-date">20 May, 2016 </div>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                        <div class="reviews-item__body">
-                            <div class="reviews-item-body">
-                                <div class="reviews-text">
-                                    Very nice plugin, unusable on tablets without landscape view. Fix it and raiting will higher. Anyway good tool, but be able to have a powerfull peer.
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="reviews__item">
-                        <div class="reviews-item__header">
-                            <div class="reviews-item-header">
-                                <div class="reviews-item-header__avatar">
-                                    <span class="profile__avatar">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                    </span>
-                                </div>
-                                <div class="reviews-item-header__wrapper">
-                                    <div class="reviews-name"><span class="reviews-name__text">George Moshowvitis</span> <div class="ui star rating rating-disabled" data-rating="1" data-max-rating="5"></div></div>
-                                    <div class="reviews-date">20 May, 2016 </div>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                        <div class="reviews-item__body">
-                            <div class="reviews-item-body">
-                                <div class="reviews-text">
-                                    Very nice plugin, unusable on tablets without landscape view. Fix it and raiting will higher. Anyway good tool, but be able to have a powerfull peer.
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="reviews__item">
-                        <div class="reviews-item__header">
-                            <div class="reviews-item-header">
-                                <div class="reviews-item-header__avatar">
-                                    <span class="profile__avatar">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                    </span>
-                                </div>
-                                <div class="reviews-item-header__wrapper">
-                                    <div class="reviews-name"><span class="reviews-name__text">George Moshowvitis</span> <div class="ui star rating rating-disabled" data-rating="5" data-max-rating="5"></div></div>
-                                    <div class="reviews-date">20 May, 2016 </div>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                        <div class="reviews-item__body">
-                            <div class="reviews-item-body">
-                                <div class="reviews-text">
-                                    Very nice plugin, unusable on tablets without landscape view. Fix it and raiting will higher. Anyway good tool, but be able to have a powerfull peer.
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <div class="clear"></div>
+                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th class="table-no-sort"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>mail@mail.com</td>
+                        <td class="table-align-right">
+                            <button class="btn btn_action"><i class="hb hb-close"></i>Delete</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="panel ui tab" data-tab="data-tab-github">
+            <div class="panel__header panel__header_datatable-search">
+                <button class="btn btn_action"><i class="hb hb-reload"></i>Update</button>
+            </div>
+            <div class="panel__body">
+                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Repository</th>
+                        <th>Created</th>
+                        <th>Last Push</th>
+                        <th>Description</th>
+                        <th>Default Branch</th>
+                        <th>Contributors</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Ipsum</td>
+                        <td>Ipsum</td>
+                        <td>Ipsum</td>
+                        <td>Ipsum</td>
+                        <td>Ipsum</td>
+                        <td>Ipsum</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="panel ui tab" data-tab="data-tab-contribution">
+            <div class="panel__header panel__header_datatable-search">
+                <button class="btn btn_green" data-remodal-target="modal-contribute-resources">Contribute Resources</button>
+            </div>
+            <div class="panel__body">
+                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Peer</th>
+                        <th>Owner</th>
+                        <th>Status</th>
+                        <th>Quata</th>
+                        <th>Contribution Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Lores</td>
+                        <td>Lores</td>
+                        <td>Lores</td>
+                        <td>Lores</td>
+                        <td>Lores</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 
 </section>
+
+
+<!--Modals-->
+<div class="remodal remodal_xs" data-remodal-id="modal-add-email">
+    <div class="remodal-header">
+        <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
+        <div class="remodal-header__title"><span class="remodal-header-title">Add default email</span></div>
+    </div>
+    <div class="remodal-body">
+        <div class="modal modal_add-email">
+            <input type="email" class="forms-input" id="email"  placeholder="example@mail.com">
+        </div>
+    </div>
+    <div class="remodal-footer">
+        <button class="btn btn_green" data-remodal-action="confirm">Add</button>
+        <button class="btn" data-remodal-action="cancel">Cancel</button>
+    </div>
+</div>
+<div class="remodal remodal_xs" data-remodal-id="modal-contribute-resources">
+    <div class="remodal-header">
+        <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
+        <div class="remodal-header__title"><span class="remodal-header-title">Contribute Resources</span></div>
+    </div>
+    <div class="remodal-body">
+        <div class="modal modal_contribute-resources">
+            <select class="forms-input">
+                <option value="">Select peer</option>
+            </select>
+            <div class="modal__forms-wrapper">
+                <label for="tiny" class="forms-label">TINY</label>
+                <input type="number" class="forms-input" id="tiny" value="100">
+            </div>
+            <div class="modal__forms-wrapper">
+                <label for="small" class="forms-label">SMALL</label>
+                <input type="number" class="forms-input" id="small" value="100">
+            </div>
+            <div class="modal__forms-wrapper">
+                <label for="medium" class="forms-label">MEDIUM</label>
+                <input type="number" class="forms-input" id="medium" value="100">
+            </div>
+            <div class="modal__forms-wrapper">
+                <label for="large" class="forms-label">LARGE</label>
+                <input type="number" class="forms-input" id="large" value="100">
+            </div>
+            <div class="modal__forms-wrapper">
+                <label for="huge" class="forms-label">HUGE</label>
+                <input type="number" class="forms-input" id="huge" value="100">
+            </div>
+        </div>
+    </div>
+    <div class="remodal-footer">
+        <button class="btn btn_blue" data-remodal-action="confirm">Save</button>
+        <button class="btn" data-remodal-action="cancel">Cancel</button>
+    </div>
+</div>
 
 <script src="js/libs/jquery-2.1.1.min.js"></script>
 <script src="js/libs/slick.js"></script>
@@ -1308,6 +1384,8 @@ innovation the SSF improves the way we collaborate and share knowledge to maximi
 <script src="js/libs/boo-dropdown.js"></script>
 <script src="js/libs/boo-tooltip.js"></script>
 <script src="js/libs/boo-popover.js"></script>
+
+<script src="js/libs/remodal.js"></script>
 
 <script src="js/main.js"></script>
 </body>
