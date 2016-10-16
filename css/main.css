@@ -1776,7 +1776,8 @@ textarea {
     text-align: right;
 }
 /*.actions-zone .btn:nth-child(odd) {*/
-.actions-zone .btn {
+.actions-zone .btn,
+.actions-zone form {
     margin: 0 10px 0 0;
 }
 .actions-zone .btn:last-child {
