@@ -303,6 +303,7 @@ a:active {
     font-weight: 500;
     line-height: 18px;
     color: #697490;
+    text-decoration: none;
 }
 .card-details-title:hover {
     text-decoration: underline;
@@ -959,6 +960,7 @@ textarea {
     font-size: 14px;
     font-weight: 500;
     color: #697490;
+    text-decoration: none;
 }
 .link-guide__icon-before {
     font-size: 18px;
@@ -1018,6 +1020,20 @@ textarea {
     background-color: #ea5761;
 }
 
+/*State badge*/
+
+.state_loader {
+    content: "";
+    background: url(../assets/img/loader-spinner.svg) no-repeat;
+    background-position: right;
+    padding: 0 20px 0 0;
+}
+
+/*Status Icon*/
+.status-icon_appscale {
+    color: #59b7ff;
+}
+
 /*Price*/
 .price {
     text-transform: uppercase;
@@ -1028,7 +1044,47 @@ textarea {
 }
 
 
+/*Labels*/
 
+.label {
+    display: inline;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 2px;
+}
+.label_default {
+    background-color: #718bb7;
+}
+.label-group .label {
+    margin: 0 10px 0 0;
+}
+.label-group .label:last-child {
+    margin: 0;
+}
+
+/*Labels of containers*/
+
+.label_tiny {
+    background-color: #fdca49;
+}
+.label_small {
+    background-color: #ffa927;
+}
+.label_medium {
+    background-color: #f8872e;
+}
+.label_large {
+    background-color: #fc6b0a;
+}
+.label_huge {
+    background-color: #fc580c;
+}
 
 /*Tooltip settings*/
 .backdrop {
@@ -1953,6 +2009,7 @@ textarea {
     line-height: 35px;
     font-weight: 500;
     color: inherit;
+    text-decoration: none;
 }
 .dropdown-menu__body {
     padding: 20px;
