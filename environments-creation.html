@@ -12,13 +12,11 @@
     <link rel="stylesheet" href="css/libs/slick-theme.css">
     <link rel="stylesheet" href="css/libs/datatables.css">
     <link rel="stylesheet" href="css/libs/ion.rangeSlider.css">
-    <link rel="stylesheet" href="css/libs/colorbox.css">
-    <link rel="stylesheet" href="css/libs/calendar.css">
-    <link rel="stylesheet" href="css/libs/elementTransitions.min.css">
-    <link rel="stylesheet" href="css/libs/xcharts.css">
+    <link rel="stylesheet" href="css/libs/ion.rangeSlider.skinFlat.css">
 
     <!--UI Docs-->
     <link rel="stylesheet" href="css/libs/transition.css">
+    <link rel="stylesheet" href="css/libs/popup.css">
     <link rel="stylesheet" href="css/libs/flag.css">
     <link rel="stylesheet" href="css/libs/rating.css">
     <link rel="stylesheet" href="css/libs/sidebar.css">
@@ -26,10 +24,6 @@
 
     <link rel="stylesheet" href="css/libs/boo-dropdown.css">
     <link rel="stylesheet" href="css/libs/boo-tooltip.css">
-
-    <link rel="stylesheet" href="css/libs/remodal.css">
-    <link rel="stylesheet" href="css/libs/remodal-default-theme.css">
-
     <!--CSS-->
     <link rel="stylesheet" href="css/main.css">
 
@@ -63,10 +57,7 @@
                     <li class="nav__breadcrumb">
                         <ul class="nav nav_breadcrumb">
                             <li class="nav-breadcrumb__item">
-                                <a href="#">Peers</a>
-                            </li>
-                            <li class="nav-breadcrumb__item">
-                                <a href="#">[Dilshat] Peers 8c</a>
+                                <a href="#">Environments</a>
                             </li>
                         </ul>
                     </li>
@@ -138,7 +129,7 @@
                         </div>
                     </li>
                 </ul>
-                <div class="clear"></div>
+				<div class="clear"></div>
             </div>
         </div>
     </div>
@@ -153,7 +144,7 @@
                 <span class="sidebar-menu-item__caption">Dashboard</span>
             </a>
         </li>
-        <li class="sidebar-menu__item">
+        <li class="sidebar-menu__item sidebar-menu__item_active">
             <a href="#" class="sidebar-menu-item" rel="tooltip" title="Environments" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-environments"></i>
                 <span class="sidebar-menu-item__caption">Environments</span>
@@ -178,7 +169,7 @@
                 <span class="sidebar-menu-item__caption">War room</span>
             </a>
         </li>
-        <li class="sidebar-menu__item sidebar-menu__item_active">
+        <li class="sidebar-menu__item">
             <a href="#" class="sidebar-menu-item" rel="tooltip" title="Peers" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-peer"></i>
                 <span class="sidebar-menu-item__caption">Peers</span>
@@ -865,404 +856,12 @@
     </div>
 </aside>
 <section class="content pusher">
-    <div class="content__header">
-        <div class="content-header">
-            <div class="content-header__right">
-                <div class="actions-zone">
-                    <button class="btn btn_blue" data-remodal-target="modal-edit"><i class="hb hb-edit"></i>Edit</button> <button class="btn btn_red"><i class="hb hb-close"></i>Delete</button>
-                </div>
-            </div>
-            <div class="content-header__left">
-                <div class="details">
-                    <div class="details__header">
-                        <ul class="details-header nav">
-                            <li class="details-header__item details-header__item_name">[Dilshat] Peer 8C
-                                <a href="#" class="details-header-item" rel="popover" data-content='<div class="details-popup"><div class="details-popup__column">Registered:<br>Version:<br>IP:</div><div class="details-popup__column">22 hours ago:<br>4.0.0-RC14-SNAPSHOT. (Stable release: 4.0.0-RC13.)<br>158.181.132.179</div></div> <div class="clear"></div>' data-html="true" data-toggle='popover' data-placement="bottom"><i class="hb hb-info"></i></a><span class="status status_online"></span></li>
-                            <li class="details-header__item details-header__item_price">Free</li>
-                            <li class="details-header__item details-header__item_rating"><i class="hb hb-solid-star"></i> 4.6</li>
-                            <li class="details-header__item details-header__item_toggles-btns">
-                                <button class="btn btn_circle" rel="tooltip" title="Show peer on Warroom" data-toggle="tooltip" data-placement="bottom"><i class="hb hb-globus"></i></button>
-                                <button class="btn btn_circle" rel="tooltip" title="Open in Subutai Social" data-toggle="tooltip" data-placement="bottom"><i class="hb hb-solid-subutai-console"></i></button>
-                            </li>
-                        </ul>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="details__description">
-                        <ul class="details-description nav">
-                            <li class="details-description__item"><i class="hb hb-user-2"></i> <span class="details-description__text">Dilshat</span></li>
-                            <li class="details-description__item"><i class="hb hb-location"></i> <span class="details-description__text"><i class="flag kg"></i> Kyrgyzstan</span></li>
-                            <li class="details-description__item"><i class="hb hb-heart"></i> <span class="details-description__text">11 hours ago</span></li>
-                            <li class="details-description__item"><i class="hb hb-compass"></i> <span class="details-description__text">Amazon.com, Inc.</span></li>
-                            <li class="details-description__item"><i class="hb hb-views"></i> <span class="details-description__text">Public</span></li>
-                        </ul>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="content-tabs">
-            <div class="tabular menu tabs">
-                <a class="item tab active" data-tab="data-tab-rh">Resource host</a>
-                <a class="item tab" data-tab="data-tab-reviews">Reviews</a>
-                <a class="item tab" data-tab="data-tab-environments">Environments</a>
-                <a class="item tab" data-tab="data-tab-sharing">Sharing</a>
-                <a class="item tab" data-tab="data-tab-history">History</a>
-                <a class="item tab" data-tab="data-tab-error-log">Error Log</a>
-            </div>
-        </div>
-    </div>
     <div class="content__body js-scroll-content">
-        <span class="content-body__fade-top"></span>
-        <span class="content-body__fade-bottom"></span>
-        <div class="panel ui tab active js-panel-hide" data-tab="data-tab-rh">
-            <div class="panel__header panel__header_datatable-search">
-                <a href="#" class="btn btn_blue">My peers</a>
-            </div>
-            <div class="panel__body">
-                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
-                    <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>CPU</th>
-                        <th>RAM</th>
-                        <th>HDD</th>
-                        <th>Price (hr)</th>
-                        <th class="table-no-sort"></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td><span class="status status_online status_left"></span><a onclick="showPageElement('panel-rh')">Brazil-AWS [Marat's]</a></td>
-                        <td><span data-tooltip="Intel(R) Xeon(R) CPU E5-2676 v3 @ 2.40GHz" data-position="top center">2 CPU <i class="hb hb-info"></i></span></td>
-                        <td>3.86 GB</td>
-                        <td>60 GB</td>
-                        <td><span class="price price_free">FREE</span></td>
-                        <td class="table-align-right">
-                            <button class="btn btn_action"><i class="hb hb-close"></i>Delete</button>
-                            <div class="dropdown dropdown_right dropdown_action">
-                                <a href="#" class="btn btn_action dropdown-toggle" data-toggle="dropdown">Action <span class="hb hb-solid-caret-down"></span></a>
-                                <ul class="dropdown-menu dropdown-menu_dividers">
-                                    <li class="dropdown-menu__item"><a href="#modal-pricing" class="dropdown-menu-item">Change price</a></li>
-                                    <li class="dropdown-menu__item"><a href="#" class="dropdown-menu-item">Metrics</a></li>
-                                </ul>
-                            </div>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="panel ui tab" data-tab="data-tab-reviews">
-            <div class="panel__header">
-                <a href="#modal-review" class="btn btn_green">Write</a>
-            </div>
-            <div class="panel__body">
-                <ul class="reviews nav">
-                    <li class="reviews__item">
-                        <div class="reviews-item__header">
-                            <div class="reviews-item-header">
-                                <div class="reviews-item-header__avatar">
-                                    <span class="profile__avatar">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                    </span>
-                                </div>
-                                <div class="reviews-item-header__wrapper">
-                                    <div class="reviews-name"><span class="reviews-name__text">George Moshowvitis</span> <div class="ui star rating rating-disabled" data-rating="3" data-max-rating="5"></div></div>
-                                    <div class="reviews-date">20 May, 2016 </div>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                        <div class="reviews-item__body">
-                            <div class="reviews-item-body">
-                                <div class="reviews-text">
-                                    Very nice plugin, unusable on tablets without landscape view. Fix it and raiting will higher. Anyway good tool, but be able to have a powerfull peer.
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="reviews__item">
-                        <div class="reviews-item__header">
-                            <div class="reviews-item-header">
-                                <div class="reviews-item-header__avatar">
-                                    <span class="profile__avatar">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                    </span>
-                                </div>
-                                <div class="reviews-item-header__wrapper">
-                                    <div class="reviews-name"><span class="reviews-name__text">George Moshowvitis</span> <div class="ui star rating rating-disabled" data-rating="1" data-max-rating="5"></div></div>
-                                    <div class="reviews-date">20 May, 2016 </div>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                        <div class="reviews-item__body">
-                            <div class="reviews-item-body">
-                                <div class="reviews-text">
-                                    Very nice plugin, unusable on tablets without landscape view. Fix it and raiting will higher. Anyway good tool, but be able to have a powerfull peer.
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="reviews__item">
-                        <div class="reviews-item__header">
-                            <div class="reviews-item-header">
-                                <div class="reviews-item-header__avatar">
-                                    <span class="profile__avatar">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                    </span>
-                                </div>
-                                <div class="reviews-item-header__wrapper">
-                                    <div class="reviews-name"><span class="reviews-name__text">George Moshowvitis</span> <div class="ui star rating rating-disabled" data-rating="5" data-max-rating="5"></div></div>
-                                    <div class="reviews-date">20 May, 2016 </div>
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                        <div class="reviews-item__body">
-                            <div class="reviews-item-body">
-                                <div class="reviews-text">
-                                    Very nice plugin, unusable on tablets without landscape view. Fix it and raiting will higher. Anyway good tool, but be able to have a powerfull peer.
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <div class="clear"></div>
-            </div>
-        </div>
-        <div class="panel ui tab" data-tab="data-tab-environments">
-            <div class="panel__body">
-                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
-                    <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>State</th>
-                        <th>Created</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>Environment name</td>
-                        <td>EXCHANGE_INFO</td>
-                        <td>2016/08/24 12:36</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="panel ui tab" data-tab="data-tab-sharing">
-            <div class="panel__body">
-                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
-                    <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Country</th>
-                        <th class="table-no-sort"></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td><span class="status status_online status_left"></span> Sharing name</td>
-                        <td><i class="flag br"></i> Brazil</td>
-                        <td class="table-align-right"><button class="btn btn_action"><i class="hb hb-close"></i>Delete</button></td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="panel ui tab" data-tab="data-tab-history">
-            <div class="panel__header panel__header_datatable-search">
-                <div class="daterange daterange_inline js-daterange_double"></div> <a href="#" class="btn btn_blue">Show</a>
-            </div>
-            <div class="panel__body">
-                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
-                    <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Action</th>
-                        <th>Info</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>2016/08/24 12:54:03</td>
-                        <td>Added to environment</td>
-                        <td>PUBLIC -> SHARED</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="panel ui tab" data-tab="data-tab-error-log">
-            <div class="panel__body">
-                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
-                    <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Message</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>2016/08/24 12:54:03</td>
-                        <td class="table-error-log">D1C6EE8CC0D51BA9BFBD0CE4889D8B3F1C16CE0C: Aug 24 05:16:41 rh1471788553.gw.intra.lan ubuntu-core-launcher[875]: [ERROR] 2016/08/24 05:16:41 Failed to handshake with
-                            a DHT Server: lookup dht1.subut.ai on [::1]:53: server misbehaving</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
 
-
-        <div class="panel panel-rh" id="panel-rh">
-            <div class="panel__header">
-                <div class="panel-header">
-                    <div class="panel-header__right">
-                        <div class="btn-group" data-toggle="buttons-radio">
-                            <button class="btn active" data-toggle="button">Day</button>
-                            <button class="btn">Week</button>
-                            <button class="btn">Mount</button>
-                        </div>
-                    </div>
-                    <div class="panel-header__left">
-                        <a href="#" class="link-guide"><i class="hb hb-arrow-left link-guide__icon-before"></i>Back to table</a>
-                    </div>
-                </div>
-            </div>
-            <div class="panel__body">
-                <div class="panel-body">
-                    <div class="rh-chart">
-                        <div class="rh-chart__title">
-                            CPU
-                        </div>
-                        <div class="rh-chart__graph">
-                            <figure id="js-chart-cpu"></figure>
-                        </div>
-                    </div>
-                    <div class="rh-chart">
-                        <div class="rh-chart__title">
-                            RAM
-                        </div>
-                        <div class="rh-chart__graph">
-                            <figure id="js-chart-ram"></figure>
-                        </div>
-                    </div>
-                    <div class="rh-chart">
-                        <div class="rh-chart__title">
-                            HDD
-                        </div>
-                        <div class="rh-chart__graph">
-                            <figure id="js-chart-hdd"></figure>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </div>
         </div>
     </div>
 
 </section>
-
-<!--Modals-->
-<div class="remodal remodal_xs" data-remodal-id="modal-pricing">
-    <div class="remodal-header">
-        <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
-        <div class="remodal-header__title"><span class="remodal-header-title">Pricing</span></div>
-    </div>
-    <div class="remodal-body">
-        <div class="modal modal_pricing">
-            <div class="modal__forms-wrapper">
-                <label for="tiny" class="forms-label">TINY</label>
-                <input type="number" class="forms-input" id="tiny" value="100">
-            </div>
-            <div class="modal__forms-wrapper">
-                <label for="small" class="forms-label">SMALL</label>
-                <input type="number" class="forms-input" id="small" value="100">
-            </div>
-            <div class="modal__forms-wrapper">
-                <label for="medium" class="forms-label">MEDIUM</label>
-                <input type="number" class="forms-input" id="medium" value="100">
-            </div>
-            <div class="modal__forms-wrapper">
-                <label for="large" class="forms-label">LARGE</label>
-                <input type="number" class="forms-input" id="large" value="100">
-            </div>
-            <div class="modal__forms-wrapper">
-                <label for="huge" class="forms-label">HUGE</label>
-                <input type="number" class="forms-input" id="huge" value="100">
-            </div>
-        </div>
-    </div>
-    <div class="remodal-footer">
-        <button class="btn btn_blue" data-remodal-action="confirm">Save</button>
-        <button class="btn" data-remodal-action="cancel">Cancel</button>
-    </div>
-</div>
-<div class="remodal remodal_md" data-remodal-id="modal-review">
-    <div class="remodal-header">
-        <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
-        <div class="remodal-header__title"><span class="remodal-header-title">Write review</span></div>
-    </div>
-    <div class="remodal-body">
-        <div class="modal modal_review">
-            <div class="modal__forms-wrapper">
-                <label class="forms-label">Rating</label>
-                <div class="forms-rating"><div class="ui star rating" data-rating="0" data-max-rating="5"></div></div>
-            </div>
-            <div class="modal__forms-wrapper">
-                <label for="name" class="forms-label">Name</label>
-                <input type="text" class="forms-input" id="name" placeholder="Write your name">
-            </div>
-            <div class="modal__forms-wrapper">
-                <label for="description" class="forms-label forms-label_textarea">Comment</label>
-                <textarea class="forms-input forms-input_textarea" id="description" placeholder="Write your comment" rows="3"></textarea>
-            </div>
-        </div>
-    </div>
-    <div class="remodal-footer">
-        <button class="btn btn_blue" data-remodal-action="confirm">Save</button>
-        <button class="btn" data-remodal-action="cancel">Cancel</button>
-    </div>
-</div>
-<div class="remodal remodal_sm" data-remodal-id="modal-edit">
-    <div class="remodal-header">
-        <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
-        <div class="remodal-header__title"><span class="remodal-header-title">Edit</span></div>
-    </div>
-    <div class="remodal-body">
-        <div class="modal modal_edit">
-            <div class="modal__forms-wrapper">
-                <label for="name" class="forms-label">Name</label>
-                <input type="text" class="forms-input" id="name" placeholder="Write your name">
-            </div>
-            <div class="modal__forms-wrapper">
-                <label for="scope" class="forms-label">Scope</label>
-                <select type="text" class="forms-input" id="scope">
-                    <option val="">Please choose</option>
-                    <option value="shared">Shared</option>
-                    <option value="public">Public</option>
-                    <option value="private">Private</option>
-                </select>
-            </div>
-            <div class="modal__wrapper">
-                <div class="modal-wrapper">
-                    <label for="scope" class="forms-label">Accessible via Tunnel to Subutai Social</label>
-                </div>
-                <label class="forms-switch">
-                    <input type="checkbox" class="forms-switch__checkbox">
-                    <span class="forms-switch__slider"></span>
-                </label>
-            </div>
-        </div>
-    </div>
-    <div class="remodal-footer">
-        <button class="btn btn_blue" data-remodal-action="confirm">Save</button>
-        <button class="btn" data-remodal-action="cancel">Cancel</button>
-    </div>
-</div>
-
 
 <script src="js/libs/jquery-2.1.1.min.js"></script>
 <script src="js/libs/slick.js"></script>
@@ -1277,8 +876,8 @@
 <script src="js/libs/d3.min.js" charset="utf-8"></script>
 <script src="js/libs/xcharts.js"></script>
 
-
 <script src="js/libs/transition.js"></script>
+<script src="js/libs/popup.js"></script>
 <script src="js/libs/rating.js"></script>
 <script src="js/libs/sidebar.js"></script>
 <script src="js/libs/tab.js"></script>
@@ -1286,9 +885,7 @@
 <script src="js/libs/boo-button.js"></script>
 <script src="js/libs/boo-dropdown.js"></script>
 <script src="js/libs/boo-tooltip.js"></script>
-<script src="js/libs/boo-popover.js"></script>
-
-<script src="js/libs/remodal.js"></script>
+<script src="js/libs/boo-popover.js"></script> <!--Need boo-tooltip.js-->
 
 <script src="js/main.js"></script>
 </body>
