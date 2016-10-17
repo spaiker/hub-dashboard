@@ -1780,7 +1780,8 @@ textarea {
 .actions-zone form {
     margin: 0 10px 0 0;
 }
-.actions-zone .btn:last-child {
+.actions-zone .btn:last-child,
+.actions-zone form:last-child {
     margin: 0;
 }
 .details-header__item {
@@ -2429,5 +2430,13 @@ textarea {
 	border: none;
 	color: #697490;
 	cursor: pointer;
+}
+
+.link-style:hover {
+	text-decoration: underline;
+}
+
+form.link-style:hover {
+	text-decoration: none;
 }
 
