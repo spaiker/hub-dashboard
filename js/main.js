@@ -74,6 +74,18 @@ $(".chat-sound__link").click(function(){
 });
 
 $(function(){
+    $('.js-scroll').slimScroll({
+        color: '#d4d9e3',
+        opacity: '1',
+        size: '5px',
+        height: '100%',
+        railVisible: true,
+        railColor: '#d4d9e3',
+        railOpacity: '0.4',
+        position: 'right',
+        distance: '1px',
+        wrapperClass: "content__body-wrapper"
+    });
     $('.js-scroll-content').slimScroll({
         color: '#d4d9e3',
         opacity: '1',

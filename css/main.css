@@ -1235,7 +1235,7 @@ textarea {
 
 .navbar_toolbar {
     border-bottom: 1px solid #d4d9e3;
-    height: 60px;
+    height: 61px;
 }
 .nav__minimize {
     float: left;
@@ -2330,7 +2330,8 @@ td .hb-question {
 .dynamic-match-wrapper:last-child {
     margin: 0;
 }
-.dynamic-match-wrapper:after {
+.dynamic-match-wrapper:after,
+.environment-tools-body-templates:after{
     content: ".";
     display: block;
     height: 0;
@@ -2349,14 +2350,190 @@ td .hb-question {
 
 
 
+/*Environment creation*/
+.content__body_environment {
+    padding: 0;
+    height: 100%;
+}
+.environment,
+.environment__tools,
+.environment-tools,
+.environment-tools-body {
+    height: 100%;
+}
+.environment-tools__body {
+    height: calc(100% - 116px);
+}
+.environment__tools {
+    width: 250px;
+    float: right;
+}
+.environment-tools {
+    background-color: #fff;
+    border-left: 1px solid #d4d9e3;
+    overflow: hidden;
+}
 
+.environment-tools-header__caption {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: solid 1px #f7f9fc;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+}
+.environment-tools-header-caption {
+    font-size: 14px;
+    font-weight: 500;
+}
 
+.environment-tools-header__search {
+    padding: 20px 30px 10px 20px;
+}
+.environment-tools-body-search {
+    width: 100%;
+}
+.environment-tools-body__templates {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.environment-tools-body-templates {
+    position: relative;
+    transition: .3s all ease-out;
+    border-bottom: solid 1px #fff;
+    border-top: solid 1px #fff;
+}
+.environment-tools-body-templates:hover {
+    background-color: #eff3f9;
+    border-bottom: solid 1px #eff3f9;
+    border-top: solid 1px #eff3f9;
+}
+.environment-tools-body-templates:active {
+    background-color: #eff3f9;
+    border-bottom: solid 1px #d4d9e3;
+    border-top: solid 1px #d4d9e3;
+}
 
+.templates {
+    padding: 10px 30px 10px 20px;
+}
+.templates__cover {
+    float: left;
+}
+.templates-cover {
+    background-color: #f5f5f5;
+    -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 30px;
+            border-radius: 30px;
+    height: 38px;
+    width: 38px;
+    overflow: hidden;
+    position: relative;
 
+}
+.templates-cover_container {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+.templates-cover-container {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.templates-cover-container__image {
+    max-height: 100%;
+    max-width: 100%;
+}
+.templates__text {
+    margin: 0 0 0 58px;
+}
+.templates-text {
+    line-height: 38px;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    word-wrap: normal;
+}
+.templates-link {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.environment__workspace {
+    height: 100%;
+    margin: 0 250px 0 0;
+    padding: 20px;
 
-
-
-
+}
+.environment-workspace {
+    height: 100%;
+    width: 100%;
+    background: url("../assets/img/environment-grid.png") repeat;
+    background-size: auto;
+}
+.environment-template {
+    height: 85px;
+    width: 73px;
+    background: url("../assets/img/environment-template-place.svg") repeat;
+    background-size: cover;
+    position: absolute;
+    top: 23px;
+    left: 28px;
+}
+.environment-template__cover {
+    position: absolute;
+    top: 14px;
+    left: 13px;
+}
+.environment-template__cover .templates-cover {
+    height: 49px;
+    width: 49px;
+}
+.environment-template__link {
+    bottom: 7px;
+    position: absolute;
+    right: 31px;
+}
+.environment-template-link {
+    font-size: 10px;
+    color: #d4d9e3;
+    transition: 0.3s all ease-out;
+}
+.environment-template__hidden {
+    opacity: 0;
+    transition: 0.3s all ease-out;
+}
+.environment-template:hover {
+    cursor: move;
+}
+.environment-template:hover .environment-template__hidden {
+    opacity: 1;
+}
+.environment-template:hover .environment-template-link {
+    color: #697490;
+}
+.environment-template__hidden .environment-template-link {
+    border: 1px solid #d4d9e3;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 2px 3px;
+    font-size: 8px;
+    top: 8px;
+    position: absolute;
+}
+.environment-template__hidden .environment-template-link:last-child {
+    right: 0;
+}
+.environment-template__hidden .environment-template-link:first-child {
+    left: 0;
+}
 
 
     /*JS*/
