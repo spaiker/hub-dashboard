@@ -93,6 +93,7 @@
 
 .dropdown_center .dropdown-menu {
     left: -50%;
+    transform: translate(-45%, 0);
 }
 .dropdown_right .dropdown-menu {
     right: 0;

@@ -1074,22 +1074,48 @@
                 </div>
             </div>
             <div class="environment__workspace">
-                <div class="environment-workspace">
-                    <div class="environment-template">
-                        <div class="environment-template__hidden">
-                            <a href="#" class="environment-template-link"><i class="hb hb-solid-duplicate"></i></a>
-                            <a href="#" class="environment-template-link"><i class="hb hb-solid-close"></i></a>
-                        </div>
-                        <div class="environment-template__cover">
-                            <div class="templates-cover">
-                                <div class="templates-cover_container">
-                                    <div class="templates-cover-container">
-                                        <img src="assets/img/template-appscale.png" alt="" class="templates-cover-container__image">
+                    <div class="environment-workspace">
+                        <div class="environment-template">
+                            <div class="environment-template__hidden">
+                                <a href="#" class="environment-template-link" rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Duplicate" data-inverted><i class="hb hb-solid-duplicate"></i></a>
+                                <a href="#" class="environment-template-link" rel="tooltip" data-toggle="tooltip" data-placement="top" data-original-title="Close" data-inverted><i class="hb hb-solid-close"></i></a>
+                            </div>
+                            <div class="environment-template__cover">
+                                <div class="templates-cover">
+                                    <div class="templates-cover_container">
+                                        <div class="templates-cover-container">
+                                            <img src="assets/img/template-appscale.png" alt="" class="templates-cover-container__image">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="environment-template__link dropdown dropdown_pointer dropdown_center">
+                                <a href="#" class="environment-template-link dropdown-toggle" data-toggle="dropdown" data-placeholder="Please select"><i class="hb hb-settings"></i></a>
+                                    <div id="template-settings" class="dropdown-menu dropdown-menu_noclose">
+                                            <div class="dropdown-menu__body">
+                                                <div class="dropdown-menu-body">
+                                                    <div class="forms-wrapper">
+                                                        <label for="name" class="forms-label">Container name</label>
+                                                        <input type="text" class="forms-input" id="name" placeholder="Container name">
+                                                    </div>
+                                                    <div class="forms-wrapper">
+                                                        <label for="quota" class="forms-label">Quota size</label>
+                                                        <select class="forms-input" id="quota">
+                                                            <option value="tiny">Tiny</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="dropdown-menu__footer">
+                                                <button class="btn btn_blue">Save</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        <div class="environment-buttons">
+                            <button class="btn btn_blue">Apply</button>
+                            <button class="btn">Clear</button>
                         </div>
-                        <div class="environment-template__link"><a href="#" class="environment-template-link"><i class="hb hb-settings"></i></a></div>
                     </div>
                 </div>
             </div>

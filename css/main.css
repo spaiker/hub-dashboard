@@ -2478,6 +2478,7 @@ td .hb-question {
     width: 100%;
     background: url("../assets/img/environment-grid.png") repeat;
     background-size: auto;
+    position: relative;
 }
 .environment-template {
     height: 85px;
@@ -2535,6 +2536,32 @@ td .hb-question {
 .environment-template__hidden .environment-template-link:first-child {
     left: 0;
 }
+.environment-template__link.dropdown .forms-label {
+    display: block;
+    margin: 0 0 5px;
+}
+.environment-template__link.dropdown .forms-input {
+    width: 100%;
+}
+.environment-template__link.dropdown .forms-wrapper {
+    margin: 0 0 20px;
+}
+.environment-template__link.dropdown .forms-wrapper:last-child {
+    margin: 0;
+}
+.environment-buttons {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-45%, 0);
+    margin: 0 250px 0 0;
+}
+.environment-buttons .btn:first-child {
+    margin: 0 20px 0 0;
+}
+
+
+
 
 
     /*JS*/
