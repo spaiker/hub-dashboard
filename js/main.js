@@ -36,6 +36,33 @@ $(function() {
 
     $("[data-toggle='popover']").popover();
 });
+
+swal({
+    title: 'Are you sure?',
+    text: "You won't be able to revert this!",
+    type: 'warning',
+    showCancelButton: true,
+    confirmButtonText: 'Yes, delete it!',
+    cancelButtonText: 'No, cancel!',
+    buttonsStyling: false
+}).then(function() {
+    swal(
+        'Deleted!',
+        'Your file has been deleted.',
+        'question'
+    )
+}, function(dismiss) {
+    // dismiss can be 'cancel', 'overlay',
+    // 'close', and 'timer'
+    if (dismiss === 'cancel') {
+        swal(
+            'Cancelled',
+            'Your imaginary file is safe :)',
+            'error'
+        )
+    }
+})
+
 $(function() {
     $(".js-filter-memory").ionRangeSlider(
         {

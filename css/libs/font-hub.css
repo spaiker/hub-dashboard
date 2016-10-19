@@ -251,3 +251,6 @@
 .hb-solid-duplicate:before {
     content: "\e94b";
 }
+.hb-warning:before {
+    content: "\e94c";
+}
