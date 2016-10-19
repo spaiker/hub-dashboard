@@ -458,6 +458,12 @@ a:active {
     border-radius: 5px;
 }
     /*Forms*/
+.forms-error {
+	color: #fa0000;
+	font-size: 12px;
+	margin: 10px 0px;
+	display: none;
+}
 .forms-input,
 textarea,
 .input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
@@ -2327,6 +2333,11 @@ textarea {
     float: right;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
+}
+.modal_account-settings label {
+	max-width: 90px;
+    display: inline-block;
+    vertical-align: middle;
 }
 .modal__forms-wrapper_hidden,
 .modal__forms-wrapper_password-hidden {
