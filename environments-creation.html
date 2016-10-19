@@ -24,6 +24,10 @@
 
     <link rel="stylesheet" href="css/libs/boo-dropdown.css">
     <link rel="stylesheet" href="css/libs/boo-tooltip.css">
+
+    <link rel="stylesheet" href="css/libs/remodal.css">
+    <link rel="stylesheet" href="css/libs/remodal-default-theme.css">
+
     <!--CSS-->
     <link rel="stylesheet" href="css/main.css">
 
@@ -1113,7 +1117,7 @@
                                     </div>
                             </div>
                         <div class="environment-buttons">
-                            <button class="btn btn_blue">Apply</button>
+                            <button data-remodal-target="modal-build-environment" class="btn btn_blue">Apply</button>
                             <button class="btn">Clear</button>
                         </div>
                     </div>
@@ -1123,6 +1127,149 @@
     </div>
 
 </section>
+
+<!--Modals-->
+<div class="remodal" data-remodal-id="modal-build-environment">
+    <div class="remodal-header">
+        <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
+        <div class="remodal-header__title"><span class="remodal-header-title">Build environment</span></div>
+    </div>
+    <div class="remodal-body">
+        <div class="modal modal_build-environment modal_datatable-no-search">
+            <div class="modal-wrapper">
+                <div class="modal__forms-wrapper">
+                    <label for="env-name" class="forms-label">Environment name:</label>
+                    <input type="text" class="forms-input" id="env-name" value="test">
+                </div>
+            </div>
+            <div class="modal-wrapper clearfix">
+                <label for="list-templates" class="forms-label">Selected templates:</label>
+                <ul class="environment-tools-body__templates js-scroll" id="list-templates">
+                    <li class="environment-tools-body-templates">
+                        <a href="#" class="templates-link"><span class="templates-link__overlay"></span></a>
+                        <div class="templates">
+                            <div class="templates__cover">
+                                <div class="templates-cover">
+                                    <div class="templates-cover_container">
+                                        <div class="templates-cover-container">
+                                            <img src="assets/img/template-appscale.png" alt="" class="templates-cover-container__image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="templates__label">
+                                <span class="label label_tiny" rel="tooltip" data-toggle="tooltip" data-placement="bottom" data-original-title="Tiny">3</span>
+                            </div>
+                            <div class="templates__text">
+                                <span class="templates-text">Cassandra</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="environment-tools-body-templates">
+                        <a href="#" class="templates-link"><span class="templates-link__overlay"></span></a>
+                        <div class="templates">
+                            <div class="templates__cover">
+                                <div class="templates-cover">
+                                    <div class="templates-cover_container">
+                                        <div class="templates-cover-container">
+                                            <img src="assets/img/template-appscale.png" alt="" class="templates-cover-container__image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="templates__label">
+                                <span class="label label_tiny" rel="tooltip" data-toggle="tooltip" data-placement="bottom" data-original-title="Tiny">3</span>
+                            </div>
+                            <div class="templates__text">
+                                <span class="templates-text">Cassandra</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <table class="table table_stripped js-datatable" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th class="table-no-sort"></th>
+                    <th>Name</th>
+                    <th>ISP</th>
+                    <th>RH</th>
+                    <th>Version</th>
+                    <th>Country</th>
+                    <th>IP Address</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="table-checkbox">
+                            <span class="checkbox-wrapper checkbox-wrapper_empty">
+                                <input type="checkbox" id="100">
+                                <label for="100"></label>
+                            </span>
+                    </td>
+                    <td><span class="status status_online status_left"></span> Dilshat</td>
+                    <td>Megaline</td>
+                    <td>1</td>
+                    <td>4.0.4-SNAPSHOT</td>
+                    <td>Kyrgyzstan</td>
+                    <td>158.181.132.179</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="remodal-footer">
+        <button class="btn btn_green" data-remodal-target="modal-start-environment">Add</button>
+        <button class="btn" data-remodal-action="cancel">Cancel</button>
+    </div>
+</div>
+<div class="remodal remodal_md" data-remodal-id="modal-start-environment">
+    <div class="remodal-header">
+        <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
+        <div class="remodal-header__title"><span class="remodal-header-title">Start environment</span></div>
+    </div>
+    <div class="remodal-body">
+        <div class="modal modal_start-environment">
+            <table class="table table_stripped" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th>Peer</th>
+                    <th>Containers</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>[Dilshat] Peer 8C</td>
+                    <td>
+                        <div class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-placeholder="Please select">Container <i class="hb hb-solid-caret-down"></i></a>
+                            <div class="dropdown-menu dropdown-menu_dividers dropdown-menu_noclose">
+                                <div class="dropdown-menu__item">
+                                    <div class="dropdown-menu__body">
+                                        <ul class="filter-list js-dark-scroll">
+                                            <li class="filter-list__item">
+                                                <span class="checkbox-wrapper">
+                                                    <input type="checkbox" id="at" name="Container 1" value="1" checked>
+                                                    <label for="at" >Container 1</label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="remodal-footer">
+        <button class="btn btn_blue" data-remodal-action="confirm">Save</button>
+        <button class="btn" data-remodal-action="cancel">Cancel</button>
+    </div>
+</div>
+
 
 <script src="js/libs/jquery-2.1.1.min.js"></script>
 <script src="js/libs/slick.js"></script>
@@ -1146,7 +1293,9 @@
 <script src="js/libs/boo-button.js"></script>
 <script src="js/libs/boo-dropdown.js"></script>
 <script src="js/libs/boo-tooltip.js"></script>
-<script src="js/libs/boo-popover.js"></script> <!--Need boo-tooltip.js-->
+<script src="js/libs/boo-popover.js"></script>
+
+<script src="js/libs/remodal.js"></script>
 
 <script src="js/main.js"></script>
 </body>

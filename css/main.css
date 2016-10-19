@@ -69,6 +69,16 @@ a:active {
 .clear {
     clear: both;
 }
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
 /*Panels*/
 
 .panel {
@@ -96,7 +106,8 @@ a:active {
 .panel__header_datatable-search .btn_action {
     padding: 9px 15px;
 }
-.panel__body_datatable-no-search .top {
+.panel__body_datatable-no-search .top,
+.modal_datatable-no-search .top{
     display: none;
 }
 .pushable > .pusher:after {
@@ -1779,7 +1790,7 @@ textarea {
 .content__body-wrapper {
     position: relative;
 }
-.js-dark-scroll:before {
+/*.js-dark-scroll:before {
     position: absolute;
     content: "";
     top: 0;
@@ -1800,7 +1811,7 @@ textarea {
     background-image: -webkit-linear-gradient(bottom,rgba(255, 255, 255,0), rgb(255, 255, 255));
     background: linear-gradient(to bottom,rgba(255, 255, 255,0), rgb(255, 255, 255));
     z-index: 999;
-}
+}*/
 .content-body__fade-top {
     position: absolute;
     top: 0;
@@ -2325,6 +2336,75 @@ textarea {
 .modal__forms-wrapper_password-hidden.show {
     display: block;
 }
+
+.modal_build-environment .modal__forms-wrapper .forms-input {
+    width: 300px;
+}
+
+.modal_build-environment .modal__forms-wrapper {
+    text-align: left;
+}
+.modal_build-environment .modal-wrapper {
+    margin: 0 0 20px;
+}
+
+.modal_build-environment .environment-tools-body__templates {
+    max-height: 200px !important;
+    float: right;
+    border: 1px solid #d4d9e3;
+    border-radius: 2px;
+    width: 100% !important;
+}
+
+.modal_build-environment .content__body-wrapper {
+    width: calc(80% + 4px) !important;
+    float: right;
+}
+.modal_build-environment .environment-tools-body-templates {
+    border-bottom: solid 1px #d4d9e3;
+}
+.modal_build-environment .environment-tools-body-templates:last-child {
+    border-bottom: solid 1px #fff;
+}
+.modal_build-environment .environment-tools-body-templates:hover,
+.modal_build-environment .environment-tools-body-templates:active {
+    border-top: 1px solid #eff3f9;
+    border-bottom: solid 1px #d4d9e3;
+}
+.modal_build-environment .environment-tools-body-templates:last-child:hover,
+.modal_build-environment .environment-tools-body-templates:last-child:active {
+    border-top: 1px solid #eff3f9;
+    border-bottom: solid 1px #eff3f9;
+}
+.modal_build-environment .templates {
+    padding: 5px 30px 5px 20px;
+}
+.modal_build-environment .list-templates {
+    float: left;
+    margin: 0 9px;
+}
+.modal_start-environment .dropdown-toggle {
+    display: block;
+    padding: 0 15px;
+    background-color: #f2f3f6;
+    border: 1px solid #d4d9e3;
+    border-radius: 2px;
+    line-height: 35px;
+    font-size: 12px;
+    color: #d4d9e3;
+}
+.modal_start-environment .dropdown-toggle .hb {
+    float: right;
+    line-height: 35px;
+}
+.modal_start-environment .dropdown-menu {
+    border-radius: 2px;
+    width: 100%;
+}
+.modal_start-environment .dropdown-menu__body {
+    padding: 10px 15px;
+}
+
 .jFiler-wrapper {
     width: 80%;
     display: inline-block;
@@ -2505,6 +2585,10 @@ td .hb-question {
 }
 .templates__text {
     margin: 0 0 0 58px;
+}
+.templates__label {
+    float: right;
+    line-height: 35px;
 }
 .templates-text {
     line-height: 38px;

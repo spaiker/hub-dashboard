@@ -31,13 +31,13 @@
     top: 32px;
     right: 50%;
     width: 50%;
-    border: 1px solid #d4d9e3;
+    border-top: 1px solid #d4d9e3;
 }
 
 .coupons li::after {
     right: auto;
     left: 50%;
-    border: 1px solid #d4d9e3;
+    border-top: 1px solid #d4d9e3;
 }
 
 /*We need to remove left-right connectors from elements without
@@ -85,7 +85,7 @@ right connector from last child*/
     position: absolute;
     top: -13px;
     left: 50%;
-    border: 1px solid #d4d9e3;
+    border-right: 1px solid #d4d9e3;
     height: 118px;
 }
 
