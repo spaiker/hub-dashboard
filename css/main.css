@@ -2453,6 +2453,7 @@ textarea {
 .modal_logs .modal__forms-wrapper .forms-input {
     width: 100%;
     margin: 0;
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
 
