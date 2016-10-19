@@ -2270,7 +2270,8 @@ textarea {
 }
 .modal_review .modal__forms-wrapper .forms-input,
 .modal_review .modal__forms-wrapper .forms-rating,
-.modal_edit-product .modal__forms-wrapper .forms-input {
+.modal_edit-product .modal__forms-wrapper .forms-input,
+.modal_upload-templates .modal__forms-wrapper .forms-input{
     width: 80%;
     display: inline-block;
 }
@@ -2439,6 +2440,22 @@ textarea {
 .modal_start-environment .dropdown-menu__body {
     padding: 10px 15px;
 }
+.modal_upload-docker .modal-wrapper,
+.modal_authorization .modal-wrapper {
+    font-size: 12px;
+}
+.modal_authorization .modal-wrapper {
+    margin: 0 0 20px 0;;
+}
+.modal_authorization .modal__forms-wrapper .forms-input {
+    width: 75%;
+}
+.modal_logs .modal__forms-wrapper .forms-input {
+    width: 100%;
+    margin: 0;
+}
+
+
 
 .jFiler-wrapper {
     width: 80%;
@@ -2734,8 +2751,14 @@ td .hb-question {
 .environment-buttons .btn:first-child {
     margin: 0 20px 0 0;
 }
-
-
+.content-header-right__quota {
+    padding: 0 40px 0 0;
+    height: 66px;
+    line-height: 66px;
+}
+.quota-widget {
+    font-size: 12px;
+}
 
 
 

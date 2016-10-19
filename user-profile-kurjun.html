@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--CSS Libs-->
+    <link rel="stylesheet" href="css/libs/normalize.css">
+    <link rel="stylesheet" href="css/libs/font-awesome.min.css">
+    <link rel="stylesheet" href="css/libs/font-hub.css">
+    <link rel="stylesheet" href="css/libs/slick.css">
+    <link rel="stylesheet" href="css/libs/slick-theme.css">
+    <link rel="stylesheet" href="css/libs/datatables.css">
+    <link rel="stylesheet" href="css/libs/ion.rangeSlider.css">
+    <link rel="stylesheet" href="css/libs/colorbox.css">
+    <link rel="stylesheet" href="css/libs/calendar.css">
+    <link rel="stylesheet" href="css/libs/elementTransitions.min.css">
+    <link rel="stylesheet" href="css/libs/xcharts.css">
+
+    <link rel="stylesheet" href="css/libs/boo-dropdown.css">
+    <link rel="stylesheet" href="css/libs/boo-tooltip.css">
+
+    <!--UI Docs-->
+    <link rel="stylesheet" href="css/libs/transition.css">
+    <link rel="stylesheet" href="css/libs/flag.css">
+    <link rel="stylesheet" href="css/libs/rating.css">
+    <link rel="stylesheet" href="css/libs/sidebar.css">
+    <link rel="stylesheet" href="css/libs/tab.css">
+
+    <link rel="stylesheet" href="css/libs/remodal.css">
+    <link rel="stylesheet" href="css/libs/remodal-default-theme.css">
+    <link rel="stylesheet" href="css/libs/jquery.filer.css">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body>
+<!--Header start-->
+<header class="header">
+    <div class="header__left">
+        <div class="header-left">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">
+                    <svg class="navbar-brand__logo">
+                        <use xlink:href="assets/logos.svg#header"></use>
+                    </svg>
+                    <svg class="navbar-brand__logo_small">
+                        <use xlink:href="assets/logos.svg#header-small"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="header__right">
+        <div class="header-right">
+            <div class="navbar navbar_toolbar">
+                <ul class="nav nav_toolbar">
+                    <li class="nav__minimize">
+                        <a href="#" class="nav-minimize js-btn-minimize">
+                            <i class="hb hb-burger"></i>
+                        </a>
+                    </li>
+                    <li class="nav__breadcrumb">
+                        <ul class="nav nav_breadcrumb">
+                            <li class="nav-breadcrumb__item">
+                                <a href="#">User profile</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav nav_toolbar nav_toolbar_right">
+                    <li class="nav-dropdown dropdown dropdown_pointer dropdown_right">
+                        <div class="nav-dropdown__btn dropdown-toggle" data-toggle="dropdown">
+                            <i class="hb hb-solid-bell"></i>
+                            <span class="badge-circle badge-circle_warning">10</span>
+                        </div>
+                        <div class="nav-dropdown__content nav-dropdown__content_notification dropdown-menu dropdown-menu_noclose">
+                            <div class="nav-dropdown-content__notification">
+                                <div class="notification__header">Peer Usage Approval</div>
+                                <div class="notification__description">User Ermek shared his peer with you. Please check your
+                                    <a href="#">shared peers</a></div>
+                                <div class="notification__date">20.07.2016  11:49</div>
+                            </div>
+                            <div class="nav-dropdown-content__footer">
+                                <a href="#">Delete All Notifications</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-dropdown__btn js-chat-btn">
+                            <i class="hb hb-solid-chat"></i>
+                            <span class="badge-circle badge-circle_warning">5</span>
+                        </a>
+                    </li>
+                    <li class="nav-dropdown dropdown dropdown_pointer dropdown_right">
+                        <div class="nav-dropdown__btn dropdown-toggle" data-toggle="dropdown" >
+                            <span class="profile-meta">
+                                <span class="profile-meta__avatar">
+                                    <span class="profile__avatar profile__avatar_online">
+                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                    </span>
+                                </span>
+                                <span class="profile__text">
+                                    Admin
+                                </span>
+                            </span>
+                        </div>
+                        <div class="nav-dropdown__content nav-dropdown__content_profile dropdown-menu dropdown-menu_noclose ">
+                            <div class="message">
+                                <div class="nav-dropdown-content__profile">
+                                    <div class="profile__header">
+                                        <div class="profile-header__avatar">
+                                            <span class="profile__avatar">
+                                                <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                            </span>
+                                        </div>
+                                        <div class="profile-header__name">
+                                            George Moschovitis
+                                        </div>
+                                    </div>
+                                    <ul class="profile-menu nav">
+                                        <li class="profile-menu__item">
+                                            <a href="#"><i class="hb hb-peer"></i> Peers</a>
+                                        </li>
+                                        <li class="profile-menu__item">
+                                            <a href="#"><i class="hb hb-bazaar"></i> Invitations</a>
+                                        </li>
+                                    </ul>
+                                    <div class="clear"></div>
+                                </div>
+                                <div class="nav-dropdown-content__footer">
+                                    <a href="#">Log out</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</header>
+<!--Header end-->
+<aside class="sidebar sidebar_left">
+    <div class="sidebar-wrapper js-scroll-sidebar">
+        <div class="sidebar-profile">
+            <div class="sidebar-profile__directional">
+                <div class="sidebar-profile-directional">
+                    <a href="#" class="sidebar-profile-directional__item">
+                        <i class="hb hb-arrow-left"></i>
+                    </a>
+                    <a href="#" class="sidebar-profile-directional__item">
+                        <i class="hb hb-cog"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="sidebar-profile__info">
+                <div class="sidebar-profile-info">
+                    <div class="sidebar-profile-info__avatar">
+                        <span class="card-content-cover-container__popover" rel="popover" data-content='<div class="card-content-cover-container-popover"><div class="sidebar-profile-info__title"><div class="sidebar-profile-info-name">Ehrlan</div><div class="sidebar-profile-info-balance">0.00 S</div></div><div class="sidebar-profile-info__details"><div class="sidebar-profile-info-details"><i class="hb hb-location"></i> <i class="flag france"></i> France</div><div class="sidebar-profile-info-details"><i class="hb hb-last-login"></i> 43 minutes ago</div></div></div>' data-html="true" data-toggle='popover' data-placement="right"></span>
+                        <div class="card-content-cover">
+                            <div class="card-content-cover__container">
+                                <div class="card-content-cover-container">
+                                    <img src="assets/img/avatar-default.png" alt="" class="card-content-cover-container__image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sidebar-profile-info__title">
+                        <div class="sidebar-profile-info-name">Ehrlan</div>
+                        <div class="sidebar-profile-info-balance">0.00 S</div>
+                    </div>
+                    <div class="sidebar-profile-info__details">
+                        <div class="sidebar-profile-info-details"><i class="hb hb-location"></i> <i class="flag france"></i> France</div>
+                        <div class="sidebar-profile-info-details"><i class="hb hb-last-login"></i> 43 minutes ago</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="nav sidebar-menu">
+        <li class="sidebar-menu__title">USER DATA</li>
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Billing" data-toggle="tooltip" data-placement="right">
+                <i class="sidebar-menu-item__icon hb hb-billing"></i>
+                <span class="sidebar-menu-item__caption">Billing</span>
+            </a>
+        </li>
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Peers" data-toggle="tooltip" data-placement="right">
+                <i class="sidebar-menu-item__icon hb hb-peer"></i>
+                <span class="sidebar-menu-item__caption">Peers</span>
+            </a>
+        </li>
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Products" data-toggle="tooltip" data-placement="right">
+                <i class="sidebar-menu-item__icon hb hb-bazaar"></i>
+                <span class="sidebar-menu-item__caption">Products</span>
+            </a>
+        </li>
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Invitations" data-toggle="tooltip" data-placement="right">
+                <i class="sidebar-menu-item__icon hb hb-invitation"></i>
+                <span class="sidebar-menu-item__caption">Invitations</span>
+            </a>
+        </li>
+        <li class="sidebar-menu__item sidebar-menu__item_active">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Kurjun" data-toggle="tooltip" data-placement="right">
+                <i class="sidebar-menu-item__icon hb hb-kurjun"></i>
+                <span class="sidebar-menu-item__caption">Kurjun</span>
+            </a>
+        </li>
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Organizations" data-toggle="tooltip" data-placement="right">
+                <i class="sidebar-menu-item__icon hb hb-organizations"></i>
+                <span class="sidebar-menu-item__caption">Organizations</span>
+            </a>
+        </li>
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Friends" data-toggle="tooltip" data-placement="right">
+                <i class="sidebar-menu-item__icon hb hb-friends"></i>
+                <span class="sidebar-menu-item__caption">Friends</span>
+            </a>
+        </li>
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="GitHub progects" data-toggle="tooltip" data-placement="right">
+                <i class="sidebar-menu-item__icon hb hb-github"></i>
+                <span class="sidebar-menu-item__caption">GitHub projects</span>
+            </a>
+        </li>
+        <li class="sidebar-menu__item">
+            <a href="#" class="sidebar-menu-item" rel="tooltip" title="Cloud provider" data-toggle="tooltip" data-placement="right">
+                <i class="sidebar-menu-item__icon hb hb-cloud-provider"></i>
+                <span class="sidebar-menu-item__caption">Cloud provider</span>
+            </a>
+        </li>
+    </ul>
+    </div>
+</aside>
+<aside class="ui sidebar sidebar_right right overlay">
+    <div class="chat">
+        <div class="chat__header">
+            <ul class="chat-header-left nav">
+                <li>
+                    <a href="#" class="chat-btn__new">
+                        <i class="hb hb-new"></i>
+                    </a>
+                </li>
+            </ul>
+            <!--<div class="chat-header-right">
+                <div class="nav js-chat-carousel">
+                    <div class="chat-header-right__item">
+                        <a href="#">
+                            <span class="profile__avatar profile__avatar_online">
+                                <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                            </span>
+                        </a>
+                    </div>
+                    <div class="chat-header-right__item">
+                        <a href="#">
+                            <span class="profile__avatar profile__avatar_online">
+                                <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                            </span>
+                        </a>
+                    </div>
+                    <div class="chat-header-right__item">
+                        <a href="#">
+                            <span class="profile__avatar profile__avatar_online">
+                                <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                            </span>
+                        </a>
+                    </div>
+                    <div class="chat-header-right__item">
+                        <a href="#">
+                            <span class="profile__avatar profile__avatar_online">
+                                <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>-->
+            <div class="clear"></div>
+        </div>
+        <div class="chat__body">
+            <div class="chat-body__tabs">
+                <div class="tabular menu tabs nav">
+                    <a class="item tab active" data-tab="chat-users">Users</a>
+                    <a class="item tab" data-tab="chat-rooms">Rooms</a>
+                </div>
+            </div>
+            <div class="chat-body__contacts ui tab active"  data-tab="chat-users">
+                <div class="chat-body-contacts__search">
+                    <div class="forms-search">
+                        <input type="search" placeholder="Search">
+                    </div>
+                </div>
+                <ul class="chat-body-contacts__content js-dark-scroll nav">
+                    <li>
+                        <a href="#" class="waves-effect">
+                            <span class="profile-meta profile-meta_list">
+                                <span class="profile-meta__avatar">
+                                    <span class="profile__avatar profile__avatar_online">
+                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                    </span>
+                                </span>
+                                <span class="profile__text">
+                                    George Moschovitis
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="waves-effect">
+                            <span class="profile-meta profile-meta_list">
+                                <span class="profile-meta__avatar">
+                                    <span class="profile__avatar profile__avatar_online">
+                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                    </span>
+                                </span>
+                                <span class="profile__text">
+                                    George Moschovitis
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="waves-effect">
+                            <span class="profile-meta profile-meta_list">
+                                <span class="profile-meta__avatar">
+                                    <span class="profile__avatar profile__avatar_offline">
+                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                    </span>
+                                </span>
+                                <span class="profile__text">
+                                    George Moschovitis
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="waves-effect">
+                            <span class="profile-meta profile-meta_list">
+                                <span class="profile-meta__avatar">
+                                    <span class="profile__avatar profile__avatar_online">
+                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                    </span>
+                                </span>
+                                <span class="profile__text">
+                                    George Moschovitis
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="waves-effect">
+                            <span class="profile-meta profile-meta_list">
+                                <span class="profile-meta__avatar">
+                                    <span class="profile__avatar profile__avatar_online">
+                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                    </span>
+                                </span>
+                                <span class="profile__text">
+                                    George Moschovitis
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="waves-effect">
+                            <span class="profile-meta profile-meta_list">
+                                <span class="profile-meta__avatar">
+                                    <span class="profile__avatar profile__avatar_online">
+                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                    </span>
+                                </span>
+                                <span class="profile__text">
+                                    George Moschovitis
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="waves-effect">
+                            <span class="profile-meta profile-meta_list">
+                                <span class="profile-meta__avatar">
+                                    <span class="profile__avatar profile__avatar_offline">
+                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                    </span>
+                                </span>
+                                <span class="profile__text">
+                                    George Moschovitis
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="waves-effect">
+                            <span class="profile-meta profile-meta_list">
+                                <span class="profile-meta__avatar">
+                                    <span class="profile__avatar profile__avatar_online">
+                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                    </span>
+                                </span>
+                                <span class="profile__text">
+                                    George Moschovitis
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="waves-effect">
+                            <span class="profile-meta profile-meta_list">
+                                <span class="profile-meta__avatar">
+                                    <span class="profile__avatar profile__avatar_online">
+                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                    </span>
+                                </span>
+                                <span class="profile__text">
+                                    George Moschovitis
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="waves-effect">
+                            <span class="profile-meta profile-meta_list">
+                                <span class="profile-meta__avatar">
+                                    <span class="profile__avatar profile__avatar_online">
+                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                    </span>
+                                </span>
+                                <span class="profile__text">
+                                    George Moschovitis
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="waves-effect">
+                            <span class="profile-meta profile-meta_list">
+                                <span class="profile-meta__avatar">
+                                    <span class="profile__avatar profile__avatar_offline">
+                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                    </span>
+                                </span>
+                                <span class="profile__text">
+                                    George Moschovitis
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="waves-effect">
+                            <span class="profile-meta profile-meta_list">
+                                <span class="profile-meta__avatar">
+                                    <span class="profile__avatar profile__avatar_online">
+                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                    </span>
+                                </span>
+                                <span class="profile__text">
+                                    George Moschovitis
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="waves-effect">
+                            <span class="profile-meta profile-meta_list">
+                                <span class="profile-meta__avatar">
+                                    <span class="profile__avatar profile__avatar_online">
+                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                    </span>
+                                </span>
+                                <span class="profile__text">
+                                    George Moschovitis
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="waves-effect">
+                            <span class="profile-meta profile-meta_list">
+                                <span class="profile-meta__avatar">
+                                    <span class="profile__avatar profile__avatar_online">
+                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                    </span>
+                                </span>
+                                <span class="profile__text">
+                                    George Moschovitis
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="waves-effect">
+                            <span class="profile-meta profile-meta_list">
+                                <span class="profile-meta__avatar">
+                                    <span class="profile__avatar profile__avatar_offline">
+                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                    </span>
+                                </span>
+                                <span class="profile__text">
+                                    George Moschovitis
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="waves-effect">
+                            <span class="profile-meta profile-meta_list">
+                                <span class="profile-meta__avatar">
+                                    <span class="profile__avatar profile__avatar_online">
+                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                    </span>
+                                </span>
+                                <span class="profile__text">
+                                    George Moschovitis
+                                </span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="chat-body__contacts ui tab" data-tab="chat-rooms">
+                <ul class="chat-body-contacts__content js-dark-scroll_rooms nav collapsible collapsible-accordion" data-collapsible="accordion">
+                    <li>
+                        <a href="#" class="waves-effect">
+                            <span class="profile-meta profile-meta_list">
+                                <span class="profile-meta__avatar">
+                                    <span class="profile__avatar profile__avatar_room">
+                                        G
+                                    </span>
+                                </span>
+                                <span class="profile__text">
+                                    General
+                                </span>
+                            </span>
+                        </a>
+                        <span class="profile__members collapsible-header">members</span>
+                        <ul class="chat-body-contacts__content nav collapsible-body"style="display: none;">
+                            <li>
+                                <a href="#" class="waves-effect">
+                        <span class="profile-meta profile-meta_list">
+                            <span class="profile-meta__avatar">
+                                <span class="profile__avatar profile__avatar_online">
+                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                </span>
+                            </span>
+                            <span class="profile__text">
+                                George Moschovitis
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect">
+                        <span class="profile-meta profile-meta_list">
+                            <span class="profile-meta__avatar">
+                                <span class="profile__avatar profile__avatar_online">
+                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                </span>
+                            </span>
+                            <span class="profile__text">
+                                George Moschovitis
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect">
+                        <span class="profile-meta profile-meta_list">
+                            <span class="profile-meta__avatar">
+                                <span class="profile__avatar profile__avatar_offline">
+                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                </span>
+                            </span>
+                            <span class="profile__text">
+                                George Moschovitis
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect">
+                        <span class="profile-meta profile-meta_list">
+                            <span class="profile-meta__avatar">
+                                <span class="profile__avatar profile__avatar_online">
+                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                </span>
+                            </span>
+                            <span class="profile__text">
+                                George Moschovitis
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect">
+                        <span class="profile-meta profile-meta_list">
+                            <span class="profile-meta__avatar">
+                                <span class="profile__avatar profile__avatar_online">
+                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                </span>
+                            </span>
+                            <span class="profile__text">
+                                George Moschovitis
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect">
+                        <span class="profile-meta profile-meta_list">
+                            <span class="profile-meta__avatar">
+                                <span class="profile__avatar profile__avatar_online">
+                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                </span>
+                            </span>
+                            <span class="profile__text">
+                                George Moschovitis
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="waves-effect">
+                            <span class="profile-meta profile-meta_list">
+                                <span class="profile-meta__avatar">
+                                    <span class="profile__avatar profile__avatar_room">
+                                        D
+                                    </span>
+                                </span>
+                                <span class="profile__text">
+                                    Developers
+                                </span>
+                            </span>
+                        </a>
+                        <span class="profile__members collapsible-header">members</span>
+                        <ul class="chat-body-contacts__content nav collapsible-body"style="display: none;">
+                            <li>
+                                <a href="#" class="waves-effect">
+                        <span class="profile-meta profile-meta_list">
+                            <span class="profile-meta__avatar">
+                                <span class="profile__avatar profile__avatar_online">
+                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                </span>
+                            </span>
+                            <span class="profile__text">
+                                George Moschovitis
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect">
+                        <span class="profile-meta profile-meta_list">
+                            <span class="profile-meta__avatar">
+                                <span class="profile__avatar profile__avatar_online">
+                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                </span>
+                            </span>
+                            <span class="profile__text">
+                                George Moschovitis
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect">
+                        <span class="profile-meta profile-meta_list">
+                            <span class="profile-meta__avatar">
+                                <span class="profile__avatar profile__avatar_offline">
+                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                </span>
+                            </span>
+                            <span class="profile__text">
+                                George Moschovitis
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect">
+                        <span class="profile-meta profile-meta_list">
+                            <span class="profile-meta__avatar">
+                                <span class="profile__avatar profile__avatar_online">
+                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                </span>
+                            </span>
+                            <span class="profile__text">
+                                George Moschovitis
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect">
+                        <span class="profile-meta profile-meta_list">
+                            <span class="profile-meta__avatar">
+                                <span class="profile__avatar profile__avatar_online">
+                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                </span>
+                            </span>
+                            <span class="profile__text">
+                                George Moschovitis
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect">
+                        <span class="profile-meta profile-meta_list">
+                            <span class="profile-meta__avatar">
+                                <span class="profile__avatar profile__avatar_online">
+                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                </span>
+                            </span>
+                            <span class="profile__text">
+                                George Moschovitis
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect">
+                        <span class="profile-meta profile-meta_list">
+                            <span class="profile-meta__avatar">
+                                <span class="profile__avatar profile__avatar_offline">
+                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                </span>
+                            </span>
+                            <span class="profile__text">
+                                George Moschovitis
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect">
+                        <span class="profile-meta profile-meta_list">
+                            <span class="profile-meta__avatar">
+                                <span class="profile__avatar profile__avatar_online">
+                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                </span>
+                            </span>
+                            <span class="profile__text">
+                                George Moschovitis
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect">
+                        <span class="profile-meta profile-meta_list">
+                            <span class="profile-meta__avatar">
+                                <span class="profile__avatar profile__avatar_online">
+                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                </span>
+                            </span>
+                            <span class="profile__text">
+                                George Moschovitis
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect">
+                        <span class="profile-meta profile-meta_list">
+                            <span class="profile-meta__avatar">
+                                <span class="profile__avatar profile__avatar_online">
+                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                </span>
+                            </span>
+                            <span class="profile__text">
+                                George Moschovitis
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect">
+                        <span class="profile-meta profile-meta_list">
+                            <span class="profile-meta__avatar">
+                                <span class="profile__avatar profile__avatar_offline">
+                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                </span>
+                            </span>
+                            <span class="profile__text">
+                                George Moschovitis
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect">
+                        <span class="profile-meta profile-meta_list">
+                            <span class="profile-meta__avatar">
+                                <span class="profile__avatar profile__avatar_online">
+                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                </span>
+                            </span>
+                            <span class="profile__text">
+                                George Moschovitis
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect">
+                        <span class="profile-meta profile-meta_list">
+                            <span class="profile-meta__avatar">
+                                <span class="profile__avatar profile__avatar_online">
+                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                </span>
+                            </span>
+                            <span class="profile__text">
+                                George Moschovitis
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect">
+                        <span class="profile-meta profile-meta_list">
+                            <span class="profile-meta__avatar">
+                                <span class="profile__avatar profile__avatar_online">
+                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                </span>
+                            </span>
+                            <span class="profile__text">
+                                George Moschovitis
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect">
+                        <span class="profile-meta profile-meta_list">
+                            <span class="profile-meta__avatar">
+                                <span class="profile__avatar profile__avatar_offline">
+                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                </span>
+                            </span>
+                            <span class="profile__text">
+                                George Moschovitis
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect">
+                        <span class="profile-meta profile-meta_list">
+                            <span class="profile-meta__avatar">
+                                <span class="profile__avatar profile__avatar_online">
+                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
+                                </span>
+                            </span>
+                            <span class="profile__text">
+                                George Moschovitis
+                            </span>
+                        </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="chat-body__downbar">
+                <div class="chat-body-downbar">
+                    <div class="chat-status">
+                        <div class="ui dropdown top right pointing chat-status__link">
+                            <input name="gender" type="hidden" value="default">
+                            <div class="text"><span class="status status_offline"></span> Offline</div>
+                            <div class="menu">
+                                <div class="item" data-value="default"><span class="status status_offline"></span> Offline</div>
+                                <div class="item active selected" data-value="0"><span class="status status_online"></span> Online</div>
+                            </div>
+                            <i class="hb hb-angle-up"></i>
+                        </div>
+                    </div>
+                    <div class="chat-sound">
+                        <a href="#" class="chat-sound__link"><i class="hb hb-sound"></i><i class="hb hb-sound-mute"></i></a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+<section class="content pusher">
+    <div class="content__header">
+        <div class="content-header__right">
+            <div class="content-header-right__quota">
+                <span class="quota-widget">Quota: 0.00 Kb used from 2048 Mb</span>
+            </div>
+        </div>
+        <div class="content-header__left">
+            <div class="content-tabs">
+                <div class="tabular menu tabs">
+                    <a class="item tab active" data-tab="data-tab-templates">Templates</a>
+                    <a class="item tab" data-tab="data-tab-apt">Apt</a>
+                    <a class="item tab" data-tab="data-tab-raw">Raw</a>
+                    <a class="item tab" data-tab="data-tab-docker">Docker</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content__body js-scroll-content">
+        <span class="content-body__fade-top"></span>
+        <span class="content-body__fade-bottom"></span>
+        <div class="panel ui tab active" data-tab="data-tab-templates">
+            <div class="panel__header">
+                <div class="panel-header">
+                    <div class="panel-header__right">
+                        <a href="#modal-authorization" class="btn btn_action"><i class="hb hb-key"></i> Authorize</a> <a href="#" class="btn btn_action"><i class="hb hb-reload"></i> Reload</a>
+                    </div>
+                    <div class="panel-header__left"><button class="btn btn_green" data-remodal-target="modal-upload-templates">Upload</button></div>
+                </div>
+            </div>
+            <div class="panel__body panel__body_datatable-no-search">
+                <table class="table table_stripped js-datatable" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Owner</th>
+                        <th>Contex</th>
+                        <th>Arch</th>
+                        <th>Parent</th>
+                        <th>Version</th>
+                        <th>Size</th>
+                        <th class="table-no-sort"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a href="#">hub-dashboard</a></td>
+                        <td>subutai</td>
+                        <td>AMD64</td>
+                        <td>AMD64</td>
+                        <td>master</td>
+                        <td>3.00</td>
+                        <td>12.56 Mb</td>
+                        <td class="table-align-right"><a href="#" class="btn btn_action"><i class="hb hb-downloads"></i> Download</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="panel ui tab" data-tab="data-tab-apt">
+            <div class="panel__header">
+                <div class="panel-header">
+                    <div class="panel-header__right">
+                        <a href="#modal-authorization" class="btn btn_action"><i class="hb hb-key"></i> Authorize</a> <a href="#" class="btn btn_action"><i class="hb hb-reload"></i> Reload</a>
+                    </div>
+                    <div class="panel-header__left"><button class="btn btn_green" data-remodal-target="modal-upload-apt">Upload</button></div>
+                </div>
+            </div>
+            <div class="panel__body panel__body_datatable-no-search">
+                <table class="table table_stripped js-datatable" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Arch</th>
+                        <th>Version</th>
+                        <th>Size</th>
+                        <th>Owner</th>
+                        <th class="table-no-sort"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a href="#">hub-dashboard</a></td>
+                        <td>subutai</td>
+                        <td>AMD64</td>
+                        <td>12.56 Mb</td>
+                        <td>3.00</td>
+                        <td>Admin</td>
+                        <td class="table-align-right">
+                            <a href="#" class="btn btn_action"><i class="hb hb-downloads"></i> Download</a>
+                            <a href="#" class="btn btn_action"><i class="hb hb-close"></i> Remove</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="panel ui tab" data-tab="data-tab-raw">
+            <div class="panel__header">
+                <div class="panel-header">
+                    <div class="panel-header__right">
+                        <a href="#modal-authorization" class="btn btn_action"><i class="hb hb-key"></i> Authorize</a> <a href="#" class="btn btn_action"><i class="hb hb-reload"></i> Reload</a>
+                    </div>
+                    <div class="panel-header__left"><button class="btn btn_green" data-remodal-target="modal-upload-raw">Upload file</button></div>
+                </div>
+            </div>
+            <div class="panel__body panel__body_datatable-no-search">
+                <table class="table table_stripped js-datatable" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Size</th>
+                        <th>Version</th>
+                        <th>Owner</th>
+                        <th class="table-no-sort"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><a href="#">testfile</a></td>
+                        <td>1mb</td>
+                        <td>n/a</td>
+                        <td>subutai</td>
+                        <td class="table-align-right"><a href="#" class="btn btn_action"><i class="hb hb-downloads"></i> Download</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="panel ui tab" data-tab="data-tab-docker">
+            <div class="panel__header">
+                <div class="panel-header">
+                    <div class="panel-header__right">
+                        <a href="#modal-authorization" class="btn btn_action"><i class="hb hb-key"></i> Authorize</a> <a href="#" class="btn btn_action"><i class="hb hb-reload"></i> Reload</a>
+                    </div>
+                    <div class="panel-header__left"><button class="btn btn_green" data-remodal-target="modal-upload-docker">Upload file</button></div>
+                </div>
+            </div>
+            <div class="panel__body panel__body_datatable-no-search">
+                <table class="table table_stripped js-datatable" cellspacing="0" width="100%">
+                    <thead>
+                    <tr>
+                        <th>Docker Image</th>
+                        <th>Status</th>
+                        <th>Converted</th>
+                        <th class="table-no-sort"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>test</td>
+                        <td>Success</td>
+                        <td>166 d 6 h 27 min ago</td>
+                        <td class="table-align-right">
+                            <a href="#modal-logs" class="btn btn_action"><i class="hb hb-billing"></i> Logs</a>
+                            <a href="#" class="btn btn_action"><i class="hb hb-reload"></i> Reconvert</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!--Modals-->
+<div class="remodal remodal_md" data-remodal-id="modal-authorization">
+    <div class="remodal-header">
+        <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
+        <div class="remodal-header__title"><span class="remodal-header-title">Kurjun authorization</span></div>
+    </div>
+    <div class="remodal-body">
+        <div class="modal modal_authorization">
+            <div class="modal-wrapper">
+                Using PGP tools do clear-sign of "Auth.ID" below and submit signed message
+            </div>
+            <div class="modal__forms-wrapper">
+                <label for="auth" class="forms-label">Auth.ID:</label>
+                <input type="text" class="forms-input" id="auth" value="ed23ffe2ecdd22f0127b6d3969733805">
+            </div>
+            <div class="modal__forms-wrapper">
+                <label for="message" class="forms-label_textarea">Signed message: </label>
+                <textarea type="text" class="forms-input forms-input_textarea" id="message" rows="5">ed23ffe2ecdd22f0127b6d3969733805</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="remodal-footer">
+        <button class="btn btn_green" data-remodal-action="confirm">Authorize</button>
+        <button class="btn" data-remodal-action="cancel">Cancel</button>
+    </div>
+</div>
+<div class="remodal remodal_sm" data-remodal-id="modal-upload-templates">
+    <div class="remodal-header">
+        <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
+        <div class="remodal-header__title"><span class="remodal-header-title">Upload template</span></div>
+    </div>
+    <div class="remodal-body">
+        <div class="modal modal_upload-templates">
+            <div class="modal__forms-wrapper modal__forms-wrapper_upload">
+                <label for="logo" class="forms-label">File</label>
+                <form action="./php/upload.php" method="post" enctype="multipart/form-data" id="logo" class="forms">
+                    <input type="file" name="files[]" multiple="multiple" class="forms-input js-input-templates">
+                </form>
+            </div>
+            <div class="modal__forms-wrapper">
+                <label for="scope" class="forms-label">Scope</label>
+                <select type="text" class="forms-input" id="scope">
+                    <option val="public">Public</option>
+                    <option value="private">Private</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="remodal-footer">
+        <button class="btn btn_green" data-remodal-action="confirm">Upload</button>
+        <button class="btn" data-remodal-action="cancel">Cancel</button>
+    </div>
+</div>
+<div class="remodal remodal_sm" data-remodal-id="modal-upload-apt">
+    <div class="remodal-header">
+        <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
+        <div class="remodal-header__title"><span class="remodal-header-title">Upload deb file</span></div>
+    </div>
+    <div class="remodal-body">
+        <div class="modal modal_upload-templates">
+            <div class="modal__forms-wrapper modal__forms-wrapper_upload">
+                <label for="logo" class="forms-label">File</label>
+                <form action="./php/upload.php" method="post" enctype="multipart/form-data" id="logo" class="forms">
+                    <input type="file" name="files[]" multiple="multiple" class="forms-input js-input-templates">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="remodal-footer">
+        <button class="btn btn_green" data-remodal-action="confirm">Upload</button>
+        <button class="btn" data-remodal-action="cancel">Cancel</button>
+    </div>
+</div>
+<div class="remodal remodal_sm" data-remodal-id="modal-upload-raw">
+    <div class="remodal-header">
+        <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
+        <div class="remodal-header__title"><span class="remodal-header-title">Upload raw file</span></div>
+    </div>
+    <div class="remodal-body">
+        <div class="modal modal_upload-templates">
+            <div class="modal__forms-wrapper modal__forms-wrapper_upload">
+                <label for="logo" class="forms-label">File</label>
+                <form action="./php/upload.php" method="post" enctype="multipart/form-data" id="logo" class="forms">
+                    <input type="file" name="files[]" multiple="multiple" class="forms-input js-input-templates">
+                </form>
+            </div>
+            <div class="modal__forms-wrapper">
+                <label for="scope" class="forms-label">Scope</label>
+                <select type="text" class="forms-input" id="scope">
+                    <option val="public">Public</option>
+                    <option value="private">Private</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="remodal-footer">
+        <button class="btn btn_green" data-remodal-action="confirm">Upload</button>
+        <button class="btn" data-remodal-action="cancel">Cancel</button>
+    </div>
+</div>
+<div class="remodal remodal_sm" data-remodal-id="modal-upload-docker">
+    <div class="remodal-header">
+        <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
+        <div class="remodal-header__title"><span class="remodal-header-title">Add Docker image</span></div>
+    </div>
+    <div class="remodal-body">
+        <div class="modal modal_upload-docker">
+            <div class="modal__forms-wrapper">
+                <label for="docker" class="forms-label">docker://</label>
+                <input type="text" class="forms-input" id="docker">
+            </div>
+            <div class="modal-wrapper">
+                Note: Debian and Ubuntu based images only supported at this moment.
+                Usage: if repo docker://grafana/grafana, put `grafana/grafana`
+            </div>
+        </div>
+    </div>
+    <div class="remodal-footer">
+        <button class="btn btn_green" data-remodal-action="confirm">Save</button>
+        <button class="btn" data-remodal-action="cancel">Cancel</button>
+    </div>
+</div>
+<div class="remodal remodal_md" data-remodal-id="modal-logs">
+    <div class="remodal-header">
+        <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
+        <div class="remodal-header__title"><span class="remodal-header-title">Converting logs</span></div>
+    </div>
+    <div class="remodal-body">
+        <div class="modal modal_logs">
+            <div class="modal__forms-wrapper">
+                <textarea type="text" class="forms-input forms-input_textarea" id="logs" rows="20">Downloading sha256:012a7829fd3: 0 B/65.8 MB Downloading sha256:012a7829fd3: 3.59 KB/65.8 MB Downloading sha256:012a7829fd3: 14.6 MB/65.8 MB Downloading sha256:012a7829fd3: 28.4 MB/65.8 MB Downloading sha256:012a7829fd3: 46.6 MB/65.8 MB Downloading sha256:012a7829fd3: 65.8 MB/65.8 MB Downloading sha256:41158247dd5: 0 B/71.5 KB Downloading sha256:41158247dd5: 3.59 KB/71.5 KB Downloading sha256:41158247dd5: 71.5 KB/71.5 KB Downloading sha256:916b974d99a: 0 B/682 B Downloading sha256:916b974d99a: 682 B/682 B Downloading sha256:a3ed95caeb0: 0 B/32 B Downloading sha256:a3ed95caeb0: 32 B/32 B Downloading sha256:a3ed95caeb0: 0 B/32 B Downloading sha256:a3ed95caeb0: 32 B/32 B Downloading sha256:4690e572841: 0 B/97.3 MB Downloading sha256:4690e572841: 16.4 KB/97.3 MB Downloading sha256:4690e572841: 225 KB/97.3 MB Downloading sha256:4690e572841: 803 KB/97.3 MB Downloading sha256:4690e572841: 2.21 MB/97.3 MB Downloading sha256:4690e572841: 5.2 MB/97.3 MB Downloading sha256:4690e572841: 8.9 MB/97.3 MB Downloading sha256:4690e572841: 11.4 MB/97.3 MB Downloading sha256:4690e572841: 13.9 MB/97.3 MB Downloading sha256:4690e572841: 16.5 MB/97.3 MB Downloading sha256:4690e572841: 19 MB/97.3 MB Downloading sha256:4690e572841: 21.5 MB/97.3 MB Downloading sha256:4690e572841: 24.1 MB/97.3 MB Downloading sha256:4690e572841: 26.6 MB/97.3 MB Downloading sha256:4690e572841: 29.1 MB/97.3 MB Downloading sha256:4690e572841: 31.6 MB/97.3 MB Downloading sha256:4690e572841: 34.1 MB/97.3 MB Downloading sha256:4690e572841: 37.6 MB/97.3 MB Downloading sha256:4690e572841: 41.3 MB/97.3 MB Downloading sha256:4690e572841: 45 MB/97.3 MB Downloading sha256:4690e572841: 48.7 MB/97.3 MB Downloading sha256:4690e572841: 52.4 MB/97.3 MB Downloading sha256:4690e572841: 56.1 MB/97.3 MB Downloading sha256:4690e572841: 59.9 MB/97.3 MB Downloading sha256:4690e572841: 64.5 MB/97.3 MB Downloading sha256:4690e572841: 69.5 MB/97.3 MB Downloading sha256:4690e572841: 75.2 MB/97.3 MB Downloading sha256:4690e572841: 81.4 MB/97.3 MB Downloading sha256:4690e572841: 88.8 MB/97.3 MB Downloading sha256:4690e572841: 97.2 MB/97.3 MB Downloading sha256:4690e572841: 97.3 MB/97.3 MB Downloading sha256:a2053833ec7: 0 B/114 B Downloading sha256:a2053833ec7: 114 B/114 B Downloading sha256:1b700a1dac9: 0 B/169 B Downloading sha256:1b700a1dac9: 169 B/169 B Downloading sha256:77a6d79569f: 0 B/114 B Downloading sha256:77a6d79569f: 114 B/114 B Downloading sha256:9ed1cec5982: 0 B/39.4 MB Downloading sha256:9ed1cec5982: 1.45 KB/39.4 MB Downloading sha256:9ed1cec5982: 333 KB/39.4 MB Downloading sha256:9ed1cec5982: 1.29 MB/39.4 MB Downloading sha256:9ed1cec5982: 3.31 MB/39.4 MB Downloading sha256:9ed1cec5982: 5.49 MB/39.4 MB Downloading sha256:9ed1cec5982: 8 MB/39.4 MB Downloading sha256:9ed1cec5982: 10.3 MB/39.4 MB Downloading sha256:9ed1cec5982: 12.8 MB/39.4 MB Downloading sha256:9ed1cec5982: 15.2 MB/39.4 MB Downloading sha256:9ed1cec5982: 17.8 MB/39.4 MB Downloading sha256:9ed1cec5982: 19.6 MB/39.4 MB Downloading sha256:9ed1cec5982: 20.9 MB/39.4 MB Downloading sha256:9ed1cec5982: 22.3 MB/39.4 MB Downloading sha256:9ed1cec5982: 23.9 MB/39.4 MB Downloading sha256:9ed1cec5982: 25.7 MB/39.4 MB Downloading sha256:9ed1cec5982: 27.6 MB/39.4 MB Downloading sha256:9ed1cec5982: 29.5 MB/39.4 MB Downloading sha256:9ed1cec5982: 31.4 MB/39.4 MB Downloading sha256:9ed1cec5982: 33.4 MB/39.4 MB Downloading sha256:9ed1cec5982: 35.9 MB/39.4 MB Downloading sha256:9ed1cec5982: 38.3 MB/39.4 MB Downloading sha256:9ed1cec5982: 39.4 MB/39.4 MB Downloading sha256:a3ed95caeb0: 0 B/32 B Downloading sha256:a3ed95caeb0: 32 B/32 B Downloading sha256:38b435f6839: 0 B/18 MB Downloading sha256:38b435f6839: 16.4 KB/18 MB Downloading sha256:38b435f6839: 382 KB/18 MB Downloading sha256:38b435f6839: 1.62 MB/18 MB Downloading sha256:38b435f6839: 4.61 MB/18 MB Downloading sha256:38b435f6839: 8.38 MB/18 MB Downloading sha256:38b435f6839: 13.1 MB/18 MB Downloading sha256:38b435f6839: 18 MB/18 MB Downloading sha256:a3ed95caeb0: 0 B/32 B Downloading sha256:a3ed95caeb0: 32 B/32 B Downloading sha256:a3ed95caeb0: 0 B/32 B Downloading sha256:a3ed95caeb0: 32 B/32 B Downloading sha256:a3ed95caeb0: 0 B/32 B Downloading sha256:a3ed95caeb0: 32 B/32 B Generated ACI(s): ansible-ubuntu14.04-ansible-latest.aci time="2016-08-11 07:32:09" level=fatal msg="Cloning container, cloning the container failed"</textarea>
+            </div>
+        </div>
+    </div>
+    <div class="remodal-footer">
+        <button class="btn" data-remodal-action="cancel">Cancel</button>
+    </div>
+</div>
+
+<script src="js/libs/jquery-2.1.1.min.js"></script>
+<script src="js/libs/slick.js"></script>
+<script src="js/libs/tether.js"></script>
+<script src="js/libs/jquery.slimscroll.min.js"></script>
+<script src="js/libs/ion.rangeSlider.js"></script>
+<script src="js/libs/jquery.colorbox.js"></script>
+<script src="js/libs/datatables.js"></script>
+<script src="js/libs/moment.js"></script>
+<script src="js/libs/calendar.js"></script>
+<script src="js/libs/elementTransitions.min.js"></script>
+<script src="js/libs/d3.min.js" charset="utf-8"></script>
+<script src="js/libs/xcharts.js"></script>
+
+<script src="js/libs/dropdown.js"></script>
+<script src="js/libs/transition.js"></script>
+<script src="js/libs/popup.js"></script>
+<script src="js/libs/rating.js"></script>
+<script src="js/libs/sidebar.js"></script>
+<script src="js/libs/tab.js"></script>
+
+<script src="js/libs/boo-button.js"></script>
+<script src="js/libs/boo-dropdown.js"></script>
+<script src="js/libs/boo-tooltip.js"></script>
+<script src="js/libs/boo-popover.js"></script>
+
+<script src="js/libs/remodal.js"></script>
+<script src="js/libs/jquery.filer.min.js"></script>
+
+<script src="js/pages/user-profile-kurjun.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
