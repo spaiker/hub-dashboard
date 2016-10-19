@@ -2441,9 +2441,11 @@ textarea {
     padding: 10px 15px;
 }
 .modal_upload-docker .modal-wrapper,
-.modal_authorization .modal-wrapper {
+.modal_authorization .modal-wrapper,
+.modal_add-cloud .modal-wrapper {
     font-size: 12px;
 }
+.modal_add-cloud .modal-wrapper,
 .modal_authorization .modal-wrapper {
     margin: 0 0 20px 0;;
 }
