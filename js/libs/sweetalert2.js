@@ -96,7 +96,7 @@
     inputValue: '',
     inputOptions: {},
     inputAutoTrim: true,
-    inputClass: null,
+    inputClass: 'forms-input',
     inputAttributes: {},
     inputValidator: null,
     progressSteps: [],

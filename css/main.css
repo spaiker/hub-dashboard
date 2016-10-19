@@ -592,21 +592,21 @@ textarea {
 
 /*Radio*/
 
-[type="radio"]:not(:checked),
-[type="radio"]:checked {
+.forms-radio:not(:checked),
+.forms-radio:checked {
     position: absolute;
     left: -9999px;
 }
-[type="radio"]:not(:checked) + label,
-[type="radio"]:checked + label {
+.forms-radio:not(:checked) + label,
+.forms-radio:checked + label {
     position: relative;
     padding-left: 25px;
     cursor: pointer;
     font-size: 12px;
 }
 
-[type="radio"]:not(:checked) + label:before,
-[type="radio"]:checked + label:before {
+.forms-radio:not(:checked) + label:before,
+.forms-radio:checked + label:before {
     content: '';
     position: absolute;
     left: 0;
@@ -617,8 +617,8 @@ textarea {
     background: #f7f9fc;
     border-radius: 50%;
 }
-[type="radio"]:not(:checked) + label:after,
-[type="radio"]:checked + label:after {
+.forms-radio:not(:checked) + label:after,
+.forms-radio:checked + label:after {
     content: '';
     position: absolute;
     top: 0;
@@ -631,24 +631,24 @@ textarea {
     transition: all .2s;
 }
 /* checked mark aspect changes */
-[type="radio"]:not(:checked) + label:after {
+.forms-radio:not(:checked) + label:after {
     opacity: 0;
     transform: scale(0);
 }
-[type="radio"]:checked + label:after {
+.forms-radio:checked + label:after {
     opacity: 1;
     transform: scale(1);
 }
-[type="radio"]:disabled:not(:checked) + label:before,
-[type="radio"]:disabled:checked + label:before {
+.forms-radio:disabled:not(:checked) + label:before,
+.forms-radio:disabled:checked + label:before {
     box-shadow: none;
     border-color: #bbb;
     background-color: #ddd;
 }
-[type="radio"]:disabled:checked + label:after {
+.forms-radio:disabled:checked + label:after {
     color: #999;
 }
-[type="radio"]:disabled + label {
+.forms-radio:disabled + label {
     color: #aaa;
 }
 
@@ -2293,8 +2293,11 @@ textarea {
 .modal_edit-product .modal__forms-wrapper_2-col .modal-forms-wrapper .forms-input {
     width: 100px;
 }
+.modal_add-peer .modal-wrapper {
+    margin: 0 0 20px;
+}
 .modal_add-peer .modal-wrapper .checkbox-wrapper {
-    margin: 0 15px 0 0;
+    margin: 0 20px 0 0;
 }
 .modal_contribute-resources .forms-input:first-child {
     width: 100%;
