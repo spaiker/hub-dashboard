@@ -2251,7 +2251,7 @@ textarea {
 }
 .modal__forms-wrapper .forms-input,
 .modal__forms-wrapper .forms-rating{
-    width: 60%;
+    width: 70%;
     margin: 0 0 0 10px;
 }
 .modal__forms-wrapper_upload .forms-label,
@@ -2457,8 +2457,74 @@ textarea {
     margin: 0;
     font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
+.modal_details .modal-wrapper {
+    margin: 0 0 20px;
+}
+.modal_details .modal-text,
+.modal_about .modal-link {
+    font-size: 12px;
+}
+.modal_details .modal-text:nth-child(odd) {
+    font-weight: 500;
+}
+.modal_about .modal__forms-wrapper_2-col:first-child {
+    float: right;
+    width: 280px;
+}
+.modal_about .modal-text {
+    font-size: 12px;
+    vertical-align: text-top;
+}
+.modal_about .modal-link {
+    margin: 0 70px;
+}
+.modal_about img {
+    width: 120px;
+    margin: 0px 0 0 -10px;
+}
+
+.modal_create-project .modal__forms-wrapper .forms-input {
+    width: 79%;
+}
+.modal_create-project .checkbox-wrapper {
+    margin: 0 0 0 85px;
+}
+.modal-wrapper_check {
+    margin: 0 0 20px 85px;
+}
 
 
+.check-widget__button {
+    margin: 0 15px 0 0;
+}
+.check-widget__status_available {
+    font-size: 15px;
+}
+.check-widget-status {
+    font-size: 12px;
+    font-weight: 500;
+}
+.check-widget__status .hb {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.check-widget__status_available .hb:before {
+    content: "\e931";
+    color: #52dc90;
+}
+.check-widget__status_available .check-widget-status:before {
+    content: "Available";
+    color: #52dc90;
+}
+
+.check-widget__status_unavailable .hb:before {
+    content: "\e930";
+    color: #ea5761;
+}
+.check-widget__status_unavailable .check-widget-status:before {
+    content: "Unvailable";
+    color: #ea5761;
+}
 
 .jFiler-wrapper {
     width: 80%;
@@ -2761,6 +2827,13 @@ td .hb-question {
 }
 .quota-widget {
     font-size: 12px;
+}
+
+.icon-link {
+    font-size: 16px;
+    line-height: 35px;
+    display: inline-block;
+    vertical-align: top;
 }
 
 

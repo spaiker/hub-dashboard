@@ -161,7 +161,7 @@
 }
 .dropdown.dropdown_action .dropdown-menu {
     border-radius: 2px;
-    min-width: inherit;
+    min-width: 100%;
 }
 .dropdown.dropdown_action .dropdown-menu .dropdown-menu__item {
     border-radius: 0;
