@@ -37,31 +37,17 @@ $(function() {
     $("[data-toggle='popover']").popover();
 });
 
-swal({
-    title: 'Are you sure?',
-    text: "You won't be able to revert this!",
-    type: 'warning',
-    showCancelButton: true,
-    confirmButtonText: 'Yes, delete it!',
-    cancelButtonText: 'No, cancel!',
-    buttonsStyling: false
-}).then(function() {
-    swal(
-        'Deleted!',
-        'Your file has been deleted.',
-        'question'
-    )
-}, function(dismiss) {
-    // dismiss can be 'cancel', 'overlay',
-    // 'close', and 'timer'
-    if (dismiss === 'cancel') {
-        swal(
-            'Cancelled',
-            'Your imaginary file is safe :)',
-            'error'
-        )
-    }
+// inputOptions can be an object or Promise
+var inputOptions = new Promise(function(resolve) {
+    setTimeout(function() {
+        resolve({
+            '#ff0000': 'Red',
+            '#00ff00': 'Green',
+            '#0000ff': 'Blue'
+        })
+    }, 2000)
 })
+
 
 $(function() {
     $(".js-filter-memory").ionRangeSlider(
@@ -281,3 +267,23 @@ var opts = {
 var myChart = new xChart('line-dotted', cpu, '#js-chart-cpu', opts);
 var myChart = new xChart('line-dotted', cpu, '#js-chart-hdd', opts);
 var myChart = new xChart('line-dotted', cpu, '#js-chart-ram', opts);
+
+swal({
+    title: 'Select color',
+    input: 'radio',
+    inputOptions: inputOptions,
+    inputValidator: function(result) {
+        return new Promise(function(resolve, reject) {
+            if (result) {
+                resolve()
+            } else {
+                reject('You need to select something!')
+            }
+        })
+    }
+}).then(function(result) {
+    swal({
+        type: 'success',
+        html: 'You selected: ' + result
+    })
+})
