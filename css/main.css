@@ -2831,3 +2831,14 @@ form.link-style:hover {
 	text-decoration: none;
 }
 
+.sidebar-closed {
+	left: -220px;
+}
+
+.sidebar-arrow {
+	position: absolute;
+	right: 25px;
+	top: 15px;
+	z-index: 10;
+}
+
