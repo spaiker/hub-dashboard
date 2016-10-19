@@ -1443,7 +1443,8 @@ textarea {
     border-bottom-right-radius: 8px;
 
 }
-.nav-dropdown-content__footer a {
+.nav-dropdown-content__footer a,
+.nav-dropdown-content__footer button {
     font-size: 12px;
     font-weight: 500;
     color: #697490;
