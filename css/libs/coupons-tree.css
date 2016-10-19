@@ -28,21 +28,16 @@
 .coupons li::before, .coupons li::after {
     content: '';
     position: absolute;
-    top: 45px;
+    top: 32px;
     right: 50%;
-    border-top: 1px solid #efefef;
-    border-bottom: 1px solid #efefef;
     width: 50%;
-    height: 4px;
-    background-color: #f9f9f9;
+    border: 1px solid #d4d9e3;
 }
 
 .coupons li::after {
     right: auto;
     left: 50%;
-    border-top: 1px solid #efefef;
-    border-bottom: 1px solid #efefef;
-    background-color: #f9f9f9;
+    border: 1px solid #d4d9e3;
 }
 
 /*We need to remove left-right connectors from elements without
@@ -88,13 +83,9 @@ right connector from last child*/
 .coupons ul::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: -13px;
     left: 50%;
-    margin-left: -3px;
-    border-left: 1px solid #efefef;
-    border-right: 1px solid #efefef;
-    background-color: #f9f9f9;
-    width: 4px;
+    border: 1px solid #d4d9e3;
     height: 118px;
 }
 
@@ -115,10 +106,10 @@ right connector from last child*/
 .coupons li a .avatar {
     content: "";
     position: absolute;
-    background: url("../../assets/img/icon-coupons-avatar.svg") no-repeat center center;
+    background: url("../../assets/img/environment-template-place.svg") no-repeat center center;
     width: 54px;
     height: 73px;
-    top: -40px;
+    bottom: 0;
     left: 50%;
     margin-left: -27px;
     z-index: -1;
@@ -129,10 +120,10 @@ right connector from last child*/
     position: absolute;
     width: 15px;
     height: 15px;
-    border: 1px solid #eaeaea;
+    border: 1px solid #d4d9e3;
     background-color: #fff;
     border-radius: 50%;
-    bottom: -15px;
+    bottom: 0;
     z-index: -2;
     right: 50%;
     margin-right: -8.5px;
@@ -141,7 +132,7 @@ right connector from last child*/
 .coupons li .me .crown:after {
     content: "";
     position: absolute;
-    background: url("../../assets/img/icon-coupons-avatar-crown-me.svg") no-repeat center center;
+    background: url("../../assets/img/environment-template-place.svg") no-repeat center center;
     width: 29px;
     height: 27px;
     top: -60px;
@@ -152,34 +143,16 @@ right connector from last child*/
 
 .coupons li a .name {
     display: block;
-    background-color: #fff;
-    border-top: 1px solid #dbdddd;
-    border-bottom: 1px solid #dbdddd;
-    padding: 0 5px;
+    background-color: #52dc90;
+    border: 1px solid #52dc90;
+    padding: 0 10px;
     height: 20px;
     line-height: 17px;
     box-sizing: border-box;
+    border-radius: 2px;
+    color: #fff;
 }
 
-.coupons li a .name:before {
-    content: "";
-    background: url("../assets/elements/coupons-flag-left.svg") no-repeat center center;
-    width: 8px;
-    height: 20px;
-    position: absolute;
-    left: -8px;
-    top: 0;
-}
-
-.coupons li a .name:after {
-    content: "";
-    background: url("../assets/elements/coupons-flag-right.svg") no-repeat center center;
-    width: 8px;
-    height: 20px;
-    position: absolute;
-    right: -8px;
-    bottom: 0;
-}
 
 .coupons li a .notification {
     background-color: #ea5761;
@@ -191,7 +164,7 @@ right connector from last child*/
     color: #fff;
     font-size: 10px;
     position: absolute;
-    top: 0;
+    top: 10px;
     right: 0;
     border-radius: 50%;
 }
@@ -207,7 +180,7 @@ right connector from last child*/
     color: #fff;
     font-size: 10px;
     position: absolute;
-    top: 0;
+    top: 10px;
     right: 35px;
     border-radius: 2px;
 }
@@ -225,9 +198,9 @@ right connector from last child*/
 .coupons li a .avatar img {
     position: absolute;
     border-radius: 50%;
-    left: 4.5px;
-    top: 5px;
-    width: 45px;
+    left: 6.5px;
+    top: 14px;
+    width: 40px;
 }
 
 /*Time for some hover effects*/
@@ -241,6 +214,11 @@ right connector from last child*/
 .coupons li a:hover + ul::before,
 .coupons li a:hover + ul ul::before,
 .coupons li a:hover:after,
-.coupons li a:hover + ul li a:after {
+.coupons li a:hover + ul li a:after,
+.coupons li a:hover .name {
     border-color: #52dc90;
+}
+.coupons li a:hover .name {
+    background-color: #fff;
+    color: #52dc90;
 }
