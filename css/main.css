@@ -1356,10 +1356,24 @@ textarea {
 }
 .profile__header {
     border-bottom: 1px solid #d4d9e3;
+    position: relative;
 }
 .profile-header__avatar {
     padding: 20px 0 0;
     text-align: center;
+}
+.profile-header__settings {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.profile-header-settings {
+    font-size: 16px;
+    color: #d4d9e3;
+    transition: 0.3s color ease-out;
+}
+.profile-header-settings:hover {
+    color: #697490;
 }
 .profile-header__avatar .profile__avatar {
     width: 80px;
