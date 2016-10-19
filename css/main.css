@@ -103,7 +103,7 @@ a:active {
     left: 20px;
     z-index: 2;
 }
-.panel__header_datatable-search .btn_action {
+.panel__header .btn_action {
     padding: 9px 15px;
 }
 .panel__body_datatable-no-search .top,
@@ -523,24 +523,24 @@ textarea {
 
 /*Checkbox*/
 
-[type="checkbox"]:not(:checked),
-[type="checkbox"]:checked {
+.forms-checkbox:not(:checked),
+.forms-checkbox:checked {
     position: absolute;
     left: -9999px;
 }
-[type="checkbox"]:not(:checked) + label,
-[type="checkbox"]:checked + label {
+.forms-checkbox:not(:checked) + label,
+.forms-checkbox:checked + label {
     position: relative;
     padding-left: 25px;
     cursor: pointer;
     font-size: 12px;
 }
-.checkbox-wrapper_empty [type="checkbox"]:not(:checked) + label,
-.checkbox-wrapper_empty  [type="checkbox"]:checked + label {
+.checkbox-wrapper_empty .forms-checkbox:not(:checked) + label,
+.checkbox-wrapper_empty  .forms-checkbox:checked + label {
     padding-left: 15px;
 }
-[type="checkbox"]:not(:checked) + label:before,
-[type="checkbox"]:checked + label:before {
+.forms-checkbox:not(:checked) + label:before,
+.forms-checkbox:checked + label:before {
     content: '';
     position: absolute;
     left: 0;
@@ -551,8 +551,8 @@ textarea {
     background: #f7f9fc;
     border-radius: 2px;
 }
-[type="checkbox"]:not(:checked) + label:after,
-[type="checkbox"]:checked + label:after {
+.forms-checkbox:not(:checked) + label:after,
+.forms-checkbox:checked + label:after {
     content: '\e92d';
     position: absolute;
     top: 0;
@@ -569,24 +569,24 @@ textarea {
     transition: all .2s;
 }
 /* checked mark aspect changes */
-[type="checkbox"]:not(:checked) + label:after {
+.forms-checkbox:not(:checked) + label:after {
     opacity: 0;
     transform: scale(0);
 }
-[type="checkbox"]:checked + label:after {
+.forms-checkbox:checked + label:after {
     opacity: 1;
     transform: scale(1);
 }
-[type="checkbox"]:disabled:not(:checked) + label:before,
-[type="checkbox"]:disabled:checked + label:before {
+.forms-checkbox:disabled:not(:checked) + label:before,
+.forms-checkbox:disabled:checked + label:before {
     box-shadow: none;
     border-color: #bbb;
     background-color: #ddd;
 }
-[type="checkbox"]:disabled:checked + label:after {
+.forms-checkbox:disabled:checked + label:after {
     color: #999;
 }
-[type="checkbox"]:disabled + label {
+.forms-checkbox:disabled + label {
     color: #aaa;
 }
 
