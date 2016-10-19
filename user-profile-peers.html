@@ -150,7 +150,7 @@
                     <a href="#" class="sidebar-profile-directional__item">
                         <i class="hb hb-arrow-left"></i>
                     </a>
-                    <a href="#" class="sidebar-profile-directional__item">
+                    <a href="#modal-account-settings" class="sidebar-profile-directional__item">
                         <i class="hb hb-cog"></i>
                     </a>
                 </div>
@@ -1122,6 +1122,78 @@
 </section>
 
 <!--Modals-->
+<div class="remodal" data-remodal-id="modal-account-settings">
+    <div class="remodal-header">
+        <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
+        <div class="remodal-header__title"><span class="remodal-header-title">Account settings</span></div>
+    </div>
+    <div class="remodal-body">
+        <div class="modal modal_account-settings">
+            <div class="modal-wrapper">
+                <div class="modal-wrapper__avatar">
+                    <div class="card-content-cover">
+                        <div class="card-content-cover__container">
+                            <div class="card-content-cover-container">
+                                <img src="assets/img/product-default.png" alt="" class="card-content-cover-container__image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-wrapper__avatar">
+                    <button class="btn btn_blue">Change avatar</button>
+                </div>
+            </div>
+            <div class="modal-wrapper">
+                <div class="modal__forms-wrapper">
+                    <label for="name" class="forms-label">Name</label>
+                    <input type="text" class="forms-input" id="name" value="Test">
+                </div>
+                <div class="modal__forms-wrapper">
+                    <label for="email" class="forms-label">Email</label>
+                    <input type="email" class="forms-input" id="email" value="sample@test.com">
+                </div>
+                <div class="modal__forms-wrapper">
+                    <label for="country" class="forms-label">Country</label>
+                    <select type="text" class="forms-input" id="country">
+                        <option val="">Please choose</option>
+                        <option value="kyrgyzstan">Kyrgyzstan</option>
+                    </select>
+                </div>
+                <div class="modal__forms-wrapper modal__forms-wrapper_password-btn">
+                    <label for="email" class="forms-label">Password</label>
+                    <button class="btn btn_blue js-btn-change-password">Change password</button>
+                </div>
+                <div class="modal__forms-wrapper modal__forms-wrapper_password-hidden">
+                    <label for="old-password" class="forms-label">Old password</label>
+                    <input type="password" class="forms-input" id="old-password">
+                </div>
+                <div class="modal__forms-wrapper modal__forms-wrapper_password-hidden">
+                    <label for="new-password" class="forms-label">New password</label>
+                    <input type="password" class="forms-input" id="new-password">
+                </div>
+                <div class="modal__forms-wrapper modal__forms-wrapper_password-hidden">
+                    <label for="confirm-password" class="forms-label">Confirm password</label>
+                    <input type="password" class="forms-input" id="confirm-password">
+                </div>
+            </div>
+            <div class="modal-wrapper modal-wrapper_pgp">
+                <div class="modal__forms-wrapper modal__forms-wrapper_input-btn">
+                    <button class="btn btn_blue js-btn-pgp">Change</button>
+                    <label for="pgp" class="forms-label">PGP Key</label>
+                    <input type="text" class="forms-input" id="pgp" value="72c62c7d188d409f1c132ae7a0adf2bbb7b2dfd4">
+                </div>
+                <div class="modal__forms-wrapper modal__forms-wrapper_hidden">
+                    <label for="owner-pgp" class="forms-label forms-label_textarea">Owner PGP Key</label>
+                    <textarea class="forms-input forms-input_textarea" id="owner-pgp"  rows="3">PUBLIC</textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="remodal-footer">
+        <button class="btn btn_blue" data-remodal-action="confirm">Save</button>
+        <button class="btn" data-remodal-action="cancel">Cancel</button>
+    </div>
+</div>
 <div class="remodal" data-remodal-id="modal-add-peer">
     <div class="remodal-header">
         <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>

@@ -858,7 +858,7 @@ textarea {
 
 }
 .btn:hover {
-    background-color: transparent;
+    background-color: #fff;
     color: #718bb7;
 }
 .btn:active,
@@ -2269,6 +2269,62 @@ textarea {
     margin: 0 0 20px 0;
 }
 
+.modal_account-settings .modal__forms-wrapper .forms-input {
+    width: 75%;
+}
+
+.modal_account-settings .modal-wrapper:nth-child(2) {
+    margin: 0 160px 20px 0;
+}
+
+.modal_account-settings .modal-wrapper:first-child {
+    float: right;
+}
+.modal_account-settings .card-content-cover {
+    height: 120px;
+    width: 120px;
+    left: 0;
+    right: 0;
+}
+.modal-wrapper__avatar:first-child {
+    margin: 0 0 20px;
+}
+.modal-wrapper__avatar:last-child {
+    text-align: center;
+}
+.modal__forms-wrapper_password-btn {
+    text-align: left;
+}
+.modal__forms-wrapper_password-btn .btn {
+    margin: 0 0 0 10px;
+}
+
+.modal__forms-wrapper_password-btn .forms-label {
+    margin: 0 0 0 46px;
+}
+
+.modal_account-settings .modal-wrapper_pgp .modal__forms-wrapper .forms-input {
+    width: calc(75% + 40px);
+}
+.modal_account-settings .modal-wrapper_pgp .modal__forms-wrapper_input-btn.modal__forms-wrapper .forms-input {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-right: none;
+    width: calc(75% - 31px)
+}
+.modal_account-settings .modal-wrapper_pgp .modal__forms-wrapper_input-btn.modal__forms-wrapper .btn {
+    float: right;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+.modal__forms-wrapper_hidden,
+.modal__forms-wrapper_password-hidden {
+    display: none;
+}
+.modal__forms-wrapper_hidden.show,
+.modal__forms-wrapper_password-hidden.show {
+    display: block;
+}
 .jFiler-wrapper {
     width: 80%;
     display: inline-block;

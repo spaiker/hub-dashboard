@@ -3,7 +3,17 @@ $(".js-btn-minimize").click(function(){
     $(".header").toggleClass("header-minimize");
     $(".content").toggleClass("content-minimize");
 });
-
+$(function() {
+    $(".js-btn-pgp").click(function(){
+        $(".modal__forms-wrapper").removeClass("modal__forms-wrapper_input-btn");
+        $(this).remove();
+        $(".modal__forms-wrapper_hidden").addClass("show");
+    });
+    $(".js-btn-change-password").click(function(){
+        $('.modal__forms-wrapper_password-btn').remove();
+        $(".modal__forms-wrapper_password-hidden").addClass("show");
+    });
+});
 $(function() {
     $('.sidebar_right').sidebar('setting', 'transition', 'overlay')
         .sidebar('attach events', '.js-chat-btn');
