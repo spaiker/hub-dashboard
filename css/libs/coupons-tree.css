@@ -1,8 +1,8 @@
-/*Coupons coupons*/
+/*Coupons b-tree*/
 
-.coupons,
-.coupons ul {
-    padding-top: 73px; position: relative;
+.coupons {
+    /*padding-top: 45px; */
+    position: relative;
 
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
@@ -10,34 +10,42 @@
 }
 
 .coupons li {
-    float: left; text-align: center;
+    float: left;
+    text-align: center;
     list-style-type: none;
     position: relative;
-    padding: 20px 5px 0 5px;
+    padding: 20px 35px 0;
 
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
+    margin-left: -40px;
+    margin-bottom: 50px;
 }
 
 /*We will use ::before and ::after to draw the connectors*/
 
-.coupons li::before, .coupons li::after{
+.coupons li::before, .coupons li::after {
     content: '';
-    position: absolute; top: 45px; right: 50%;
+    position: absolute;
+    top: 45px;
+    right: 50%;
     border-top: 1px solid #efefef;
     border-bottom: 1px solid #efefef;
-    width: 50%; height: 4px;
+    width: 50%;
+    height: 4px;
     background-color: #f9f9f9;
 }
-.coupons li::after{
-    right: auto; left: 50%;
+
+.coupons li::after {
+    right: auto;
+    left: 50%;
     border-top: 1px solid #efefef;
     border-bottom: 1px solid #efefef;
     background-color: #f9f9f9;
 }
 
-/*We need to remove left-right connectors from elements without 
+/*We need to remove left-right connectors from elements without
 any siblings*/
 .coupons li:only-child::after, .coupons li:only-child::before {
     display: none;
@@ -48,14 +56,15 @@ any siblings*/
     /*padding-top: 0;*/
 }
 
-/*Remove left connector from first child and 
+/*Remove left connector from first child and
 right connector from last child*/
-.coupons li:first-child::before, .coupons li:last-child::after{
+.coupons li:first-child::before, .coupons li:last-child::after {
     border: 0 none;
     background: none;
 }
+
 /*Adding back the vertical connector to the last nodes*/
-.coupons li:last-child::before{
+.coupons li:last-child::before {
     /*    border-left: 1px solid #efefef;
         border-right: 1px solid #efefef;
         background-color: #f9f9f9;*/
@@ -63,23 +72,30 @@ right connector from last child*/
     -webkit-border-radius: 0 5px 0 0;
     -moz-border-radius: 0 5px 0 0;
 }
-.coupons li:first-child::after{
+
+.coupons li:first-child::after {
     border-radius: 5px 0 0 0;
     -webkit-border-radius: 5px 0 0 0;
     -moz-border-radius: 5px 0 0 0;
 }
+
 .coupons ul {
+    padding-top: 73px;
     position: relative;
 }
+
 /*Time to add downward connectors from parents*/
-.coupons ul::before{
+.coupons ul::before {
     content: '';
-    position: absolute; top: 0; left: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
     margin-left: -3px;
     border-left: 1px solid #efefef;
     border-right: 1px solid #efefef;
     background-color: #f9f9f9;
-    width: 4px; height: 118px;
+    width: 4px;
+    height: 118px;
 }
 
 .coupons li a {
@@ -96,7 +112,7 @@ right connector from last child*/
     z-index: 5;
 }
 
-.coupons li a:before {
+.coupons li a .avatar {
     content: "";
     position: absolute;
     background: url("../../assets/img/icon-coupons-avatar.svg") no-repeat center center;
@@ -107,6 +123,7 @@ right connector from last child*/
     margin-left: -27px;
     z-index: -1;
 }
+
 .coupons li a:after {
     content: "";
     position: absolute;
@@ -120,6 +137,7 @@ right connector from last child*/
     right: 50%;
     margin-right: -8.5px;
 }
+
 .coupons li .me .crown:after {
     content: "";
     position: absolute;
@@ -131,7 +149,8 @@ right connector from last child*/
     margin-right: -14.5px;
     z-index: 1;
 }
-.coupons li a span {
+
+.coupons li a .name {
     display: block;
     background-color: #fff;
     border-top: 1px solid #dbdddd;
@@ -141,7 +160,8 @@ right connector from last child*/
     line-height: 17px;
     box-sizing: border-box;
 }
-.coupons li a span:before {
+
+.coupons li a .name:before {
     content: "";
     background: url("../assets/elements/coupons-flag-left.svg") no-repeat center center;
     width: 8px;
@@ -150,7 +170,8 @@ right connector from last child*/
     left: -8px;
     top: 0;
 }
-.coupons li a span:after {
+
+.coupons li a .name:after {
     content: "";
     background: url("../assets/elements/coupons-flag-right.svg") no-repeat center center;
     width: 8px;
@@ -160,17 +181,66 @@ right connector from last child*/
     bottom: 0;
 }
 
+.coupons li a .notification {
+    background-color: #ea5761;
+    border: 2px solid #fff;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 17px;
+    color: #fff;
+    font-size: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+}
+
+.coupons li a .information {
+    display: none;
+    background-color: #52dc90;
+    border: 2px solid #fff;
+    padding: 0 5px;
+    height: 20px;
+    text-align: center;
+    line-height: 17px;
+    color: #fff;
+    font-size: 10px;
+    position: absolute;
+    top: 0;
+    right: 35px;
+    border-radius: 2px;
+}
+
+.coupons li a .information_red {
+    background-color: #ea5761;
+    border: 1px solid #ea5761;
+}
+
+.coupons li a:hover .information,
+.coupons li a:hover + ul li a .information {
+    display: block;
+}
+
+.coupons li a .avatar img {
+    position: absolute;
+    border-radius: 50%;
+    left: 4.5px;
+    top: 5px;
+    width: 45px;
+}
+
 /*Time for some hover effects*/
 /*We will apply the hover effect the the lineage of the element also*/
 /*.coupons li a:hover, .coupons li a:hover+ul li a {
     background: #c8e4f8; color: #000; border: 1px solid #94a0b4;
 }*/
 /*Connector styles on hover*/
-.coupons li a:hover+ul li::after,
-.coupons li a:hover+ul li::before,
-.coupons li a:hover+ul::before,
-.coupons li a:hover+ul ul::before,
+.coupons li a:hover + ul li::after,
+.coupons li a:hover + ul li::before,
+.coupons li a:hover + ul::before,
+.coupons li a:hover + ul ul::before,
 .coupons li a:hover:after,
-.coupons li a:hover+ul li a:after {
-    border-color:  #01b9c1;
+.coupons li a:hover + ul li a:after {
+    border-color: #52dc90;
 }
