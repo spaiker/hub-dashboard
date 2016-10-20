@@ -25,6 +25,7 @@
 
     <link rel="stylesheet" href="css/libs/remodal.css">
     <link rel="stylesheet" href="css/libs/remodal-default-theme.css">
+    <link rel="stylesheet" href="css/libs/jquery.filer.css">
 
     <!--CSS-->
     <link rel="stylesheet" href="css/main.css">
@@ -865,8 +866,8 @@
         <div class="content-header">
             <div class="content-header__right">
                 <div class="actions-zone">
-                    <button class="btn btn_green" data-remodal-target="modal-edit"><i class="hb hb-play"></i>Build</button>
-                    <button class="btn btn_blue" data-remodal-target=""><i class="hb hb-edit"></i>Edit</button>
+                    <button class="btn btn_green"><i class="hb hb-play"></i>Build</button>
+                    <button class="btn btn_blue" data-remodal-target="modal-edit-environment"><i class="hb hb-edit"></i>Edit</button>
                     <button class="btn btn_red"><i class="hb hb-close"></i>Delete</button>
                 </div>
             </div>
@@ -927,7 +928,7 @@
         </div>
         <div class="panel ui tab" data-tab="data-tab-containers">
             <div class="panel__header panel__header_datatable-search">
-                <button class="btn btn_green">Add container</button>
+                <button class="btn btn_green" data-remodal-target="modal-add-container">Add container</button>
             </div>
             <div class="panel__body">
                 <table class="table table_stripped js-datatable" cellspacing="0" width="100%">
@@ -962,7 +963,7 @@
         </div>
         <div class="panel ui tab" data-tab="data-tab-ssh-keys">
             <div class="panel__header panel__header_datatable-search">
-                <button class="btn btn_action" disabled><i class="hb hb-ssh-key"></i>Add SSH Key</button>
+                <button class="btn btn_action" data-remodal-target="modal-add-ssh"><i class="hb hb-ssh-key"></i>Add SSH Key</button>
             </div>
             <div class="panel__body">
                 <table class="table table_stripped js-datatable" cellspacing="0" width="100%">
@@ -1118,50 +1119,131 @@
 
 
 <!--Modals-->
-<div class="remodal remodal_xs" data-remodal-id="modal-add-email">
+<div class="remodal remodal_md" data-remodal-id="modal-edit-environment">
     <div class="remodal-header">
         <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
-        <div class="remodal-header__title"><span class="remodal-header-title">Add default email</span></div>
+        <div class="remodal-header__title"><span class="remodal-header-title">Edit environment</span></div>
     </div>
     <div class="remodal-body">
-        <div class="modal modal_add-email">
-            <input type="email" class="forms-input" id="email"  placeholder="example@mail.com">
+        <div class="modal modal_edit-environment">
+            <div class="modal__forms-wrapper">
+                <label for="Name" class="forms-label">Name</label>
+                <input type="text" class="forms-input" id="Name" value="Test">
+            </div>
+            <div class="modal__forms-wrapper">
+                <label for="Description" class="forms-label forms-label_textarea">Description</label>
+                <textarea class="forms-input forms-input_textarea" id="Description" rows="4">PUBLIC</textarea>
+            </div>
+            <div class="modal-wrapper">
+                <span class="checkbox-wrapper">
+                    <input type="checkbox" id="assign" class="forms-checkbox js-assign-subdomain">
+                    <label for="assign" >Assign a subdomain to this environment</label>
+                </span>
+            </div>
+            <div class="modal-wrapper-hidden">
+                <div class="modal__forms-wrapper">
+                    <label for="subdomain" class="forms-label">Subdomain:</label>
+                    <input type="text" class="forms-input" id="subdomain">
+                </div>
+                <div class="modal-wrapper modal-wrapper_check">
+                    <div class="check-widget">
+                        <button class="check-widget__button btn btn_green">Check</button>
+                        <span class="check-widget__status check-widget__status_unavailable"> <!--Просто меняй класс check-widget__status_unavailable-->
+                            <i class="hb"></i>
+                            <span class="check-widget-status"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__forms-wrapper">
+                <label for="TTL" class="forms-label">TTL (seconds)</label>
+                <input type="text" class="forms-input" id="TTL" value="PUBLIC">
+            </div>
+            <div class="modal__forms-wrapper">
+                <label for="public-key" class="forms-label forms-label_textarea">Public Key</label>
+                <textarea class="forms-input forms-input_textarea" id="public-key" rows="4">PUBLIC</textarea>
+            </div>
         </div>
     </div>
     <div class="remodal-footer">
-        <button class="btn btn_green" data-remodal-action="confirm">Add</button>
+        <button class="btn btn_blue" data-remodal-action="confirm">Save</button>
         <button class="btn" data-remodal-action="cancel">Cancel</button>
     </div>
 </div>
-<div class="remodal remodal_xs" data-remodal-id="modal-contribute-resources">
+<div class="remodal remodal_md" data-remodal-id="modal-add-container">
     <div class="remodal-header">
         <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
-        <div class="remodal-header__title"><span class="remodal-header-title">Contribute Resources</span></div>
+        <div class="remodal-header__title"><span class="remodal-header-title">Add container</span></div>
     </div>
     <div class="remodal-body">
-        <div class="modal modal_contribute-resources">
-            <select class="forms-input">
-                <option value="">Select peer</option>
-            </select>
-            <div class="modal__forms-wrapper">
-                <label for="tiny" class="forms-label">TINY</label>
-                <input type="number" class="forms-input" id="tiny" value="100">
+        <div class="modal modal_add-container modal_build-environment">
+            <div class="modal-wrapper">
+                <div class="modal__forms-wrapper">
+                    <label for="container-name" class="forms-label">Name:</label>
+                    <input type="text" class="forms-input" id="container-name">
+                </div>
+            </div>
+            <div class="modal-wrapper clearfix">
+                <label for="list-templates" class="forms-label">Templates:</label>
+                <ul class="environment-tools-body__templates js-scroll" id="list-templates">
+                    <li class="environment-tools-body-templates">
+                        <a href="#" class="templates-link"><span class="templates-link__overlay"></span></a>
+                        <div class="templates">
+                            <div class="templates__cover">
+                                <div class="templates-cover">
+                                    <div class="templates-cover_container">
+                                        <div class="templates-cover-container">
+                                            <img src="assets/img/template-appscale.png" alt="" class="templates-cover-container__image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="templates__text">
+                                <span class="templates-text">Cassandra</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
             <div class="modal__forms-wrapper">
-                <label for="small" class="forms-label">SMALL</label>
-                <input type="number" class="forms-input" id="small" value="100">
+                <label for="container-size" class="forms-label">Size:</label>
+                <select class="forms-input" id="container-size">
+                    <option value="medium">medium</option>
+                </select>
             </div>
             <div class="modal__forms-wrapper">
-                <label for="medium" class="forms-label">MEDIUM</label>
-                <input type="number" class="forms-input" id="medium" value="100">
+                <label for="container-peer" class="forms-label">Peer:</label>
+                <select class="forms-input" id="container-peer">
+                    <option value="peer">Peer</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="remodal-footer">
+        <button class="btn btn_green" data-remodal-target="modal-start-environment">Add</button>
+        <button class="btn" data-remodal-action="cancel">Cancel</button>
+    </div>
+</div>
+<div class="remodal remodal_md" data-remodal-id="modal-add-ssh">
+    <div class="remodal-header">
+        <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
+        <div class="remodal-header__title"><span class="remodal-header-title">Add SSH Key</span></div>
+    </div>
+    <div class="remodal-body">
+        <div class="modal modal_add-ssh">
+            <div class="modal__forms-wrapper">
+                <label for="key-name" class="forms-label">Key name</label>
+                <input type="text" class="forms-input" id="key-name" placeholder="Write your key name">
             </div>
             <div class="modal__forms-wrapper">
-                <label for="large" class="forms-label">LARGE</label>
-                <input type="number" class="forms-input" id="large" value="100">
+                <label for="ssh-key" class="forms-label forms-label_textarea">SSH Key</label>
+                <textarea class="forms-input forms-input_textarea" id="ssh-key" placeholder="Paste SSH Key here or upload from file" rows="4"></textarea>
             </div>
-            <div class="modal__forms-wrapper">
-                <label for="huge" class="forms-label">HUGE</label>
-                <input type="number" class="forms-input" id="huge" value="100">
+            <div class="modal__forms-wrapper modal__forms-wrapper_upload">
+                <label for="ssh-file" class="forms-label">SSH Key file</label>
+                <form action="./php/upload.php" method="post" enctype="multipart/form-data" id="ssh-file" class="forms">
+                    <input type="file" name="files[]" multiple="multiple" class="forms-input js-ssh-key">
+                </form>
             </div>
         </div>
     </div>
@@ -1190,7 +1272,9 @@
 <script src="js/libs/boo-popover.js"></script>
 
 <script src="js/libs/remodal.js"></script>
+<script src="js/libs/jquery.filer.min.js"></script>
 
+<script src="js/pages/environment-details.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

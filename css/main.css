@@ -2277,7 +2277,8 @@ textarea {
 .modal_review .modal__forms-wrapper .forms-input,
 .modal_review .modal__forms-wrapper .forms-rating,
 .modal_edit-product .modal__forms-wrapper .forms-input,
-.modal_upload-templates .modal__forms-wrapper .forms-input{
+.modal_upload-templates .modal__forms-wrapper .forms-input,
+.modal_add-ssh .modal__forms-wrapper .forms-input {
     width: 80%;
     display: inline-block;
 }
@@ -2382,9 +2383,15 @@ textarea {
 .modal_build-environment .modal__forms-wrapper .forms-input {
     width: 300px;
 }
+.modal_add-container .modal__forms-wrapper .forms-input {
+    width: calc(80% + 5px);
+}
 
 .modal_build-environment .modal__forms-wrapper {
     text-align: left;
+}
+.modal_add-container .modal__forms-wrapper  {
+    text-align: right;
 }
 .modal_build-environment .modal-wrapper {
     margin: 0 0 20px;
@@ -2397,7 +2404,9 @@ textarea {
     border-radius: 2px;
     width: 100% !important;
 }
-
+.modal_add-container .environment-tools-body__templates {
+    max-height: 100px !important;
+}
 .modal_build-environment .content__body-wrapper {
     width: calc(80% + 4px) !important;
     float: right;
@@ -2452,7 +2461,8 @@ textarea {
     font-size: 12px;
 }
 .modal_add-cloud .modal-wrapper,
-.modal_authorization .modal-wrapper {
+.modal_authorization .modal-wrapper,
+.modal_edit-environment .modal-wrapper {
     margin: 0 0 20px 0;;
 }
 .modal_authorization .modal__forms-wrapper .forms-input {
@@ -2486,19 +2496,26 @@ textarea {
 }
 .modal_about img {
     width: 120px;
-    margin: 0px 0 0 -10px;
+    margin: 0 0 0 -10px;
 }
 
-.modal_create-project .modal__forms-wrapper .forms-input {
+.modal_create-project .modal__forms-wrapper .forms-input,
+.modal_edit-environment .modal__forms-wrapper .forms-input{
     width: 79%;
 }
+.modal_edit-environment .checkbox-wrapper,
 .modal_create-project .checkbox-wrapper {
     margin: 0 0 0 85px;
 }
 .modal-wrapper_check {
-    margin: 0 0 20px 85px;
+    margin: 0 0 20px 85px!important;
 }
-
+.modal-wrapper-hidden {
+    display: none;
+}
+.modal-wrapper-hidden.show {
+    display: block;
+}
 
 .check-widget__button {
     margin: 0 15px 0 0;
