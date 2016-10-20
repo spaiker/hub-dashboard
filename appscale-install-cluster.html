@@ -64,6 +64,9 @@
                             <li class="nav-breadcrumb__item">
                                 <a href="#">AppScale</a>
                             </li>
+                            <li class="nav-breadcrumb__item">
+                                <a href="#">Install Cluster</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -865,34 +868,61 @@
         <span class="content-body__fade-top"></span>
         <span class="content-body__fade-bottom"></span>
         <div class="panel">
-            <div class="panel__header panel__header_datatable-search">
-                <a href="appscale-install-cluster.html" class="btn btn_green">Install cluster</a>
-                <a href="#modal-about" class="icon-link"><i class="hb hb-question"></i></a>
-            </div>
             <div class="panel__body">
-                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
-                    <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Cluster State</th>
-                        <th>Cluster Containers</th>
-                        <th>Tunnel</th>
-                        <th>Console Domain</th>
-                        <th class="table-no-sort"></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr class="js-table-clickable" data-href="appscale-details.html">
-                        <td>Lorem ipsum</td>
-                        <td><span class="state state_loader">RUNNING</span></td>
-                        <td>4</td>
-                        <td>No need</td>
-                        <td><a href="#" class="">appscale.stage-hub.net</a></td>
-                        <td class="table-align-right">
-                            <button class="btn btn_action"><i class="hb hb-close"></i> Destroy</button>
-                        </td>
-                    </tr>
-                </table>
+                <div class="panel-body">
+                    <div class="panel-body__dynamic-match">
+                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
+                            <label for="environment" class="forms-label dynamic-match-wrapper__left">Environment</label>
+                            <select name="environment" id="environment" class="forms-input dynamic-match-wrapper__right">
+                                <option value="">Please choose</option>
+                            </select>
+                        </div>
+                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
+                            <label for="Domain" class="forms-label dynamic-match-wrapper__left">Domain</label>
+                            <input type="text" name="Domain" id="Domain" class="forms-input dynamic-match-wrapper__right">
+                        </div>
+                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
+                            <label for="Controller" class="forms-label dynamic-match-wrapper__left">Controller</label>
+                            <select name="Controller" id="Controller" class="forms-input dynamic-match-wrapper__right">
+                                <option value="">Please choose</option>
+                            </select>
+                        </div>
+                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
+                            <label for="AppEngine" class="forms-label dynamic-match-wrapper__left">AppEngine</label>
+                            <select name="AppEngine" id="AppEngine" class="forms-input dynamic-match-wrapper__right">
+                                <option value="">Please choose</option>
+                            </select>
+                        </div>
+                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
+                            <label for="Zookeeper" class="forms-label dynamic-match-wrapper__left">Zookeeper</label>
+                            <select name="Zookeeper" id="Zookeeper" class="forms-input dynamic-match-wrapper__right">
+                                <option value="">Please choose</option>
+                            </select>
+                        </div>
+                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
+                            <label for="Database" class="forms-label dynamic-match-wrapper__left">Database</label>
+                            <select name="Database" id="Database" class="forms-input dynamic-match-wrapper__right">
+                                <option value="">Please choose</option>
+                            </select>
+                        </div>
+                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
+                            <label for="Email" class="forms-label dynamic-match-wrapper__left">Email</label>
+                            <input type="text" name="Email" id="Email" placeholder="Email" class="forms-input dynamic-match-wrapper__right">
+                        </div>
+                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
+                            <label for="Password" class="forms-label dynamic-match-wrapper__left">Password</label>
+                            <input type="password" name="Password" id="Password" placeholder="minimum 6 chars" class="forms-input dynamic-match-wrapper__right">
+                        </div>
+                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
+                            <label for="Confirm-password" class="forms-label dynamic-match-wrapper__left">Confirm password</label>
+                            <input type="password" name="Confirm password" id="Confirm-password" placeholder="Confirm password" class="forms-input dynamic-match-wrapper__right">
+                        </div>
+                        <div class="dynamic-match-wrapper">
+                            <button class="btn btn_blue">Save</button>
+                            <button class="btn">Cancel</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

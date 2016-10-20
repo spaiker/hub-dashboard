@@ -813,6 +813,11 @@ textarea {
     background-color: #eff3f9;
     cursor: pointer;
 }
+.table_no-borders,
+.table_no-borders tr,
+.table_no-borders td {
+    border: none;
+}
 
 /*Row settings*/
 
@@ -2603,6 +2608,9 @@ td .hb-question {
 .dynamic-match-wrapper .forms-input {
     width: 75px;
 }
+.dynamic-match-wrapper_cluster .forms-input {
+    width: 250px;
+}
 .dynamic-match-wrapper_toggle {
     line-height: inherit;
 }
@@ -2835,6 +2843,13 @@ td .hb-question {
     line-height: 35px;
     display: inline-block;
     vertical-align: top;
+}
+.panel-body_appscale-details {
+    width: 320px;
+}
+
+.panel-body_appscale-details .table th {
+    padding: 5px 0;
 }
 
 

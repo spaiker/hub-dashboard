@@ -64,6 +64,9 @@
                             <li class="nav-breadcrumb__item">
                                 <a href="#">AppScale</a>
                             </li>
+                            <li class="nav-breadcrumb__item">
+                                <a href="#">Details</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -865,34 +868,48 @@
         <span class="content-body__fade-top"></span>
         <span class="content-body__fade-bottom"></span>
         <div class="panel">
-            <div class="panel__header panel__header_datatable-search">
-                <a href="appscale-install-cluster.html" class="btn btn_green">Install cluster</a>
-                <a href="#modal-about" class="icon-link"><i class="hb hb-question"></i></a>
-            </div>
             <div class="panel__body">
-                <table class="table table_stripped table_hover js-datatable" cellspacing="0" width="100%">
-                    <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Cluster State</th>
-                        <th>Cluster Containers</th>
-                        <th>Tunnel</th>
-                        <th>Console Domain</th>
-                        <th class="table-no-sort"></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr class="js-table-clickable" data-href="appscale-details.html">
-                        <td>Lorem ipsum</td>
-                        <td><span class="state state_loader">RUNNING</span></td>
-                        <td>4</td>
-                        <td>No need</td>
-                        <td><a href="#" class="">appscale.stage-hub.net</a></td>
-                        <td class="table-align-right">
-                            <button class="btn btn_action"><i class="hb hb-close"></i> Destroy</button>
-                        </td>
-                    </tr>
-                </table>
+                <div class="panel-body panel-body_appscale-details">
+                    <table class="table table_no-borders" cellspacing="0" width="100%">
+                        <thead>
+                        <tr>
+                            <th>Environment:</th>
+                            <td>Appscale</td>
+                        </tr>
+                        <tr>
+                            <th>State:</th>
+                            <td>INSTALLED</td>
+                        </tr>
+                        <tr>
+                            <th>Domain:</th>
+                            <td><a href="#">appscale.stage-hub.net</a></td>
+                        </tr>
+                        <tr>
+                            <th>Controller:</th>
+                            <td>[Marat’s Germany-62] Container1</td>
+                        </tr>
+                        <tr>
+                            <th>AppEngine:</th>
+                            <td>[Marat’s Germany-62] Container1</td>
+                        </tr>
+                        <tr>
+                            <th>Zookeeper:</th>
+                            <td>[Marat’s Germany-62] Container1</td>
+                        </tr>
+                        <tr>
+                            <th>Database:</th>
+                            <td>[Marat’s Germany-62] Container1</td>
+                        </tr>
+                        <tr>
+                            <th>Credentials:</th>
+                            <td><a href="#">Show</a></td>
+                        </tr>
+                        <tr>
+                            <th>Logs:</th>
+                            <td>Appscale</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
