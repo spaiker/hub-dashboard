@@ -59,6 +59,15 @@
     border: none;
 }
 
+.dropdown-menu button.dropdown-menu-item {
+	display: inline-block;
+	width: 100%;
+	background: none;
+	border: none;
+	text-align: left;
+	cursor: pointer;
+}
+
 .dropdown-menu .dropdown-menu__caption {
     display: block;
     padding: 10px 20px 5px 5px;
@@ -75,7 +84,8 @@
     background-color: #d4d9e3;
 }
 
-.dropdown-menu li > a:hover, .dropdown-menu .active > a, .dropdown-menu .active > a:hover {
+.dropdown-menu li > a:hover, .dropdown-menu .active > a, .dropdown-menu .active > a:hover,
+.dropdown-menu li button:hover, .dropdown-menu .active button, .dropdown-menu .active button:hover {
     text-decoration: none;
     background-color: #f2f3f6
 }
