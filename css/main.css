@@ -3060,3 +3060,22 @@ form.link-style:hover {
 	z-index: 10;
 }
 
+.modal__forms-pgp-sign label {
+	display: block;
+	text-align: left;
+}
+
+.modal__forms-pgp-sign .forms-input {
+	width: 100%;
+	margin: 0;
+}
+
+.form-help {
+	font-size: 12px;
+	margin: 0 0 20px 0;
+}
+
+.table-kujun-actions {
+	min-width: 116px;;
+}
+
