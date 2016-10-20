@@ -254,3 +254,6 @@
 .hb-warning:before {
     content: "\e94c";
 }
+.hb-solid-write:before {
+    content: "\e94d";
+}
