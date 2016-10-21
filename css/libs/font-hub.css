@@ -257,3 +257,37 @@
 .hb-solid-write:before {
     content: "\e94d";
 }
+.hb-top-invites:before {
+    content: "\e94e";
+}
+.hb-top-sellers:before {
+    content: "\e94f";
+}
+.hb-top-buyers:before {
+    content: "\e950";
+}
+.hb-top-countries:before {
+    content: "\e951";
+}
+.hb-tops:before {
+    content: "\e952";
+}
+.hb-solid-thumb-down:before {
+    content: "\e953";
+}
+.hb-solid-thumb-up:before {
+    content: "\e954";
+}
+.hb-solid-comment:before {
+    content: "\e955";
+}
+.hb-tv:before,
+.hb-resource-host:before{
+    content: "\e956";
+}
+.hb-thumb-up:before {
+    content: "\e958";
+}
+.hb-thumb-down:before {
+    content: "\e957";
+}

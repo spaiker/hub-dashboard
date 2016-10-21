@@ -24,16 +24,16 @@
 
     <link rel="stylesheet" href="css/libs/boo-dropdown.css">
     <link rel="stylesheet" href="css/libs/boo-tooltip.css">
+    <link rel="stylesheet" href="css/libs/boo-tabs.css">
 
     <link rel="stylesheet" href="css/libs/remodal.css">
     <link rel="stylesheet" href="css/libs/remodal-default-theme.css">
-
 
     <!--CSS-->
     <link rel="stylesheet" href="css/main.css">
 
 </head>
-<body>
+<body class="body-theme-dark">
 <!--Header start-->
 <header class="header">
     <div class="header__left">
@@ -62,10 +62,7 @@
                     <li class="nav__breadcrumb">
                         <ul class="nav nav_breadcrumb">
                             <li class="nav-breadcrumb__item">
-                                <a href="#">AppScale</a>
-                            </li>
-                            <li class="nav-breadcrumb__item">
-                                <a href="#">Install Cluster</a>
+                                <a href="#">Warroom</a>
                             </li>
                         </ul>
                     </li>
@@ -152,13 +149,13 @@
                 <span class="sidebar-menu-item__caption">Dashboard</span>
             </a>
         </li>
-        <li class="sidebar-menu__item">
+        <li class="sidebar-menu__item sidebar-menu__item_active">
             <a href="#" class="sidebar-menu-item" rel="tooltip" title="Environments" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-environments"></i>
                 <span class="sidebar-menu-item__caption">Environments</span>
             </a>
         </li>
-        <li class="sidebar-menu__item sidebar-menu__item_active">
+        <li class="sidebar-menu__item">
             <a href="#" class="sidebar-menu-item" rel="tooltip" title="AppScale" data-toggle="tooltip" data-placement="right">
                 <i class="sidebar-menu-item__icon hb hb-appscale"></i>
                 <span class="sidebar-menu-item__caption">AppScale</span>
@@ -864,99 +861,399 @@
     </div>
 </aside>
 <section class="content pusher">
-    <div class="content__body js-scroll-content">
-        <span class="content-body__fade-top"></span>
-        <span class="content-body__fade-bottom"></span>
-        <div class="panel">
-            <div class="panel__body">
-                <div class="panel-body">
-                    <div class="panel-body__dynamic-match">
-                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
-                            <label for="environment" class="forms-label dynamic-match-wrapper__left">Environment</label>
-                            <select name="environment" id="environment" class="forms-input dynamic-match-wrapper__right">
-                                <option value="">Please choose</option>
-                            </select>
+    <div class="content__body content__body_no-padding clearfix">
+        <div class="content-body__sidebar">
+            <div class="sidebar-space">
+                <div class="sidebar-space__right tab-content">
+                    <div class="info-widget tab-pane fade in active" id="tab-hub-statistic">
+                        <div class="info-widget__header">
+                            <div class="info-widget-title">
+                                Hub Statistic
+                            </div>
                         </div>
-                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
-                            <label for="Domain" class="forms-label dynamic-match-wrapper__left">Domain</label>
-                            <span class="input-text-mask-wrapper">
-                            <input type="text" name="Domain" id="Domain" class="forms-input dynamic-match-wrapper__right"><span class="input-text-mask">.stage.hub.net</span>
-                            </span>
+                        <div class="info-widget__body">
+                            <div class="statistic-widget js-scroll-sidebar">
+                                <div class="statistic-widget__informer">
+                                    <div class="informer-general">
+                                        <div class="informer-general__icon">
+                                            <i class="informer-general-icon hb hb-resource-host"></i>
+                                        </div>
+                                        <div class="informer-general__text">
+                                            <div class="informer-text">
+                                                <div class="informer-text-big">
+                                                    23,687 <span class="informer-text-super"><b>+5,690</b> today</span>
+                                                </div>
+                                                <div class="informer-text-small">
+                                                    RESOURCE HOSTS
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="statistic-widget__informer">
+                                    <div class="informer-general">
+                                        <div class="informer-general__icon">
+                                            <i class="informer-general-icon hb hb-environments"></i>
+                                        </div>
+                                        <div class="informer-general__text">
+                                            <div class="informer-text">
+                                                <div class="informer-text-big">
+                                                    23,687 <span class="informer-text-super"><b>+5,690</b> today</span>
+                                                </div>
+                                                <div class="informer-text-small">
+                                                    ENVIRONMENTS
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="statistic-widget__informer">
+                                    <div class="informer-general">
+                                        <div class="informer-general__icon">
+                                            <i class="informer-general-icon hb hb-peers"></i>
+                                        </div>
+                                        <div class="informer-general__text">
+                                            <div class="informer-text">
+                                                <div class="informer-text-big">
+                                                    23,687 <span class="informer-text-super"><b>+5,690</b> today</span>
+                                                </div>
+                                                <div class="informer-text-small">
+                                                    PEERS
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="statistic-widget__informer">
+                                    <div class="informer-general">
+                                        <div class="informer-general__icon">
+                                            <i class="informer-general-icon hb hb-users"></i>
+                                        </div>
+                                        <div class="informer-general__text">
+                                            <div class="informer-text">
+                                                <div class="informer-text-big">
+                                                    23,687 <span class="informer-text-super"><b>+5,690</b> today</span>
+                                                </div>
+                                                <div class="informer-text-small">
+                                                    USERS
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="statistic-widget__informer">
+                                    <div class="informer-general">
+                                        <div class="informer-general__icon">
+                                            <i class="informer-general-icon hb hb-bazaar"></i>
+                                        </div>
+                                        <div class="informer-general__text">
+                                            <div class="informer-text">
+                                                <div class="informer-text-big">
+                                                    23,687 <span class="informer-text-super"><b>+5,690</b> today</span>
+                                                </div>
+                                                <div class="informer-text-small">
+                                                    PRODUCTS
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="statistic-widget__informer">
+                                    <div class="informer-appscale">
+                                        <div class="informer-appscale__title">APPSCALE STATISTICS</div>
+                                        <div class="informer-appscale__group">
+                                            <div class="informer-appscale__text">
+                                                <div class="informer-text">
+                                                    <div class="informer-text-big">3</div>
+                                                    <div class="informer-text-small">clusters</div>
+                                                </div>
+                                            </div>
+                                            <div class="informer-appscale__text">
+                                                <div class="informer-text">
+                                                    <div class="informer-text-big">3</div>
+                                                    <div class="informer-text-small">containers</div>
+                                                </div>
+                                            </div>
+                                            <div class="informer-appscale__text">
+                                                <div class="informer-text">
+                                                    <div class="informer-text-big">3</div>
+                                                    <div class="informer-text-small">peers</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
-                            <label for="Controller" class="forms-label dynamic-match-wrapper__left">Controller</label>
-                            <select name="Controller" id="Controller" class="forms-input dynamic-match-wrapper__right">
-                                <option value="">Please choose</option>
-                            </select>
+                    </div>
+                    <div class="info-widget tab-pane fade" id="tab-tops">
+                        <div class="info-widget__header">
+                            <ul class="info-widget-tabs">
+                                <li class="info-widget-tabs__item active">
+                                    <a href="#tap-top-sellers" data-toggle="tab" class="info-widget-tabs-item"><i class="hb hb-top-sellers"></i></a>
+                                </li>
+                                <li class="info-widget-tabs__item">
+                                    <a href="#tap-top-buyers" data-toggle="tab" class="info-widget-tabs-item"><i class="hb hb-top-buyers"></i></a>
+                                </li>
+                                <li class="info-widget-tabs__item">
+                                    <a href="#tap-top-countries" data-toggle="tab" class="info-widget-tabs-item"><i class="hb hb-top-countries"></i></a>
+                                </li>
+                                <li class="info-widget-tabs__item">
+                                    <a href="#tap-top-invites" data-toggle="tab" class="info-widget-tabs-item"><i class="hb hb-top-invites"></i></a>
+                                </li>
+                                <li class="info-widget-tabs__item">
+                                    <a href="#tap-top-products" data-toggle="tab" class="info-widget-tabs-item"><i class="hb hb-bazaar"></i></a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
-                            <label for="AppEngine" class="forms-label dynamic-match-wrapper__left">AppEngine</label>
-                            <select name="AppEngine" id="AppEngine" class="forms-input dynamic-match-wrapper__right">
-                                <option value="">Please choose</option>
-                            </select>
+                        <div class="info-widget__body">
+                            <div class="info-widget-wrapper js-scroll-sidebar tab-content">
+                                <div class="lister-widget tab-pane fade in active" id="tap-top-sellers">
+                                    <div class="lister-widget__header">
+                                        <span class="lister-widget-header">Top Peer Sellers</span>
+                                    </div>
+                                    <div class="lister-widget__body">
+                                        <ul class="tops-widget">
+                                            <li class="tops-widget__item">
+                                                <div class="tops-widget__name"><a href="#" class="tops-widget-name">1. Beishen Nuriddin uulu</a> <i class="tops-widget-flag flag kz"></i></div>
+                                                <div class="tops-widget__sum"><span class="tops-widget-sum">peers used 30991.4 hours</span></div>
+                                            </li>
+                                            <li class="tops-widget__item">
+                                                <div class="tops-widget__name"><a href="#" class="tops-widget-name">2. Faruh Fernand</a> <i class="tops-widget-flag flag kz"></i></div>
+                                                <div class="tops-widget__sum"><span class="tops-widget-sum">peers used 29139.4 hours</span></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="lister-widget tab-pane fade" id="tap-top-buyers">
+                                    <div class="lister-widget__header">
+                                        <span class="lister-widget-header">Top Peer Buyers</span>
+                                    </div>
+                                    <div class="lister-widget__body">
+                                        <ul class="tops-widget">
+                                            <li class="tops-widget__item">
+                                                <div class="tops-widget__name"><a href="#" class="tops-widget-name">1. Beishen Nuriddin uulu</a> <i class="tops-widget-flag flag kg"></i></div>
+                                                <div class="tops-widget__sum"><span class="tops-widget-sum">used peers 46145.6 hours</span></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="lister-widget tab-pane fade" id="tap-top-countries">
+                                    <div class="lister-widget__header">
+                                        <span class="lister-widget-header">Top Countries</span>
+                                        <ul class="lister-widget-tabs">
+                                            <li class="lister-widget-tabs__item active"><a href="#tab-top-countries-users" data-toggle="tab" class="lister-widget-tabs-item">By Users</a></li>
+                                            <li class="lister-widget-tabs__item"><a href="#tab-top-countries-peers" data-toggle="tab" class="lister-widget-tabs-item">By Peers</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="lister-widget__body tab-content">
+                                        <ul class="tops-widget tab-pane fade in active" id="tab-top-countries-users">
+                                            <li class="tops-widget__item">
+                                                <div class="tops-widget__name"><a href="#" class="tops-widget-name">1. United States</a> <i class="tops-widget-flag flag us"></i></div>
+                                                <div class="tops-widget__sum"><span class="tops-widget-sum">24 user</span></div>
+                                            </li>
+                                            <li class="tops-widget__item">
+                                                <div class="tops-widget__name"><a href="#" class="tops-widget-name">2. Faruh Fernand</a> <i class="tops-widget-flag flag tj"></i></div>
+                                                <div class="tops-widget__sum"><span class="tops-widget-sum">134 sales</span></div>
+                                            </li>
+                                        </ul>
+                                        <ul class="tops-widget tab-pane fade" id="tab-top-countries-peers">
+                                            <li class="tops-widget__item">
+                                                <div class="tops-widget__name"><a href="#" class="tops-widget-name">1. Kyrgyzstan</a> <i class="tops-widget-flag flag kg"></i></div>
+                                                <div class="tops-widget__sum"><span class="tops-widget-sum">24 user</span></div>
+                                            </li>
+                                            <li class="tops-widget__item">
+                                                <div class="tops-widget__name"><a href="#" class="tops-widget-name">2. Faruh Fernand</a> <i class="tops-widget-flag flag tj"></i></div>
+                                                <div class="tops-widget__sum"><span class="tops-widget-sum">134 sales</span></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="lister-widget tab-pane fade" id="tap-top-invites">
+                                    <div class="lister-widget__header">
+                                        <span class="lister-widget-header">Top Invites</span>
+                                    </div>
+                                    <div class="lister-widget__body">
+                                        <ul class="tops-widget">
+                                            <li class="tops-widget__item">
+                                                <div class="tops-widget__name"><a href="#" class="tops-widget-name">1. Beishen Nuriddin uulu</a><i class="tops-widget-flag flag ru"></i></div>
+                                                <div class="tops-widget__sum"><span class="tops-widget-sum">134 sales</span></div>
+                                            </li>
+                                            <li class="tops-widget__item">
+                                                <div class="tops-widget__name"><a href="#" class="tops-widget-name">2. Faruh Fernand</a><i class="tops-widget-flag flag tj"></i></div>
+                                                <div class="tops-widget__sum"><span class="tops-widget-sum">134 sales</span></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="lister-widget tab-pane fade" id="tap-top-products">
+                                    <div class="lister-widget__header">
+                                        <span class="lister-widget-header">Top Products</span>
+                                    </div>
+                                    <div class="lister-widget__body">
+                                        <ul class="tops-widget">
+                                            <li class="tops-widget__item">
+                                                <div class="tops-widget__name"><a href="#" class="tops-widget-name">1. Hadoop</a></div>
+                                                <div class="tops-widget__sum"><span class="tops-widget-sum">71 time(s) installed</span></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
-                            <label for="Zookeeper" class="forms-label dynamic-match-wrapper__left">Zookeeper</label>
-                            <select name="Zookeeper" id="Zookeeper" class="forms-input dynamic-match-wrapper__right">
-                                <option value="">Please choose</option>
-                            </select>
+                    </div>
+                    <div class="info-widget tab-pane fade" id="tab-features">
+                        <div class="info-widget__header">
+                            <ul class="info-widget-tabs">
+                                <li class="info-widget-tabs__item active">
+                                    <a href="#tap-features-popular" data-toggle="tab" class="info-widget-tabs-item"><i class="hb hb-heart"></i></a>
+                                </li>
+                                <li class="info-widget-tabs__item">
+                                    <a href="#tap-features-recent" data-toggle="tab" class="info-widget-tabs-item"><i class="hb hb-time"></i></a>
+                                </li>
+                                <li class="info-widget-tabs__item">
+                                    <a href="#tap-features-yours" data-toggle="tab" class="info-widget-tabs-item"><i class="hb hb-user-1"></i></a>
+                                </li>
+                                <li class="info-widget-tabs__item info-widget-tabs__item_right">
+                                    <a href="#modal-suggest-feature" class="info-widget-tabs-item">Add</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
-                            <label for="Database" class="forms-label dynamic-match-wrapper__left">Database</label>
-                            <select name="Database" id="Database" class="forms-input dynamic-match-wrapper__right">
-                                <option value="">Please choose</option>
-                            </select>
-                        </div>
-                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
-                            <label for="Email" class="forms-label dynamic-match-wrapper__left">Email</label>
-                            <input type="text" name="Email" id="Email" placeholder="Email" class="forms-input dynamic-match-wrapper__right">
-                        </div>
-                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
-                            <label for="Password" class="forms-label dynamic-match-wrapper__left">Password</label>
-                            <input type="password" name="Password" id="Password" placeholder="minimum 6 chars" class="forms-input dynamic-match-wrapper__right">
-                        </div>
-                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
-                            <label for="Confirm-password" class="forms-label dynamic-match-wrapper__left">Confirm password</label>
-                            <input type="password" name="Confirm password" id="Confirm-password" placeholder="Confirm password" class="forms-input dynamic-match-wrapper__right">
-                        </div>
-                        <div class="dynamic-match-wrapper">
-                            <button class="btn btn_blue">Save</button>
-                            <button class="btn">Cancel</button>
+                        <div class="info-widget__body">
+                            <div class="info-widget-wrapper js-scroll-sidebar tab-content">
+                                <div class="lister-widget tab-pane fade in active" id="tap-features-popular">
+                                    <div class="lister-widget__header">
+                                        <span class="lister-widget-header">Popular suggestions</span>
+                                    </div>
+                                    <div class="lister-widget__body">
+                                        <ul class="features-widget">
+                                            <li class="features-widget__item">
+                                                <div class="features-widget__wrapper">
+                                                    <div class="features-widget__author"><span class="features-widget-author">Abdysamat Mamytov</span> <span class="features-widget-status planned"><i class="hb"></i></span></div>
+                                                    <div class="features-widget__name"><a href="#" class="features-widget-name">Add FAQ page</a></div>
+                                                    <div class="features-widget__footer">
+                                                        <div class="features-widget-left">
+                                                            <a href="#" class="features-widget-icon features-widget-icon_comment"><i class="hb hb-solid-comment"></i></a>
+                                                            <span class="features-widget-sum">2</span>
+                                                        </div>
+                                                        <div class="features-widget-right">
+                                                            <span class="features-widget-sum">13</span>
+                                                            <a href="#" class="features-widget-icon js-toggle-like"><i class="hb hb-solid-thumb-up"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="lister-widget tab-pane fade" id="tap-features-recent">
+                                    <div class="lister-widget__header">
+                                        <span class="lister-widget-header">Recent suggestions</span>
+                                    </div>
+                                    <div class="lister-widget__body">
+                                        <ul class="features-widget">
+                                            <li class="features-widget__item">
+                                                <div class="features-widget__wrapper">
+                                                    <div class="features-widget__author"><span class="features-widget-author">Abdysamat Mamytov</span> <span class="features-widget-status"><i class="hb"></i></span></div>
+                                                    <div class="features-widget__name"><a href="#" class="features-widget-name">Add FAQ page</a></div>
+                                                    <div class="features-widget__footer">
+                                                        <div class="features-widget-left">
+                                                            <a href="#" class="features-widget-icon features-widget-icon_comment"><i class="hb hb-solid-comment"></i></a>
+                                                            <span class="features-widget-sum">2</span>
+                                                        </div>
+                                                        <div class="features-widget-right">
+                                                            <span class="features-widget-sum">13</span>
+                                                            <a href="#" class="features-widget-icon js-toggle-like"><i class="hb hb-solid-thumb-up"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="lister-widget tab-pane fade" id="tap-features-yours">
+                                    <div class="lister-widget__header">
+                                        <span class="lister-widget-header">Yours suggestions</span>
+                                    </div>
+                                    <div class="lister-widget__body">
+                                        <ul class="features-widget">
+                                            <li class="features-widget__item">
+                                                <div class="features-widget__wrapper">
+                                                    <div class="features-widget__author"><span class="features-widget-author">Abdysamat Mamytov</span> <span class="features-widget-status done"><i class="hb"></i></span></div>
+                                                    <div class="features-widget__name"><a href="#" class="features-widget-name">Add FAQ page</a></div>
+                                                    <div class="features-widget__footer">
+                                                        <div class="features-widget-left">
+                                                            <a href="#" class="features-widget-icon features-widget-icon_comment"><i class="hb hb-solid-comment"></i></a>
+                                                            <span class="features-widget-sum">2</span>
+                                                        </div>
+                                                        <div class="features-widget-right">
+                                                            <span class="features-widget-sum">13</span>
+                                                            <a href="#" class="features-widget-icon js-toggle-like"><i class="hb hb-solid-thumb-up"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="sidebar-space__left">
+                    <ul class="extra-widget">
+                        <li class="extra-widget__toggle">
+                            <a href="#tab-hub-statistic" class="extra-widget-toggle"><i class="hb hb-angle-right"></i></a>
+                        </li>
+                        <li class="extra-widget__item active">
+                            <a href="#tab-hub-statistic" data-toggle="tab" class="extra-widget-item">
+                                <i class="hb hb-dashboard"></i>
+                            </a>
+                        </li>
+                        <li class="extra-widget__item">
+                            <a href="#tab-tops" data-toggle="tab" class="extra-widget-item">
+                                <i class="hb hb-tops"></i>
+                            </a>
+                        </li>
+                        <li class="extra-widget__item">
+                            <a href="#tab-features" data-toggle="tab" class="extra-widget-item">
+                                <i class="hb hb-billing"></i>
+                            </a>
+                        </li>
+                        <li class="extra-widget__item extra-widget__item_bottom">
+                            <a href="#modal-your-opinion" class="extra-widget-item">
+                                <i class="hb hb-thumb-up"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
+        <div class="content-body__workspace">
 
+        </div>
+    </div>
 </section>
 
 <!--Modals-->
-
-<div class="remodal remodal_md" data-remodal-id="modal-about">
+<div class="remodal remodal_sm" data-remodal-id="modal-your-opinion">
     <div class="remodal-header">
         <div class="remodal-header__close"><button data-remodal-action="close" class="remodal-header-close"><i class="hb hb-close"></i></button></div>
-        <div class="remodal-header__title"><span class="remodal-header-title">AppScale information</span></div>
+        <div class="remodal-header__title"><span class="remodal-header-title">Let us know your opinion</span></div>
     </div>
     <div class="remodal-body">
-        <div class="modal modal_about">
-            <div class="modal-wrapper clearfix">
-                <div class="modal__forms-wrapper_2-col">
-                    <span class="modal-text">
-                        AppScale is an open-source cloud computing platform that automatically deploys and scales unmodified Google App Engine applications over public and private cloud systems, as well as on-premises clusters. "Run Google App Engine applications anywhere, on any infrastructure."
-                    </span>
-                    <a href="www.appscale.com" class="modal-link">www.appscale.com</a>
-                </div>
-                <div class="modal__forms-wrapper_2-col">
-                    <img src="assets/img/AppScale-Logo.jpg" alt="">
-                </div>
+        <div class="modal modal_your-opinion">
+            <div class="modal-wrapper">
+                <textarea name="opinion" id=""opinion rows="4" class="forms-input forms-input_textarea"></textarea>
             </div>
         </div>
     </div>
     <div class="remodal-footer">
-        <button class="btn" data-remodal-action="cancel">Cancel</button>
+        <button class="btn btn_green" data-remodal-target="modal-start-environment">Good</button>
+        <button class="btn btn_red" data-remodal-action="cancel">Bad</button>
     </div>
 </div>
+
 
 <script src="js/libs/jquery-2.1.1.min.js"></script>
 <script src="js/libs/slick.js"></script>
@@ -981,12 +1278,11 @@
 <script src="js/libs/boo-dropdown.js"></script>
 <script src="js/libs/boo-tooltip.js"></script>
 <script src="js/libs/boo-popover.js"></script>
+<script src="js/libs/boo-tabs.js"></script>
 
 <script src="js/libs/remodal.js"></script>
-<script src="js/libs/jquery.filer.min.js"></script>
-<script src="js/libs/sweetalert2.js"></script>
-<script src="js/libs/masked-input.js"></script>
 
+<script src="js/pages/warroom.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
