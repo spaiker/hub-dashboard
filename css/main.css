@@ -469,12 +469,12 @@ a:active {
 textarea,
 .input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
     border: 1px solid #d4d9e3;
+    background-color: #fff;
+    color: #697490;
     border-radius: 2px;
     padding: 0 10px;
     margin: 0;
     height: 35px;
-    background-color: #fff;
-    color: #697490;
     font-size: 12px;
 }
 input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]),
@@ -552,6 +552,11 @@ textarea {
     background: #f7f9fc;
     border-radius: 2px;
 }
+.forms-checkbox_dark.forms-checkbox:not(:checked) + label:before,
+.forms-checkbox_dark.forms-checkbox:checked + label:before {
+    border: 1px solid #697490;
+    background: #0d1828;
+}
 .forms-checkbox:not(:checked) + label:after,
 .forms-checkbox:checked + label:after {
     content: '\e92d';
@@ -569,6 +574,15 @@ textarea {
     color: #fff;
     transition: all .2s;
 }
+.forms-checkbox_dark.forms-checkbox:not(:checked) + label:after,
+.forms-checkbox_dark.forms-checkbox:checked + label:after {
+    top: 1px;
+    left: 1px;
+    line-height: 12px;
+    width: 12px;
+    background-color: #202d43;
+    color: #697490;
+}
 /* checked mark aspect changes */
 .forms-checkbox:not(:checked) + label:after {
     opacity: 0;
@@ -584,6 +598,7 @@ textarea {
     border-color: #bbb;
     background-color: #ddd;
 }
+
 .forms-checkbox:disabled:checked + label:after {
     color: #999;
 }
@@ -783,6 +798,7 @@ textarea {
     background-color: #fff;
     border-bottom: 1px solid #d4d9e3;
 }
+
 .table th {
     padding: 20px 10px 15px 20px;
     background-color: #fff;
@@ -819,6 +835,27 @@ textarea {
 .table_no-borders td {
     border: none;
 }
+
+/*Dark table*/
+.table {
+    border: 1px solid #697490;
+    border-radius: 2px;
+}
+.table tr {
+    background-color: #0d1828;
+    border-bottom: 1px solid #697490;
+}
+
+.table th {
+    background-color: #0d1828;
+    color: #697490;
+    padding: 10px;
+}
+.table td {
+    color: #697490;
+    padding: 10px;
+}
+
 
 /*Row settings*/
 
@@ -932,6 +969,23 @@ textarea {
 .btn i {
     margin: 0 5px 0 -5px;
     vertical-align: baseline;
+}
+.btn_dark {
+    color: #697490;
+    background-color: #202d43;
+    border: 1px solid #202d43;
+}
+.btn_dark:hover {
+    color: #697490;
+    background-color: transparent;
+}
+.btn_dark:active {
+    color: #697490;
+}
+.btn_dark.active {
+    background-color: #0d1828;
+    border: 1px solid #0d1828;
+    color: #697490;
 }
 
 /*Custom buttons*/
@@ -3263,7 +3317,53 @@ td .hb-question {
     font-weight: 600;
 }
 
+/*Map of peers*/
 
+.simulation-widget {
+    padding: 20px;
+}
+.simulation-widget__wrapper {
+    margin: 0 0 20px;
+}
+.simulation-widget__wrapper .forms-label {
+    display: block;
+    margin: 0 0 8px;
+}
+.simulation-widget__wrapper .forms-input {
+    width: 100%;
+    border: 1px solid #697490;
+    background-color: #0d1828;
+    color: #697490;
+}
+.regions-widget-table {
+    border: 1px solid #697490;
+    background-color: #0d1828;
+    border-radius: 2px;
+    overflow: hidden;
+}
+.regions-widget-table__item {
+    padding: 10px;
+    border-bottom: 1px solid #697490;
+}
+.regions-widget-table__item:last-child {
+    border: none;
+}
+.regions-widget-table-text {
+    font-size: 12px;
+}
+.regions-widget-table__item .checkbox-wrapper {
+    float: right;
+}
+.regions-widget-table__item .forms-checkbox:not(:checked) + label,
+.regions-widget-table__item .forms-checkbox:checked + label {
+    padding-left: 15px;
+}
+.simulation-widget-buttons {
+    text-align: center;
+}
+.simulation-widget-buttons .btn {
+    margin: 0 10px;
+}
 
     /*JS*/
 .sidebar-minimize {
