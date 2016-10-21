@@ -3025,13 +3025,15 @@ td .hb-question {
 .content-body__sidebar {
     position: absolute;
     right: 0;
-}
-.content-body__sidebar-animation-in {
-    right: -250px!important;
     transition: 0.1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     transition-property: left, right;
     transition-delay: 0s, .08s;
 }
+.content-body__sidebar-animation-in {
+    right: -250px!important;
+
+}
+
 .sidebar-space {
     position: relative;
 }
@@ -3132,6 +3134,13 @@ td .hb-question {
     line-height: 50px;
     text-align: center;
     background-color: rgba(32, 45, 67, 0.7);
+}
+.extra-widget-toggle_rotate {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 .extra-widget-item {
     display: block;
