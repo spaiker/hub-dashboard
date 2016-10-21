@@ -2872,7 +2872,8 @@ td .hb-question {
     vertical-align: top;
 }
 .panel-body_appscale-details {
-    width: 320px;
+    width: 470px;
+	margin-bottom: 20px;	
 }
 
 .panel-body_appscale-details .table th {
