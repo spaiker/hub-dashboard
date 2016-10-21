@@ -118,6 +118,9 @@
 .remodal-body {
   padding: 20px 25px;
 }
+.remodal-body_no-padding {
+  padding: 0;
+}
 
 
 .remodal.remodal-is-opening,
