@@ -3120,3 +3120,11 @@ form.link-style:hover {
 	min-width: 116px;;
 }
 
+.vehs-values {
+	width: 79%;
+	margin: 0 0 0 10px;
+	font-weight: bold;
+	display: inline-block;
+	text-align: left;
+}
+
