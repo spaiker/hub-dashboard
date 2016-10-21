@@ -877,8 +877,20 @@
                                 <option value="">Please choose</option>
                             </select>
                         </div>
+                        <div class="dynamic-match-wrapper" style="margin: 0">
+                            <label for="domain-wrapper" class="forms-label dynamic-match-wrapper__left">Domain</label>
+                            <div class="modal-wrapper dynamic-match-wrapper__right" id="domain-wrapper">
+                                <span class="checkbox-wrapper">
+                                    <input type="radio" id="Managed" name="domain" class="forms-radio">
+                                    <label for="Managed">Managed by Hub</label>
+                                </span>
+                                <span class="checkbox-wrapper">
+                                    <input type="radio" id="own-domain" name="domain" class="forms-radio">
+                                    <label for="own-domain">Own domain</label>
+                                </span>
+                            </div>
+                        </div>
                         <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
-                            <label for="Domain" class="forms-label dynamic-match-wrapper__left">Domain</label>
                             <span class="input-text-mask-wrapper">
                             <input type="text" name="Domain" id="Domain" class="forms-input dynamic-match-wrapper__right"><span class="input-text-mask">.stage.hub.net</span>
                             </span>
@@ -985,7 +997,6 @@
 <script src="js/libs/remodal.js"></script>
 <script src="js/libs/jquery.filer.min.js"></script>
 <script src="js/libs/sweetalert2.js"></script>
-<script src="js/libs/masked-input.js"></script>
 
 <script src="js/main.js"></script>
 </body>

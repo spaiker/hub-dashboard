@@ -2522,7 +2522,9 @@ textarea {
     width: 100%;
     resize: none;
 }
-
+.dynamic-match-wrapper__right .checkbox-wrapper:first-child {
+    margin: 0 40px 0 0;
+}
 
 .check-widget__button {
     margin: 0 15px 0 0;
@@ -3036,7 +3038,7 @@ td .hb-question {
 }
 .info-widget-tabs__item_right {
     float: right;
-    line-height: 50px;
+    padding: 19px 0;
 }
 .info-widget-tabs__item_right .info-widget-tabs-item {
     font-size: 10px;
@@ -3190,7 +3192,7 @@ td .hb-question {
 }
 .input-text-mask {
     position: absolute;
-    right: -348px;
+    right: -389px;
     font-size: 12px;
     font-weight: 600;
 }
