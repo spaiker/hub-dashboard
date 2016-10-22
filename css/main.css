@@ -3645,3 +3645,7 @@ form.link-style:hover {
     width: 20px;
 }
 
+.long-string-cut {
+    word-wrap: break-word;
+}
+
