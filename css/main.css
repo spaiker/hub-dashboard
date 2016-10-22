@@ -3637,3 +3637,11 @@ form.link-style:hover {
 	text-align: left;
 }
 
+.table__no-space {
+	white-space: nowrap;
+}
+
+.table__xsm {
+    width: 20px;
+}
+
