@@ -3674,3 +3674,52 @@ form.link-style:hover {
 	max-height: 152px;
 }
 
+.loading-screen {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.loading-screen .load-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -12px 0 0 -12px;
+}
+
+.load-icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    box-sizing: border-box;
+    border: solid 2px transparent;
+    border-top-color: #078DD0;
+    border-left-color: #078DD0;
+    border-radius: 50%;
+    -webkit-animation: nprogress-spinner 400ms linear infinite;
+    animation: nprogress-spinner 400ms linear infinite;
+}
+
+@-webkit-keyframes nprogress-spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes nprogress-spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
