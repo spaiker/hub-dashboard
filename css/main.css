@@ -837,21 +837,21 @@ textarea {
 }
 
 /*Dark table*/
-.table {
+.table_dark {
     border: 1px solid #697490;
     border-radius: 2px;
 }
-.table tr {
+.table_dark tr {
     background-color: #0d1828;
     border-bottom: 1px solid #697490;
 }
 
-.table th {
+.table_dark th {
     background-color: #0d1828;
     color: #697490;
     padding: 10px;
 }
-.table td {
+.table_dark td {
     color: #697490;
     padding: 10px;
 }
