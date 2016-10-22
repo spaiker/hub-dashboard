@@ -2947,17 +2947,17 @@ td .hb-question {
 .environment-template__hidden .environment-template-link:first-child {
     left: 0;
 }
-.dropdown_template .forms-label {
+.dropdown-menu_template .forms-label {
     display: block;
     margin: 0 0 5px;
 }
-.dropdown_template .forms-input  {
+.dropdown-menu_template .forms-input  {
     width: 100%;
 }
-.dropdown_template .forms-wrapper{
+.dropdown-menu_template .forms-wrapper{
     margin: 0 0 20px;
 }
-.dropdown_template .forms-wrapper:last-child {
+.dropdown-menu_template .forms-wrapper:last-child {
     margin: 0;
 }
 .environment-buttons {
