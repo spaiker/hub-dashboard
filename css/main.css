@@ -3649,3 +3649,20 @@ form.link-style:hover {
     word-wrap: break-word;
 }
 
+.table_fixed-header {
+	border-collapse: collapse;
+}
+
+.table_fixed-header thead {
+	display: block;
+}
+
+.table_fixed-header tbody {
+	display: block;
+}
+
+.environment-creation-peers {
+	position: relative;
+	max-height: 152px;
+}
+
