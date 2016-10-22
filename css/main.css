@@ -91,10 +91,10 @@ a:active {
 .panel__header {
     margin-bottom: 20px;
 }
-.panel__header .btn {
+.panel__header_multi-btns .btn {
     margin: 0 10px 0 0;
 }
-.panel__header .btn:last-child {
+.panel__headerr_multi-btns .btn:last-child {
     margin: 0;
 }
 .panel__header_datatable-search {
@@ -1251,7 +1251,31 @@ textarea {
     font-weight: 500;
 }
 
-
+/*Custom select*/
+.dd-select {
+    background: #fff;
+    border: solid 1px #d4d9e3;
+}
+.dd-option-image, .dd-selected-image {
+    border-radius: 50%;
+    width: 38px;
+}
+.dd-options {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.dd-selected {
+    text-decoration: none;
+}
+.dd-option-text,.dd-selected-text {
+    vertical-align: -webkit-baseline-middle;
+    line-height: normal !important;
+}
+.forms-input_custom-select {
+    float: right;
+    width: calc(80% + 5px);
+    margin: 0 0 0 10px;
+}
 
 /*Header*/
 .header {
@@ -3339,6 +3363,7 @@ td .hb-question {
     font-size: 12px;
     font-weight: 600;
 }
+
 
 /*Map of peers*/
 

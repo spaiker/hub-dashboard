@@ -14,3 +14,8 @@ $('.js-ssh-key').filer({
     limit: 1,
     maxSize: 3,
 });
+
+$('.js-custom-select').ddslick({
+    width: '100%',
+    height: '117px'
+});

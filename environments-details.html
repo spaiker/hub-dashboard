@@ -1183,27 +1183,15 @@
                     <input type="text" class="forms-input" id="container-name">
                 </div>
             </div>
-            <div class="modal-wrapper clearfix">
+            <div class="modal__forms-wrapper clearfix">
                 <label for="list-templates" class="forms-label">Templates:</label>
-                <ul class="environment-tools-body__templates js-scroll" id="list-templates">
-                    <li class="environment-tools-body-templates">
-                        <a href="#" class="templates-link"><span class="templates-link__overlay"></span></a>
-                        <div class="templates">
-                            <div class="templates__cover">
-                                <div class="templates-cover">
-                                    <div class="templates-cover_container">
-                                        <div class="templates-cover-container">
-                                            <img src="assets/img/template-appscale.png" alt="" class="templates-cover-container__image">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="templates__text">
-                                <span class="templates-text">Cassandra</span>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
+                <div class="forms-input_custom-select">
+                    <select id="list-templates" class="forms-input js-custom-select">
+                        <option value="0" data-imagesrc="assets/img/template-appscale.png">Casandra</option>
+                        <option value="1" data-imagesrc="assets/img/template-appscale.png">Casandra</option>
+                        <option value="2" data-imagesrc="assets/img/template-appscale.png">Casandra</option>
+                    </select>
+                </div>
             </div>
             <div class="modal__forms-wrapper">
                 <label for="container-size" class="forms-label">Size:</label>
@@ -1273,6 +1261,7 @@
 
 <script src="js/libs/remodal.js"></script>
 <script src="js/libs/jquery.filer.min.js"></script>
+<script src="js/libs/jquery.ddslick.js"></script>
 
 <script src="js/pages/environment-details.js"></script>
 <script src="js/main.js"></script>
