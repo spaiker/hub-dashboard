@@ -3022,6 +3022,10 @@ td .hb-question {
     height: calc(100% - 50px);
 }
 
+.content-body__workspace, .b-wr-globe {
+	height: 100%;
+}
+
 .content-body__sidebar {
     position: absolute;
     right: 0;
