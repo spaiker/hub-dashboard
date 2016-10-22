@@ -2875,6 +2875,7 @@ td .hb-question {
     position: absolute;
     right: 0;
     top: 0;
+	cursor: pointer;
 }
 .environment__workspace {
     height: 100%;
