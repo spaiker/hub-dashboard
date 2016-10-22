@@ -107,7 +107,6 @@ $(function(){
         railOpacity: '0.4',
         position: 'right',
         distance: '1px',
-        wrapperClass: "content__body-wrapper"
     });
     $('.js-scroll-content').slimScroll({
         color: '#d4d9e3',

@@ -1202,6 +1202,7 @@ textarea {
     white-space: nowrap;
     vertical-align: baseline;
     border-radius: 2px;
+    cursor: pointer;
 }
 .label_default {
     background-color: #718bb7;
@@ -2455,18 +2456,21 @@ textarea {
 
 .modal_build-environment .environment-tools-body__templates {
     max-height: 200px !important;
-    float: right;
     border: 1px solid #d4d9e3;
     border-radius: 2px;
-    width: 100% !important;
 }
 .modal_add-container .environment-tools-body__templates {
     max-height: 100px !important;
 }
-.modal_build-environment .content__body-wrapper {
+
+.modal-wrapper_template .forms-label {
+    float: left;
+    margin: 0 13px 0 0;
+}
+/*.modal_build-environment {
     width: calc(80% + 4px) !important;
     float: right;
-}
+}*/
 .modal_build-environment .environment-tools-body-templates {
     border-bottom: solid 1px #d4d9e3;
 }
@@ -2732,14 +2736,14 @@ td .hb-question {
 .dynamic-match-wrapper:last-child {
     margin: 0;
 }
-.dynamic-match-wrapper:after,
+/*.dynamic-match-wrapper:after,
 .environment-tools-body-templates:after{
     content: ".";
     display: block;
     height: 0;
     clear: both;
     visibility: hidden;
-}
+}*/
 .dynamic-match-wrapper__right {
     float: right;
 }
@@ -2859,6 +2863,10 @@ td .hb-question {
     float: right;
     line-height: 35px;
 }
+.templates__label .label {
+    margin: 0 0 0 10px;
+}
+
 .templates-text {
     line-height: 38px;
     font-size: 12px;
