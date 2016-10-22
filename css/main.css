@@ -2875,6 +2875,7 @@ td .hb-question {
     position: absolute;
     right: 0;
     top: 0;
+	cursor: pointer;
 }
 .environment__workspace {
     height: 100%;
@@ -3020,6 +3021,10 @@ td .hb-question {
 }
 .info-widget__body {
     height: calc(100% - 50px);
+}
+
+.content-body__workspace, .b-wr-globe {
+	height: 100%;
 }
 
 .content-body__sidebar {
