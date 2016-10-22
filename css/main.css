@@ -3735,3 +3735,12 @@ form.link-style:hover {
 	font-size: 12px;
 }
 
+.full-text-area .forms-label {
+	display: block;
+}
+
+.full-text-area .forms-input_textarea {
+	margin: 0;
+	width: 100%;
+}
+
