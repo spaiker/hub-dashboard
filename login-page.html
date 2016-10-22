@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="css/libs/boo-tabs.css">
+    <link rel="stylesheet" href="css/libs/font-hub.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<div class="login-page">
+    <div class="login-page__wrapper">
+        <div class="login-page__sidebar">
+            <div class="login-widget">
+                <div class="login-widget__logo">
+                    <svg class="login-widget-logo">
+                        <use xlink:href="assets/logos.svg#header"></use>
+                    </svg>
+                </div>
+                <div class="login-widget__panel">
+                    <div class="login-panel">
+                        <div class="login-panel__header">
+                            <ul class="login-panel-tabs clearfix">
+                                <li class="login-panel-tabs__item active">
+                                    <a href="#tab-login" data-toggle="tab" class="login-panel-tabs-item">Login</a>
+                                </li>
+                                <li class="login-panel-tabs__item">
+                                    <a href="#tab-register" data-toggle="tab" class="login-panel-tabs-item">Register</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="login-panel__body tab-content">
+                            <div class="login-forms tab-pane fade in active" id="tab-login">
+                                <div class="login-forms__wrapper">
+                                    <input type="text" class="forms-input forms-input_dark" placeholder="Email">
+                                </div>
+                                <div class="login-forms__wrapper">
+                                    <input type="text" class="forms-input forms-input_dark" placeholder="Password">
+                                </div>
+                                <div class="login-forms__wrapper">
+                                    <a href="#" class="login-forms-link login-forms-link_right">Forgot password?</a>
+                                    <span class="checkbox-wrapper checkbox-wrapper_login">
+                                        <input type="checkbox" id="remember-me" class="forms-checkbox">
+                                        <label class="forms-label" for="remember-me">Remember me</label>
+                                    </span>
+                                </div>
+                                <div class="login-forms__wrapper">
+                                    <button class="btn btn_blue btn_full-width">LOGIN</button>
+                                </div>
+                            </div>
+                            <div class="login-forms tab-pane fade" id="tab-register">
+                                <div class="login-forms__wrapper">
+                                    <button class="btn btn_social-facebook btn_icon-left"><span class="btn-icon-left__icon"><i class="hb hb-social-facebook"></i></span><span class="btn-icon-left__text">FACEBOOK</span></button>
+                                </div>
+                                <div class="login-forms__wrapper">
+                                    <button class="btn btn_social-google-plus btn_icon-left"><span class="btn-icon-left__icon"><i class="hb hb-social-google-plus"></i></span><span class="btn-icon-left__text">Google</span></button>
+                                </div>
+                                <div class="login-forms__wrapper">
+                                    <button class="btn btn_social-github btn_icon-left"><span class="btn-icon-left__icon"><i class="hb hb-social-github"></i></span><span class="btn-icon-left__text">Github</span></button>
+                                </div>
+                                <div class="login-forms__wrapper">
+                                    <input type="password" class="forms-input forms-input_dark" placeholder="Password">
+                                </div>
+                                <div class="login-forms__wrapper">
+                                    <input type="password" class="forms-input forms-input_dark" placeholder="Confirm password">
+                                </div>
+                                <div class="login-forms__wrapper">
+                                    <button class="btn btn_blue btn_full-width">REGISTER</button>
+                                </div>
+                                <div class="login-forms__wrapper">
+                                    <div class="login-forms-text">
+                                        By clicking Register, you agree to our <a href="" class="login-forms-link">Terms.</a>
+                                        <hr>
+                                        Please note the Subutai Hub will not use your social profile data without your explicit permission. This data may be used when you request specific friends and colleagues to share resources with you. We also use social network information to evaluate your reputation in the system and establish some basic identity.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="login-widget__additional">
+                    <a href="#" class="login-page-link">Read more about the Subutai Hub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/libs/jquery-2.1.1.min.js"></script>
+<script src="js/libs/boo-tabs.js"></script>
+</body>
+</html>

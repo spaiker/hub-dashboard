@@ -465,9 +465,9 @@ a:active {
 	margin: 10px 0px;
 	display: none;
 }
-.forms-input,
-textarea,
-.input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+.forms-input
+/*textarea,
+.input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea */{
     border: 1px solid #d4d9e3;
     background-color: #fff;
     color: #697490;
@@ -1056,10 +1056,52 @@ textarea {
     border: 1px solid #3b579d;
     background-color: #3b579d;
 }
+.btn_social-facebook .btn-icon-left__text {
+    background-color: #30467e;
+}
+.btn_social-github .btn-icon-left__text {
+    background-color: #2b2a2a;
+}
+.btn_social-google-plus .btn-icon-left__text {
+    background-color: #c6382e;
+}
 .btn_social-facebook:hover {
     border: 1px solid #3b579d;
     color: #3b579d;
 }
+.btn_full-width {
+    width: 100%;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    font-stretch: normal;
+}
+.btn_icon-left {
+    padding: 0;
+}
+.btn_icon-left i {
+    margin: 0;
+}
+.btn-icon-left__icon {
+    float: left;
+    display: block;
+    padding: 9px 0;
+    width: 35px;
+    text-align: center;
+}
+.btn-icon-left__text {
+    display: block;
+    margin: 0 0 0 35px;
+    padding: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    background-color: #697490;
+}
+
+.btn_icon-left:hover .btn-icon-left__text {
+    background-color: transparent;
+}
+
 /* Buttons groups*/
 
 .btn-group {
@@ -3385,10 +3427,14 @@ td .hb-question {
     display: block;
     margin: 0 0 8px;
 }
-.simulation-widget__wrapper .forms-input {
+.simulation-widget__wrapper .forms-input,
+.forms-input_dark {
     width: 100%;
     border: 1px solid #697490;
     background-color: #0d1828;
+    color: #697490;
+}
+.forms-input_dark::-webkit-input-placeholder {
     color: #697490;
 }
 .regions-widget-table {

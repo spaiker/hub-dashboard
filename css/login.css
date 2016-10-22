@@ -1,0 +1,121 @@
+.login-page {
+    background: url(../assets/img/login-bg.jpg) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.login-page__sidebar {
+    position: absolute;
+    top: 50%;
+    left: 135px;
+    transform: translate(0, -50%);
+}
+.login-widget {
+    width: 290px;
+}
+.login-widget-logo {
+    width: 290px;
+    height: 70px;
+}
+.login-widget__logo {
+    margin: 0 0 25px 0;
+}
+.login-widget__panel {
+    margin: 0 0 15px 0;
+}
+
+.login-panel {
+    background-color: #131f33;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.login-panel-header {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 25px;
+}
+.login-panel__header_border {
+    border-bottom: 1px solid #697490;
+}
+.login-panel-tabs {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.login-panel-tabs__item {
+    width: 50%;
+    float: left;
+}
+.login-panel-tabs-item {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #0d1828;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    font-weight: 600;
+    color: #697490;
+    text-align: center;
+    text-decoration: none;
+}
+
+.login-panel-tabs__item.active .login-panel-tabs-item {
+    background-color: #131f33;
+}
+.login-panel-tabs__item.active .login-panel-tabs-item:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 47px);
+    width: 94px;
+    height: 4px;
+    background-color: #59b7ff;
+}
+
+.login-panel__body {
+    padding: 20px 25px 25px 25px;
+}
+
+.login-forms__wrapper {
+    margin: 0 0 20px 0;
+}
+.login-forms__wrapper:last-child {
+    margin: 0;
+}
+.checkbox-wrapper_login .forms-label,
+.login-forms-link,
+.login-forms-text {
+    color: #59b7ff;
+    letter-spacing: 1px;
+    font-size: 10px !important;
+}
+.login-forms-link_right {
+    line-height: 25px;
+    float: right;
+}
+.login-forms__wrapper .btn {
+    width: 100%;
+}
+.login-forms__wrapper .btn:hover {
+    background-color: transparent;
+}
+.login-widget__additional {
+    text-align: center;
+}
+.login-page-link {
+    letter-spacing: 1.2px;
+    color: #59b7ff;
+    font-size: 12px;
+}
+.login-forms-text hr {
+    border-bottom: 1px solid #59b7ff;
+    margin: 9px 0 7px;
+    border-top: 0;
+}
+
