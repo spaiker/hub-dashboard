@@ -2946,17 +2946,17 @@ td .hb-question {
 .environment-template__hidden .environment-template-link:first-child {
     left: 0;
 }
-.environment-template__link.dropdown .forms-label {
+.dropdown_template .forms-label {
     display: block;
     margin: 0 0 5px;
 }
-.environment-template__link.dropdown .forms-input {
+.dropdown_template .forms-input  {
     width: 100%;
 }
-.environment-template__link.dropdown .forms-wrapper {
+.dropdown_template .forms-wrapper{
     margin: 0 0 20px;
 }
-.environment-template__link.dropdown .forms-wrapper:last-child {
+.dropdown_template .forms-wrapper:last-child {
     margin: 0;
 }
 .environment-buttons {
