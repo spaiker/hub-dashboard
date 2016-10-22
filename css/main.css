@@ -2876,6 +2876,8 @@ td .hb-question {
     overflow: hidden;
     display: block;
     word-wrap: normal;
+	display: block;
+    min-height: 38px;
 }
 .templates-link {
     bottom: 0;
