@@ -2001,6 +2001,12 @@ textarea {
     background: url(../assets/img/loader-spinner.svg) no-repeat right;
     padding: 0 30px 0 0;
 }
+.details-header__item_unhealthy {
+	color: #ea5761;
+}
+.details-header__item_healthy {
+	color: #52dc90;
+}
 .details-popup {
     color: inherit;
     font-size: 12px;
