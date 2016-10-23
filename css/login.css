@@ -103,7 +103,7 @@
 .login-forms__wrapper .btn {
     width: 100%;
 }
-.login-forms__wrapper .btn:hover {
+.login-forms__wrapper .btn_blue:hover {
     background-color: transparent;
 }
 .login-widget__additional {

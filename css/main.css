@@ -86,7 +86,8 @@ a:active {
     padding: 20px;
     background-color: #fff;
     border: 1px solid #d4d9e3;
-    box-shadow: 0 0 6px 0 rgba(0,0,0,0.1)
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+    border-bottom: 1px solid #D4D9E3;
 }
 .panel__header {
     margin-bottom: 20px;
@@ -721,6 +722,9 @@ textarea {
     -ms-transform: translateX(13px);
     transform: translateX(13px);
 }
+.forms-switch_middle {
+    vertical-align: middle;
+}
 
 /*Forms range*/
 
@@ -1056,6 +1060,18 @@ textarea {
 .btn_social-facebook {
     border: 1px solid #3b579d;
     background-color: #3b579d;
+}
+.btn_social-facebook.btn_icon-left:hover {
+    background-color: #30467e;
+    color: #fff;
+}
+.btn_social-google-plus.btn_icon-left:hover {
+    background-color: #c6382e;
+    color: #fff;
+}
+.btn_social-github.btn_icon-left:hover {
+    background-color: #2b2a2a;
+    color: #fff;
 }
 .btn_social-facebook .btn-icon-left__text {
     background-color: #30467e;
@@ -2969,6 +2985,7 @@ td .hb-question {
     height: 100%;
     margin: 0 250px 0 0;
     padding: 20px;
+    position: relative;
 
 }
 .environment-workspace {
@@ -3113,8 +3130,35 @@ td .hb-question {
 
 .content-body__workspace, .b-wr-globe {
 	height: 100%;
+    position: relative;
 }
 
+.content-body-workspace__globe-toggles {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.globe-toggles {
+    width: 112px;
+}
+.globe-toggles__panel {
+    background-color: rgba(19, 31, 51, 0.7);
+    padding: 15px;
+    border-radius: 2px;
+    margin: 0 0 15px;
+}
+.globe-toggles-wrapper {
+    margin: 0 0 15px;
+}
+.globe-toggles-wrapper:last-child {
+    margin: 0;
+}
+.globe-toggles-wrapper .forms-label {
+    margin: 0 10px 0 0;
+}
+.globe-toggles-wrapper .forms-switch {
+    float: right;
+}
 .content-body__sidebar {
     position: absolute;
     right: 0;
@@ -3440,6 +3484,15 @@ td .hb-question {
     color: #697490;
 }
 .forms-input_dark::-webkit-input-placeholder {
+    color: #697490;
+}
+.forms-input_dark::-moz-placeholder {
+    color: #697490;
+}
+.forms-input_dark:-moz-placeholder {
+    color: #697490;
+}
+.forms-input_dark:-ms-input-placeholder {
     color: #697490;
 }
 .regions-widget-table {
