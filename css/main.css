@@ -2836,6 +2836,7 @@ td .hb-question {
 .content__body_no-padding {
     padding: 0;
     height: 100%;
+	position: relative;
 }
 .environment,
 .environment__tools,
