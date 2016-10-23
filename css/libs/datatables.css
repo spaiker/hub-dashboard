@@ -295,7 +295,19 @@ table.dataTable td {
     text-align: right;
 }
 .dataTables_wrapper .dataTables_filter input {
-    margin-left: 0.5em;
+    border: 1px solid #d4d9e3;
+    background-color: #fff;
+    color: #697490;
+    border-radius: 2px;
+    padding: 0 10px;
+    margin: 0;
+    height: 35px;
+    font-size: 12px;
+}
+.dataTables_wrapper .dataTables_filter input:focus {
+    border: 1px solid #59b7ff;
+    box-shadow: none;
+    outline: none;
 }
 .dataTables_wrapper .dataTables_info {
     clear: both;
