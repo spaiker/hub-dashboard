@@ -3450,9 +3450,14 @@ td .hb-question {
 .features-widget-icon:hover,
 .features-widget-icon.features-widget-icon_like {
     color: #59b7ff;
+	cursor: pointer;
 }
 .features-widget-left {
     float: right;
+}
+
+.features-widget-checkbox {
+	display: none;
 }
 
 .features-widget__item:hover {
