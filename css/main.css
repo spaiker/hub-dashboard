@@ -1024,10 +1024,11 @@ textarea {
 .btn_dark:active {
     color: #697490;
 }
-.btn_dark.active {
-    background-color: #0d1828;
-    border: 1px solid #0d1828;
-    color: #697490;
+.btn_dark.active,
+.btn_dark:disabled {
+    background-color: #0d1828!important;
+    border: 1px solid #0d1828!important;
+    color: #697490!important;
 }
 
 /*Custom buttons*/
@@ -3202,9 +3203,15 @@ td .hb-question {
     transition: 0.2s background ease-out;
 }
 .content-body__workspace_map-of-peers {
-    background: url(../assets/img/pattern-map-of-peers.png);
     margin: 0 250px 0 0;
 }
+
+.world-map {
+	height: 100%;
+	width: 100%;
+    background: url(../assets/img/pattern-map-of-peers.png);
+}
+
 .content-body__workspace_no-sidebar {
     margin: 0 50px 0 0;
 }
