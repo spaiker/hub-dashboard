@@ -335,7 +335,7 @@ a:active {
     font-size: 10px;
     line-height: 13px;
     margin: 5px 0 0;
-    max-width: 132px;
+    max-width: 108px;
     overflow: hidden;
     white-space: nowrap;
 }
@@ -1016,11 +1016,11 @@ textarea {
 }
 .btn_circle {
     border-radius: 50%;
-    padding: 0 1px 0 0;
+    padding: 0;
     width: 26px;
     height: 26px;
     font-size: 15px;
-    line-height: 23px;
+    line-height: 25px;
 
     background-color: #fff;
     color: #718bb7;
