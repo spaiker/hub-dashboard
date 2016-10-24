@@ -2193,6 +2193,7 @@ textarea {
     overflow: hidden;
     margin: 0;
     position: relative;
+    transition: 0.3s all ease-out;
 }
 .details__description_text .details-description__item:after {
     position: absolute;
@@ -2200,21 +2201,33 @@ textarea {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 40px;
+    height: 15px;
     background-image: -webkit-linear-gradient(bottom,rgba(255, 255, 255,0), rgb(255, 255, 255));
     background: linear-gradient(to bottom,rgba(255, 255, 255,0), rgb(255, 255, 255));
     z-index: 2;
+    transition: 0.3s all ease-out;
 }
 .details-description {
     position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
-
+.details-description__item_expand {
+    max-height: none !important;
+}
 .details-description__expand-btn {
-    position: absolute;
-    bottom: -70px;
+    position: relative;
+    display: block;
+    height: 20px;
     z-index: 999;
-    left: 50%;
-    margin-left: -8px;
+}
+.details-description-expand-btn {
+    position: absolute;
+    left: calc(50% - 8px);
+}
+.details-description__item_expand:after {
+    opacity: 0;
 }
 .content-tabs {
     padding: 22px 40px 0 40px;
