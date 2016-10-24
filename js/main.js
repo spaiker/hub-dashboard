@@ -46,7 +46,16 @@ var inputOptions = new Promise(function(resolve) {
             '#0000ff': 'Blue'
         })
     }, 2000)
-})
+});
+$(".js-map-toggle").click(function(){
+    $(".content-body-workspace__table").toggleClass("content-body-workspace__table_down");
+});
+
+$(".js-expand-description").click(function(){
+    $(".details-description__text").toggleClass("details-description__text_expand");
+    $(".header").toggleClass("header-minimize");
+    $(".content").toggleClass("content-minimize");
+});
 
 
 $(function() {

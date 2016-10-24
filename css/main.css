@@ -862,6 +862,43 @@ textarea {
 }
 
 
+/*Map of peers*/
+.table_map {
+    border: 1px solid #697490;
+    border-radius: 2px;
+}
+.table_map tr {
+    background-color: rgba(19, 31, 51, 0.8);
+    border-bottom: none;
+}
+
+.table_map th {
+    background-color: rgba(19, 31, 51, 0.8);
+    color: #697490;
+    padding: 10px 0 5px 10px;
+}
+.table_map td {
+    color: #697490;
+    padding: 0 0 5px 10px;
+}
+
+.table__toggle {
+    position: absolute;
+    top: -24px;
+    border: 1px solid #697490;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 25px;
+    left: calc(50% - 25px);
+    background-color: rgba(19, 31, 51, 1);
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    clip: rect(0, 50px, 25px, 0);
+}
+
+
 /*Row settings*/
 
 .table-align-right {
@@ -2167,6 +2204,17 @@ textarea {
     background: linear-gradient(to bottom,rgba(255, 255, 255,0), rgb(255, 255, 255));
     z-index: 2;
 }
+.details-description {
+    position: relative;
+}
+
+.details-description__expand-btn {
+    position: absolute;
+    bottom: -70px;
+    z-index: 999;
+    left: 50%;
+    margin-left: -8px;
+}
 .content-tabs {
     padding: 22px 40px 0 40px;
 }
@@ -3132,6 +3180,21 @@ td .hb-question {
 	height: 100%;
     position: relative;
 
+}
+.content-body-workspace {
+    position: relative;
+    height: 100%;
+}
+.content-body-workspace__table {
+    position: absolute;
+    width: 620px;
+    bottom: 0;
+    left: calc(50% - 310px);
+    transition: 0.3s all ease-out;
+}
+.content-body-workspace__table_down {
+    top: 100%;
+    bottom: inherit;
 }
 .content-body__workspace_warroom {
     background: url(../assets/img/pattern-warroom.png);
