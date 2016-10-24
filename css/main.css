@@ -989,9 +989,9 @@ textarea {
 }
 .btn_dark.active,
 .btn_dark:disabled {
-    background-color: #0d1828;
-    border: 1px solid #0d1828;
-    color: #697490;
+    background-color: #0d1828!important;
+    border: 1px solid #0d1828!important;
+    color: #697490!important;
 }
 
 /*Custom buttons*/
