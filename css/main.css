@@ -554,11 +554,7 @@ textarea {
     background: #f7f9fc;
     border-radius: 2px;
 }
-.forms-checkbox_dark.forms-checkbox:not(:checked) + label:before,
-.forms-checkbox_dark.forms-checkbox:checked + label:before {
-    border: 1px solid #697490;
-    background: #0d1828;
-}
+
 .forms-checkbox:not(:checked) + label:after,
 .forms-checkbox:checked + label:after {
     content: '\e92d';
@@ -576,15 +572,7 @@ textarea {
     color: #fff;
     transition: all .2s;
 }
-.forms-checkbox_dark.forms-checkbox:not(:checked) + label:after,
-.forms-checkbox_dark.forms-checkbox:checked + label:after {
-    top: 1px;
-    left: 1px;
-    line-height: 12px;
-    width: 12px;
-    background-color: #202d43;
-    color: #697490;
-}
+
 /* checked mark aspect changes */
 .forms-checkbox:not(:checked) + label:after {
     opacity: 0;
@@ -606,6 +594,30 @@ textarea {
 }
 .forms-checkbox:disabled + label {
     color: #aaa;
+}
+
+/*Dark checkbox*/
+
+.forms-checkbox_dark.forms-checkbox:not(:checked) + label:before,
+.forms-checkbox_dark.forms-checkbox:checked + label:before {
+    border: 1px solid #697490;
+    background: #0d1828;
+}
+
+.forms-checkbox_dark.forms-checkbox:not(:checked) + label:after,
+.forms-checkbox_dark.forms-checkbox:checked + label:after {
+    top: 1px;
+    left: 1px;
+    line-height: 12px;
+    width: 12px;
+    background-color: #202d43;
+    color: #697490;
+}
+.forms-checkbox_dark:disabled:not(:checked) + label:before,
+.forms-checkbox_dark:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #697490;
+    background-color: #697490;
 }
 
 /*Radio*/
