@@ -2044,6 +2044,10 @@ textarea {
 .content-header {
     padding: 40px 40px 15px;
 }
+/*Pages*/
+.content-header_peers {
+    padding: 15px 40px 10px;
+}
 .content-header__left {
     margin: 0 200px 0 0
 }
@@ -3773,11 +3777,13 @@ td .hb-question {
 }
 
 .selected-filter {
-	display: block;
-	padding: 7px 15px;
-	color: #fff;
-	font-weight: normal;
-	background-color: #D4D9E4;
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+    font-weight: normal;
+    background-color: #D4D9E4;
+    font-size: 12px;
+    border-radius: 2px;
 }
 
 .selected-filter .hb {
