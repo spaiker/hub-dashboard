@@ -52,9 +52,9 @@ $(".js-map-toggle").click(function(){
 });
 
 $(".js-expand-description").click(function(){
-    $(".details-description__text").toggleClass("details-description__text_expand");
-    $(".header").toggleClass("header-minimize");
-    $(".content").toggleClass("content-minimize");
+    $(".details-description__item").toggleClass("details-description__item_expand");
+    $(".js-expand-description .hb").toggleClass("hb-angle-down hb-angle-up");
+    $(".content").toggleClass("content_overflow-blocked");
 });
 
 
