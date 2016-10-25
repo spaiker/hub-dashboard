@@ -505,7 +505,9 @@ textarea {
     height: inherit;
     padding: 10px;
 }
-
+.forms-input_select-multiple {
+    height: auto;
+}
 .forms-search {
     position: relative;
 }
@@ -1526,6 +1528,7 @@ textarea {
     list-style: none;
     max-height: 350px;
     overflow: auto;
+    border-bottom: 1px solid #d4d9e3;
 }
 .nav-dropdown-content-notification {
     padding: 15px;
