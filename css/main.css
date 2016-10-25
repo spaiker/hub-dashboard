@@ -896,6 +896,7 @@ textarea {
     color: #fff;
     text-align: center;
     clip: rect(0, 50px, 25px, 0);
+	cursor: pointer;
 }
 
 
@@ -3204,6 +3205,7 @@ td .hb-question {
 }
 .content-body__workspace_map-of-peers {
     margin: 0 250px 0 0;
+	overflow: hidden;
 }
 
 .world-map {
