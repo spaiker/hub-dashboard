@@ -142,11 +142,11 @@
     left: inherit;
 }
 .dropdown_center.dropdown_pointer .dropdown-menu:before {
-    left: calc(50% - 4px);
+    left: calc(50% - 3px);
 }
 
 .dropdown_center.dropdown_pointer .dropdown-menu:after {
-    left: calc(50% - 3px);
+    left: calc(50% - 2px);
 }
 .dropdown-menu_dividers .dropdown-menu__item {
     border-bottom: 1px solid #d4d9e3;
