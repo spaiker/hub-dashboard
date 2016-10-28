@@ -24,9 +24,12 @@
 
     <link rel="stylesheet" href="css/libs/boo-dropdown.css">
     <link rel="stylesheet" href="css/libs/boo-tooltip.css">
+    <link rel="stylesheet" href="css/libs/boo-tabs.css">
 
     <link rel="stylesheet" href="css/libs/remodal.css">
     <link rel="stylesheet" href="css/libs/remodal-default-theme.css">
+    <link rel="stylesheet" href="css/libs/boo-collapse.css">
+    <link rel="stylesheet" href="css/libs/chat.css">
 
 
     <!--CSS-->
@@ -212,652 +215,537 @@
 <aside class="ui sidebar sidebar_right right overlay">
     <div class="chat">
         <div class="chat__header">
-            <ul class="chat-header-left nav">
-                <li>
-                    <a href="#" class="chat-btn__new">
-                        <i class="hb hb-new"></i>
-                    </a>
-                </li>
-            </ul>
-            <!--<div class="chat-header-right">
-                <div class="nav js-chat-carousel">
-                    <div class="chat-header-right__item">
-                        <a href="#">
-                            <span class="profile__avatar profile__avatar_online">
-                                <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                            </span>
-                        </a>
-                    </div>
-                    <div class="chat-header-right__item">
-                        <a href="#">
-                            <span class="profile__avatar profile__avatar_online">
-                                <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                            </span>
-                        </a>
-                    </div>
-                    <div class="chat-header-right__item">
-                        <a href="#">
-                            <span class="profile__avatar profile__avatar_online">
-                                <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                            </span>
-                        </a>
-                    </div>
-                    <div class="chat-header-right__item">
-                        <a href="#">
-                            <span class="profile__avatar profile__avatar_online">
-                                <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                            </span>
-                        </a>
+            <div class="chat-header clearfix">
+                <div class="chat-header__new-btn">
+                    <a href="#" class="chat-new-btn" rel="tooltip" data-toggle="tooltip" data-placement="bottom" data-original-title="New message" data-inverted><i class="hb hb-new"></i></a>
+                </div>
+                <div class="chat-header__slider">
+                    <div class="chat-slider clearfix">
+
+                        <div class="chat-slider__list js-chat-slider">
+                            <div class="chat-slider-list__item">
+                                <div class="avatar-wrapper avatar-wrapper_hover avatar-wrapper_status avatar-wrapper_status_online">
+                                    <a href="#" class="click-target" rel="tooltip" data-toggle="tooltip" data-placement="bottom" data-original-title="Nurdin Osorov"></a>
+                                    <div class="avatar">
+                                        <div class="avatar__container">
+                                            <div class="avatar-container">
+                                                <img src="assets/img/avatar-default.png" alt="" class="avatar-container__image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-slider-list__item">
+                                <div class="avatar-wrapper avatar-wrapper_hover avatar-wrapper_status avatar-wrapper_status_offline avatar-wrapper_notified">
+                                    <a href="#" class="click-target" rel="tooltip" data-toggle="tooltip" data-placement="bottom" data-original-title="Nurdin Osorov"></a>
+                                    <div class="avatar">
+                                        <div class="avatar__container">
+                                            <div class="avatar-container">
+                                                <img src="assets/img/avatar-default.png" alt="" class="avatar-container__image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-slider-list__item">
+                                <div class="avatar-wrapper avatar-wrapper_hover avatar-wrapper_status avatar-wrapper_status_offline">
+                                    <a href="#" class="click-target" rel="tooltip" data-toggle="tooltip" data-placement="bottom" data-original-title="Nurdin Osorov"></a>
+                                    <div class="avatar">
+                                        <div class="avatar__container">
+                                            <div class="avatar-container">
+                                                <img src="assets/img/avatar-default.png" alt="" class="avatar-container__image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-slider-list__item">
+                                <div class="avatar-wrapper avatar-wrapper_hover avatar-wrapper_status avatar-wrapper_status_online">
+                                    <a href="#" class="click-target" rel="tooltip" data-toggle="tooltip" data-placement="bottom" data-original-title="Nurdin Osorov"></a>
+                                    <div class="avatar">
+                                        <div class="avatar__container">
+                                            <div class="avatar-container">
+                                                <img src="assets/img/avatar-default.png" alt="" class="avatar-container__image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chat-slider-list__item">
+                                <div class="avatar-wrapper avatar-wrapper_hover avatar-wrapper_status avatar-wrapper_status_offline">
+                                    <a href="#" class="click-target" rel="tooltip" data-toggle="tooltip" data-placement="bottom" data-original-title="Nurdin Osorov"></a>
+                                    <div class="avatar">
+                                        <div class="avatar__container">
+                                            <div class="avatar-container">
+                                                <img src="assets/img/avatar-default.png" alt="" class="avatar-container__image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-            </div>-->
-            <div class="clear"></div>
+            </div>
         </div>
         <div class="chat__body">
-            <div class="chat-body__tabs">
-                <div class="tabular menu tabs nav">
-                    <a class="item tab active" data-tab="chat-users">Users</a>
-                    <a class="item tab" data-tab="chat-rooms">Rooms</a>
+            <div class="chat-main">
+                <div class="chat-main__tab">
+                    <ul class="chat-tab clearfix">
+                        <li class="chat-tab__item active"><a href="#tab-users" data-toggle="tab" class="chat-tab-item">Users</a></li>
+                        <li class="chat-tab__item"><a href="#tab-rooms" data-toggle="tab" class="chat-tab-item">Rooms</a></li>
+                    </ul>
                 </div>
-            </div>
-            <div class="chat-body__contacts ui tab active"  data-tab="chat-users">
-                <div class="chat-body-contacts__search">
-                    <div class="forms-search">
-                        <input type="search" placeholder="Search">
-                    </div>
-                </div>
-                <ul class="chat-body-contacts__content js-dark-scroll nav">
-                    <li>
-                        <a href="#" class="waves-effect">
-                            <span class="profile-meta profile-meta_list">
-                                <span class="profile-meta__avatar">
-                                    <span class="profile__avatar profile__avatar_online">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                    </span>
-                                </span>
-                                <span class="profile__text">
-                                    George Moschovitis
-                                </span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="waves-effect">
-                            <span class="profile-meta profile-meta_list">
-                                <span class="profile-meta__avatar">
-                                    <span class="profile__avatar profile__avatar_online">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                    </span>
-                                </span>
-                                <span class="profile__text">
-                                    George Moschovitis
-                                </span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="waves-effect">
-                            <span class="profile-meta profile-meta_list">
-                                <span class="profile-meta__avatar">
-                                    <span class="profile__avatar profile__avatar_offline">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                    </span>
-                                </span>
-                                <span class="profile__text">
-                                    George Moschovitis
-                                </span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="waves-effect">
-                            <span class="profile-meta profile-meta_list">
-                                <span class="profile-meta__avatar">
-                                    <span class="profile__avatar profile__avatar_online">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                    </span>
-                                </span>
-                                <span class="profile__text">
-                                    George Moschovitis
-                                </span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="waves-effect">
-                            <span class="profile-meta profile-meta_list">
-                                <span class="profile-meta__avatar">
-                                    <span class="profile__avatar profile__avatar_online">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                    </span>
-                                </span>
-                                <span class="profile__text">
-                                    George Moschovitis
-                                </span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="waves-effect">
-                            <span class="profile-meta profile-meta_list">
-                                <span class="profile-meta__avatar">
-                                    <span class="profile__avatar profile__avatar_online">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                    </span>
-                                </span>
-                                <span class="profile__text">
-                                    George Moschovitis
-                                </span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="waves-effect">
-                            <span class="profile-meta profile-meta_list">
-                                <span class="profile-meta__avatar">
-                                    <span class="profile__avatar profile__avatar_offline">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                    </span>
-                                </span>
-                                <span class="profile__text">
-                                    George Moschovitis
-                                </span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="waves-effect">
-                            <span class="profile-meta profile-meta_list">
-                                <span class="profile-meta__avatar">
-                                    <span class="profile__avatar profile__avatar_online">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                    </span>
-                                </span>
-                                <span class="profile__text">
-                                    George Moschovitis
-                                </span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="waves-effect">
-                            <span class="profile-meta profile-meta_list">
-                                <span class="profile-meta__avatar">
-                                    <span class="profile__avatar profile__avatar_online">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                    </span>
-                                </span>
-                                <span class="profile__text">
-                                    George Moschovitis
-                                </span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="waves-effect">
-                            <span class="profile-meta profile-meta_list">
-                                <span class="profile-meta__avatar">
-                                    <span class="profile__avatar profile__avatar_online">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                    </span>
-                                </span>
-                                <span class="profile__text">
-                                    George Moschovitis
-                                </span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="waves-effect">
-                            <span class="profile-meta profile-meta_list">
-                                <span class="profile-meta__avatar">
-                                    <span class="profile__avatar profile__avatar_offline">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                    </span>
-                                </span>
-                                <span class="profile__text">
-                                    George Moschovitis
-                                </span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="waves-effect">
-                            <span class="profile-meta profile-meta_list">
-                                <span class="profile-meta__avatar">
-                                    <span class="profile__avatar profile__avatar_online">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                    </span>
-                                </span>
-                                <span class="profile__text">
-                                    George Moschovitis
-                                </span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="waves-effect">
-                            <span class="profile-meta profile-meta_list">
-                                <span class="profile-meta__avatar">
-                                    <span class="profile__avatar profile__avatar_online">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                    </span>
-                                </span>
-                                <span class="profile__text">
-                                    George Moschovitis
-                                </span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="waves-effect">
-                            <span class="profile-meta profile-meta_list">
-                                <span class="profile-meta__avatar">
-                                    <span class="profile__avatar profile__avatar_online">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                    </span>
-                                </span>
-                                <span class="profile__text">
-                                    George Moschovitis
-                                </span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="waves-effect">
-                            <span class="profile-meta profile-meta_list">
-                                <span class="profile-meta__avatar">
-                                    <span class="profile__avatar profile__avatar_offline">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                    </span>
-                                </span>
-                                <span class="profile__text">
-                                    George Moschovitis
-                                </span>
-                            </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="waves-effect">
-                            <span class="profile-meta profile-meta_list">
-                                <span class="profile-meta__avatar">
-                                    <span class="profile__avatar profile__avatar_online">
-                                        <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                    </span>
-                                </span>
-                                <span class="profile__text">
-                                    George Moschovitis
-                                </span>
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-                <div class="clear"></div>
-            </div>
-            <div class="chat-body__contacts ui tab" data-tab="chat-rooms">
-                <ul class="chat-body-contacts__content js-dark-scroll_rooms nav collapsible collapsible-accordion" data-collapsible="accordion">
-                    <li>
-                        <a href="#" class="waves-effect">
-                            <span class="profile-meta profile-meta_list">
-                                <span class="profile-meta__avatar">
-                                    <span class="profile__avatar profile__avatar_room">
-                                        G
-                                    </span>
-                                </span>
-                                <span class="profile__text">
-                                    General
-                                </span>
-                            </span>
-                        </a>
-                        <span class="profile__members collapsible-header">members</span>
-                        <ul class="chat-body-contacts__content nav collapsible-body"style="display: none;">
-                            <li>
-                                <a href="#" class="waves-effect">
-                        <span class="profile-meta profile-meta_list">
-                            <span class="profile-meta__avatar">
-                                <span class="profile__avatar profile__avatar_online">
-                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                </span>
-                            </span>
-                            <span class="profile__text">
-                                George Moschovitis
-                            </span>
-                        </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="waves-effect">
-                        <span class="profile-meta profile-meta_list">
-                            <span class="profile-meta__avatar">
-                                <span class="profile__avatar profile__avatar_online">
-                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                </span>
-                            </span>
-                            <span class="profile__text">
-                                George Moschovitis
-                            </span>
-                        </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="waves-effect">
-                        <span class="profile-meta profile-meta_list">
-                            <span class="profile-meta__avatar">
-                                <span class="profile__avatar profile__avatar_offline">
-                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                </span>
-                            </span>
-                            <span class="profile__text">
-                                George Moschovitis
-                            </span>
-                        </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="waves-effect">
-                        <span class="profile-meta profile-meta_list">
-                            <span class="profile-meta__avatar">
-                                <span class="profile__avatar profile__avatar_online">
-                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                </span>
-                            </span>
-                            <span class="profile__text">
-                                George Moschovitis
-                            </span>
-                        </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="waves-effect">
-                        <span class="profile-meta profile-meta_list">
-                            <span class="profile-meta__avatar">
-                                <span class="profile__avatar profile__avatar_online">
-                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                </span>
-                            </span>
-                            <span class="profile__text">
-                                George Moschovitis
-                            </span>
-                        </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="waves-effect">
-                        <span class="profile-meta profile-meta_list">
-                            <span class="profile-meta__avatar">
-                                <span class="profile__avatar profile__avatar_online">
-                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                </span>
-                            </span>
-                            <span class="profile__text">
-                                George Moschovitis
-                            </span>
-                        </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#" class="waves-effect">
-                            <span class="profile-meta profile-meta_list">
-                                <span class="profile-meta__avatar">
-                                    <span class="profile__avatar profile__avatar_room">
-                                        D
-                                    </span>
-                                </span>
-                                <span class="profile__text">
-                                    Developers
-                                </span>
-                            </span>
-                        </a>
-                        <span class="profile__members collapsible-header">members</span>
-                        <ul class="chat-body-contacts__content nav collapsible-body"style="display: none;">
-                            <li>
-                                <a href="#" class="waves-effect">
-                        <span class="profile-meta profile-meta_list">
-                            <span class="profile-meta__avatar">
-                                <span class="profile__avatar profile__avatar_online">
-                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                </span>
-                            </span>
-                            <span class="profile__text">
-                                George Moschovitis
-                            </span>
-                        </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="waves-effect">
-                        <span class="profile-meta profile-meta_list">
-                            <span class="profile-meta__avatar">
-                                <span class="profile__avatar profile__avatar_online">
-                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                </span>
-                            </span>
-                            <span class="profile__text">
-                                George Moschovitis
-                            </span>
-                        </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="waves-effect">
-                        <span class="profile-meta profile-meta_list">
-                            <span class="profile-meta__avatar">
-                                <span class="profile__avatar profile__avatar_offline">
-                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                </span>
-                            </span>
-                            <span class="profile__text">
-                                George Moschovitis
-                            </span>
-                        </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="waves-effect">
-                        <span class="profile-meta profile-meta_list">
-                            <span class="profile-meta__avatar">
-                                <span class="profile__avatar profile__avatar_online">
-                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                </span>
-                            </span>
-                            <span class="profile__text">
-                                George Moschovitis
-                            </span>
-                        </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="waves-effect">
-                        <span class="profile-meta profile-meta_list">
-                            <span class="profile-meta__avatar">
-                                <span class="profile__avatar profile__avatar_online">
-                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                </span>
-                            </span>
-                            <span class="profile__text">
-                                George Moschovitis
-                            </span>
-                        </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="waves-effect">
-                        <span class="profile-meta profile-meta_list">
-                            <span class="profile-meta__avatar">
-                                <span class="profile__avatar profile__avatar_online">
-                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                </span>
-                            </span>
-                            <span class="profile__text">
-                                George Moschovitis
-                            </span>
-                        </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="waves-effect">
-                        <span class="profile-meta profile-meta_list">
-                            <span class="profile-meta__avatar">
-                                <span class="profile__avatar profile__avatar_offline">
-                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                </span>
-                            </span>
-                            <span class="profile__text">
-                                George Moschovitis
-                            </span>
-                        </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="waves-effect">
-                        <span class="profile-meta profile-meta_list">
-                            <span class="profile-meta__avatar">
-                                <span class="profile__avatar profile__avatar_online">
-                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                </span>
-                            </span>
-                            <span class="profile__text">
-                                George Moschovitis
-                            </span>
-                        </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="waves-effect">
-                        <span class="profile-meta profile-meta_list">
-                            <span class="profile-meta__avatar">
-                                <span class="profile__avatar profile__avatar_online">
-                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                </span>
-                            </span>
-                            <span class="profile__text">
-                                George Moschovitis
-                            </span>
-                        </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="waves-effect">
-                        <span class="profile-meta profile-meta_list">
-                            <span class="profile-meta__avatar">
-                                <span class="profile__avatar profile__avatar_online">
-                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                </span>
-                            </span>
-                            <span class="profile__text">
-                                George Moschovitis
-                            </span>
-                        </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="waves-effect">
-                        <span class="profile-meta profile-meta_list">
-                            <span class="profile-meta__avatar">
-                                <span class="profile__avatar profile__avatar_offline">
-                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                </span>
-                            </span>
-                            <span class="profile__text">
-                                George Moschovitis
-                            </span>
-                        </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="waves-effect">
-                        <span class="profile-meta profile-meta_list">
-                            <span class="profile-meta__avatar">
-                                <span class="profile__avatar profile__avatar_online">
-                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                </span>
-                            </span>
-                            <span class="profile__text">
-                                George Moschovitis
-                            </span>
-                        </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="waves-effect">
-                        <span class="profile-meta profile-meta_list">
-                            <span class="profile-meta__avatar">
-                                <span class="profile__avatar profile__avatar_online">
-                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                </span>
-                            </span>
-                            <span class="profile__text">
-                                George Moschovitis
-                            </span>
-                        </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="waves-effect">
-                        <span class="profile-meta profile-meta_list">
-                            <span class="profile-meta__avatar">
-                                <span class="profile__avatar profile__avatar_online">
-                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                </span>
-                            </span>
-                            <span class="profile__text">
-                                George Moschovitis
-                            </span>
-                        </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="waves-effect">
-                        <span class="profile-meta profile-meta_list">
-                            <span class="profile-meta__avatar">
-                                <span class="profile__avatar profile__avatar_offline">
-                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                </span>
-                            </span>
-                            <span class="profile__text">
-                                George Moschovitis
-                            </span>
-                        </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="waves-effect">
-                        <span class="profile-meta profile-meta_list">
-                            <span class="profile-meta__avatar">
-                                <span class="profile__avatar profile__avatar_online">
-                                    <img src="assets/img/avatar-default.png" class="img-circle" alt="admin">
-                                </span>
-                            </span>
-                            <span class="profile__text">
-                                George Moschovitis
-                            </span>
-                        </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <div class="clear"></div>
-            </div>
-            <div class="chat-body__downbar">
-                <div class="chat-body-downbar">
-                    <div class="chat-status">
-                        <div class="ui dropdown top right pointing chat-status__link">
-                            <input name="gender" type="hidden" value="default">
-                            <div class="text"><span class="status status_offline"></span> Offline</div>
-                            <div class="menu">
-                                <div class="item" data-value="default"><span class="status status_offline"></span> Offline</div>
-                                <div class="item active selected" data-value="0"><span class="status status_online"></span> Online</div>
-                            </div>
-                            <i class="hb hb-angle-up"></i>
+                <div class="chat-main__list tab-content">
+                    <div class="chat-list tab-pane active" id="tab-users">
+                        <div class="chat-list__search"><input type="search" class="forms-input forms-search"></div>
+                        <div class="chat-list__catalog">
+                            <ul class="chat-catalog js-scroll">
+                                <li class="chat-catalog__item">
+                                    <div class="chat-catalog-item clearfix">
+                                        <a href="#" class="click-target js-slide-open"></a>
+                                        <div class="chat-catalog__avatar">
+                                            <div class="avatar-wrapper avatar-wrapper_status avatar-wrapper_status_online">
+                                                <div class="avatar">
+                                                    <div class="avatar__container">
+                                                        <div class="avatar-container">
+                                                            <img src="assets/img/avatar-default.png" alt="" class="avatar-container__image">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="chat-catalog__name">
+                                            <span class="chat-catalog-name">George Moschovitis</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="chat-catalog__item">
+                                    <div class="chat-catalog-item clearfix">
+                                        <a href="#" class="click-target js-slide-open"></a>
+                                        <div class="chat-catalog__avatar">
+                                            <div class="avatar-wrapper avatar-wrapper_status avatar-wrapper_status_offline">
+                                                <div class="avatar">
+                                                    <div class="avatar__container">
+                                                        <div class="avatar-container">
+                                                            <img src="assets/img/avatar-default.png" alt="" class="avatar-container__image">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="chat-catalog__name">
+                                            <span class="chat-catalog-name">George Moschovitis</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="chat-catalog__item">
+                                    <div class="chat-catalog-item clearfix">
+                                        <a href="#" class="click-target js-slide-open"></a>
+                                        <div class="chat-catalog__avatar">
+                                            <div class="avatar-wrapper avatar-wrapper_status avatar-wrapper_status_offline">
+                                                <div class="avatar">
+                                                    <div class="avatar__container">
+                                                        <div class="avatar-container">
+                                                            <img src="assets/img/avatar-default.png" alt="" class="avatar-container__image">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="chat-catalog__name">
+                                            <span class="chat-catalog-name">George Moschovitis</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="chat-sound">
-                        <a href="#" class="chat-sound__link"><i class="hb hb-sound"></i><i class="hb hb-sound-mute"></i></a>
+                    <div class="chat-list tab-pane" id="tab-rooms">
+                        <div class="chat-list__catalog chat-list__catalog_no-search">
+                            <ul class="chat-catalog js-scroll" id="collapse-rooms">
+                                <li class="chat-catalog__accordion">
+                                    <div class="chat-catalog__room">
+                                        <div class="chat-catalog-item clearfix">
+                                            <div class="chat-catalog__avatar">
+                                                <div class="avatar-wrapper">
+                                                    <a href="#" class="click-target js-slide-open"></a>
+                                                    <div class="avatar">
+                                                        <div class="avatar__container">
+                                                            <div class="avatar-container">
+                                                                <img src="assets/img/room-default.png" alt="" class="avatar-container__image">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chat-catalog__subname"><a role="button" data-toggle="collapse" href="#collapse-general" data-parent="#collapse-rooms" aria-expanded="false"  class="chat-catalog-subname">Members</a></div>
+                                            <div class="chat-catalog__name"><span class="chat-catalog-name js-slide-open">General</span></div>
+                                        </div>
+                                    </div>
+                                    <ul class="chat-catalog collapse" id="collapse-general">
+                                        <li class="chat-catalog__item">
+                                            <div class="chat-catalog-item clearfix">
+                                                <a href="#" class="click-target"></a>
+                                                <div class="chat-catalog__avatar">
+                                                    <div class="avatar-wrapper avatar-wrapper_status avatar-wrapper_status_online">
+                                                        <div class="avatar">
+                                                            <div class="avatar__container">
+                                                                <div class="avatar-container">
+                                                                    <img src="assets/img/avatar-default.png" alt="" class="avatar-container__image">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="chat-catalog__name">
+                                                    <span class="chat-catalog-name">George Moschovitis</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="chat-catalog__item">
+                                            <div class="chat-catalog-item clearfix">
+                                                <a href="#" class="click-target"></a>
+                                                <div class="chat-catalog__avatar">
+                                                    <div class="avatar-wrapper avatar-wrapper_status avatar-wrapper_status_offline">
+                                                        <div class="avatar">
+                                                            <div class="avatar__container">
+                                                                <div class="avatar-container">
+                                                                    <img src="assets/img/avatar-default.png" alt="" class="avatar-container__image">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="chat-catalog__name">
+                                                    <span class="chat-catalog-name">George Moschovitis</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="chat-catalog__item">
+                                            <div class="chat-catalog-item clearfix">
+                                                <a href="#" class="click-target"></a>
+                                                <div class="chat-catalog__avatar">
+                                                    <div class="avatar-wrapper avatar-wrapper_status avatar-wrapper_status_offline">
+                                                        <div class="avatar">
+                                                            <div class="avatar__container">
+                                                                <div class="avatar-container">
+                                                                    <img src="assets/img/avatar-default.png" alt="" class="avatar-container__image">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="chat-catalog__name">
+                                                    <span class="chat-catalog-name">George Moschovitis</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="chat-catalog__accordion">
+                                    <div class="chat-catalog__room">
+                                        <div class="chat-catalog-item clearfix">
+                                            <div class="chat-catalog__avatar">
+                                                <div class="avatar-wrapper">
+                                                    <div class="avatar">
+                                                        <div class="avatar__container">
+                                                            <div class="avatar-container">
+                                                                <img src="assets/img/room-default.png" alt="" class="avatar-container__image">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chat-catalog__subname"><a role="button" data-toggle="collapse" href="#collapse-hub"  data-parent="#collapse-rooms" aria-expanded="false" class="chat-catalog-subname">Members</a></div>
+                                            <div class="chat-catalog__name"><span class="chat-catalog-name">Hub</span></div>
+                                        </div>
+                                    </div>
+                                    <ul class="chat-catalog collapse" id="collapse-hub">
+                                        <li class="chat-catalog__item">
+                                            <div class="chat-catalog-item clearfix">
+                                                <a href="#" class="click-target"></a>
+                                                <div class="chat-catalog__avatar">
+                                                    <div class="avatar-wrapper avatar-wrapper_status avatar-wrapper_status_online">
+                                                        <div class="avatar">
+                                                            <div class="avatar__container">
+                                                                <div class="avatar-container">
+                                                                    <img src="assets/img/avatar-default.png" alt="" class="avatar-container__image">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="chat-catalog__name">
+                                                    <span class="chat-catalog-name">George Moschovitis</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="chat-catalog__item">
+                                            <div class="chat-catalog-item clearfix">
+                                                <a href="#" class="click-target"></a>
+                                                <div class="chat-catalog__avatar">
+                                                    <div class="avatar-wrapper avatar-wrapper_status avatar-wrapper_status_offline">
+                                                        <div class="avatar">
+                                                            <div class="avatar__container">
+                                                                <div class="avatar-container">
+                                                                    <img src="assets/img/avatar-default.png" alt="" class="avatar-container__image">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="chat-catalog__name">
+                                                    <span class="chat-catalog-name">George Moschovitis</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="chat-catalog__item">
+                                            <div class="chat-catalog-item clearfix">
+                                                <a href="#" class="click-target"></a>
+                                                <div class="chat-catalog__avatar">
+                                                    <div class="avatar-wrapper avatar-wrapper_status avatar-wrapper_status_offline">
+                                                        <div class="avatar">
+                                                            <div class="avatar__container">
+                                                                <div class="avatar-container">
+                                                                    <img src="assets/img/avatar-default.png" alt="" class="avatar-container__image">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="chat-catalog__name">
+                                                    <span class="chat-catalog-name">George Moschovitis</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="chat-dialog chat-dialog_slider js-slide-panel">
+                <div class="chat-dialog__header">
+                    <div class="chat-dialog-header">
+                        <div class="chat-dialog-header__back"><a href="#" class="chat-dialog-header-control js-slide-close"><i class="hb hb-arrow-left"></i></a></div>
+                        <div class="chat-dialog-header__close"><a href="#" class="chat-dialog-header-control js-slide-close"><i class="hb hb-close"></i></a></div>
+                        <div class="chat-dialog-header__title"><span class="chat-dialog-header-title">General</span></div>
+                    </div>
+                </div>
+                <div class="chat-dialog__message-list">
+                    <div class="message-list js-scroll">
+                        <div class="message-list__item">
+                            <div class="message message_in message_tail">
+                                <div class="message__chat">
+                                    <div class="chat">
+                                        <div class="chat__wrapper">
+                                            <div class="chat__avatar">
+                                                <div class="avatar-wrapper">
+                                                    <a href="#" class="click-target"  rel="tooltip" data-toggle="tooltip" data-placement="bottom" data-original-title="Ehrlan"></a>
+                                                    <div class="avatar">
+                                                        <div class="avatar__container">
+                                                            <div class="avatar-container">
+                                                                <img src="assets/img/avatar-default.png" alt="" class="avatar-container__image">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chat__bubble">
+                                                <div class="bubble">
+                                                    <span class="bubble-tail bubble-tail_border"></span>
+                                                    <span class="bubble-tail"></span>
+                                                    <span class="bubble-text">I'm here!</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="chat__meta"><span class="chat-datetime">20.07.2016 11:50</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message-list__item">
+                            <div class="message message_in message_tail">
+                                <div class="message__chat">
+                                    <div class="chat">
+                                        <div class="chat__wrapper">
+                                            <div class="chat__avatar">
+                                                <div class="avatar-wrapper">
+                                                    <a href="#" class="click-target"  rel="tooltip" data-toggle="tooltip" data-placement="bottom" data-original-title="Manas"></a>
+                                                    <div class="avatar">
+                                                        <div class="avatar__container">
+                                                            <div class="avatar-container">
+                                                                <img src="assets/img/avatar-default.png" alt="" class="avatar-container__image">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chat__bubble">
+                                                <div class="bubble">
+                                                    <span class="bubble-tail bubble-tail_border"></span>
+                                                    <span class="bubble-tail"></span>
+                                                    <span class="bubble-text">I'm going to home!</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="chat__meta"><span class="chat-datetime">20.07.2016 11:50</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message-list__item message-list__item_continuation message-list__item_same-time">
+                            <div class="message message_in message_tail">
+                                <div class="message__chat">
+                                    <div class="chat">
+                                        <div class="chat__wrapper">
+                                            <div class="chat__avatar">
+                                                <div class="avatar-wrapper">
+                                                    <a href="#" class="click-target"  rel="tooltip" data-toggle="tooltip" data-placement="bottom" data-original-title="Nurdin Osorov"></a>
+                                                    <div class="avatar">
+                                                        <div class="avatar__container">
+                                                            <div class="avatar-container">
+                                                                <img src="assets/img/avatar-default.png" alt="" class="avatar-container__image">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chat__bubble">
+                                                <div class="bubble">
+                                                    <span class="bubble-tail bubble-tail_border"></span>
+                                                    <span class="bubble-tail"></span>
+                                                    <span class="bubble-text">Hi there…</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="chat__meta"><span class="chat-datetime">20.07.2016 11:49</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message-list__item">
+                            <div class="message message_in message_tail">
+                                <div class="message__chat">
+                                    <div class="chat">
+                                        <div class="chat__wrapper">
+                                            <div class="chat__avatar">
+                                                <div class="avatar-wrapper">
+                                                    <a href="#" class="click-target"  rel="tooltip" data-toggle="tooltip" data-placement="bottom" data-original-title="Nurdin Osorov"></a>
+                                                    <div class="avatar">
+                                                        <div class="avatar__container">
+                                                            <div class="avatar-container">
+                                                                <img src="assets/img/avatar-default.png" alt="" class="avatar-container__image">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chat__bubble">
+                                                <div class="bubble">
+                                                    <span class="bubble-tail bubble-tail_border"></span>
+                                                    <span class="bubble-tail"></span>
+                                                    <span class="bubble-text">What's up, dude!</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="chat__meta"><span class="chat-datetime">20.07.2016 11:50</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message-list__item message-list__item_continuation">
+                            <div class="message message_out message_tail">
+                                <div class="message__chat">
+                                    <div class="chat">
+                                        <div class="chat__wrapper">
+                                            <div class="chat__avatar">
+                                                <div class="avatar-wrapper">
+                                                    <a href="#" class="click-target"  rel="tooltip" data-toggle="tooltip" data-placement="bottom" data-original-title="Nurdin Osorov"></a>
+                                                    <div class="avatar">
+                                                        <div class="avatar__container">
+                                                            <div class="avatar-container">
+                                                                <img src="assets/img/avatar-default.png" alt="" class="avatar-container__image">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chat__bubble">
+                                                <div class="bubble">
+                                                    <span class="bubble-tail bubble-tail_border"></span>
+                                                    <span class="bubble-tail"></span>
+                                                    <span class="bubble-text">What's up, man!</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="chat__meta"><span class="chat-datetime">20.07.2016 11:51</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="message-list__item">
+                            <div class="message message_out message_tail">
+                                <div class="message__chat">
+                                    <div class="chat">
+                                        <div class="chat__wrapper">
+                                            <div class="chat__avatar">
+                                                <div class="avatar-wrapper">
+                                                    <a href="#" class="click-target"  rel="tooltip" data-toggle="tooltip" data-placement="bottom" data-original-title="Nurdin Osorov"></a>
+                                                    <div class="avatar">
+                                                        <div class="avatar__container">
+                                                            <div class="avatar-container">
+                                                                <img src="assets/img/avatar-default.png" alt="" class="avatar-container__image">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="chat__bubble">
+                                                <div class="bubble">
+                                                    <span class="bubble-tail bubble-tail_border"></span>
+                                                    <span class="bubble-tail"></span>
+                                                    <span class="bubble-text">I'm living here, I am a bot!</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="chat__meta"><span class="chat-datetime">20.07.2016 11:51</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-dialog__footer">
+                    <div class="compose-block clearfix">
+                        <div class="compose-block__input">
+                            <input type="text" class="forms-input compose-input" placeholder="Type something…">
+                        </div>
+                        <div class="compose-block__btn">
+                            <a href="#" class="compose-btn"><i class="hb hb-solid-send"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat__footer" style="display: none">
+            <div class="chat-footer clearfix">
+                <div class="chat-footer__left">
+                    <div class="chat-footer__dropdown">
+                        <div class="dropdown dropdown_right dropdown_top dropdown_pointer">
+                            <a href="#" class="dropdown-toggle chat-dropdown-toogle" data-toggle="dropdown"><span class="status status_offline"></span> Offline <span class="hb hb-angle-up"></span></a>
+                            <ul class="dropdown-menu dropdown-menu_dividers">
+                                <li class="dropdown-menu__item"><a href="#" class="dropdown-menu-item"><span class="status status_online"></span> Online</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-footer__right">
+                    <a href="#" class="chat-footer-icon"><i class="hb hb-sound"></i></a>
                 </div>
             </div>
         </div>
@@ -966,10 +854,13 @@
 <script src="js/libs/boo-dropdown.js"></script>
 <script src="js/libs/boo-tooltip.js"></script>
 <script src="js/libs/boo-popover.js"></script>
+<script src="js/libs/boo-tabs.js"></script>
 
 <script src="js/libs/remodal.js"></script>
 <script src="js/libs/jquery.filer.min.js"></script>
 <script src="js/libs/sweetalert2.js"></script>
+<script src="js/libs/boo-collapse.js"></script>
+<script src="js/libs/jquery.simpler-sidebar.js"></script>
 
 <script src="js/main.js"></script>
 </body>

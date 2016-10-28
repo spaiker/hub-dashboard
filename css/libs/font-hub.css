@@ -31,7 +31,7 @@
 .hb-new:before {
     content: "\e91f";
 }
-.hb-icons_send:before {
+.hb-solid-send:before {
     content: "\e920";
 }
 .hb-sound:before {
