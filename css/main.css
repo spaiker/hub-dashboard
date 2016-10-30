@@ -540,6 +540,8 @@ textarea {
     padding-left: 25px;
     cursor: pointer;
     font-size: 12px;
+    display: inline-block;
+    line-height: 14px;
 }
 .checkbox-wrapper_empty .forms-checkbox:not(:checked) + label,
 .checkbox-wrapper_empty  .forms-checkbox:checked + label {
@@ -944,6 +946,9 @@ textarea {
 }
 .table-checkbox {
     width: 15px;
+}
+.table-user-width {
+    width: 30px;
 }
 
 /*Buttons*/
@@ -1475,7 +1480,7 @@ textarea {
     color: #697490;;
 }
 .nav-breadcrumb__item:before {
-    content: "/";
+    content: "|";
     font-size: 14px;
     position: absolute;
     right: 0;
@@ -1654,6 +1659,8 @@ textarea {
     color: #697490;
     margin: 0 auto;
     text-decoration: none;
+    display: block;
+    width: 100%;
 }
 
 .profile-meta {
@@ -3697,10 +3704,7 @@ td .hb-question {
 	border: none;
 	color: #697490;
 	cursor: pointer;
-}
-
-.link-style:hover {
-	text-decoration: underline;
+    outline: none;
 }
 
 form.link-style:hover {
