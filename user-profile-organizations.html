@@ -19,6 +19,7 @@
 
     <link rel="stylesheet" href="css/libs/boo-dropdown.css">
     <link rel="stylesheet" href="css/libs/boo-tooltip.css">
+    <link rel="stylesheet" href="css/libs/boo-tabs.css">
 
     <!--UI Docs-->
     <link rel="stylesheet" href="css/libs/transition.css">
@@ -890,17 +891,23 @@
 </aside>
 <section class="content pusher">
     <div class="content__header">
-        <div class="content-tabs">
-            <div class="tabular menu tabs">
-                <a class="item tab active" data-tab="data-tab-invitations">Invitations</a>
-                <a class="item tab" data-tab="data-tab-owner">Owner</a>
+        <div class="content-header content-header_no-padding">
+            <div class="content-header__tabs">
+                <ul class="header-tabs">
+                    <li class="header-tabs__item active">
+                        <a href="#data-tab-invitations"
+                           data-toggle="tab"
+                           class="header-tabs-item">Invitations</a>
+                    </li>
+                    <li class="header-tabs__item"><a href="#data-tab-owner" data-toggle="tab" class="header-tabs-item">Owner</a></li>
+                </ul>
             </div>
         </div>
     </div>
-    <div class="content__body js-scroll-content">
+    <div class="content__body tab-content js-scroll-content">
         <span class="content-body__fade-top"></span>
         <span class="content-body__fade-bottom"></span>
-        <div class="panel panel_multi ui tab active" data-tab="data-tab-invitations">
+        <div class="panel panel_multi tab-pane active" id="data-tab-invitations">
             <div class="panel__header">
                 <a href="#" class="btn btn_blue">Go to Organizations</a>
             </div>
@@ -947,7 +954,7 @@
                 </div>
             </div>
         </div>
-        <div class="panel panel_multi ui tab" data-tab="data-tab-owner">
+        <div class="panel panel_multi tab-pane" id="data-tab-owner">
             <div class="panel__header">
                 <a href="#" class="btn btn_green">Create</a>
             </div>
@@ -1028,6 +1035,7 @@
 <script src="js/libs/boo-dropdown.js"></script>
 <script src="js/libs/boo-tooltip.js"></script>
 <script src="js/libs/boo-popover.js"></script>
+<script src="js/libs/boo-tabs.js"></script>
 
 <script src="js/main.js"></script>
 </body>
