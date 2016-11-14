@@ -44,6 +44,9 @@ $(document).ready(function() {
         $(".content").toggleClass("content_overflow-blocked");
     });
 
+    $('.js-select-widget-no-search').chosen({disable_search_threshold: 10});
+    $('.js-select-widget').chosen();
+
     var inputOptions = new Promise(function(resolve) {
         setTimeout(function() {
             resolve({
@@ -239,23 +242,24 @@ $(document).ready(function() {
             }
         } );
 
-/*    swal({
-        title: 'Select color',
-        input: 'radio',
-        inputOptions: inputOptions,
-        inputValidator: function(result) {
-            return new Promise(function(resolve, reject) {
-                if (result) {
-                    resolve()
-                } else {
-                    reject('You need to select something!')
-                }
+
+    /*    swal({
+            title: 'Select color',
+            input: 'radio',
+            inputOptions: inputOptions,
+            inputValidator: function(result) {
+                return new Promise(function(resolve, reject) {
+                    if (result) {
+                        resolve()
+                    } else {
+                        reject('You need to select something!')
+                    }
+                })
+            }
+        }).then(function(result) {
+            swal({
+                type: 'success',
+                html: 'You selected: ' + result
             })
-        }
-    }).then(function(result) {
-        swal({
-            type: 'success',
-            html: 'You selected: ' + result
-        })
-    })*/
+        })*/
 });

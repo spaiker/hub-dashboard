@@ -291,3 +291,18 @@
 .hb-thumb-down:before {
     content: "\e957";
 }
+.hb-angle-down-small:before {
+    content: "\e959";
+}
+.hb-angle-up-small:before {
+    content: "\e95a";
+}
+.hb-angle-left-small:before {
+    content: "\e95b";
+}
+.hb-angle-right-small:before {
+    content: "\e95c";
+}
+.hb-trash:before {
+    content: "\e95d";
+}

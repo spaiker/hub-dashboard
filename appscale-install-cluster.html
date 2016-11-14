@@ -24,6 +24,7 @@
 
     <link rel="stylesheet" href="css/libs/boo-dropdown.css">
     <link rel="stylesheet" href="css/libs/boo-tooltip.css">
+    <link rel="stylesheet" href="css/libs/chosen.css">
 
     <link rel="stylesheet" href="css/libs/remodal.css">
     <link rel="stylesheet" href="css/libs/remodal-default-theme.css">
@@ -871,10 +872,20 @@
             <div class="panel__body">
                 <div class="panel-body">
                     <div class="panel-body__dynamic-match">
-                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
+                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster clearfix">
                             <label for="environment" class="forms-label dynamic-match-wrapper__left">Environment</label>
-                            <select name="environment" id="environment" class="forms-input dynamic-match-wrapper__right">
-                                <option value="">Please choose</option>
+                            <select data-placeholder="Please choose..."  name="environment" id="environment" class="forms-input dynamic-match-wrapper__right js-select-widget">
+                                <option></option>
+                                <optgroup label="Fills">
+                                <option value="1">SMALL</option>
+                                </optgroup>
+                                <optgroup label="Stages">
+                                <option value="1">MEDIUM</option>
+                                <option value="1" disabled>LARGE</option>
+                                </optgroup>
+                                <optgroup label="Sizes">
+                                <option value="1">HUGE</option>
+                                </optgroup>
                             </select>
                         </div>
                         <div class="dynamic-match-wrapper" style="margin: 0">
@@ -890,44 +901,45 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
-                            <span class="input-text-mask-wrapper">
-                            <input type="text" name="Domain" id="Domain" class="forms-input dynamic-match-wrapper__right"><span class="input-text-mask">.stage.hub.net</span>
+                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster clearfix">
+                            <span class="forms-postfix-wrapper dynamic-match-wrapper__right">
+                            <input type="text" name="Domain" id="Domain" class="forms-input">
+                                <span class="forms-fix forms-fix_post">.stage.hub.net</span>
                             </span>
                         </div>
-                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
+                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster clearfix">
                             <label for="Controller" class="forms-label dynamic-match-wrapper__left">Controller</label>
                             <select name="Controller" id="Controller" class="forms-input dynamic-match-wrapper__right">
                                 <option value="">Please choose</option>
                             </select>
                         </div>
-                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
+                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster clearfix">
                             <label for="AppEngine" class="forms-label dynamic-match-wrapper__left">AppEngine</label>
                             <select name="AppEngine" id="AppEngine" class="forms-input dynamic-match-wrapper__right">
                                 <option value="">Please choose</option>
                             </select>
                         </div>
-                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
+                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster clearfix">
                             <label for="Zookeeper" class="forms-label dynamic-match-wrapper__left">Zookeeper</label>
                             <select name="Zookeeper" id="Zookeeper" class="forms-input dynamic-match-wrapper__right">
                                 <option value="">Please choose</option>
                             </select>
                         </div>
-                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
+                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster clearfix">
                             <label for="Database" class="forms-label dynamic-match-wrapper__left">Database</label>
                             <select name="Database" id="Database" class="forms-input dynamic-match-wrapper__right">
                                 <option value="">Please choose</option>
                             </select>
                         </div>
-                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
+                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster clearfix">
                             <label for="Email" class="forms-label dynamic-match-wrapper__left">Email</label>
                             <input type="text" name="Email" id="Email" placeholder="Email" class="forms-input dynamic-match-wrapper__right">
                         </div>
-                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
+                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster clearfix">
                             <label for="Password" class="forms-label dynamic-match-wrapper__left">Password</label>
                             <input type="password" name="Password" id="Password" placeholder="minimum 6 chars" class="forms-input dynamic-match-wrapper__right">
                         </div>
-                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster">
+                        <div class="dynamic-match-wrapper dynamic-match-wrapper_cluster clearfix">
                             <label for="Confirm-password" class="forms-label dynamic-match-wrapper__left">Confirm password</label>
                             <input type="password" name="Confirm password" id="Confirm-password" placeholder="Confirm password" class="forms-input dynamic-match-wrapper__right">
                         </div>
@@ -993,6 +1005,7 @@
 <script src="js/libs/boo-dropdown.js"></script>
 <script src="js/libs/boo-tooltip.js"></script>
 <script src="js/libs/boo-popover.js"></script>
+<script src="js/libs/chosen.jquery.js"></script>
 
 <script src="js/libs/remodal.js"></script>
 <script src="js/libs/jquery.filer.min.js"></script>
