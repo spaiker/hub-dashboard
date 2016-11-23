@@ -300,6 +300,11 @@
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding-box;
     background-clip: padding-box;
+    -webkit-box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+    -moz-box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.1);
+    border: 1px solid #d4d9e3;
+
 }
 
 .popover-content p, .popover-content ul, .popover-content ol {

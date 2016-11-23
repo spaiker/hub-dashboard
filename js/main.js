@@ -32,7 +32,20 @@ $(document).ready(function() {
         $('.tooltip').addClass('tooltip-inverted');
     });
 
-    $("[data-toggle='popover']").popover();
+    $("[data-toggle='popover']").popover({
+        container: 'body',
+        trigger: 'click'
+    });
+    $(document).on('click', function (e) {
+        $('[data-toggle="popover"],[data-original-title]').each(function () {
+            //the 'is' for buttons that trigger popups
+            //the 'has' for icons within a button that triggers a popup
+            if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                (($(this).popover('hide').data('bs.popover')||{}).inState||{}).click = false  // fix for BS 3.3.6
+            }
+
+        });
+    });
 
     $(".js-map-toggle").click(function(){
         $(".content-body-workspace__table").toggleClass("content-body-workspace__table_down");
@@ -112,7 +125,7 @@ $(document).ready(function() {
         railColor: '#d4d9e3',
         railOpacity: '0.4',
         position: 'right',
-        distance: '1px',
+        distance: '1px'
     });
     $('.js-scroll-content').slimScroll({
         color: '#d4d9e3',
